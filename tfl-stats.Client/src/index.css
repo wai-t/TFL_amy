@@ -1,0 +1,56 @@
+.container {
+    padding: 20px;
+    font-family: Arial, sans-serif;
+}
+
+.table {
+    width: 25%;
+    border-collapse: collapse;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.table th,
+.table td {
+    padding: 10px 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+.table th {
+    background-color: #f4f4f4;
+    color: #333;
+
+}
+.table td {
+    cursor: pointer;
+
+}
+.status-good {
+    color: #28a745; 
+}
+
+.status-minordelay {
+    color: #c78e00;
+}
+
+.status-severdelay {
+    color: #c12e2a;
+}
+
+.status-reason {
+    color: red;
+    font-style: italic;
+}
+
+.status-delayed:hover {
+    text-decoration: underline;
+}
+
+.form label{
+    margin-right:5px;
+    margin-left:10px;
+}
+.form button {
+    margin-top:20px;
+}
+.suggestion {
+   list-style-type:none;
+}

@@ -1,0 +1,41 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35825.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "tfl-stats.Client", "tfl-stats.Client\tfl-stats.Client.esproj", "{624805E8-2066-E2B4-5E93-503AF8431DAD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tfl-stats.Server", "tfl-stats.Server\tfl-stats.Server.csproj", "{4D1AA2BC-2BDE-4547-AFD8-755246525C6A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{8EC462FD-D22E-90A8-E5CE-7E832BA40C5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tfl-stats-Core", "tfl-stats-Core\tfl-stats-Core.csproj", "{0236F6C8-247A-3D0F-C408-08BB5CD2108A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{624805E8-2066-E2B4-5E93-503AF8431DAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{624805E8-2066-E2B4-5E93-503AF8431DAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{624805E8-2066-E2B4-5E93-503AF8431DAD}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{624805E8-2066-E2B4-5E93-503AF8431DAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{624805E8-2066-E2B4-5E93-503AF8431DAD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{624805E8-2066-E2B4-5E93-503AF8431DAD}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{4D1AA2BC-2BDE-4547-AFD8-755246525C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D1AA2BC-2BDE-4547-AFD8-755246525C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D1AA2BC-2BDE-4547-AFD8-755246525C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D1AA2BC-2BDE-4547-AFD8-755246525C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0236F6C8-247A-3D0F-C408-08BB5CD2108A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0236F6C8-247A-3D0F-C408-08BB5CD2108A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0236F6C8-247A-3D0F-C408-08BB5CD2108A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0236F6C8-247A-3D0F-C408-08BB5CD2108A}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {31546C3C-FDAB-4952-B670-3A90F8FBBDBA}
+	EndGlobalSection
+EndGlobal

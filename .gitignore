@@ -1,0 +1,37 @@
+# .NET
+bin/
+obj/
+project.lock.json
+project.fragment.lock.json
+*.user
+*.vspscc
+.vs/
+
+# ASP.NET Core
+wwwroot/
+
+# React
+node_modules/
+build/
+
+# Logs
+*.log
+
+# VS Code
+.vscode/
+
+# JetBrains Rider
+.idea/
+
+# Windows Installer files
+Thumbs.db
+Desktop.ini
+
+# macOS
+.DS_Store
+
+# User-specific files
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
