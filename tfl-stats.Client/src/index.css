@@ -1,38 +1,49 @@
 .container {
     padding: 20px;
     font-family: Arial, sans-serif;
+    max-width: 600px;
+    margin: 20px auto;
 }
 
 .table {
-    width: 25%;
+    width: 100%;
     border-collapse: collapse;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
-.table th,
-.table td {
-    padding: 10px 15px;
-    text-align: left;
-    border-bottom: 1px solid #ddd;
-}
-.table th {
-    background-color: #f4f4f4;
-    color: #333;
 
-}
-.table td {
-    cursor: pointer;
+    .table th,
+    .table td {
+        padding: 10px 15px;
+        text-align: left;
+        border-bottom: 1px solid #f0f0f0;
+    }
 
-}
+    .table th {
+        background-color: #f7f7f7;
+        color: #484848;
+    }
+
+    .table td {
+        color: #484848;
+        cursor: pointer;
+    }
+
+        .table tr:hover {
+            background-color: #f0f0f0;
+        }
+
 .status-good {
-    color: #28a745; 
+    color: #00A699; 
 }
 
 .status-minordelay {
-    color: #c78e00;
+    color: #FFB400; 
 }
 
-.status-severdelay {
-    color: #c12e2a;
+.status-severdelay,
+.status-suspension,
+.status-closure {
+    color: #c12e2a; 
 }
 
 .status-reason {
@@ -40,17 +51,54 @@
     font-style: italic;
 }
 
-.status-delayed:hover {
-    text-decoration: underline;
+.form label {
+    margin-right: 5px;
+    margin-left: 10px;
 }
 
-.form label{
-    margin-right:5px;
-    margin-left:10px;
-}
 .form button {
-    margin-top:20px;
+    margin-top: 20px;
 }
+
 .suggestion {
-   list-style-type:none;
+    list-style-type: none;
 }
+
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.button {
+    background-color: #ff5a5f;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+    .button:hover {
+        background-color: #ff1c47;
+    }
+
+.journey-container {
+    margin-top: 20px;
+}
+
+.journey-card {
+    background: white;
+    border: 2px solid #ddd;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .journey-card:hover {
+        transform: scale(1.03);
+        box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+
+.journey-leg {
