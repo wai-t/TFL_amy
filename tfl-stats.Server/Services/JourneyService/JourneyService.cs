@@ -26,7 +26,7 @@ namespace tfl_stats.Server.Services.JourneyService
             baseUrl = options.Value.baseUrl ?? throw new ArgumentNullException(nameof(baseUrl));
         }
 
-        public async Task<ResponseResult<List<Journey>>> getJourney(JourneyRequest journeyRequest)
+        public async Task<ResponseResult<List<Journey>>> GetJourney(JourneyRequest journeyRequest)
         {
             var from = await GetStopPointId(journeyRequest.From);
             var to = await GetStopPointId(journeyRequest.To);

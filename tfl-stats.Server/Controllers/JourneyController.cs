@@ -21,7 +21,7 @@ namespace tfl_stats.Server.Controllers
         [HttpPost]
         public async Task<IActionResult> GetJourney([FromBody] JourneyRequest journeyRequest)
         {
-            var response = await _journeyService.getJourney(journeyRequest);
+            var response = await _journeyService.GetJourney(journeyRequest);
             if (!response.IsSuccessful)
             {
                 switch (response.ResponseStatus)
