@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using tfl_stats.Server.Models;
 using tfl_stats.Server.Services.LineService;
 
 namespace tfl_stats.Server.Controllers
@@ -19,10 +20,24 @@ namespace tfl_stats.Server.Controllers
         [HttpGet]
         public async Task<IActionResult> GetLine()
         {
-            var data = await _lineService.getLine();
-            _logger.LogInformation(data.Count == 0 ? "No data fetched" : "Data fetched");
+            var response = await _lineService.GetLine();
 
-            return Ok(data);
+            if (!response.IsSuccessful)
+            {
+                switch (response.ResponseStatus)
+                {
+
+                    case ResponseStatus.NotFound:
+                        _logger.LogWarning("Not Found");
+                        return NotFound();
+
+                    default:
+                        _logger.LogError("Unexpected Error");
+                        return StatusCode(500);
+                }
+            }
+            _logger.LogInformation("Successfully fetched Lines.");
+            return Ok(response.Data);
         }
     }
 }
