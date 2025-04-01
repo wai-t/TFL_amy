@@ -40,7 +40,7 @@ namespace tfl_stats.Server.Services.JourneyService
             }
 
             string url = $"{baseUrl}Journey/journeyresults/{Uri.EscapeDataString(from)}/to/{Uri.EscapeDataString(to)}?app_id={appId}&app_key={appKey}";
-            var journeyResponse = await _apiclient.GetFromApi<JourneyResponse>(url, "getJourney");
+            var journeyResponse = await _apiclient.GetFromApi<JourneyResponse>(url, "GetJourney");
 
             if (journeyResponse?.Journeys != null)
             {
