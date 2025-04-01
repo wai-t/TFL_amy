@@ -1,5 +1,7 @@
 using tfl_stats.Server.Configurations;
 using tfl_stats.Server.Services;
+using tfl_stats.Server.Services.JourneyService;
+using tfl_stats.Server.Services.LineService;
 
 namespace tfl_stats.Server
 {
@@ -34,6 +36,9 @@ namespace tfl_stats.Server
             //builder.Services.AddHttpClient<LineService, LineService>();
             //builder.Services.AddHttpClient<JourneyService>();
             builder.Services.AddHttpClient<ApiClient>();
+
+            builder.Services.AddScoped<JourneyService>();
+            builder.Services.AddScoped<LineService>();
 
 
 
