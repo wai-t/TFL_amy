@@ -27,20 +27,20 @@ namespace tfl_stats.Server.Controllers
                 switch (response.ResponseStatus)
                 {
                     case ResponseStatus.BadRequest:
-                        _logger.LogError("Bad Request: {Message}", response.Message);
-                        return BadRequest(new { message = response.Message });
+                        _logger.LogError("Bad Request");
+                        return BadRequest();
 
                     case ResponseStatus.NotFound:
-                        _logger.LogWarning("Not Found: {Message}", response.Message);
-                        return NotFound(new { message = response.Message });
+                        _logger.LogWarning("Not Found");
+                        return NotFound();
 
                     default:
-                        _logger.LogError("Unexpected Error: {Message}", response.Message);
-                        return StatusCode(500, new { message = "An unexpected error occurred." });
+                        _logger.LogError("Unexpected Error");
+                        return StatusCode(500);
                 }
             }
 
-            _logger.LogInformation("Successfully fetched {JourneyCount} journeys.", response.Data.Count);
+            _logger.LogInformation("Successfully fetched journeys.");
             return Ok(response.Data);
         }
     }
