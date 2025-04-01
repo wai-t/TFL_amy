@@ -17,7 +17,7 @@ namespace tfl_stats.Server.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> getLine()
+        public async Task<IActionResult> GetLine()
         {
             var data = await _lineService.getLine();
             _logger.LogInformation(data.Count == 0 ? "No data fetched" : "Data fetched");
