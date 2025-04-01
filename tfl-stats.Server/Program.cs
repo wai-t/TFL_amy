@@ -1,6 +1,5 @@
 using tfl_stats.Server.Configurations;
-using tfl_stats.Server.Services.JourneyService;
-using tfl_stats.Server.Services.LineService;
+using tfl_stats.Server.Services;
 
 namespace tfl_stats.Server
 {
@@ -32,9 +31,9 @@ namespace tfl_stats.Server
                 builder.Configuration.GetSection("AppSettings"));
 
 
-            builder.Services.AddHttpClient<LineService, LineService>();
-            builder.Services.AddHttpClient<JourneyService>();
-
+            //builder.Services.AddHttpClient<LineService, LineService>();
+            //builder.Services.AddHttpClient<JourneyService>();
+            builder.Services.AddHttpClient<ApiClient>();
 
 
 
