@@ -1,3 +1,4 @@
+using StackExchange.Redis;
 using tfl_stats.Server.Configurations;
 using tfl_stats.Server.Services;
 using tfl_stats.Server.Services.JourneyService;
@@ -33,14 +34,20 @@ namespace tfl_stats.Server
                 builder.Configuration.GetSection("AppSettings"));
 
 
+            builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
+            {
+                var configuration = sp.GetRequiredService<IConfiguration>();
+                var redisConnection = configuration.GetConnectionString("Redis");
+                return ConnectionMultiplexer.Connect(redisConnection);
+            });
+
+
             //builder.Services.AddHttpClient<LineService, LineService>();
             //builder.Services.AddHttpClient<JourneyService>();
             builder.Services.AddHttpClient<ApiClient>();
 
             builder.Services.AddScoped<JourneyService>();
             builder.Services.AddScoped<LineService>();
-
-
 
             var app = builder.Build();
 
