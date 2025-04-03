@@ -14,7 +14,6 @@ namespace tfl_stats.Server
 
             builder.Logging.AddConsole();
 
-
             builder.Services.AddControllers();
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
@@ -27,12 +26,10 @@ namespace tfl_stats.Server
                                       .AllowAnyMethod());
             });
 
-            //builder.Configuration.AddJsonFile("appsettings.json", false, true);
             builder.Configuration.AddUserSecrets<Program>();
 
             builder.Services.Configure<AppSettings>(
                 builder.Configuration.GetSection("AppSettings"));
-
 
             builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
             {
@@ -41,13 +38,11 @@ namespace tfl_stats.Server
                 return ConnectionMultiplexer.Connect(redisConnection);
             });
 
-
-            //builder.Services.AddHttpClient<LineService, LineService>();
-            //builder.Services.AddHttpClient<JourneyService>();
             builder.Services.AddHttpClient<ApiClient>();
 
-            builder.Services.AddScoped<JourneyService>();
             builder.Services.AddScoped<LineService>();
+            builder.Services.AddScoped<StopPointService>();
+            builder.Services.AddScoped<JourneyService>();
 
             var app = builder.Build();
 
@@ -65,7 +60,6 @@ namespace tfl_stats.Server
             app.UseCors("AllowLocalhost");
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
