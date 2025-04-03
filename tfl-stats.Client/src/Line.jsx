@@ -26,7 +26,7 @@ function GetLine() {
             <tbody>
                 {lines.map((line, index) => {
                     const statuses = getLineStatuses(line);
-                    const isDelayed = statuses.some(status => status.statusSeverityDescription.includes("Delay") || status.statusSeverityDescription.includes("Closure"));
+                    const isDelayed = statuses.some(status => status.statusSeverityDescription.includes("Delay") || status.statusSeverityDescription.includes("Closure") || status.statusSeverityDescription.includes("Suspended"));
                     let statusClass = null;
 
                     return (
@@ -51,7 +51,7 @@ function GetLine() {
                             {showDelayedRows[index] && isDelayed && (
                                 <tr>
                                     <td colSpan="2">
-                                        {statuses.filter(status => status.statusSeverityDescription.includes("Delay") || status.statusSeverityDescription.includes("Closure")).map((status, i) => (
+                                        {statuses.filter(status => status.statusSeverityDescription.includes("Delay") || status.statusSeverityDescription.includes("Closure") || status.statusSeverityDescription.includes("Suspended")).map((status, i) => (
                                             <p key={i}>{status.reason}</p>
                                         ))}
                                     </td>
