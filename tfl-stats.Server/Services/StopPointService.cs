@@ -81,11 +81,13 @@ namespace tfl_stats.Server.Services
                     _logger.LogInformation("CACHE HIT for all stop points.");
                     var allStopPoints = JsonConvert.DeserializeObject<List<string>>(cachedAllStopPoints.ToString());
 
-                    var suggestions = allStopPoints.Where(sp => sp.Contains(query, StringComparison.OrdinalIgnoreCase)).ToList();
-
-                    if (suggestions.Any())
+                    if (allStopPoints != null)
                     {
-                        return suggestions;
+                        var suggestions = allStopPoints.Where(sp => sp.Contains(query, StringComparison.OrdinalIgnoreCase)).ToList();
+                        if (suggestions.Any())
+                        {
+                            return suggestions;
+                        }
                     }
                 }
             }
