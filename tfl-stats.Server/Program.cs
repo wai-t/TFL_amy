@@ -1,14 +1,13 @@
 using StackExchange.Redis;
+using tfl_stats.Server.Client;
 using tfl_stats.Server.Configurations;
 using tfl_stats.Server.Services;
-using tfl_stats.Server.Services.JourneyService;
-using tfl_stats.Server.Services.LineService;
 
 namespace tfl_stats.Server
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -35,8 +34,14 @@ namespace tfl_stats.Server
             {
                 var configuration = sp.GetRequiredService<IConfiguration>();
                 var redisConnection = configuration.GetConnectionString("Redis");
-                return ConnectionMultiplexer.Connect(redisConnection);
+
+                var options = ConfigurationOptions.Parse(redisConnection);
+                options.ConnectTimeout = 10000;
+                options.AbortOnConnectFail = false;
+
+                return ConnectionMultiplexer.Connect(options);
             });
+
 
             builder.Services.AddHttpClient<ApiClient>();
 
@@ -45,6 +50,13 @@ namespace tfl_stats.Server
             builder.Services.AddScoped<JourneyService>();
 
             var app = builder.Build();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var stopPointService = scope.ServiceProvider.GetRequiredService<StopPointService>();
+                await stopPointService.PreloadStopPoints();
+            }
+
 
             app.UseDefaultFiles();
             app.UseStaticFiles();
