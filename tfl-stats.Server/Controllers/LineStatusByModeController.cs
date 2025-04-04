@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using tfl_stats.Server.Models;
-using tfl_stats.Server.Services.LineService;
+using tfl_stats.Server.Services;
 
 namespace tfl_stats.Server.Controllers
 {
