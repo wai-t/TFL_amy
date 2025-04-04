@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using tfl_stats.Server.Models.StopPointModels;
 
 namespace tfl_stats.Server.Models.JourneyModels
 {
