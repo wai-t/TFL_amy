@@ -51,13 +51,6 @@ namespace tfl_stats.Server
 
             var app = builder.Build();
 
-            using (var scope = app.Services.CreateScope())
-            {
-                var stopPointService = scope.ServiceProvider.GetRequiredService<StopPointService>();
-                await stopPointService.PreloadStopPoints();
-            }
-
-
             app.UseDefaultFiles();
             app.UseStaticFiles();
 
@@ -78,6 +71,12 @@ namespace tfl_stats.Server
             app.MapFallbackToFile("/index.html");
 
             app.Run();
+
+            using (var scope = app.Services.CreateScope())
+            {
+                var stopPointService = scope.ServiceProvider.GetRequiredService<StopPointService>();
+                await stopPointService.PreloadStopPoints();
+            }
         }
     }
 }
