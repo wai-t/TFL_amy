@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using tfl_stats.Server.Models;
 using tfl_stats.Server.Models.JourneyModels;
-using tfl_stats.Server.Services.JourneyService;
+using tfl_stats.Server.Services;
 
 namespace tfl_stats.Server.Controllers
 {
