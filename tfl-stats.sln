@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tfl-stats-Core", "tfl-stats-Core\tfl-stats-Core.csproj", "{0236F6C8-247A-3D0F-C408-08BB5CD2108A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tfl-stats.Tests", "tfl-stats.Tests\tfl-stats.Tests.csproj", "{3C496157-DAE3-8305-B380-D118DB5787DC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,6 +33,10 @@ Global
 		{0236F6C8-247A-3D0F-C408-08BB5CD2108A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0236F6C8-247A-3D0F-C408-08BB5CD2108A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0236F6C8-247A-3D0F-C408-08BB5CD2108A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C496157-DAE3-8305-B380-D118DB5787DC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C496157-DAE3-8305-B380-D118DB5787DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C496157-DAE3-8305-B380-D118DB5787DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C496157-DAE3-8305-B380-D118DB5787DC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
