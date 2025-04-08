@@ -7,7 +7,7 @@ namespace tfl_stats.Server
 {
     public class Program
     {
-        public static async Task Main(string[] args)
+        public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
@@ -69,14 +69,13 @@ namespace tfl_stats.Server
             app.MapControllers();
 
             app.MapFallbackToFile("/index.html");
+            // Preload immediately before Run
+            //using var scope = app.Services.CreateScope();
+            //var stopPointService = scope.ServiceProvider.GetRequiredService<StopPointService>();
+            //await stopPointService.PreloadStopPoints();
 
             app.Run();
 
-            using (var scope = app.Services.CreateScope())
-            {
-                var stopPointService = scope.ServiceProvider.GetRequiredService<StopPointService>();
-                await stopPointService.PreloadStopPoints();
-            }
         }
     }
 }
