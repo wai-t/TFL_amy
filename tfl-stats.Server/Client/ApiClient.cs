@@ -13,12 +13,11 @@ namespace tfl_stats.Server.Client
             _logger = logger;
         }
 
-        public async Task<T?> GetFromApi<T>(string url, string context)
+        public async virtual Task<T?> GetFromApi<T>(string url, string context)
         {
             try
             {
                 var responseContent = await _httpClient.GetStringAsync(url);
-                //_logger.LogInformation("Raw API Response for {Context}: {Response}", context, responseContent);
                 return JsonConvert.DeserializeObject<T>(responseContent);
             }
             catch (HttpRequestException ex)
