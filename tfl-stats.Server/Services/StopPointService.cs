@@ -83,12 +83,19 @@ namespace tfl_stats.Server.Services
 
                     if (allStopPoints != null)
                     {
-                        var suggestions = allStopPoints.Where(sp => sp.Contains(query, StringComparison.OrdinalIgnoreCase)).ToList();
+                        var suggestions = allStopPoints
+                            .Where(sp => sp.Contains(query, StringComparison.OrdinalIgnoreCase))
+                            .ToList();
                         if (suggestions.Any())
                         {
                             return suggestions;
                         }
                     }
+                }
+                else
+                {
+                    _logger.LogInformation("CACHE MISS: Preloading stop points.");
+                    await PreloadStopPoints();
                 }
             }
             catch (Exception ex)
