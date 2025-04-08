@@ -4,6 +4,8 @@
     <TargetFramework>net8.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <DisableImplicitProgram>true</DisableImplicitProgram>
+    <GenerateProgramFile>false</GenerateProgramFile>
     <RootNamespace>tfl_stats.Server</RootNamespace>
     <SpaRoot>..\tfl-stats.client</SpaRoot>
     <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
