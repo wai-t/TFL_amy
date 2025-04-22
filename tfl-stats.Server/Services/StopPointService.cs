@@ -1,58 +1,65 @@
 ﻿using Microsoft.Extensions.Options;
-using Newtonsoft.Json;
-using StackExchange.Redis;
 using tfl_stats.Server.Client;
 using tfl_stats.Server.Configurations;
 using tfl_stats.Server.Models.StopPointModels;
 using tfl_stats.Server.Models.StopPointModels.Mode;
-
+using tfl_stats.Server.Services.Cache;
 
 namespace tfl_stats.Server.Services
 {
     public class StopPointService
     {
-        private readonly ApiClient _apiclient;
-        private readonly IDatabase _cache;
+        private readonly ApiClient _apiClient;
+        private readonly ICacheService _cache;
         private readonly ILogger<StopPointService> _logger;
-        private readonly string appId;
-        private readonly string appKey;
-        private readonly string baseUrl;
+        private readonly string _baseUrl;
 
-        public StopPointService(ApiClient apiClient,
+        private static readonly SemaphoreSlim _preloadLock = new(1, 1);
+
+        public StopPointService(
+            ApiClient apiClient,
             IOptions<AppSettings> options,
-            IConnectionMultiplexer redis,
+            ICacheService cache,
             ILogger<StopPointService> logger)
         {
-            _apiclient = apiClient;
-            _cache = redis.GetDatabase();
+            _apiClient = apiClient;
+            _cache = cache;
             _logger = logger;
-            appId = options.Value.appId ?? throw new ArgumentNullException(nameof(appId));
-            appKey = options.Value.appKey ?? throw new ArgumentNullException(nameof(appKey));
-            baseUrl = options.Value.baseUrl ?? throw new ArgumentNullException(nameof(baseUrl));
+            _baseUrl = options.Value.baseUrl ?? throw new ArgumentNullException(nameof(_baseUrl));
         }
 
         public async Task<string?> GetStopPointId(string location)
         {
-            string url = $"{baseUrl}StopPoint/Search/{Uri.EscapeDataString(location)}?app_id={appId}&app_key={appKey}";
-            var stopPointResponse = await _apiclient.GetFromApi<StopPointSearchResponse>(url, "GetStopPointId");
+            var url = $"{_baseUrl}StopPoint/Search/{Uri.EscapeDataString(location)}";
+            var response = await _apiClient.GetFromApi<StopPointSearchResponse>(url, "GetStopPointId");
 
-            var bestMatch = stopPointResponse?.Matches?.FirstOrDefault(sp => sp.Modes.Contains("tube"));
-            return bestMatch?.IcsId;
+            return response?.Matches?.FirstOrDefault(sp => sp.Modes.Contains("tube"))?.IcsId;
         }
 
         public async Task PreloadStopPoints()
         {
+            await _preloadLock.WaitAsync();
+
             try
             {
-                string url = $"{baseUrl}StopPoint/Mode/tube?app_id={appId}&app_key={appKey}";
-                var stopPointResponse = await _apiclient.GetFromApi<StopPointModeResponse>(url, "PreloadStopPoints");
-
-
-                if (stopPointResponse?.StopPoints != null)
+                var existing = await _cache.GetAsync<List<string>>(CacheKeys.AllStopPoints);
+                if (existing != null)
                 {
-                    var allStopPoints = stopPointResponse.StopPoints.Select(sp => sp.CommonName).Distinct().ToList();
+                    _logger.LogInformation("Preload skipped – already cached.");
+                    return;
+                }
 
-                    await _cache.StringSetAsync("allStopPoints", JsonConvert.SerializeObject(allStopPoints), TimeSpan.FromDays(1));
+                var url = $"{_baseUrl}StopPoint/Mode/tube";
+                var response = await _apiClient.GetFromApi<StopPointModeResponse>(url, "PreloadStopPoints");
+
+                if (response?.StopPoints != null)
+                {
+                    var allStopPoints = response.StopPoints
+                        .Select(sp => sp.CommonName)
+                        .Distinct()
+                        .ToList();
+
+                    await _cache.SetAsync(CacheKeys.AllStopPoints, allStopPoints, TimeSpan.FromDays(1));
                     _logger.LogInformation("Preloaded and cached all stop points.");
                 }
                 else
@@ -62,7 +69,11 @@ namespace tfl_stats.Server.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error preloading stop points");
+                _logger.LogError(ex, "Error during stop point preload.");
+            }
+            finally
+            {
+                _preloadLock.Release();
             }
         }
 
@@ -71,25 +82,30 @@ namespace tfl_stats.Server.Services
             if (string.IsNullOrWhiteSpace(query))
                 return new List<string>();
 
-            var cacheKey = $"autocomplete:{query.ToLowerInvariant()}";
+            var cacheKey = CacheKeys.Autocomplete(query);
 
             try
             {
-                var cachedAllStopPoints = await _cache.StringGetAsync("allStopPoints");
-                if (cachedAllStopPoints.HasValue)
+                var cachedSuggestions = await _cache.GetAsync<List<string>>(cacheKey);
+                if (cachedSuggestions != null)
+                {
+                    _logger.LogInformation("CACHE HIT for autocomplete '{Query}'", query);
+                    return cachedSuggestions;
+                }
+
+                var allStopPoints = await _cache.GetAsync<List<string>>(CacheKeys.AllStopPoints);
+                if (allStopPoints != null)
                 {
                     _logger.LogInformation("CACHE HIT for all stop points.");
-                    var allStopPoints = JsonConvert.DeserializeObject<List<string>>(cachedAllStopPoints.ToString());
 
-                    if (allStopPoints != null)
+                    var suggestions = allStopPoints
+                        .Where(sp => sp.Contains(query, StringComparison.OrdinalIgnoreCase))
+                        .ToList();
+
+                    if (suggestions.Any())
                     {
-                        var suggestions = allStopPoints
-                            .Where(sp => sp.Contains(query, StringComparison.OrdinalIgnoreCase))
-                            .ToList();
-                        if (suggestions.Any())
-                        {
-                            return suggestions;
-                        }
+                        await _cache.SetAsync(cacheKey, suggestions, TimeSpan.FromHours(1));
+                        return suggestions;
                     }
                 }
                 else
@@ -100,24 +116,29 @@ namespace tfl_stats.Server.Services
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error accessing Redis cache for all stop points");
+                _logger.LogError(ex, "Error accessing cache for '{Query}'", query);
             }
 
-            string url = $"{baseUrl}StopPoint/Search/{Uri.EscapeDataString(query)}?modes=tube&app_id={appId}&app_key={appKey}";
-            var stopPointResponse = await _apiclient.GetFromApi<StopPointSearchResponse>(url, "GetAutocompleteSuggestions");
+            return await FetchFromApiAndCache(query, cacheKey);
+        }
 
-            var apiSuggestions = stopPointResponse?.Matches?.Select(sp => sp.Name).ToList() ?? new List<string>();
+        private async Task<List<string>> FetchFromApiAndCache(string query, string cacheKey)
+        {
+            var url = $"{_baseUrl}StopPoint/Search/{Uri.EscapeDataString(query)}?modes=tube";
+            var response = await _apiClient.GetFromApi<StopPointSearchResponse>(url, "GetAutocompleteSuggestions");
+
+            var apiSuggestions = response?.Matches?.Select(sp => sp.Name).ToList() ?? new List<string>();
 
             if (apiSuggestions.Any())
             {
                 try
                 {
-                    await _cache.StringSetAsync(cacheKey, JsonConvert.SerializeObject(apiSuggestions), TimeSpan.FromHours(1));
-                    _logger.LogInformation("CACHE MISS => Fetched and cached autocomplete suggestions for '{Query}'", query);
+                    await _cache.SetAsync(cacheKey, apiSuggestions, TimeSpan.FromHours(1));
+                    _logger.LogInformation("CACHE MISS => Fetched and cached autocomplete for '{Query}'", query);
                 }
                 catch (Exception ex)
                 {
-                    _logger.LogError(ex, "Error writing to Redis cache for key '{CacheKey}'", cacheKey);
+                    _logger.LogError(ex, "Error writing to cache for '{CacheKey}'", cacheKey);
                 }
             }
 
