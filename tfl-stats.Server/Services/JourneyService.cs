@@ -12,8 +12,6 @@ namespace tfl_stats.Server.Services
         private readonly ApiClient _apiclient;
         private readonly ILogger<JourneyService> _logger;
         private readonly StopPointService _stopPointService;
-        private readonly string appId;
-        private readonly string appKey;
         private readonly string baseUrl;
 
         public JourneyService(ApiClient apiClient,
@@ -24,8 +22,6 @@ namespace tfl_stats.Server.Services
             _apiclient = apiClient;
             _stopPointService = stopPointService;
             _logger = logger;
-            appId = options.Value.appId ?? throw new ArgumentNullException(nameof(appId));
-            appKey = options.Value.appKey ?? throw new ArgumentNullException(nameof(appKey));
             baseUrl = options.Value.baseUrl ?? throw new ArgumentNullException(nameof(baseUrl));
         }
 
@@ -39,7 +35,8 @@ namespace tfl_stats.Server.Services
                 return new ResponseResult<List<Journey>>(false, new List<Journey>(), ResponseStatus.BadRequest);
             }
 
-            string url = $"{baseUrl}Journey/journeyresults/{Uri.EscapeDataString(from)}/to/{Uri.EscapeDataString(to)}?app_id={appId}&app_key={appKey}";
+            string url = $"{baseUrl}Journey/journeyresults/{Uri.EscapeDataString(from)}/to/{Uri.EscapeDataString(to)}";
+
             var journeyResponse = await _apiclient.GetFromApi<JourneyResponse>(url, "GetJourney");
 
             if (journeyResponse?.Journeys != null)
