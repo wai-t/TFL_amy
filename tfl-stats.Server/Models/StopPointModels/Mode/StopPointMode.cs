@@ -6,42 +6,42 @@ namespace tfl_stats.Server.Models.StopPointModels.Mode
     {
         //[JsonRequired]
         [JsonProperty("naptanId")]
-        public string NaptanId { get; set; }
+        public string NaptanId { get; set; } = string.Empty;
 
         //[JsonRequired]
         [JsonProperty("indicator")]
-        public string Indicator { get; set; }
+        public string Indicator { get; set; } = string.Empty;
 
         //[JsonRequired]
         [JsonProperty("stopLetter")]
-        public string StopLetter { get; set; }
+        public string StopLetter { get; set; } = string.Empty;
 
         //[JsonRequired]
         [JsonProperty("modes")]
-        public List<string> Modes { get; set; }
+        public List<string> Modes { get; set; } = new List<string>();
 
         //[JsonRequired]
-        [JsonProperty("icsCode")]
-        public string IcsCode { get; set; }
+        //[JsonProperty("icsCode")]
+        public string IcsCode { get; set; } = string.Empty;
 
         //[JsonRequired]
         [JsonProperty("stopType")]
-        public string StopType { get; set; }
+        public string StopType { get; set; } = string.Empty;
 
-        //[JsonProperty("stationNaptan")]
-        public string StationNaptan { get; set; }
+        [JsonProperty("stationNaptan")]
+        public string StationNaptan { get; set; } = string.Empty;
 
-        //[JsonProperty("hubNaptanCode")]
-        public string HubNaptanCode { get; set; }
+        [JsonProperty("hubNaptanCode")]
+        public string HubNaptanCode { get; set; } = string.Empty;
 
-        //[JsonProperty("lines")]
-        public List<object> Lines { get; set; }
+        [JsonProperty("lines")]
+        public List<object> Lines { get; set; } = new List<object>();
 
-        //[JsonProperty("lineGroup")]
-        public List<object> LineGroup { get; set; }
+        [JsonProperty("lineGroup")]
+        public List<object> LineGroup { get; set; } = new List<object>();
 
-        //[JsonProperty("lineModeGroups")]
-        public List<object> LineModeGroups { get; set; }
+        [JsonProperty("lineModeGroups")]
+        public List<object> LineModeGroups { get; set; } = new List<object>();
 
         //[JsonRequired]
         [JsonProperty("status")]
@@ -49,23 +49,23 @@ namespace tfl_stats.Server.Models.StopPointModels.Mode
 
         //[JsonRequired]
         [JsonProperty("id")]
-        public string Id { get; set; }
+        public string Id { get; set; } = string.Empty;
 
         //[JsonRequired]
         [JsonProperty("commonName")]
-        public string CommonName { get; set; }
+        public string CommonName { get; set; } = string.Empty;
 
         //[JsonRequired]
         [JsonProperty("placeType")]
-        public string PlaceType { get; set; }
+        public string PlaceType { get; set; } = string.Empty;
 
         //[JsonRequired]
         [JsonProperty("additionalProperties")]
-        public List<AdditionalProperty> AdditionalProperties { get; set; }
+        public List<AdditionalProperty> AdditionalProperties { get; set; } = new List<AdditionalProperty>();
 
         //[JsonRequired]
         [JsonProperty("children")]
-        public List<object> Children { get; set; }
+        public List<object> Children { get; set; } = new List<object>();
 
         //[JsonRequired]
         [JsonProperty("lat")]
@@ -74,6 +74,5 @@ namespace tfl_stats.Server.Models.StopPointModels.Mode
         //[JsonRequired]
         [JsonProperty("lon")]
         public double Longitude { get; set; }
-
     }
 }
