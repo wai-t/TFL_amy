@@ -2,6 +2,7 @@ using StackExchange.Redis;
 using tfl_stats.Server.Client;
 using tfl_stats.Server.Configurations;
 using tfl_stats.Server.Services;
+using tfl_stats.Server.Services.Cache;
 
 namespace tfl_stats.Server
 {
@@ -33,15 +34,27 @@ namespace tfl_stats.Server
             builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
             {
                 var configuration = sp.GetRequiredService<IConfiguration>();
-                var redisConnection = configuration.GetConnectionString("Redis");
+                var redisConnection = configuration.GetConnectionString("Redis")
+                ?? throw new InvalidOperationException("Redis connection string is missing.");
 
                 var options = ConfigurationOptions.Parse(redisConnection);
+
                 options.ConnectTimeout = 10000;
                 options.AbortOnConnectFail = false;
 
                 return ConnectionMultiplexer.Connect(options);
             });
 
+            if (builder.Environment.IsDevelopment())
+            {
+                builder.Services.AddSingleton<ICacheService, MemoryCacheService>();
+            }
+            else
+            {
+                builder.Services.AddSingleton<ICacheService, RedisCacheService>();
+            }
+
+            builder.Services.AddMemoryCache();
 
             builder.Services.AddHttpClient<ApiClient>();
 
@@ -69,10 +82,6 @@ namespace tfl_stats.Server
             app.MapControllers();
 
             app.MapFallbackToFile("/index.html");
-            // Preload immediately before Run
-            //using var scope = app.Services.CreateScope();
-            //var stopPointService = scope.ServiceProvider.GetRequiredService<StopPointService>();
-            //await stopPointService.PreloadStopPoints();
 
             app.Run();
 
