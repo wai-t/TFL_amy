@@ -2,9 +2,7 @@
 {
     public class AppSettings
     {
-        public string appId { get; set; }
-        public string appKey { get; set; }
-        public string baseUrl { get; set; }
+        public required string baseUrl { get; set; }
     }
 }
 
