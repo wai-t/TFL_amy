@@ -11,24 +11,19 @@ namespace tfl_stats.Server.Services
         private readonly ApiClient _apiClient;
 
         private ILogger<LineService> _logger;
-
-        private readonly string appId;
-        private readonly string appKey;
         private readonly string baseUrl;
 
         public LineService(ApiClient apiClient, IOptions<AppSettings> options, ILogger<LineService> logger)
         {
             _apiClient = apiClient;
             _logger = logger;
-            appId = options.Value.appId ?? throw new ArgumentNullException(nameof(appId));
-            appKey = options.Value.appKey ?? throw new ArgumentNullException(nameof(appKey));
             baseUrl = options.Value.baseUrl ?? throw new ArgumentNullException(nameof(baseUrl));
         }
 
         public async Task<ResponseResult<List<Line>>> GetLine()
         {
 
-            string url = $"{baseUrl}Line/Mode/tube/Status?app_id={appId}&app_key={appKey}";
+            string url = $"{baseUrl}Line/Mode/tube/Status";
 
             var lineResponse = await _apiClient.GetFromApi<List<Line>>(url, "GetLine");
 
