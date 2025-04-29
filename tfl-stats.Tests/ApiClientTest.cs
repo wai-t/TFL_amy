@@ -1,11 +1,5 @@
-﻿using Microsoft.AspNetCore.OutputCaching;
-using Microsoft.Extensions.Logging;
+﻿using Microsoft.Extensions.Logging;
 using Moq;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using tfl_stats.Server.Client;
 using tfl_stats.Server.Models.JourneyModels;
 using tfl_stats.Server.Models.LineModels;
@@ -68,6 +62,17 @@ namespace tfl_stats.Tests
                 Assert.Equal(fromIcsCode, result.Journeys[i].Legs[0].DeparturePoint.IcsCode);
                 Assert.Equal(toIcsCode, result.Journeys[i].Legs.Last().ArrivalPoint.IcsCode);
             }
+        }
+
+        // General utility test to investigate API responses
+        [Fact]
+        [Trait("Category", "TflApiTests")]
+        public async Task TestDynamic()
+        {
+            var url = $"Journey/journeyresults/1000007/to/1000138?mode=tube";
+            var result = await _apiClient.GetFromApi<dynamic>(url, "testMethod");
+            Assert.NotNull(result);
+            var asString = result?.ToString();
         }
     }
 }
