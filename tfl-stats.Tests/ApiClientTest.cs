@@ -4,6 +4,7 @@ using tfl_stats.Server.Client;
 using tfl_stats.Server.Models.JourneyModels;
 using tfl_stats.Server.Models.LineModels;
 using tfl_stats.Server.Models.StopPointModels;
+using tfl_stats.Server.Models.StopPointModels.Mode;
 
 namespace tfl_stats.Tests
 {
@@ -62,6 +63,16 @@ namespace tfl_stats.Tests
                 Assert.Equal(fromIcsCode, result.Journeys[i].Legs[0].DeparturePoint.IcsCode);
                 Assert.Equal(toIcsCode, result.Journeys[i].Legs.Last().ArrivalPoint.IcsCode);
             }
+        }
+
+        [Fact]
+        [Trait("Category", "TflApiTests")]
+        public async Task AllStopPoints()
+        {
+            var url = "StopPoint/Mode/tube";
+            var result = await _apiClient.GetFromApi<StopPointModeResponse>(url);
+            Assert.NotNull(result);
+            var stops = result.StopPoints.Where(sp => sp.StopType == "NaptanMetroStation").ToList();
         }
 
         // General utility test to investigate API responses

@@ -57,6 +57,7 @@ namespace tfl_stats.Server.Services
                 if (response?.StopPoints != null)
                 {
                     var allStopPoints = response.StopPoints
+                        .Where(sp => sp.StopType == "NaptanMetroStation")
                         .Select(sp => sp.CommonName)
                         .Distinct()
                         .ToList();
