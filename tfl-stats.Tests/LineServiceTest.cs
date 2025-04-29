@@ -10,27 +10,21 @@ namespace tfl_stats.Tests
 {
     public class LineServiceTest
     {
-        private readonly Mock<ApiClient> _mockApiClient;
         private readonly Mock<IOptions<AppSettings>> _mockOptions;
         private readonly Mock<ILogger<LineService>> _mockLogger;
+        private readonly Mock<ApiClient> _mockApiClient;
         private readonly LineService _lineService;
         public LineServiceTest()
         {
             _mockOptions = new Mock<IOptions<AppSettings>>();
-            var appsettings = new AppSettings
+            _mockOptions.Setup(o => o.Value).Returns(new AppSettings
             {
-                appId = "123",
-                appKey = "cb52c92815b94cabb22449624d95e007",
                 baseUrl = "https://api.tfl.gov.uk/"
-            };
-            _mockOptions.Setup(o => o.Value).Returns(appsettings);
+            });
 
             _mockLogger = new Mock<ILogger<LineService>>();
-            var mockApiClientLogger = new Mock<ILogger<ApiClient>>();
 
-            var mockHttpClinet = new HttpClient();
-            _mockApiClient = new Mock<ApiClient>(mockHttpClinet, mockApiClientLogger.Object);
-
+            _mockApiClient = new Mock<ApiClient>(MockBehavior.Strict, new HttpClient(), Mock.Of<ILogger<ApiClient>>());
 
             _lineService = new LineService(_mockApiClient.Object,
                                            _mockOptions.Object,
@@ -38,7 +32,7 @@ namespace tfl_stats.Tests
         }
 
         [Fact]
-        public async Task TestGetLine()
+        public async Task GetLine_WhenCalled_ReturnsListOfLines()
         {
             var testLines = new List<Line>
         {
@@ -81,9 +75,36 @@ namespace tfl_stats.Tests
             var result = await _lineService.GetLine();
 
             Assert.NotNull(result);
-            Assert.Single((System.Collections.IEnumerable)result.Data);
+            Assert.Single(result.Data);
             Assert.Equal("Jubilee", result.Data[0].Name);
             Assert.Equal("Minor Delays", result.Data[0].LineStatuses[0].StatusSeverityDescription);
+        }
+
+        [Fact]
+        public async Task GetLine_WhenApiReturnsEmptyList_ReturnsEmptyData()
+        {
+            _mockApiClient
+                .Setup(api => api.GetFromApi<List<Line>>(It.IsAny<string>(), "GetLine"))
+                .ReturnsAsync(new List<Line>());
+
+            var result = await _lineService.GetLine();
+
+            Assert.NotNull(result);
+            Assert.Empty(result.Data);
+        }
+
+        [Fact]
+        public async Task GetLine_WhenApiReturnsNull_ReturnsEmptyData()
+        {
+            List<Line> nullLine = null;
+            _mockApiClient
+                .Setup(api => api.GetFromApi<List<Line>>(It.IsAny<string>(), "GetLine"))
+                .ReturnsAsync(nullLine);
+
+            var result = await _lineService.GetLine();
+
+            Assert.NotNull(result);
+            Assert.Empty(result.Data);
         }
     }
 }
