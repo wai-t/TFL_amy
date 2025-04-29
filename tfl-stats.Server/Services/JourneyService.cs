@@ -42,7 +42,7 @@ namespace tfl_stats.Server.Services
             //string url = $"{baseUrl}Journey/journeyresults/{Uri.EscapeDataString(from)}/to/{Uri.EscapeDataString(to)}";
             string url = $"Journey/journeyresults/{Uri.EscapeDataString(from)}/to/{Uri.EscapeDataString(to)}";
 
-            var journeyResponse = await _apiclient.GetFromApi<JourneyResponse>(url, "GetJourney");
+            var journeyResponse = await _apiclient.GetFromApi<JourneyResponse>(url/*, "GetJourney"*/);
 
             if (journeyResponse?.Journeys != null)
             {

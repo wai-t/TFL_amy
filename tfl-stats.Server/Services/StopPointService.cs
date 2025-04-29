@@ -32,7 +32,7 @@ namespace tfl_stats.Server.Services
         {
             //var url = $"{_baseUrl}StopPoint/Search/{Uri.EscapeDataString(location)}";
             var url = $"StopPoint/Search/{Uri.EscapeDataString(location)}";
-            var response = await _apiClient.GetFromApi<StopPointSearchResponse>(url, "GetStopPointId");
+            var response = await _apiClient.GetFromApi<StopPointSearchResponse>(url/*, "GetStopPointId"*/);
 
             return response?.Matches?.FirstOrDefault(sp => sp.Modes.Contains("tube"))?.IcsId;
         }
@@ -52,7 +52,7 @@ namespace tfl_stats.Server.Services
 
                 //var url = $"{_baseUrl}StopPoint/Mode/tube";
                 var url = "StopPoint/Mode/tube";
-                var response = await _apiClient.GetFromApi<StopPointModeResponse>(url, "PreloadStopPoints");
+                var response = await _apiClient.GetFromApi<StopPointModeResponse>(url/*, "PreloadStopPoints"*/);
 
                 if (response?.StopPoints != null)
                 {
@@ -128,7 +128,7 @@ namespace tfl_stats.Server.Services
         {
             //var url = $"{_baseUrl}StopPoint/Search/{Uri.EscapeDataString(query)}?modes=tube";
             var url = $"StopPoint/Search/{Uri.EscapeDataString(query)}?modes=tube";
-            var response = await _apiClient.GetFromApi<StopPointSearchResponse>(url, "GetAutocompleteSuggestions");
+            var response = await _apiClient.GetFromApi<StopPointSearchResponse>(url/*, "GetAutocompleteSuggestions"*/);
 
             var apiSuggestions = response?.Matches?.Select(sp => sp.Name).ToList() ?? new List<string>();
 

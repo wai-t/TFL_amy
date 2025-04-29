@@ -26,7 +26,7 @@ namespace tfl_stats.Server.Services
             //string url = $"{baseUrl}Line/Mode/tube/Status";
             string url = "Line/Mode/tube/Status";
 
-            var lineResponse = await _apiClient.GetFromApi<List<Line>>(url, "GetLine");
+            var lineResponse = await _apiClient.GetFromApi<List<Line>>(url/*, "GetLine"*/);
 
             if (lineResponse != null)
             {

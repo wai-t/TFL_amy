@@ -24,7 +24,7 @@ namespace tfl_stats.Tests
         [Trait("Category", "TflApiTests")]
         public async Task TestLineStatusQuery()
         {
-            var result = await _apiClient.GetFromApi<List<Line>>( "Line/Mode/tube/Status", "testMethod");
+            var result = await _apiClient.GetFromApi<List<Line>>( "Line/Mode/tube/Status");
 
             // Assert
             Assert.NotNull(result);
@@ -39,7 +39,7 @@ namespace tfl_stats.Tests
         public async Task TestStopPoints(string query, string expected)
         {
             var url = $"StopPoint/Search/{Uri.EscapeDataString(query)}?modes=tube";
-            var result = await _apiClient.GetFromApi<StopPointSearchResponse>(url, "testMethod");
+            var result = await _apiClient.GetFromApi<StopPointSearchResponse>(url);
 
             Assert.NotNull(result);
             Assert.NotNull(result.Matches.Find(x => x.Name == expected));
@@ -51,7 +51,7 @@ namespace tfl_stats.Tests
         public async Task TestJourneyPlanner(string fromIcsCode, string toIcsCode)
         {
             var url = $"Journey/journeyresults/{fromIcsCode}/to/{toIcsCode}?mode=tube";
-            var result = await _apiClient.GetFromApi<JourneyResponse>(url, "testMethod");
+            var result = await _apiClient.GetFromApi<JourneyResponse>(url);
 
             Assert.NotNull(result);
             Assert.True(result.Journeys.Count > 0);
@@ -70,7 +70,7 @@ namespace tfl_stats.Tests
         public async Task TestDynamic()
         {
             var url = $"Journey/journeyresults/1000007/to/1000138?mode=tube";
-            var result = await _apiClient.GetFromApi<dynamic>(url, "testMethod");
+            var result = await _apiClient.GetFromApi<dynamic>(url);
             Assert.NotNull(result);
             var asString = result?.ToString();
         }
