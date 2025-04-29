@@ -13,7 +13,10 @@ namespace tfl_stats.Server.Services.Cache
 
         public Task<T?> GetAsync<T>(string key)
         {
-            _memoryCache.TryGetValue(key, out T? value);
+            if (_memoryCache.TryGetValue(key, out T? value))
+            {
+                return Task.FromResult(value);
+            }
             return Task.FromResult(value);
         }
 
