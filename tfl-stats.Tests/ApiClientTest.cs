@@ -1,0 +1,73 @@
+﻿using Microsoft.AspNetCore.OutputCaching;
+using Microsoft.Extensions.Logging;
+using Moq;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using tfl_stats.Server.Client;
+using tfl_stats.Server.Models.JourneyModels;
+using tfl_stats.Server.Models.LineModels;
+using tfl_stats.Server.Models.StopPointModels;
+
+namespace tfl_stats.Tests
+{
+    public class ApiClientTest
+    {
+        private readonly ApiClient _apiClient;
+
+        public ApiClientTest() {
+            // Arrange
+            var httpClient = new HttpClient()
+            {
+                BaseAddress = new Uri("https://api.tfl.gov.uk/"),
+            };
+            var mockApiClientLogger = new Mock<ILogger<ApiClient>>();
+            _apiClient = new ApiClient(httpClient, mockApiClientLogger.Object);
+        }
+        [Fact]
+        [Trait("Category", "TflApiTests")]
+        public async Task TestLineStatusQuery()
+        {
+            var result = await _apiClient.GetFromApi<List<Line>>( "Line/Mode/tube/Status", "testMethod");
+
+            // Assert
+            Assert.NotNull(result);
+            Assert.Equal(11, result.Count);
+            Assert.Equal("circle", result[2].Id);
+        }
+
+        [Theory]
+        [Trait("Category", "TflApiTests")]
+        [InlineData("Angel","Angel Underground Station")]
+        [InlineData("Liverpool", "Liverpool Street")]
+        public async Task TestStopPoints(string query, string expected)
+        {
+            var url = $"StopPoint/Search/{Uri.EscapeDataString(query)}?modes=tube";
+            var result = await _apiClient.GetFromApi<StopPointSearchResponse>(url, "testMethod");
+
+            Assert.NotNull(result);
+            Assert.NotNull(result.Matches.Find(x => x.Name == expected));
+        }
+
+        [Theory]
+        [Trait("Category", "TflApiTests")]
+        [InlineData("1000007", "1000138")] // Angel to Liverpool Street
+        public async Task TestJourneyPlanner(string fromIcsCode, string toIcsCode)
+        {
+            var url = $"Journey/journeyresults/{fromIcsCode}/to/{toIcsCode}?mode=tube";
+            var result = await _apiClient.GetFromApi<JourneyResponse>(url, "testMethod");
+
+            Assert.NotNull(result);
+            Assert.True(result.Journeys.Count > 0);
+            for (var i = 0; i < result.Journeys.Count; i++)
+            {
+                Assert.NotNull(result.Journeys[i].Legs);
+                Assert.True(result.Journeys[i].Legs.Count > 0);
+                Assert.Equal(fromIcsCode, result.Journeys[i].Legs[0].DeparturePoint.IcsCode);
+                Assert.Equal(toIcsCode, result.Journeys[i].Legs.Last().ArrivalPoint.IcsCode);
+            }
+        }
+    }
+}
