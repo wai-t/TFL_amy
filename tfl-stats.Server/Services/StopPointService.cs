@@ -12,7 +12,7 @@ namespace tfl_stats.Server.Services
         private readonly ApiClient _apiClient;
         private readonly ICacheService _cache;
         private readonly ILogger<StopPointService> _logger;
-        private readonly string _baseUrl;
+        //private readonly string _baseUrl;
 
         private static readonly SemaphoreSlim _preloadLock = new(1, 1);
 
@@ -25,12 +25,13 @@ namespace tfl_stats.Server.Services
             _apiClient = apiClient;
             _cache = cache;
             _logger = logger;
-            _baseUrl = options.Value.baseUrl ?? throw new ArgumentNullException(nameof(_baseUrl));
+            //_baseUrl = options.Value.baseUrl ?? throw new ArgumentNullException(nameof(_baseUrl));
         }
 
         public async Task<string?> GetStopPointId(string location)
         {
-            var url = $"{_baseUrl}StopPoint/Search/{Uri.EscapeDataString(location)}";
+            //var url = $"{_baseUrl}StopPoint/Search/{Uri.EscapeDataString(location)}";
+            var url = $"StopPoint/Search/{Uri.EscapeDataString(location)}";
             var response = await _apiClient.GetFromApi<StopPointSearchResponse>(url, "GetStopPointId");
 
             return response?.Matches?.FirstOrDefault(sp => sp.Modes.Contains("tube"))?.IcsId;
@@ -49,7 +50,8 @@ namespace tfl_stats.Server.Services
                     return;
                 }
 
-                var url = $"{_baseUrl}StopPoint/Mode/tube";
+                //var url = $"{_baseUrl}StopPoint/Mode/tube";
+                var url = "StopPoint/Mode/tube";
                 var response = await _apiClient.GetFromApi<StopPointModeResponse>(url, "PreloadStopPoints");
 
                 if (response?.StopPoints != null)
@@ -124,7 +126,8 @@ namespace tfl_stats.Server.Services
 
         private async Task<List<string>> FetchFromApiAndCache(string query, string cacheKey)
         {
-            var url = $"{_baseUrl}StopPoint/Search/{Uri.EscapeDataString(query)}?modes=tube";
+            //var url = $"{_baseUrl}StopPoint/Search/{Uri.EscapeDataString(query)}?modes=tube";
+            var url = $"StopPoint/Search/{Uri.EscapeDataString(query)}?modes=tube";
             var response = await _apiClient.GetFromApi<StopPointSearchResponse>(url, "GetAutocompleteSuggestions");
 
             var apiSuggestions = response?.Matches?.Select(sp => sp.Name).ToList() ?? new List<string>();
