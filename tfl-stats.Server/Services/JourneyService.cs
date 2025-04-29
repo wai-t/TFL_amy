@@ -27,6 +27,10 @@ namespace tfl_stats.Server.Services
 
         public async Task<ResponseResult<List<Journey>>> GetJourney(JourneyRequest journeyRequest)
         {
+            // Suggestion: Consider receiving the actual id of the StopPoint instead of using the name
+            // again to do another query. Investigate which id is the right one to use; it looks like there
+            // is a number of options including IcsId, NaptanId, etc. This would involve some changes on
+            // the client side to store a list of (name, id) pairs for the StopPoints.
             var from = await _stopPointService.GetStopPointId(journeyRequest.From);
             var to = await _stopPointService.GetStopPointId(journeyRequest.To);
 
