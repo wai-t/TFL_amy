@@ -13,6 +13,7 @@ function JourneyForm({ formData, fromSuggestions, toSuggestions, onFormSubmit, o
                 onChange={onInputChange}
                 required
                 list="from-suggestions"
+                autoComplete="off"
             />
             <datalist id="from-suggestions">
                 {fromSuggestions.map((suggestion) => (
@@ -29,6 +30,7 @@ function JourneyForm({ formData, fromSuggestions, toSuggestions, onFormSubmit, o
                 onChange={onInputChange}
                 required
                 list="to-suggestions"
+                autoComplete="off"
             />
             <datalist id="to-suggestions">
                 {toSuggestions.map((suggestion) => (
@@ -103,6 +105,10 @@ function GetJourney() {
 
         if (value.length > 2) {
             fetchSuggestions(value, name);
+        }
+        else {
+            setFromSuggestions([]);
+            setToSuggestions([]);
         }
     };
 

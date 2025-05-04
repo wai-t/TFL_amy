@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using System.Runtime.CompilerServices;
 
 namespace tfl_stats.Server.Client
 {
@@ -13,8 +14,10 @@ namespace tfl_stats.Server.Client
             _logger = logger;
         }
 
-        public async virtual Task<T?> GetFromApi<T>(string url, string context)
+        public async virtual Task<T?> GetFromApi<T>(string url, [CallerMemberName]string context="")
         {
+            // Don't just log and "swallow" exceptions. Either handle them or
+            // let them bubble up, even if it means the caller has to deal with them.
             try
             {
                 var responseContent = await _httpClient.GetStringAsync(url);
@@ -23,17 +26,20 @@ namespace tfl_stats.Server.Client
             catch (HttpRequestException ex)
             {
                 _logger.LogError($"{context} - Network error: {ex.Message}");
+                throw;
             }
             catch (JsonSerializationException ex)
             {
                 _logger.LogError($"{context} - Deserialization failed: {ex.Message}");
+                throw;
             }
             catch (Exception ex)
             {
                 _logger.LogError($"{context} - Unexpected error: {ex.Message}");
+                throw;
             }
 
-            return default;
+            //return default;
         }
     }
 }

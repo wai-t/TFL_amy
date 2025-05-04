@@ -56,7 +56,12 @@ namespace tfl_stats.Server
 
             builder.Services.AddMemoryCache();
 
-            builder.Services.AddHttpClient<ApiClient>();
+            builder.Services.AddHttpClient<ApiClient>(
+                options =>
+                {
+                    options.BaseAddress = new Uri("https://api.tfl.gov.uk/");
+                    options.Timeout = TimeSpan.FromSeconds(10);
+                });
 
             builder.Services.AddScoped<LineService>();
             builder.Services.AddScoped<StopPointService>();
