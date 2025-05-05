@@ -2,7 +2,7 @@
 {
     public class AppSettings
     {
-        public required string baseUrl { get; set; }
+        public required string BaseUrl { get; set; }
     }
 }
 
