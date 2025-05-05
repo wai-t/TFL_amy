@@ -1,4 +1,3 @@
-using StackExchange.Redis;
 using tfl_stats.Server.Client;
 using tfl_stats.Server.Configurations;
 using tfl_stats.Server.Services;
@@ -26,33 +25,12 @@ namespace tfl_stats.Server
                                       .AllowAnyMethod());
             });
 
-            builder.Configuration.AddUserSecrets<Program>();
+            //builder.Configuration.AddUserSecrets<Program>();
 
             builder.Services.Configure<AppSettings>(
                 builder.Configuration.GetSection("AppSettings"));
 
-            builder.Services.AddSingleton<IConnectionMultiplexer>(sp =>
-            {
-                var configuration = sp.GetRequiredService<IConfiguration>();
-                var redisConnection = configuration.GetConnectionString("Redis")
-                ?? throw new InvalidOperationException("Redis connection string is missing.");
-
-                var options = ConfigurationOptions.Parse(redisConnection);
-
-                options.ConnectTimeout = 10000;
-                options.AbortOnConnectFail = false;
-
-                return ConnectionMultiplexer.Connect(options);
-            });
-
-            if (builder.Environment.IsDevelopment())
-            {
-                builder.Services.AddSingleton<ICacheService, MemoryCacheService>();
-            }
-            else
-            {
-                builder.Services.AddSingleton<ICacheService, RedisCacheService>();
-            }
+            builder.Services.AddSingleton<ICacheService, MemoryCacheService>();
 
             builder.Services.AddMemoryCache();
 
