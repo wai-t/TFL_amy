@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+﻿import { useState, useEffect } from 'react';
 import './App.css';
 
 function JourneyForm({ formData, fromSuggestions, toSuggestions, onFormSubmit, onInputChange }) {
@@ -84,16 +84,30 @@ function GetJourney() {
     const [showJourney, setShowJourney] = useState(false);
     const [noJourneyFound, setNoJourneyFound] = useState(false);
     const [errorMessage, setErrorMessage] = useState('');
+    const [cache, setCache] = useState({});
 
-    const API_BASE ='https://localhost:7056';
+    const API_BASE = 'https://localhost:7056';
 
     const fetchSuggestions = async (location, type) => {
+        if (cache[location]) {
+            type === 'from' ? setFromSuggestions(cache[location]) : setToSuggestions(cache[location]);
+            return;
+        }
+
         try {
             const response = await fetch(`${API_BASE}/api/StopPoint/autocomplete?query=${location}`);
             const data = await response.json();
             const topSuggestions = data.slice(0, 5);
-            if (type === 'from') setFromSuggestions(topSuggestions);
-            else if (type === 'to') setToSuggestions(topSuggestions);
+            setCache((prevCache) => ({
+                ...prevCache,
+                [location]: topSuggestions
+            }));
+
+            if (type === 'from') {
+                setFromSuggestions(topSuggestions);
+            } else if (type === 'to') {
+                setToSuggestions(topSuggestions);
+            }
         } catch (error) {
             console.error('Error fetching suggestions:', error);
         }
@@ -105,8 +119,7 @@ function GetJourney() {
 
         if (value.length > 2) {
             fetchSuggestions(value, name);
-        }
-        else {
+        } else {
             setFromSuggestions([]);
             setToSuggestions([]);
         }
@@ -149,6 +162,15 @@ function GetJourney() {
             setErrorMessage('Something went wrong. Please check your connection and try again.');
         }
     };
+
+    useEffect(() => {
+        if (formData.from.length > 2) {
+            fetchSuggestions(formData.from, 'from');
+        }
+        if (formData.to.length > 2) {
+            fetchSuggestions(formData.to, 'to');
+        }
+    }, [formData.from, formData.to]);
 
     return (
         <div className="container">
