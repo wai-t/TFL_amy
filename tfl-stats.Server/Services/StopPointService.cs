@@ -132,7 +132,7 @@ namespace tfl_stats.Server.Services
             {
                 try
                 {
-                    await _cache.SetAsync(cacheKey, apiSuggestions, TimeSpan.FromHours(1));
+                    await _cache.SetAsync(cacheKey, apiSuggestions, TimeSpan.FromDays(1));
                     _logger.LogInformation("CACHE MISS => Fetched and cached autocomplete for '{Query}'", query);
                 }
                 catch (Exception ex)
