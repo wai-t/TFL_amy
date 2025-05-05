@@ -19,7 +19,7 @@ namespace tfl_stats.Tests
             _mockOptions = new Mock<IOptions<AppSettings>>();
             _mockOptions.Setup(o => o.Value).Returns(new AppSettings
             {
-                baseUrl = "https://api.tfl.gov.uk/"
+                BaseUrl = "https://api.tfl.gov.uk/"
             });
 
             _mockLogger = new Mock<ILogger<LineService>>();
@@ -32,7 +32,7 @@ namespace tfl_stats.Tests
         }
 
         [Fact]
-        public async Task GetLine_WhenCalled_ReturnsListOfLines()
+        public async Task TestLineData()
         {
             var testLines = new List<Line>
         {
@@ -75,13 +75,14 @@ namespace tfl_stats.Tests
             var result = await _lineService.GetLine();
 
             Assert.NotNull(result);
+            Assert.NotNull(result.Data);
             Assert.Single(result.Data);
             Assert.Equal("Jubilee", result.Data[0].Name);
             Assert.Equal("Minor Delays", result.Data[0].LineStatuses[0].StatusSeverityDescription);
         }
 
         [Fact]
-        public async Task GetLine_WhenApiReturnsEmptyList_ReturnsEmptyData()
+        public async Task TestEmptyLineList()
         {
             _mockApiClient
                 .Setup(api => api.GetFromApi<List<Line>>(It.IsAny<string>(), "GetLine"))
@@ -90,11 +91,12 @@ namespace tfl_stats.Tests
             var result = await _lineService.GetLine();
 
             Assert.NotNull(result);
+            Assert.NotNull(result.Data);
             Assert.Empty(result.Data);
         }
 
         [Fact]
-        public async Task GetLine_WhenApiReturnsNull_ReturnsEmptyData()
+        public async Task TestNullLineList()
         {
             List<Line> nullLine = null;
             _mockApiClient
@@ -104,6 +106,7 @@ namespace tfl_stats.Tests
             var result = await _lineService.GetLine();
 
             Assert.NotNull(result);
+            Assert.NotNull(result.Data);
             Assert.Empty(result.Data);
         }
     }
