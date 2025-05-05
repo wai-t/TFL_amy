@@ -17,7 +17,7 @@ namespace tfl_stats.Server.Services.Cache
             {
                 return Task.FromResult(value);
             }
-            return Task.FromResult(value);
+            return Task.FromResult(default(T?));
         }
 
         public Task SetAsync<T>(string key, T value, TimeSpan expiration)
