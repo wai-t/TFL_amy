@@ -5,7 +5,7 @@
         public const string AllStopPoints = "allStopPoints";
 
         public static string Autocomplete(string query) =>
-            $"autocomplete:{query.ToLowerInvariant()}";
+            $"autocomplete:{query.ToLower()}";
     }
 
 }
