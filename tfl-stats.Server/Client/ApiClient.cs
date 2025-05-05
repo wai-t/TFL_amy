@@ -14,10 +14,9 @@ namespace tfl_stats.Server.Client
             _logger = logger;
         }
 
-        public async virtual Task<T?> GetFromApi<T>(string url, [CallerMemberName]string context="")
+        public async virtual Task<T?> GetFromApi<T>(string url, [CallerMemberName] string context = "")
         {
-            // Don't just log and "swallow" exceptions. Either handle them or
-            // let them bubble up, even if it means the caller has to deal with them.
+
             try
             {
                 var responseContent = await _httpClient.GetStringAsync(url);
@@ -38,8 +37,6 @@ namespace tfl_stats.Server.Client
                 _logger.LogError($"{context} - Unexpected error: {ex.Message}");
                 throw;
             }
-
-            //return default;
         }
     }
 }
