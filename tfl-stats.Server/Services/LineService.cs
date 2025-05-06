@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Options;
-using tfl_stats.Server.Client;
-using tfl_stats.Server.Configurations;
+﻿using tfl_stats.Server.Client;
 using tfl_stats.Server.Models;
 using tfl_stats.Server.Models.LineModels;
 
@@ -12,7 +10,7 @@ namespace tfl_stats.Server.Services
 
         private ILogger<LineService> _logger;
 
-        public LineService(ApiClient apiClient, IOptions<AppSettings> options, ILogger<LineService> logger)
+        public LineService(ApiClient apiClient, ILogger<LineService> logger)
         {
             _apiClient = apiClient;
             _logger = logger;

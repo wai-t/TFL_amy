@@ -1,8 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
 using Moq;
 using tfl_stats.Server.Client;
-using tfl_stats.Server.Configurations;
 using tfl_stats.Server.Models.LineModels;
 using tfl_stats.Server.Services;
 
@@ -10,25 +8,16 @@ namespace tfl_stats.Tests
 {
     public class LineServiceTest
     {
-        private readonly Mock<IOptions<AppSettings>> _mockOptions;
         private readonly Mock<ILogger<LineService>> _mockLogger;
         private readonly Mock<ApiClient> _mockApiClient;
         private readonly LineService _lineService;
         public LineServiceTest()
         {
-            _mockOptions = new Mock<IOptions<AppSettings>>();
-            _mockOptions.Setup(o => o.Value).Returns(new AppSettings
-            {
-                BaseUrl = "https://api.tfl.gov.uk/"
-            });
-
             _mockLogger = new Mock<ILogger<LineService>>();
 
             _mockApiClient = new Mock<ApiClient>(MockBehavior.Strict, new HttpClient(), Mock.Of<ILogger<ApiClient>>());
 
-            _lineService = new LineService(_mockApiClient.Object,
-                                           _mockOptions.Object,
-                                           _mockLogger.Object);
+            _lineService = new LineService(_mockApiClient.Object, _mockLogger.Object);
         }
 
         [Fact]
