@@ -1,5 +1,4 @@
 using tfl_stats.Server.Client;
-using tfl_stats.Server.Configurations;
 using tfl_stats.Server.Services;
 using tfl_stats.Server.Services.Cache;
 
@@ -25,21 +24,21 @@ namespace tfl_stats.Server
                                       .AllowAnyMethod());
             });
 
-            //builder.Configuration.AddUserSecrets<Program>();
-
-            builder.Services.Configure<AppSettings>(
-                builder.Configuration.GetSection("AppSettings"));
-
+            builder.Services.AddMemoryCache();
             builder.Services.AddSingleton<ICacheService, MemoryCacheService>();
 
-            builder.Services.AddMemoryCache();
+            var baseUrl = builder.Configuration["ApiSettings:BaseUrl"];
 
-            builder.Services.AddHttpClient<ApiClient>(
-                options =>
-                {
-                    options.BaseAddress = new Uri("https://api.tfl.gov.uk/");
-                    options.Timeout = TimeSpan.FromSeconds(10);
-                });
+            if (string.IsNullOrWhiteSpace(baseUrl))
+            {
+                throw new InvalidOperationException("ApiSettings:BaseUrl is not configured in appsettings.json.");
+            }
+
+            builder.Services.AddHttpClient<ApiClient>(options =>
+            {
+                options.BaseAddress = new Uri(baseUrl);
+                options.Timeout = TimeSpan.FromSeconds(10);
+            });
 
             builder.Services.AddScoped<LineService>();
             builder.Services.AddScoped<StopPointService>();
