@@ -12,7 +12,8 @@ namespace tfl_stats.Tests
     {
         private readonly ApiClient _apiClient;
 
-        public ApiClientTest() {
+        public ApiClientTest()
+        {
             // Arrange
             var httpClient = new HttpClient()
             {
@@ -25,7 +26,7 @@ namespace tfl_stats.Tests
         [Trait("Category", "TflApiTests")]
         public async Task TestLineStatusQuery()
         {
-            var result = await _apiClient.GetFromApi<List<Line>>( "Line/Mode/tube/Status");
+            var result = await _apiClient.GetFromApi<List<Line>>("Line/Mode/tube/Status");
 
             // Assert
             Assert.NotNull(result);
@@ -35,7 +36,7 @@ namespace tfl_stats.Tests
 
         [Theory]
         [Trait("Category", "TflApiTests")]
-        [InlineData("Angel","Angel Underground Station")]
+        [InlineData("Angel", "Angel Underground Station")]
         [InlineData("Liverpool", "Liverpool Street")]
         public async Task TestStopPoints(string query, string expected)
         {
