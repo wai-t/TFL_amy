@@ -9,7 +9,7 @@ function JourneyForm({ formData, fromSuggestions, toSuggestions, onFormSubmit, o
                 id="from"
                 type="text"
                 name="from"
-                value={formData.from}
+                value={formData.from.name}
                 onChange={onInputChange}
                 required
                 list="from-suggestions"
@@ -17,7 +17,7 @@ function JourneyForm({ formData, fromSuggestions, toSuggestions, onFormSubmit, o
             />
             <datalist id="from-suggestions">
                 {fromSuggestions.map((suggestion) => (
-                    <option key={suggestion} value={suggestion} />
+                    <option key={suggestion.naptanId} value={suggestion.commonName} />
                 ))}
             </datalist>
 
@@ -26,7 +26,7 @@ function JourneyForm({ formData, fromSuggestions, toSuggestions, onFormSubmit, o
                 id="to"
                 type="text"
                 name="to"
-                value={formData.to}
+                value={formData.to.name}
                 onChange={onInputChange}
                 required
                 list="to-suggestions"
@@ -34,7 +34,7 @@ function JourneyForm({ formData, fromSuggestions, toSuggestions, onFormSubmit, o
             />
             <datalist id="to-suggestions">
                 {toSuggestions.map((suggestion) => (
-                    <option key={suggestion} value={suggestion} />
+                    <option key={suggestion.naptanId} value={suggestion.commonName} />
                 ))}
             </datalist>
 
@@ -77,7 +77,10 @@ function JourneyLeg({ leg }) {
 }
 
 function GetJourney() {
-    const [formData, setFormData] = useState({ from: '', to: '' });
+    const [formData, setFormData] = useState({
+        from: { name: '', id: '' },
+        to: { name: '', id: '' },
+    });
     const [fromSuggestions, setFromSuggestions] = useState([]);
     const [toSuggestions, setToSuggestions] = useState([]);
     const [journeys, setJourneys] = useState([]);
@@ -93,21 +96,13 @@ function GetJourney() {
             type === 'from' ? setFromSuggestions(cache[location]) : setToSuggestions(cache[location]);
             return;
         }
-
         try {
             const response = await fetch(`${API_BASE}/api/StopPoint/autocomplete?query=${location}`);
             const data = await response.json();
             const topSuggestions = data.slice(0, 5);
-            setCache((prevCache) => ({
-                ...prevCache,
-                [location]: topSuggestions
-            }));
-
-            if (type === 'from') {
-                setFromSuggestions(topSuggestions);
-            } else if (type === 'to') {
-                setToSuggestions(topSuggestions);
-            }
+            setCache((prev) => ({ ...prev, [location]: topSuggestions }));
+            if (type === 'from') setFromSuggestions(topSuggestions);
+            else setToSuggestions(topSuggestions);
         } catch (error) {
             console.error('Error fetching suggestions:', error);
         }
@@ -115,13 +110,21 @@ function GetJourney() {
 
     const handleChange = (e) => {
         const { name, value } = e.target;
-        setFormData((prev) => ({ ...prev, [name]: value }));
+        const suggestions = name === 'from' ? fromSuggestions : toSuggestions;
+        const matched = suggestions.find(s => s.commonName === value);
+        setFormData((prev) => ({
+            ...prev,
+            [name]: {
+                name: value,
+                id: matched ? matched.naptanId : ''
+            }
+        }));
 
         if (value.length > 2) {
             fetchSuggestions(value, name);
         } else {
-            setFromSuggestions([]);
-            setToSuggestions([]);
+            if (name === 'from') setFromSuggestions([]);
+            else setToSuggestions([]);
         }
     };
 
@@ -131,7 +134,7 @@ function GetJourney() {
         setNoJourneyFound(false);
         setErrorMessage('');
 
-        if (formData.from === formData.to) {
+        if (formData.from.id === formData.to.id) {
             setErrorMessage('Departure and destination cannot be the same.');
             return;
         }
@@ -140,7 +143,10 @@ function GetJourney() {
             const response = await fetch(`${API_BASE}/api/Journey`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(formData),
+                body: JSON.stringify({
+                    fromNaptanId: formData.from.id,
+                    toNaptanId: formData.to.id,
+                }),
             });
 
             if (!response.ok) {
@@ -164,13 +170,13 @@ function GetJourney() {
     };
 
     useEffect(() => {
-        if (formData.from.length > 2) {
-            fetchSuggestions(formData.from, 'from');
+        if (formData.from.name.length > 2) {
+            fetchSuggestions(formData.from.name, 'from');
         }
-        if (formData.to.length > 2) {
-            fetchSuggestions(formData.to, 'to');
+        if (formData.to.name.length > 2) {
+            fetchSuggestions(formData.to.name, 'to');
         }
-    }, [formData.from, formData.to]);
+    }, [formData.from.name, formData.to.name]);
 
     return (
         <div className="container">
