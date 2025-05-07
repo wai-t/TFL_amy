@@ -25,15 +25,14 @@ namespace tfl_stats.Server.Services
 
         public async Task<ResponseResult<List<Journey>>> GetJourney(JourneyRequest journeyRequest)
         {
-            var from = await _stopPointService.GetStopPointId(journeyRequest.From);
-            var to = await _stopPointService.GetStopPointId(journeyRequest.To);
 
-            if (string.IsNullOrEmpty(from) || string.IsNullOrEmpty(to))
+
+            if (string.IsNullOrEmpty(journeyRequest.FromNaptanId) || string.IsNullOrEmpty(journeyRequest.ToNaptanId))
             {
                 return new ResponseResult<List<Journey>>(false, new List<Journey>(), ResponseStatus.BadRequest);
             }
 
-            string url = $"Journey/journeyresults/{Uri.EscapeDataString(from)}/to/{Uri.EscapeDataString(to)}";
+            string url = $"Journey/journeyresults/{Uri.EscapeDataString(journeyRequest.FromNaptanId)}/to/{Uri.EscapeDataString(journeyRequest.ToNaptanId)}";
 
             var journeyResponse = await _apiclient.GetFromApi<JourneyResponse>(url);
 
