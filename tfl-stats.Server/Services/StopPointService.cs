@@ -54,7 +54,7 @@ namespace tfl_stats.Server.Services
                 {
                     var allStopPoints = response.StopPoints
                         .Where(sp => sp.StopType == "NaptanMetroStation")
-                        .Select(sp => sp.CommonName)
+                        .Select(sp => new StopPointSummary { NaptanId = sp.NaptanId, CommonName = sp.CommonName })
                         .Distinct()
                         .ToList();
 
@@ -76,34 +76,34 @@ namespace tfl_stats.Server.Services
             }
         }
 
-        public async Task<List<string>> GetAutocompleteSuggestions(string query)
+        public async Task<List<StopPointSummary>> GetAutocompleteSuggestions(string query)
         {
             if (string.IsNullOrWhiteSpace(query))
-                return new List<string>();
+                return new List<StopPointSummary>();
 
             var cacheKey = CacheKeys.Autocomplete(query);
 
             try
             {
-                var cachedSuggestions = await _cache.GetAsync<List<string>>(cacheKey);
+                var cachedSuggestions = await _cache.GetAsync<List<StopPointSummary>>(cacheKey);
                 if (cachedSuggestions != null)
                 {
                     _logger.LogInformation("CACHE HIT for autocomplete '{Query}'", query);
                     return cachedSuggestions;
                 }
 
-                var allStopPoints = await _cache.GetAsync<List<string>>(CacheKeys.AllStopPoints);
+                var allStopPoints = await _cache.GetAsync<List<StopPointSummary>>(CacheKeys.AllStopPoints);
                 if (allStopPoints != null)
                 {
                     _logger.LogInformation("CACHE HIT for all stop points.");
 
                     var suggestions = allStopPoints
-                        .Where(sp => sp.Contains(query, StringComparison.OrdinalIgnoreCase))
+                        .Where(sp => sp.CommonName.Contains(query, StringComparison.OrdinalIgnoreCase))
                         .ToList();
 
                     if (suggestions.Any())
                     {
-                        await _cache.SetAsync(cacheKey, suggestions, TimeSpan.FromHours(1));
+                        await _cache.SetAsync(cacheKey, suggestions, TimeSpan.FromDays(1));
                         return suggestions;
                     }
                 }
@@ -118,7 +118,8 @@ namespace tfl_stats.Server.Services
                 _logger.LogError(ex, "Error accessing cache for '{Query}'", query);
             }
 
-            return await FetchFromApiAndCache(query, cacheKey);
+            //return await FetchFromApiAndCache(query, cacheKey);
+            return new List<StopPointSummary>();
         }
 
         private async Task<List<string>> FetchFromApiAndCache(string query, string cacheKey)
