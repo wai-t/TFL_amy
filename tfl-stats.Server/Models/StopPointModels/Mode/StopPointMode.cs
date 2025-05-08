@@ -4,27 +4,23 @@ namespace tfl_stats.Server.Models.StopPointModels.Mode
 {
     public class StopPointMode
     {
-        //[JsonRequired]
         [JsonProperty("naptanId")]
+        [JsonRequired]
         public string NaptanId { get; set; } = string.Empty;
 
-        //[JsonRequired]
         [JsonProperty("indicator")]
         public string Indicator { get; set; } = string.Empty;
 
-        //[JsonRequired]
         [JsonProperty("stopLetter")]
         public string StopLetter { get; set; } = string.Empty;
 
-        //[JsonRequired]
         [JsonProperty("modes")]
+        [JsonRequired]
         public List<string> Modes { get; set; } = new List<string>();
 
-        //[JsonRequired]
-        //[JsonProperty("icsCode")]
+        [JsonProperty("icsCode")]
         public string IcsCode { get; set; } = string.Empty;
 
-        //[JsonRequired]
         [JsonProperty("stopType")]
         public string StopType { get; set; } = string.Empty;
 
@@ -35,44 +31,48 @@ namespace tfl_stats.Server.Models.StopPointModels.Mode
         public string HubNaptanCode { get; set; } = string.Empty;
 
         [JsonProperty("lines")]
-        public List<object> Lines { get; set; } = new List<object>();
+        public List<Line> Lines { get; set; } = new List<Line>();
 
         [JsonProperty("lineGroup")]
-        public List<object> LineGroup { get; set; } = new List<object>();
+        public List<LineGroup> LineGroup { get; set; } = new List<LineGroup>();
 
         [JsonProperty("lineModeGroups")]
-        public List<object> LineModeGroups { get; set; } = new List<object>();
+        public List<LineModeGroups> LineModeGroups { get; set; } = new List<LineModeGroups>();
 
-        //[JsonRequired]
         [JsonProperty("status")]
         public bool Status { get; set; }
 
-        //[JsonRequired]
         [JsonProperty("id")]
+        [JsonRequired]
         public string Id { get; set; } = string.Empty;
 
-        //[JsonRequired]
         [JsonProperty("commonName")]
+        [JsonRequired]
         public string CommonName { get; set; } = string.Empty;
 
-        //[JsonRequired]
         [JsonProperty("placeType")]
         public string PlaceType { get; set; } = string.Empty;
 
-        //[JsonRequired]
         [JsonProperty("additionalProperties")]
         public List<AdditionalProperty> AdditionalProperties { get; set; } = new List<AdditionalProperty>();
 
-        //[JsonRequired]
         [JsonProperty("children")]
-        public List<object> Children { get; set; } = new List<object>();
+        public List<Children> Children { get; set; } = new List<Children>();
 
-        //[JsonRequired]
         [JsonProperty("lat")]
+        [JsonRequired]
         public double Latitude { get; set; }
 
-        //[JsonRequired]
         [JsonProperty("lon")]
+        [JsonRequired]
         public double Longitude { get; set; }
+    }
+
+    public class Children
+    {
+    }
+
+    public class LineModeGroups
+    {
     }
 }

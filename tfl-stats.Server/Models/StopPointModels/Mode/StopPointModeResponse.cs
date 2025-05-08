@@ -6,6 +6,6 @@ namespace tfl_stats.Server.Models.StopPointModels.Mode
     {
         [JsonRequired]
         [JsonProperty("stopPoints")]
-        public List<StopPointMode> StopPoints { get; set; }
+        public List<StopPointMode> StopPoints { get; set; } = new List<StopPointMode>();
     }
 }

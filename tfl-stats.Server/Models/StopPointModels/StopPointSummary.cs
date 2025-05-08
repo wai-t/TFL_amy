@@ -1,4 +1,4 @@
-﻿namespace tfl_stats.Server.Models.StopPointModels.Mode
+﻿namespace tfl_stats.Server.Models.StopPointModels
 {
     public class StopPointSummary
     {
