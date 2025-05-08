@@ -2,7 +2,6 @@
 using Moq;
 using tfl_stats.Server.Client;
 using tfl_stats.Server.Models.JourneyModels;
-using tfl_stats.Server.Models.LineModels;
 using tfl_stats.Server.Models.StopPointModels;
 using tfl_stats.Server.Models.StopPointModels.Mode;
 
@@ -26,7 +25,7 @@ namespace tfl_stats.Tests
         [Trait("Category", "TflApiTests")]
         public async Task TestLineStatusQuery()
         {
-            var result = await _apiClient.GetFromApi<List<Line>>("Line/Mode/tube/Status");
+            var result = await _apiClient.GetFromApi<List<Server.Models.LineModels.Line>>("Line/Mode/tube/Status");
 
             // Assert
             Assert.NotNull(result);
