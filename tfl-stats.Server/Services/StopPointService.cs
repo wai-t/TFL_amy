@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Options;
-using tfl_stats.Server.Client;
-using tfl_stats.Server.Configurations;
+﻿using tfl_stats.Server.Client;
 using tfl_stats.Server.Models.StopPointModels;
 using tfl_stats.Server.Models.StopPointModels.Mode;
 using tfl_stats.Server.Services.Cache;
@@ -17,7 +15,6 @@ namespace tfl_stats.Server.Services
 
         public StopPointService(
             ApiClient apiClient,
-            IOptions<AppSettings> options,
             ICacheService cache,
             ILogger<StopPointService> logger)
         {
@@ -26,21 +23,13 @@ namespace tfl_stats.Server.Services
             _logger = logger;
         }
 
-        public async Task<string?> GetStopPointId(string location)
-        {
-            var url = $"StopPoint/Search/{Uri.EscapeDataString(location)}";
-            var response = await _apiClient.GetFromApi<StopPointSearchResponse>(url);
-
-            return response?.Matches?.FirstOrDefault(sp => sp.Modes.Contains("tube"))?.IcsId;
-        }
-
         public async Task PreloadStopPoints()
         {
             await _preloadLock.WaitAsync();
 
             try
             {
-                var existing = await _cache.GetAsync<List<string>>(CacheKeys.AllStopPoints);
+                var existing = await _cache.GetAsync<List<StopPointSummary>>(CacheKeys.AllStopPoints);
                 if (existing != null)
                 {
                     _logger.LogInformation("Preload skipped – already cached.");
@@ -54,7 +43,11 @@ namespace tfl_stats.Server.Services
                 {
                     var allStopPoints = response.StopPoints
                         .Where(sp => sp.StopType == "NaptanMetroStation")
-                        .Select(sp => new StopPointSummary { NaptanId = sp.NaptanId, CommonName = sp.CommonName })
+                        .Select(sp => new StopPointSummary
+                        {
+                            NaptanId = sp.NaptanId,
+                            CommonName = sp.CommonName
+                        })
                         .Distinct()
                         .ToList();
 
@@ -88,15 +81,20 @@ namespace tfl_stats.Server.Services
                 var cachedSuggestions = await _cache.GetAsync<List<StopPointSummary>>(cacheKey);
                 if (cachedSuggestions != null)
                 {
-                    _logger.LogInformation("CACHE HIT for autocomplete '{Query}'", query);
+                    _logger.LogInformation("Cache hit for autocomplete '{Query}'", query);
                     return cachedSuggestions;
                 }
 
                 var allStopPoints = await _cache.GetAsync<List<StopPointSummary>>(CacheKeys.AllStopPoints);
+                if (allStopPoints == null)
+                {
+                    _logger.LogInformation("Cache miss: preloading stop points.");
+                    await PreloadStopPoints();
+                    allStopPoints = await _cache.GetAsync<List<StopPointSummary>>(CacheKeys.AllStopPoints);
+                }
+
                 if (allStopPoints != null)
                 {
-                    _logger.LogInformation("CACHE HIT for all stop points.");
-
                     var suggestions = allStopPoints
                         .Where(sp => sp.CommonName.Contains(query, StringComparison.OrdinalIgnoreCase))
                         .ToList();
@@ -104,45 +102,67 @@ namespace tfl_stats.Server.Services
                     if (suggestions.Any())
                     {
                         await _cache.SetAsync(cacheKey, suggestions, TimeSpan.FromDays(1));
+                        _logger.LogInformation("Autocomplete suggestions cached for '{Query}'", query);
                         return suggestions;
                     }
+                    else
+                    {
+                        _logger.LogInformation("No autocomplete suggestions found for '{Query}'", query);
+                    }
                 }
-                else
-                {
-                    _logger.LogInformation("CACHE MISS: Preloading stop points.");
-                    await PreloadStopPoints();
-                }
+
+                _logger.LogWarning("Using fallback to fetch suggestions directly from API.");
+                return await FetchFromApiAndCache(query, cacheKey);
             }
             catch (Exception ex)
             {
                 _logger.LogError(ex, "Error accessing cache for '{Query}'", query);
+                return new List<StopPointSummary>();
             }
-
-            //return await FetchFromApiAndCache(query, cacheKey);
-            return new List<StopPointSummary>();
         }
 
-        private async Task<List<string>> FetchFromApiAndCache(string query, string cacheKey)
+        private async Task<List<StopPointSummary>> FetchFromApiAndCache(string query, string cacheKey)
         {
-            var url = $"StopPoint/Search/{Uri.EscapeDataString(query)}?modes=tube";
-            var response = await _apiClient.GetFromApi<StopPointSearchResponse>(url);
-
-            var apiSuggestions = response?.Matches?.Select(sp => sp.Name).ToList() ?? new List<string>();
-
-            if (apiSuggestions.Any())
+            try
             {
-                try
-                {
-                    await _cache.SetAsync(cacheKey, apiSuggestions, TimeSpan.FromDays(1));
-                    _logger.LogInformation("CACHE MISS => Fetched and cached autocomplete for '{Query}'", query);
-                }
-                catch (Exception ex)
-                {
-                    _logger.LogError(ex, "Error writing to cache for '{CacheKey}'", cacheKey);
-                }
-            }
+                var url = "StopPoint/Mode/tube";
+                var response = await _apiClient.GetFromApi<StopPointModeResponse>(url);
 
-            return apiSuggestions;
+                if (response?.StopPoints == null)
+                {
+                    _logger.LogWarning("Fallback API call returned no data.");
+                    return new List<StopPointSummary>();
+                }
+
+                var allStopPoints = response.StopPoints
+                    .Where(sp => sp.StopType == "NaptanMetroStation")
+                    .Select(sp => new StopPointSummary
+                    {
+                        NaptanId = sp.NaptanId,
+                        CommonName = sp.CommonName
+                    })
+                    .Distinct()
+                    .ToList();
+
+                await _cache.SetAsync(CacheKeys.AllStopPoints, allStopPoints, TimeSpan.FromDays(1));
+
+                var suggestions = allStopPoints
+                    .Where(sp => sp.CommonName.Contains(query, StringComparison.OrdinalIgnoreCase))
+                    .ToList();
+
+                if (suggestions.Any())
+                {
+                    await _cache.SetAsync(cacheKey, suggestions, TimeSpan.FromDays(1));
+                    _logger.LogInformation("Fallback API results cached for '{Query}'", query);
+                }
+
+                return suggestions;
+            }
+            catch (Exception ex)
+            {
+                _logger.LogError(ex, "Fallback API call failed for '{Query}'", query);
+                return new List<StopPointSummary>();
+            }
         }
     }
 }
