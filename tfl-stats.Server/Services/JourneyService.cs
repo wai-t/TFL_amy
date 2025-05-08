@@ -1,6 +1,4 @@
-﻿using Microsoft.Extensions.Options;
-using tfl_stats.Server.Client;
-using tfl_stats.Server.Configurations;
+﻿using tfl_stats.Server.Client;
 using tfl_stats.Server.Models;
 using tfl_stats.Server.Models.JourneyModels;
 
@@ -14,7 +12,6 @@ namespace tfl_stats.Server.Services
         private readonly StopPointService _stopPointService;
 
         public JourneyService(ApiClient apiClient,
-            IOptions<AppSettings> options,
             StopPointService stopPointService,
             ILogger<JourneyService> logger)
         {
