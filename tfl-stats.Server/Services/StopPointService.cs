@@ -1,4 +1,6 @@
-﻿using tfl_stats.Server.Client;
+﻿using System.Collections.Specialized;
+using System.ComponentModel;
+using tfl_stats.Server.Client;
 using tfl_stats.Server.Models.StopPointModels;
 using tfl_stats.Server.Models.StopPointModels.Mode;
 using tfl_stats.Server.Services.Cache;
@@ -29,35 +31,36 @@ namespace tfl_stats.Server.Services
 
             try
             {
-                var cached = await _cache.GetAsync<List<StopPointSummary>>(CacheKeys.AllStopPoints);
-                if (cached != null)
-                {
-                    _logger.LogInformation("Stop points loaded from cache.");
-                    return cached;
-                }
+                var cached = await _cache.GetAsync<List<StopPointSummary>>(CacheKeys.AllStopPoints, FetchAllStopPoints);
+                return cached!;
+                //if (cached != null)
+                //{
+                //    _logger.LogInformation("Stop points loaded from cache.");
+                //    return cached;
+                //}
 
-                var url = "StopPoint/Mode/tube";
-                var response = await _apiClient.GetFromApi<StopPointModeResponse>(url);
+                //var url = "StopPoint/Mode/tube";
+                //var response = await _apiClient.GetFromApi<StopPointModeResponse>(url);
 
-                if (response?.StopPoints == null)
-                {
-                    _logger.LogWarning("API returned no stop points.");
-                    return new List<StopPointSummary>();
-                }
+                //if (response?.StopPoints == null)
+                //{
+                //    _logger.LogWarning("API returned no stop points.");
+                //    return new List<StopPointSummary>();
+                //}
 
-                var stopPoints = response.StopPoints
-                    .Where(sp => sp.StopType == "NaptanMetroStation")
-                    .Select(sp => new StopPointSummary
-                    {
-                        NaptanId = sp.NaptanId,
-                        CommonName = sp.CommonName
-                    })
-                    .ToList();
+                //var stopPoints = response.StopPoints
+                //    .Where(sp => sp.StopType == "NaptanMetroStation")
+                //    .Select(sp => new StopPointSummary
+                //    {
+                //        NaptanId = sp.NaptanId,
+                //        CommonName = sp.CommonName
+                //    })
+                //    .ToList();
 
-                await _cache.SetAsync(CacheKeys.AllStopPoints, stopPoints, TimeSpan.FromDays(1));
-                _logger.LogInformation("Stop points fetched from API and cached.");
+                //await _cache.SetAsync(CacheKeys.AllStopPoints, stopPoints, TimeSpan.FromDays(1));
+                //_logger.LogInformation("Stop points fetched from API and cached.");
 
-                return stopPoints;
+                //return stopPoints;
             }
             catch (Exception ex)
             {
@@ -70,40 +73,66 @@ namespace tfl_stats.Server.Services
             }
         }
 
+        public async Task<List<StopPointSummary>> FetchAllStopPoints(string _)
+        {
+            var url = "StopPoint/Mode/tube";
+            var response = await _apiClient.GetFromApi<StopPointModeResponse>(url);
+
+            if (response?.StopPoints == null)
+            {
+                _logger.LogWarning("API returned no stop points.");
+                return new List<StopPointSummary>();
+            }
+
+            var stopPoints = response.StopPoints
+                .Where(sp => sp.StopType == "NaptanMetroStation")
+                .Select(sp => new StopPointSummary
+                {
+                    NaptanId = sp.NaptanId,
+                    CommonName = sp.CommonName
+                })
+                .ToList();
+
+            await _cache.SetAsync(CacheKeys.AllStopPoints, stopPoints, TimeSpan.FromDays(1));
+            _logger.LogInformation("Stop points fetched from API and cached.");
+
+            return stopPoints;
+        }
         public async Task<List<StopPointSummary>> GetAutocompleteSuggestions(string query)
         {
             if (string.IsNullOrWhiteSpace(query))
                 return new List<StopPointSummary>();
 
-            var cacheKey = CacheKeys.Autocomplete(query);
+            //var cacheKey = CacheKeys.Autocomplete(query);
 
             try
             {
-                var cachedSuggestions = await _cache.GetAsync<List<StopPointSummary>>(cacheKey);
-                if (cachedSuggestions != null)
-                {
-                    _logger.LogInformation("Cache hit for autocomplete '{Query}'", query);
-                    return cachedSuggestions;
-                }
+                var cachedSuggestions = await _cache.GetAsync<List<StopPointSummary>>(query, GetFilteredStopPoints);
+                return cachedSuggestions!;
+                //if (cachedSuggestions != null)
+                //{
+                //    _logger.LogInformation("Cache hit for autocomplete '{Query}'", query);
+                //    return cachedSuggestions;
+                //}
 
-                var allStopPoints = await PreloadStopPoints();
+                //var allStopPoints = await PreloadStopPoints();
 
-                var suggestions = allStopPoints
-                    .Where(sp => sp.CommonName.Contains(query, StringComparison.OrdinalIgnoreCase))
-                    .Take(10)
-                    .ToList();
+                //var suggestions = allStopPoints
+                //    .Where(sp => sp.CommonName.Contains(query, StringComparison.OrdinalIgnoreCase))
+                //    .Take(10)
+                //    .ToList();
 
-                if (suggestions.Any())
-                {
-                    await _cache.SetAsync(cacheKey, suggestions, TimeSpan.FromDays(1));
-                    _logger.LogInformation("Autocomplete suggestions cached for '{Query}'", query);
-                }
-                else
-                {
-                    _logger.LogInformation("No autocomplete suggestions found for '{Query}'", query);
-                }
+                //if (suggestions.Any())
+                //{
+                //    await _cache.SetAsync(cacheKey, suggestions, TimeSpan.FromDays(1));
+                //    _logger.LogInformation("Autocomplete suggestions cached for '{Query}'", query);
+                //}
+                //else
+                //{
+                //    _logger.LogInformation("No autocomplete suggestions found for '{Query}'", query);
+                //}
 
-                return suggestions;
+                //return suggestions;
             }
             catch (Exception ex)
             {
@@ -112,6 +141,29 @@ namespace tfl_stats.Server.Services
             }
         }
 
+        public async Task<List<StopPointSummary>> GetFilteredStopPoints(string query)
+        {
+            var allStopPoints = await PreloadStopPoints();
+
+            var suggestions = allStopPoints
+                .Where(sp => sp.CommonName.Contains(query, StringComparison.OrdinalIgnoreCase))
+                .Take(10)
+                .ToList();
+
+            if (suggestions.Any())
+            {
+                var cacheKey = CacheKeys.Autocomplete(query);
+
+                await _cache.SetAsync(cacheKey, suggestions, TimeSpan.FromDays(1));
+                _logger.LogInformation("Autocomplete suggestions cached for '{Query}'", query);
+            }
+            else
+            {
+                _logger.LogInformation("No autocomplete suggestions found for '{Query}'", query);
+            }
+
+            return suggestions;
+        }
         internal async Task<List<StopPointSummary>> GetStopPointList()
         {
             return await PreloadStopPoints();
