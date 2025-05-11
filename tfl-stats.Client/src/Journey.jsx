@@ -81,6 +81,7 @@ function GetJourney() {
         from: { name: '', id: '' },
         to: { name: '', id: '' },
     });
+    const [stopPoints, setStopPoints] = useState([])
     const [fromSuggestions, setFromSuggestions] = useState([]);
     const [toSuggestions, setToSuggestions] = useState([]);
     const [journeys, setJourneys] = useState([]);
@@ -91,6 +92,15 @@ function GetJourney() {
 
     //const API_BASE = 'https://localhost:7056';
 
+    const fetchStopPoints = async () => {
+        try {
+            const response = await fetch(`api/StopPoint/stopPointList`);
+            const data = await response.json();
+            setStopPoints(data);
+        } catch (error) {
+            console.error('Error in fetchStopPoints:', error);
+        }
+    }
     const fetchSuggestions = async (location, type) => {
         if (cache[location]) {
             type === 'from' ? setFromSuggestions(cache[location]) : setToSuggestions(cache[location]);
@@ -108,10 +118,37 @@ function GetJourney() {
         }
     };
 
+    //const handleChange = (e) => {
+    //    const { name, value } = e.target;
+    //    const suggestions = name === 'from' ? fromSuggestions : toSuggestions;
+    //    const matched = suggestions.find(s => s.commonName === value);
+    //    setFormData((prev) => ({
+    //        ...prev,
+    //        [name]: {
+    //            name: value,
+    //            id: matched ? matched.naptanId : ''
+    //        }
+    //    }));
+
+    //    if (value.length > 2) {
+    //        fetchSuggestions(value, name);
+    //    } else {
+    //        if (name === 'from') setFromSuggestions([]);
+    //        else setToSuggestions([]);
+    //    }
+    //};
+
     const handleChange = (e) => {
         const { name, value } = e.target;
-        const suggestions = name === 'from' ? fromSuggestions : toSuggestions;
-        const matched = suggestions.find(s => s.commonName === value);
+
+        const f = value.toLowerCase();
+        let suggestions = [];        
+        if (value.length > 2) {
+            suggestions = stopPoints.filter(s => s.commonName.toLowerCase().includes(f));
+        }
+        name === "from" ?
+            setFromSuggestions(suggestions) : setToSuggestions(suggestions);
+        const matched = suggestions.find(s => s.commonName.toLowerCase() === f);
         setFormData((prev) => ({
             ...prev,
             [name]: {
@@ -119,15 +156,7 @@ function GetJourney() {
                 id: matched ? matched.naptanId : ''
             }
         }));
-
-        if (value.length > 2) {
-            fetchSuggestions(value, name);
-        } else {
-            if (name === 'from') setFromSuggestions([]);
-            else setToSuggestions([]);
-        }
     };
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         setShowJourney(false);
@@ -175,13 +204,14 @@ function GetJourney() {
     };
 
     useEffect(() => {
-        if (formData.from.name.length > 2) {
-            fetchSuggestions(formData.from.name, 'from');
-        }
-        if (formData.to.name.length > 2) {
-            fetchSuggestions(formData.to.name, 'to');
-        }
-    }, [formData.from.name, formData.to.name]);
+        fetchStopPoints();
+        //if (formData.from.name.length > 2) {
+        //    fetchSuggestions(formData.from.name, 'from');
+        //}
+        //if (formData.to.name.length > 2) {
+        //    fetchSuggestions(formData.to.name, 'to');
+        //}
+    }, []);
 
     return (
         <div className="container">
