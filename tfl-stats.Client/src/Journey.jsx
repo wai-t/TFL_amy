@@ -3,7 +3,7 @@ import './App.css';
 
 function JourneyForm({ formData, fromSuggestions, toSuggestions, onFormSubmit, onInputChange }) {
     return (
-        <form className="form" onSubmit={onFormSubmit}>
+        <form className="form journey-form" onSubmit={onFormSubmit}>
             <label htmlFor="from">From:</label>
             <input
                 id="from"
@@ -133,6 +133,11 @@ function GetJourney() {
         setShowJourney(false);
         setNoJourneyFound(false);
         setErrorMessage('');
+
+        if (!formData.from.id || !formData.to.id) {
+            setErrorMessage('Departure and destination should be selected from suggestions.');
+            return;
+        }
 
         if (formData.from.id === formData.to.id) {
             setErrorMessage('Departure and destination cannot be the same.');

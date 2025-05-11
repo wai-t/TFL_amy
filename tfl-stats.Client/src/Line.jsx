@@ -84,6 +84,7 @@ function GetLine() {
                     setLoading(false);
                 }
             } catch (error) {
+                console.error('Error fetching line data:', error); 
                 setError('Error fetching line data:',error);
                 setLoading(false);
             }
