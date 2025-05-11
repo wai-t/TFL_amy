@@ -91,6 +91,8 @@ function GetLine() {
         };
 
         fetchLineData();
+        const interval = setInterval(fetchLineData, 30000);
+        return () => clearInterval(interval); 
     }, []);
 
     const toggleStatusDetails = (index) => {
