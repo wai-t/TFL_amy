@@ -93,7 +93,7 @@ namespace tfl_stats.Server.Services
                 })
                 .ToList();
 
-            await _cache.SetAsync(CacheKeys.AllStopPoints, stopPoints, TimeSpan.FromDays(1));
+            //await _cache.SetAsync(CacheKeys.AllStopPoints, stopPoints, TimeSpan.FromDays(1));
             _logger.LogInformation("Stop points fetched from API and cached.");
 
             return stopPoints;
@@ -154,7 +154,7 @@ namespace tfl_stats.Server.Services
             {
                 var cacheKey = CacheKeys.Autocomplete(query);
 
-                await _cache.SetAsync(cacheKey, suggestions, TimeSpan.FromDays(1));
+                //await _cache.SetAsync(cacheKey, suggestions, TimeSpan.FromDays(1));
                 _logger.LogInformation("Autocomplete suggestions cached for '{Query}'", query);
             }
             else

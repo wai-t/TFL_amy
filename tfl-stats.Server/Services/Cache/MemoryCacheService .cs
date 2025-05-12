@@ -24,6 +24,7 @@ namespace tfl_stats.Server.Services.Cache
                 }
 
                 var data = await loader(key);
+                // maybe check error here, that data is valid
                 await SetAsync(key, data, TimeSpan.FromDays(1));
                 return data;
             }
