@@ -112,5 +112,9 @@ namespace tfl_stats.Server.Services
             }
         }
 
+        internal async Task<List<StopPointSummary>> GetStopPointList()
+        {
+            return await PreloadStopPoints();
+        }
     }
 }

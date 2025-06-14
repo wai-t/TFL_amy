@@ -23,5 +23,13 @@ namespace tfl_stats.Server.Controllers
 
             return Ok(data);
         }
+
+        [HttpGet("stopPointList")]
+        public async Task<IActionResult> GetStopPointList()
+        {
+            var data = await _stopPointService.GetStopPointList();
+            _logger.LogInformation(data.Count == 0 ? "No data fetched" : "Data fetched");
+            return Ok(data);
+        }
     }
 }
