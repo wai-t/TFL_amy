@@ -89,7 +89,7 @@ function GetJourney() {
     const [errorMessage, setErrorMessage] = useState('');
     const [cache, setCache] = useState({});
 
-    const API_BASE = 'https://localhost:7056';
+    /*const API_BASE = 'https://localhost:7056';*/
 
     const fetchSuggestions = async (location, type) => {
         if (cache[location]) {
@@ -97,7 +97,7 @@ function GetJourney() {
             return;
         }
         try {
-            const response = await fetch(`${API_BASE}/api/StopPoint/autocomplete?query=${location}`);
+            const response = await fetch(`api/StopPoint/autocomplete?query=${location}`);
             const data = await response.json();
             const topSuggestions = data.slice(0, 5);
             setCache((prev) => ({ ...prev, [location]: topSuggestions }));
@@ -145,7 +145,7 @@ function GetJourney() {
         }
 
         try {
-            const response = await fetch(`${API_BASE}/api/Journey`, {
+            const response = await fetch(`api/Journey`, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({

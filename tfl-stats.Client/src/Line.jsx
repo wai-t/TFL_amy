@@ -73,7 +73,7 @@ function GetLine() {
     useEffect(() => {
         const fetchLineData = async () => {
             try {
-                const response = await fetch('https://localhost:7056/api/LineStatusByMode');
+                const response = await fetch('api/LineStatusByMode');
                 if (response.ok) {
                     const data = await response.json();
                     setLines(data);
