@@ -20,7 +20,6 @@ It shows live tube statuses and helps plan journeys between tube stations.
 
 - **Backend**: ASP.NET Core (.NET 8), C#, Redis, TfL API
 - **Frontend**: React
-- **Secrets**: Stored securely using .NET User Secrets during development
 
 ---
 
