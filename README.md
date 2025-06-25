@@ -24,9 +24,8 @@ It shows live tube statuses and helps plan journeys between tube stations.
 
 ---
 
-## Getting Started
 
-### Prerequisites
+## Prerequisites
 
 - [.NET 8 SDK](https://dotnet.microsoft.com/)
 - [Node.js and npm](https://nodejs.org/)
@@ -34,59 +33,4 @@ It shows live tube statuses and helps plan journeys between tube stations.
 - TfL API `appId` and `appKey` 
 
 ---
-
-## Backend Setup
-
-1. Go to the backend folder:
-
-```bash
-cd backend
-```
-2. Set up your development secrets:
-
-```
-dotnet user-secrets init
-dotnet user-secrets set "ConnectionStrings:Redis" "localhost:6379,abortConnect=false"
-dotnet user-secrets set "AppSettings:baseUrl" "https://api.tfl.gov.uk/"
-dotnet user-secrets set "AppSettings:appKey" "cb52c92815b94cabb22449624d95e007"
-dotnet user-secrets set "AppSettings:appId" "123"
-```
-
-## Frontend Setup
-1. Navigate to the frontend folder:
-```
-cd frontend
-```
-
-2. Install dependencies
-```
-npm install
-
-```
-
-3. Start the React development server:
-```
-npm start
-```
-
-## Notes
-- Redis is used for basic caching (can be customized or removed)
-
-- Secrets are stored using .NET User Secrets for development
-
-- Backend uses an AppSettings class to bind configuration
-
-- Journey and stop point logic is being refactored into separate services
-
-## To Do
-- Extract stop point logic into its own service
-  
-- Refactor frontend components and state handling
-  
-- Add unit tests
-
-
-
-
-
 
