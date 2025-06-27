@@ -13,6 +13,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tfl-stats-Core", "tfl-stats
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tfl-stats.Tests", "tfl-stats.Tests\tfl-stats.Tests.csproj", "{3C496157-DAE3-8305-B380-D118DB5787DC}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TflObjects", "TflObjects\TflObjects.csproj", "{3DCE1230-F19A-4423-AE3B-434B8FDFD98E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTflObjects", "TestTflObjects\TestTflObjects.csproj", "{1FCAD1ED-B9AF-424B-A1ED-E05FDEC8E5DB}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +41,14 @@ Global
 		{3C496157-DAE3-8305-B380-D118DB5787DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3C496157-DAE3-8305-B380-D118DB5787DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3C496157-DAE3-8305-B380-D118DB5787DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3DCE1230-F19A-4423-AE3B-434B8FDFD98E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3DCE1230-F19A-4423-AE3B-434B8FDFD98E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3DCE1230-F19A-4423-AE3B-434B8FDFD98E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3DCE1230-F19A-4423-AE3B-434B8FDFD98E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FCAD1ED-B9AF-424B-A1ED-E05FDEC8E5DB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FCAD1ED-B9AF-424B-A1ED-E05FDEC8E5DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FCAD1ED-B9AF-424B-A1ED-E05FDEC8E5DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FCAD1ED-B9AF-424B-A1ED-E05FDEC8E5DB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
