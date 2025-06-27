@@ -5,7 +5,6 @@ using tfl_stats.Tfl;
 namespace TestTflObjects
 {
     [Collection("HttpClientFactory collection")]
-
     public class LineTests
     {
         private readonly IHttpClientFactory _httpClientFactory;
@@ -20,5 +19,6 @@ namespace TestTflObjects
         {
             var ret = await _client.StatusByModeAsync(["tube"], true, null);
         }
+
     }
 }
