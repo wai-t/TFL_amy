@@ -11664,10 +11664,10 @@ namespace tfl_stats.Tfl
         public System.DateTimeOffset? ArrivalTime { get; set; }
 
         [Newtonsoft.Json.JsonProperty("departurePoint", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public Point DeparturePoint { get; set; }
+        public StopPoint DeparturePoint { get; set; }
 
         [Newtonsoft.Json.JsonProperty("arrivalPoint", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
-        public Point ArrivalPoint { get; set; }
+        public StopPoint ArrivalPoint { get; set; }
 
         [Newtonsoft.Json.JsonProperty("path", Required = Newtonsoft.Json.Required.Default, NullValueHandling = Newtonsoft.Json.NullValueHandling.Ignore)]
         public Path Path { get; set; }
