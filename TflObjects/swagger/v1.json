@@ -5259,10 +5259,10 @@
           "type": "string"
         },
         "departurePoint": {
-          "$ref": "#/definitions/Tfl.Api.Presentation.Entities.Point"
+          "$ref": "#/definitions/Tfl.Api.Presentation.Entities.StopPoint"
         },
         "arrivalPoint": {
-          "$ref": "#/definitions/Tfl.Api.Presentation.Entities.Point"
+          "$ref": "#/definitions/Tfl.Api.Presentation.Entities.StopPoint"
         },
         "path": {
           "$ref": "#/definitions/Tfl.Api.Presentation.Entities.JourneyPlanner.Path"
