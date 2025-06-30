@@ -60,7 +60,7 @@ namespace tfl_stats.Tests
             {
                 Assert.NotNull(result.Journeys[i].Legs);
                 Assert.True(result.Journeys[i].Legs.Count > 0);
-                Assert.Equal(fromIcsCode, result.Journeys[i].Legs[0].DeparturePoint.IcsCode);
+                Assert.Equal(fromIcsCode, result.Journeys[i].Legs.First().DeparturePoint.IcsCode);
                 Assert.Equal(toIcsCode, result.Journeys[i].Legs.Last().ArrivalPoint.IcsCode);
             }
         }

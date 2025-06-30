@@ -1,7 +1,13 @@
 ﻿using tfl_stats.Server.Client;
 using tfl_stats.Server.Models;
-using tfl_stats.Server.Models.JourneyModels;
 
+#if USE_TFL_MODEL
+    using Journey = tfl_stats.Tfl.Journey2;
+    using JourneyRequest = tfl_stats.Server.Models.JourneyModels.JourneyRequest;
+    using JourneyResponse = tfl_stats.Server.Models.JourneyModels.JourneyResponse;
+#else
+    using tfl_stats.Server.Models.JourneyModels;
+#endif
 
 namespace tfl_stats.Server.Services
 {
