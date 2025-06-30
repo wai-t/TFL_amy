@@ -1,8 +1,17 @@
-﻿using Microsoft.Extensions.Logging;
+﻿using Microsoft.AspNetCore.Builder;
+using Microsoft.Extensions.Logging;
 using Moq;
 using tfl_stats.Server.Client;
-using tfl_stats.Server.Models.LineModels;
 using tfl_stats.Server.Services;
+
+#if USE_TFL_MODEL
+    using Line = tfl_stats.Tfl.Line;
+    using LineStatus = tfl_stats.Tfl.LineStatus;
+    using LineServiceTypeInfo = tfl_stats.Tfl.LineServiceTypeInfo;
+    using Crowding = tfl_stats.Tfl.Crowding;
+#else
+    using tfl_stats.Server.Models.LineModels;
+#endif
 
 namespace tfl_stats.Tests
 {
@@ -67,7 +76,7 @@ namespace tfl_stats.Tests
             Assert.NotNull(result.Data);
             Assert.Single(result.Data);
             Assert.Equal("Jubilee", result.Data[0].Name);
-            Assert.Equal("Minor Delays", result.Data[0].LineStatuses[0].StatusSeverityDescription);
+            Assert.Equal("Minor Delays", result.Data[0].LineStatuses.First().StatusSeverityDescription);
         }
 
         [Fact]

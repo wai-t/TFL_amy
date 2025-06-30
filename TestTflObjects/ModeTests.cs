@@ -23,7 +23,8 @@ namespace TestTflObjects
         [Fact]
         public async Task Test1()
         {
-            var ret = await _client.ArrivalsAsync("tube", null);
+            var predictions = await _client.ArrivalsAsync("tube", null);
+            var sortByVehicle = predictions.OrderBy(p => p.ExpectedArrival).OrderBy(p => p.VehicleId);
         }
 
 

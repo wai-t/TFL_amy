@@ -2,6 +2,10 @@
 using tfl_stats.Server.Models;
 using tfl_stats.Server.Models.LineModels;
 
+#if USE_TFL_MODEL
+using Line = tfl_stats.Tfl.Line;
+#endif
+
 namespace tfl_stats.Server.Services
 {
     public class LineService
