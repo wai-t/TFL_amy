@@ -1,0 +1,5186 @@
+[
+  {
+    "Line": "bakerloo",
+    "Stations": [
+      {
+        "Id": "940GZZLUHAW",
+        "Name": "Harrow & Wealdstone Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUKEN"
+        ]
+      },
+      {
+        "Id": "940GZZLUKEN",
+        "Name": "Kenton Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUHAW"
+        ],
+        "Successors": [
+          "940GZZLUSKT"
+        ]
+      },
+      {
+        "Id": "940GZZLUSKT",
+        "Name": "South Kenton Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUKEN"
+        ],
+        "Successors": [
+          "940GZZLUNWY"
+        ]
+      },
+      {
+        "Id": "940GZZLUNWY",
+        "Name": "North Wembley Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUSKT"
+        ],
+        "Successors": [
+          "940GZZLUWYC"
+        ]
+      },
+      {
+        "Id": "940GZZLUWYC",
+        "Name": "Wembley Central Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUNWY"
+        ],
+        "Successors": [
+          "940GZZLUSGP"
+        ]
+      },
+      {
+        "Id": "940GZZLUSGP",
+        "Name": "Stonebridge Park Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUWYC"
+        ],
+        "Successors": [
+          "940GZZLUHSN"
+        ]
+      },
+      {
+        "Id": "940GZZLUHSN",
+        "Name": "Harlesden Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLUSGP"
+        ],
+        "Successors": [
+          "940GZZLUWJN"
+        ]
+      },
+      {
+        "Id": "940GZZLUWJN",
+        "Name": "Willesden Junction Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUHSN"
+        ],
+        "Successors": [
+          "940GZZLUKSL"
+        ]
+      },
+      {
+        "Id": "940GZZLUKSL",
+        "Name": "Kensal Green Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLUWJN"
+        ],
+        "Successors": [
+          "940GZZLUQPS"
+        ]
+      },
+      {
+        "Id": "940GZZLUQPS",
+        "Name": "Queen's Park Underground Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZLUKSL"
+        ],
+        "Successors": [
+          "940GZZLUKPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUKPK",
+        "Name": "Kilburn Park Underground Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZLUQPS"
+        ],
+        "Successors": [
+          "940GZZLUMVL"
+        ]
+      },
+      {
+        "Id": "940GZZLUMVL",
+        "Name": "Maida Vale Underground Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZLUKPK"
+        ],
+        "Successors": [
+          "940GZZLUWKA"
+        ]
+      },
+      {
+        "Id": "940GZZLUWKA",
+        "Name": "Warwick Avenue Underground Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZLUMVL"
+        ],
+        "Successors": [
+          "940GZZLUPAC"
+        ]
+      },
+      {
+        "Id": "940GZZLUPAC",
+        "Name": "Paddington Underground Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZLUWKA"
+        ],
+        "Successors": [
+          "940GZZLUERB"
+        ]
+      },
+      {
+        "Id": "940GZZLUERB",
+        "Name": "Edgware Road (Bakerloo) Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLUPAC"
+        ],
+        "Successors": [
+          "940GZZLUMYB"
+        ]
+      },
+      {
+        "Id": "940GZZLUMYB",
+        "Name": "Marylebone Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUERB"
+        ],
+        "Successors": [
+          "940GZZLUBST"
+        ]
+      },
+      {
+        "Id": "940GZZLUBST",
+        "Name": "Baker Street Underground Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZLUMYB"
+        ],
+        "Successors": [
+          "940GZZLURGP"
+        ]
+      },
+      {
+        "Id": "940GZZLURGP",
+        "Name": "Regent's Park Underground Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZLUBST"
+        ],
+        "Successors": [
+          "940GZZLUOXC"
+        ]
+      },
+      {
+        "Id": "940GZZLUOXC",
+        "Name": "Oxford Circus Underground Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZLURGP"
+        ],
+        "Successors": [
+          "940GZZLUPCC"
+        ]
+      },
+      {
+        "Id": "940GZZLUPCC",
+        "Name": "Piccadilly Circus Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLUOXC"
+        ],
+        "Successors": [
+          "940GZZLUCHX"
+        ]
+      },
+      {
+        "Id": "940GZZLUCHX",
+        "Name": "Charing Cross Underground Station",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLUPCC"
+        ],
+        "Successors": [
+          "940GZZLUEMB"
+        ]
+      },
+      {
+        "Id": "940GZZLUEMB",
+        "Name": "Embankment Underground Station",
+        "Order": 22,
+        "Predecessors": [
+          "940GZZLUCHX"
+        ],
+        "Successors": [
+          "940GZZLUWLO"
+        ]
+      },
+      {
+        "Id": "940GZZLUWLO",
+        "Name": "Waterloo Underground Station",
+        "Order": 23,
+        "Predecessors": [
+          "940GZZLUEMB"
+        ],
+        "Successors": [
+          "940GZZLULBN"
+        ]
+      },
+      {
+        "Id": "940GZZLULBN",
+        "Name": "Lambeth North Underground Station",
+        "Order": 24,
+        "Predecessors": [
+          "940GZZLUWLO"
+        ],
+        "Successors": [
+          "940GZZLUEAC"
+        ]
+      },
+      {
+        "Id": "940GZZLUEAC",
+        "Name": "Elephant & Castle Underground Station",
+        "Order": 25,
+        "Predecessors": [
+          "940GZZLULBN"
+        ],
+        "Successors": []
+      }
+    ]
+  },
+  {
+    "Line": "central",
+    "Stations": [
+      {
+        "Id": "940GZZLUEPG",
+        "Name": "Epping Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUTHB"
+        ]
+      },
+      {
+        "Id": "940GZZLUTHB",
+        "Name": "Theydon Bois Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUEPG"
+        ],
+        "Successors": [
+          "940GZZLUDBN"
+        ]
+      },
+      {
+        "Id": "940GZZLUDBN",
+        "Name": "Debden Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUTHB"
+        ],
+        "Successors": [
+          "940GZZLULGN"
+        ]
+      },
+      {
+        "Id": "940GZZLULGN",
+        "Name": "Loughton Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUDBN"
+        ],
+        "Successors": [
+          "940GZZLUBKH"
+        ]
+      },
+      {
+        "Id": "940GZZLUBKH",
+        "Name": "Buckhurst Hill Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLULGN"
+        ],
+        "Successors": [
+          "940GZZLUWOF"
+        ]
+      },
+      {
+        "Id": "940GZZLUWOF",
+        "Name": "Woodford Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUBKH",
+          "940GZZLURVY"
+        ],
+        "Successors": [
+          "940GZZLUSWF"
+        ]
+      },
+      {
+        "Id": "940GZZLUSWF",
+        "Name": "South Woodford Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLUWOF"
+        ],
+        "Successors": [
+          "940GZZLUSNB"
+        ]
+      },
+      {
+        "Id": "940GZZLUSNB",
+        "Name": "Snaresbrook Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUSWF"
+        ],
+        "Successors": [
+          "940GZZLULYS"
+        ]
+      },
+      {
+        "Id": "940GZZLULYS",
+        "Name": "Leytonstone Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLUSNB",
+          "940GZZLUWSD"
+        ],
+        "Successors": [
+          "940GZZLULYN"
+        ]
+      },
+      {
+        "Id": "940GZZLULYN",
+        "Name": "Leyton Underground Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZLULYS"
+        ],
+        "Successors": [
+          "940GZZLUSTD"
+        ]
+      },
+      {
+        "Id": "940GZZLUSTD",
+        "Name": "Stratford Underground Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZLULYN"
+        ],
+        "Successors": [
+          "940GZZLUMED"
+        ]
+      },
+      {
+        "Id": "940GZZLUMED",
+        "Name": "Mile End Underground Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZLUSTD"
+        ],
+        "Successors": [
+          "940GZZLUBLG"
+        ]
+      },
+      {
+        "Id": "940GZZLUBLG",
+        "Name": "Bethnal Green Underground Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZLUMED"
+        ],
+        "Successors": [
+          "940GZZLULVT"
+        ]
+      },
+      {
+        "Id": "940GZZLULVT",
+        "Name": "Liverpool Street Underground Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZLUBLG"
+        ],
+        "Successors": [
+          "940GZZLUBNK"
+        ]
+      },
+      {
+        "Id": "940GZZLUBNK",
+        "Name": "Bank Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLULVT"
+        ],
+        "Successors": [
+          "940GZZLUSPU"
+        ]
+      },
+      {
+        "Id": "940GZZLUSPU",
+        "Name": "St. Paul's Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUBNK"
+        ],
+        "Successors": [
+          "940GZZLUCHL"
+        ]
+      },
+      {
+        "Id": "940GZZLUCHL",
+        "Name": "Chancery Lane Underground Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZLUSPU"
+        ],
+        "Successors": [
+          "940GZZLUHBN"
+        ]
+      },
+      {
+        "Id": "940GZZLUHBN",
+        "Name": "Holborn Underground Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZLUCHL"
+        ],
+        "Successors": [
+          "940GZZLUTCR"
+        ]
+      },
+      {
+        "Id": "940GZZLUTCR",
+        "Name": "Tottenham Court Road Underground Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZLUHBN"
+        ],
+        "Successors": [
+          "940GZZLUOXC"
+        ]
+      },
+      {
+        "Id": "940GZZLUOXC",
+        "Name": "Oxford Circus Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLUTCR"
+        ],
+        "Successors": [
+          "940GZZLUBND"
+        ]
+      },
+      {
+        "Id": "940GZZLUBND",
+        "Name": "Bond Street Underground Station",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLUOXC"
+        ],
+        "Successors": [
+          "940GZZLUMBA"
+        ]
+      },
+      {
+        "Id": "940GZZLUMBA",
+        "Name": "Marble Arch Underground Station",
+        "Order": 22,
+        "Predecessors": [
+          "940GZZLUBND"
+        ],
+        "Successors": [
+          "940GZZLULGT"
+        ]
+      },
+      {
+        "Id": "940GZZLULGT",
+        "Name": "Lancaster Gate Underground Station",
+        "Order": 23,
+        "Predecessors": [
+          "940GZZLUMBA"
+        ],
+        "Successors": [
+          "940GZZLUQWY"
+        ]
+      },
+      {
+        "Id": "940GZZLUQWY",
+        "Name": "Queensway Underground Station",
+        "Order": 24,
+        "Predecessors": [
+          "940GZZLULGT"
+        ],
+        "Successors": [
+          "940GZZLUNHG"
+        ]
+      },
+      {
+        "Id": "940GZZLUNHG",
+        "Name": "Notting Hill Gate Underground Station",
+        "Order": 25,
+        "Predecessors": [
+          "940GZZLUQWY"
+        ],
+        "Successors": [
+          "940GZZLUHPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUHPK",
+        "Name": "Holland Park Underground Station",
+        "Order": 26,
+        "Predecessors": [
+          "940GZZLUNHG"
+        ],
+        "Successors": [
+          "940GZZLUSBC"
+        ]
+      },
+      {
+        "Id": "940GZZLUSBC",
+        "Name": "Shepherd's Bush (Central) Underground Station",
+        "Order": 27,
+        "Predecessors": [
+          "940GZZLUHPK"
+        ],
+        "Successors": [
+          "940GZZLUWCY"
+        ]
+      },
+      {
+        "Id": "940GZZLUWCY",
+        "Name": "White City Underground Station",
+        "Order": 28,
+        "Predecessors": [
+          "940GZZLUSBC"
+        ],
+        "Successors": [
+          "940GZZLUEAN"
+        ]
+      },
+      {
+        "Id": "940GZZLUEAN",
+        "Name": "East Acton Underground Station",
+        "Order": 29,
+        "Predecessors": [
+          "940GZZLUWCY"
+        ],
+        "Successors": [
+          "940GZZLUNAN"
+        ]
+      },
+      {
+        "Id": "940GZZLUNAN",
+        "Name": "North Acton Underground Station",
+        "Order": 30,
+        "Predecessors": [
+          "940GZZLUEAN"
+        ],
+        "Successors": [
+          "940GZZLUHGR",
+          "940GZZLUWTA"
+        ]
+      },
+      {
+        "Id": "940GZZLUHGR",
+        "Name": "Hanger Lane Underground Station",
+        "Order": 31,
+        "Predecessors": [
+          "940GZZLUNAN"
+        ],
+        "Successors": [
+          "940GZZLUPVL"
+        ]
+      },
+      {
+        "Id": "940GZZLUPVL",
+        "Name": "Perivale Underground Station",
+        "Order": 32,
+        "Predecessors": [
+          "940GZZLUHGR"
+        ],
+        "Successors": [
+          "940GZZLUGFD"
+        ]
+      },
+      {
+        "Id": "940GZZLUGFD",
+        "Name": "Greenford Underground Station",
+        "Order": 33,
+        "Predecessors": [
+          "940GZZLUPVL"
+        ],
+        "Successors": [
+          "940GZZLUNHT"
+        ]
+      },
+      {
+        "Id": "940GZZLUNHT",
+        "Name": "Northolt Underground Station",
+        "Order": 34,
+        "Predecessors": [
+          "940GZZLUGFD"
+        ],
+        "Successors": [
+          "940GZZLUSRP"
+        ]
+      },
+      {
+        "Id": "940GZZLUSRP",
+        "Name": "South Ruislip Underground Station",
+        "Order": 35,
+        "Predecessors": [
+          "940GZZLUNHT"
+        ],
+        "Successors": [
+          "940GZZLURSG"
+        ]
+      },
+      {
+        "Id": "940GZZLURSG",
+        "Name": "Ruislip Gardens Underground Station",
+        "Order": 36,
+        "Predecessors": [
+          "940GZZLUSRP"
+        ],
+        "Successors": [
+          "940GZZLUWRP"
+        ]
+      },
+      {
+        "Id": "940GZZLUWRP",
+        "Name": "West Ruislip Underground Station",
+        "Order": 37,
+        "Predecessors": [
+          "940GZZLURSG"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZLUHLT",
+        "Name": "Hainault Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUFLP",
+          "940GZZLUGGH"
+        ]
+      },
+      {
+        "Id": "940GZZLUFLP",
+        "Name": "Fairlop Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUHLT"
+        ],
+        "Successors": [
+          "940GZZLUBKE"
+        ]
+      },
+      {
+        "Id": "940GZZLUBKE",
+        "Name": "Barkingside Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUFLP"
+        ],
+        "Successors": [
+          "940GZZLUNBP"
+        ]
+      },
+      {
+        "Id": "940GZZLUNBP",
+        "Name": "Newbury Park Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUBKE"
+        ],
+        "Successors": [
+          "940GZZLUGTH"
+        ]
+      },
+      {
+        "Id": "940GZZLUGTH",
+        "Name": "Gants Hill Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUNBP"
+        ],
+        "Successors": [
+          "940GZZLURBG"
+        ]
+      },
+      {
+        "Id": "940GZZLURBG",
+        "Name": "Redbridge Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUGTH"
+        ],
+        "Successors": [
+          "940GZZLUWSD"
+        ]
+      },
+      {
+        "Id": "940GZZLUWSD",
+        "Name": "Wanstead Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLURBG"
+        ],
+        "Successors": [
+          "940GZZLULYS"
+        ]
+      },
+      {
+        "Id": "940GZZLUGGH",
+        "Name": "Grange Hill Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUHLT"
+        ],
+        "Successors": [
+          "940GZZLUCWL"
+        ]
+      },
+      {
+        "Id": "940GZZLUCWL",
+        "Name": "Chigwell Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUGGH"
+        ],
+        "Successors": [
+          "940GZZLURVY"
+        ]
+      },
+      {
+        "Id": "940GZZLURVY",
+        "Name": "Roding Valley Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUCWL"
+        ],
+        "Successors": [
+          "940GZZLUWOF"
+        ]
+      },
+      {
+        "Id": "940GZZLUWTA",
+        "Name": "West Acton Underground Station",
+        "Order": 31,
+        "Predecessors": [
+          "940GZZLUNAN"
+        ],
+        "Successors": [
+          "940GZZLUEBY"
+        ]
+      },
+      {
+        "Id": "940GZZLUEBY",
+        "Name": "Ealing Broadway Underground Station",
+        "Order": 32,
+        "Predecessors": [
+          "940GZZLUWTA"
+        ],
+        "Successors": []
+      }
+    ]
+  },
+  {
+    "Line": "circle",
+    "Stations": [
+      {
+        "Id": "940GZZLUERC",
+        "Name": "Edgware Road (Circle Line) Underground Station",
+        "Order": 1,
+        "Predecessors": [
+          "940GZZLUBST"
+        ],
+        "Successors": [
+          "940GZZLUPAC",
+          "940GZZLUPAH"
+        ]
+      },
+      {
+        "Id": "940GZZLUPAC",
+        "Name": "Paddington Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUERC"
+        ],
+        "Successors": [
+          "940GZZLUBWT"
+        ]
+      },
+      {
+        "Id": "940GZZLUBWT",
+        "Name": "Bayswater Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUPAC"
+        ],
+        "Successors": [
+          "940GZZLUNHG"
+        ]
+      },
+      {
+        "Id": "940GZZLUNHG",
+        "Name": "Notting Hill Gate Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUBWT"
+        ],
+        "Successors": [
+          "940GZZLUHSK"
+        ]
+      },
+      {
+        "Id": "940GZZLUHSK",
+        "Name": "High Street Kensington Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUNHG"
+        ],
+        "Successors": [
+          "940GZZLUGTR"
+        ]
+      },
+      {
+        "Id": "940GZZLUGTR",
+        "Name": "Gloucester Road Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUHSK"
+        ],
+        "Successors": [
+          "940GZZLUSKS"
+        ]
+      },
+      {
+        "Id": "940GZZLUSKS",
+        "Name": "South Kensington Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLUGTR"
+        ],
+        "Successors": [
+          "940GZZLUSSQ"
+        ]
+      },
+      {
+        "Id": "940GZZLUSSQ",
+        "Name": "Sloane Square Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUSKS"
+        ],
+        "Successors": [
+          "940GZZLUVIC"
+        ]
+      },
+      {
+        "Id": "940GZZLUVIC",
+        "Name": "Victoria Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLUSSQ"
+        ],
+        "Successors": [
+          "940GZZLUSJP"
+        ]
+      },
+      {
+        "Id": "940GZZLUSJP",
+        "Name": "St. James's Park Underground Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZLUVIC"
+        ],
+        "Successors": [
+          "940GZZLUWSM"
+        ]
+      },
+      {
+        "Id": "940GZZLUWSM",
+        "Name": "Westminster Underground Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZLUSJP"
+        ],
+        "Successors": [
+          "940GZZLUEMB"
+        ]
+      },
+      {
+        "Id": "940GZZLUEMB",
+        "Name": "Embankment Underground Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZLUWSM"
+        ],
+        "Successors": [
+          "940GZZLUTMP"
+        ]
+      },
+      {
+        "Id": "940GZZLUTMP",
+        "Name": "Temple Underground Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZLUEMB"
+        ],
+        "Successors": [
+          "940GZZLUBKF"
+        ]
+      },
+      {
+        "Id": "940GZZLUBKF",
+        "Name": "Blackfriars Underground Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZLUTMP"
+        ],
+        "Successors": [
+          "940GZZLUMSH"
+        ]
+      },
+      {
+        "Id": "940GZZLUMSH",
+        "Name": "Mansion House Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLUBKF"
+        ],
+        "Successors": [
+          "940GZZLUCST"
+        ]
+      },
+      {
+        "Id": "940GZZLUCST",
+        "Name": "Cannon Street Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUMSH"
+        ],
+        "Successors": [
+          "940GZZLUMMT"
+        ]
+      },
+      {
+        "Id": "940GZZLUMMT",
+        "Name": "Monument Underground Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZLUCST"
+        ],
+        "Successors": [
+          "940GZZLUTWH"
+        ]
+      },
+      {
+        "Id": "940GZZLUTWH",
+        "Name": "Tower Hill Underground Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZLUMMT"
+        ],
+        "Successors": [
+          "940GZZLUALD"
+        ]
+      },
+      {
+        "Id": "940GZZLUALD",
+        "Name": "Aldgate Underground Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZLUTWH"
+        ],
+        "Successors": [
+          "940GZZLULVT"
+        ]
+      },
+      {
+        "Id": "940GZZLULVT",
+        "Name": "Liverpool Street Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLUALD"
+        ],
+        "Successors": [
+          "940GZZLUMGT"
+        ]
+      },
+      {
+        "Id": "940GZZLUMGT",
+        "Name": "Moorgate Underground Station",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLULVT"
+        ],
+        "Successors": [
+          "940GZZLUBBN"
+        ]
+      },
+      {
+        "Id": "940GZZLUBBN",
+        "Name": "Barbican Underground Station",
+        "Order": 22,
+        "Predecessors": [
+          "940GZZLUMGT"
+        ],
+        "Successors": [
+          "940GZZLUFCN"
+        ]
+      },
+      {
+        "Id": "940GZZLUFCN",
+        "Name": "Farringdon Underground Station",
+        "Order": 23,
+        "Predecessors": [
+          "940GZZLUBBN"
+        ],
+        "Successors": [
+          "940GZZLUKSX"
+        ]
+      },
+      {
+        "Id": "940GZZLUKSX",
+        "Name": "King's Cross St. Pancras Underground Station",
+        "Order": 24,
+        "Predecessors": [
+          "940GZZLUFCN"
+        ],
+        "Successors": [
+          "940GZZLUESQ"
+        ]
+      },
+      {
+        "Id": "940GZZLUESQ",
+        "Name": "Euston Square Underground Station",
+        "Order": 25,
+        "Predecessors": [
+          "940GZZLUKSX"
+        ],
+        "Successors": [
+          "940GZZLUGPS"
+        ]
+      },
+      {
+        "Id": "940GZZLUGPS",
+        "Name": "Great Portland Street Underground Station",
+        "Order": 26,
+        "Predecessors": [
+          "940GZZLUESQ"
+        ],
+        "Successors": [
+          "940GZZLUBST"
+        ]
+      },
+      {
+        "Id": "940GZZLUBST",
+        "Name": "Baker Street Underground Station",
+        "Order": 27,
+        "Predecessors": [
+          "940GZZLUGPS"
+        ],
+        "Successors": [
+          "940GZZLUERC"
+        ]
+      },
+      {
+        "Id": "940GZZLUPAH",
+        "Name": "Paddington (H&C Line)-Underground",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUERC"
+        ],
+        "Successors": [
+          "940GZZLURYO"
+        ]
+      },
+      {
+        "Id": "940GZZLURYO",
+        "Name": "Royal Oak Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUPAH"
+        ],
+        "Successors": [
+          "940GZZLUWSP"
+        ]
+      },
+      {
+        "Id": "940GZZLUWSP",
+        "Name": "Westbourne Park Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLURYO"
+        ],
+        "Successors": [
+          "940GZZLULAD"
+        ]
+      },
+      {
+        "Id": "940GZZLULAD",
+        "Name": "Ladbroke Grove Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUWSP"
+        ],
+        "Successors": [
+          "940GZZLULRD"
+        ]
+      },
+      {
+        "Id": "940GZZLULRD",
+        "Name": "Latimer Road Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLULAD"
+        ],
+        "Successors": [
+          "940GZZLUWLA"
+        ]
+      },
+      {
+        "Id": "940GZZLUWLA",
+        "Name": "Wood Lane Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLULRD"
+        ],
+        "Successors": [
+          "940GZZLUSBM"
+        ]
+      },
+      {
+        "Id": "940GZZLUSBM",
+        "Name": "Shepherd's Bush Market Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUWLA"
+        ],
+        "Successors": [
+          "940GZZLUGHK"
+        ]
+      },
+      {
+        "Id": "940GZZLUGHK",
+        "Name": "Goldhawk Road Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLUSBM"
+        ],
+        "Successors": [
+          "940GZZLUHSC"
+        ]
+      },
+      {
+        "Id": "940GZZLUHSC",
+        "Name": "Hammersmith (H&C Line) Underground Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZLUGHK"
+        ],
+        "Successors": []
+      }
+    ]
+  },
+  {
+    "Line": "district",
+    "Stations": [
+      {
+        "Id": "940GZZLUUPM",
+        "Name": "Upminster Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUUPB"
+        ]
+      },
+      {
+        "Id": "940GZZLUUPB",
+        "Name": "Upminster Bridge Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUUPM"
+        ],
+        "Successors": [
+          "940GZZLUHCH"
+        ]
+      },
+      {
+        "Id": "940GZZLUHCH",
+        "Name": "Hornchurch Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUUPB"
+        ],
+        "Successors": [
+          "940GZZLUEPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUEPK",
+        "Name": "Elm Park Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUHCH"
+        ],
+        "Successors": [
+          "940GZZLUDGE"
+        ]
+      },
+      {
+        "Id": "940GZZLUDGE",
+        "Name": "Dagenham East Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUEPK"
+        ],
+        "Successors": [
+          "940GZZLUDGY"
+        ]
+      },
+      {
+        "Id": "940GZZLUDGY",
+        "Name": "Dagenham Heathway Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUDGE"
+        ],
+        "Successors": [
+          "940GZZLUBEC"
+        ]
+      },
+      {
+        "Id": "940GZZLUBEC",
+        "Name": "Becontree Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLUDGY"
+        ],
+        "Successors": [
+          "940GZZLUUPY"
+        ]
+      },
+      {
+        "Id": "940GZZLUUPY",
+        "Name": "Upney Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUBEC"
+        ],
+        "Successors": [
+          "940GZZLUBKG"
+        ]
+      },
+      {
+        "Id": "940GZZLUBKG",
+        "Name": "Barking Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLUUPY"
+        ],
+        "Successors": [
+          "940GZZLUEHM"
+        ]
+      },
+      {
+        "Id": "940GZZLUEHM",
+        "Name": "East Ham Underground Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZLUBKG"
+        ],
+        "Successors": [
+          "940GZZLUUPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUUPK",
+        "Name": "Upton Park Underground Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZLUEHM"
+        ],
+        "Successors": [
+          "940GZZLUPLW"
+        ]
+      },
+      {
+        "Id": "940GZZLUPLW",
+        "Name": "Plaistow Underground Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZLUUPK"
+        ],
+        "Successors": [
+          "940GZZLUWHM"
+        ]
+      },
+      {
+        "Id": "940GZZLUWHM",
+        "Name": "West Ham Underground Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZLUPLW"
+        ],
+        "Successors": [
+          "940GZZLUBBB"
+        ]
+      },
+      {
+        "Id": "940GZZLUBBB",
+        "Name": "Bromley-by-Bow Underground Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZLUWHM"
+        ],
+        "Successors": [
+          "940GZZLUBWR"
+        ]
+      },
+      {
+        "Id": "940GZZLUBWR",
+        "Name": "Bow Road Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLUBBB"
+        ],
+        "Successors": [
+          "940GZZLUMED"
+        ]
+      },
+      {
+        "Id": "940GZZLUMED",
+        "Name": "Mile End Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUBWR"
+        ],
+        "Successors": [
+          "940GZZLUSGN"
+        ]
+      },
+      {
+        "Id": "940GZZLUSGN",
+        "Name": "Stepney Green Underground Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZLUMED"
+        ],
+        "Successors": [
+          "940GZZLUWPL"
+        ]
+      },
+      {
+        "Id": "940GZZLUWPL",
+        "Name": "Whitechapel Underground Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZLUSGN"
+        ],
+        "Successors": [
+          "940GZZLUADE"
+        ]
+      },
+      {
+        "Id": "940GZZLUADE",
+        "Name": "Aldgate East Underground Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZLUWPL"
+        ],
+        "Successors": [
+          "940GZZLUTWH"
+        ]
+      },
+      {
+        "Id": "940GZZLUTWH",
+        "Name": "Tower Hill Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLUADE"
+        ],
+        "Successors": [
+          "940GZZLUMMT"
+        ]
+      },
+      {
+        "Id": "940GZZLUMMT",
+        "Name": "Monument Underground Station",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLUTWH"
+        ],
+        "Successors": [
+          "940GZZLUCST"
+        ]
+      },
+      {
+        "Id": "940GZZLUCST",
+        "Name": "Cannon Street Underground Station",
+        "Order": 22,
+        "Predecessors": [
+          "940GZZLUMMT"
+        ],
+        "Successors": [
+          "940GZZLUMSH"
+        ]
+      },
+      {
+        "Id": "940GZZLUMSH",
+        "Name": "Mansion House Underground Station",
+        "Order": 23,
+        "Predecessors": [
+          "940GZZLUCST"
+        ],
+        "Successors": [
+          "940GZZLUBKF"
+        ]
+      },
+      {
+        "Id": "940GZZLUBKF",
+        "Name": "Blackfriars Underground Station",
+        "Order": 24,
+        "Predecessors": [
+          "940GZZLUMSH"
+        ],
+        "Successors": [
+          "940GZZLUTMP"
+        ]
+      },
+      {
+        "Id": "940GZZLUTMP",
+        "Name": "Temple Underground Station",
+        "Order": 25,
+        "Predecessors": [
+          "940GZZLUBKF"
+        ],
+        "Successors": [
+          "940GZZLUEMB"
+        ]
+      },
+      {
+        "Id": "940GZZLUEMB",
+        "Name": "Embankment Underground Station",
+        "Order": 26,
+        "Predecessors": [
+          "940GZZLUTMP"
+        ],
+        "Successors": [
+          "940GZZLUWSM"
+        ]
+      },
+      {
+        "Id": "940GZZLUWSM",
+        "Name": "Westminster Underground Station",
+        "Order": 27,
+        "Predecessors": [
+          "940GZZLUEMB"
+        ],
+        "Successors": [
+          "940GZZLUSJP"
+        ]
+      },
+      {
+        "Id": "940GZZLUSJP",
+        "Name": "St. James's Park Underground Station",
+        "Order": 28,
+        "Predecessors": [
+          "940GZZLUWSM"
+        ],
+        "Successors": [
+          "940GZZLUVIC"
+        ]
+      },
+      {
+        "Id": "940GZZLUVIC",
+        "Name": "Victoria Underground Station",
+        "Order": 29,
+        "Predecessors": [
+          "940GZZLUSJP"
+        ],
+        "Successors": [
+          "940GZZLUSSQ"
+        ]
+      },
+      {
+        "Id": "940GZZLUSSQ",
+        "Name": "Sloane Square Underground Station",
+        "Order": 30,
+        "Predecessors": [
+          "940GZZLUVIC"
+        ],
+        "Successors": [
+          "940GZZLUSKS"
+        ]
+      },
+      {
+        "Id": "940GZZLUSKS",
+        "Name": "South Kensington Underground Station",
+        "Order": 31,
+        "Predecessors": [
+          "940GZZLUSSQ"
+        ],
+        "Successors": [
+          "940GZZLUGTR"
+        ]
+      },
+      {
+        "Id": "940GZZLUGTR",
+        "Name": "Gloucester Road Underground Station",
+        "Order": 32,
+        "Predecessors": [
+          "940GZZLUSKS"
+        ],
+        "Successors": [
+          "940GZZLUECT"
+        ]
+      },
+      {
+        "Id": "940GZZLUECT",
+        "Name": "Earl's Court Underground Station",
+        "Order": 33,
+        "Predecessors": [
+          "940GZZLUGTR",
+          "940GZZLUHSK"
+        ],
+        "Successors": [
+          "940GZZLUWKN",
+          "940GZZLUWBN",
+          "940GZZLUKOY"
+        ]
+      },
+      {
+        "Id": "940GZZLUWKN",
+        "Name": "West Kensington Underground Station",
+        "Order": 34,
+        "Predecessors": [
+          "940GZZLUECT"
+        ],
+        "Successors": [
+          "940GZZLUBSC"
+        ]
+      },
+      {
+        "Id": "940GZZLUBSC",
+        "Name": "Barons Court Underground Station",
+        "Order": 35,
+        "Predecessors": [
+          "940GZZLUWKN"
+        ],
+        "Successors": [
+          "940GZZLUHSD"
+        ]
+      },
+      {
+        "Id": "940GZZLUHSD",
+        "Name": "Hammersmith (Dist&Picc Line) Underground Station",
+        "Order": 36,
+        "Predecessors": [
+          "940GZZLUBSC"
+        ],
+        "Successors": [
+          "940GZZLURVP"
+        ]
+      },
+      {
+        "Id": "940GZZLURVP",
+        "Name": "Ravenscourt Park Underground Station",
+        "Order": 37,
+        "Predecessors": [
+          "940GZZLUHSD"
+        ],
+        "Successors": [
+          "940GZZLUSFB"
+        ]
+      },
+      {
+        "Id": "940GZZLUSFB",
+        "Name": "Stamford Brook Underground Station",
+        "Order": 38,
+        "Predecessors": [
+          "940GZZLURVP"
+        ],
+        "Successors": [
+          "940GZZLUTNG"
+        ]
+      },
+      {
+        "Id": "940GZZLUTNG",
+        "Name": "Turnham Green Underground Station",
+        "Order": 39,
+        "Predecessors": [
+          "940GZZLUSFB"
+        ],
+        "Successors": [
+          "940GZZLUCWP",
+          "940GZZLUGBY"
+        ]
+      },
+      {
+        "Id": "940GZZLUCWP",
+        "Name": "Chiswick Park Underground Station",
+        "Order": 40,
+        "Predecessors": [
+          "940GZZLUTNG"
+        ],
+        "Successors": [
+          "940GZZLUACT"
+        ]
+      },
+      {
+        "Id": "940GZZLUACT",
+        "Name": "Acton Town Underground Station",
+        "Order": 41,
+        "Predecessors": [
+          "940GZZLUCWP"
+        ],
+        "Successors": [
+          "940GZZLUECM"
+        ]
+      },
+      {
+        "Id": "940GZZLUECM",
+        "Name": "Ealing Common Underground Station",
+        "Order": 42,
+        "Predecessors": [
+          "940GZZLUACT"
+        ],
+        "Successors": [
+          "940GZZLUEBY"
+        ]
+      },
+      {
+        "Id": "940GZZLUEBY",
+        "Name": "Ealing Broadway Underground Station",
+        "Order": 43,
+        "Predecessors": [
+          "940GZZLUECM"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZLUGBY",
+        "Name": "Gunnersbury Underground Station",
+        "Order": 40,
+        "Predecessors": [
+          "940GZZLUTNG"
+        ],
+        "Successors": [
+          "940GZZLUKWG"
+        ]
+      },
+      {
+        "Id": "940GZZLUKWG",
+        "Name": "Kew Gardens Underground Station",
+        "Order": 41,
+        "Predecessors": [
+          "940GZZLUGBY"
+        ],
+        "Successors": [
+          "940GZZLURMD"
+        ]
+      },
+      {
+        "Id": "940GZZLURMD",
+        "Name": "Richmond Underground Station",
+        "Order": 42,
+        "Predecessors": [
+          "940GZZLUKWG"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZLUWBN",
+        "Name": "West Brompton Underground Station",
+        "Order": 34,
+        "Predecessors": [
+          "940GZZLUECT"
+        ],
+        "Successors": [
+          "940GZZLUFBY"
+        ]
+      },
+      {
+        "Id": "940GZZLUFBY",
+        "Name": "Fulham Broadway Underground Station",
+        "Order": 35,
+        "Predecessors": [
+          "940GZZLUWBN"
+        ],
+        "Successors": [
+          "940GZZLUPSG"
+        ]
+      },
+      {
+        "Id": "940GZZLUPSG",
+        "Name": "Parsons Green Underground Station",
+        "Order": 36,
+        "Predecessors": [
+          "940GZZLUFBY"
+        ],
+        "Successors": [
+          "940GZZLUPYB"
+        ]
+      },
+      {
+        "Id": "940GZZLUPYB",
+        "Name": "Putney Bridge Underground Station",
+        "Order": 37,
+        "Predecessors": [
+          "940GZZLUPSG"
+        ],
+        "Successors": [
+          "940GZZLUEPY"
+        ]
+      },
+      {
+        "Id": "940GZZLUEPY",
+        "Name": "East Putney Underground Station",
+        "Order": 38,
+        "Predecessors": [
+          "940GZZLUPYB"
+        ],
+        "Successors": [
+          "940GZZLUSFS"
+        ]
+      },
+      {
+        "Id": "940GZZLUSFS",
+        "Name": "Southfields Underground Station",
+        "Order": 39,
+        "Predecessors": [
+          "940GZZLUEPY"
+        ],
+        "Successors": [
+          "940GZZLUWIP"
+        ]
+      },
+      {
+        "Id": "940GZZLUWIP",
+        "Name": "Wimbledon Park Underground Station",
+        "Order": 40,
+        "Predecessors": [
+          "940GZZLUSFS"
+        ],
+        "Successors": [
+          "940GZZLUWIM"
+        ]
+      },
+      {
+        "Id": "940GZZLUWIM",
+        "Name": "Wimbledon Underground Station",
+        "Order": 41,
+        "Predecessors": [
+          "940GZZLUWIP"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZLUERC",
+        "Name": "Edgware Road (Circle Line) Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUPAC"
+        ]
+      },
+      {
+        "Id": "940GZZLUPAC",
+        "Name": "Paddington Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUERC"
+        ],
+        "Successors": [
+          "940GZZLUBWT"
+        ]
+      },
+      {
+        "Id": "940GZZLUBWT",
+        "Name": "Bayswater Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUPAC"
+        ],
+        "Successors": [
+          "940GZZLUNHG"
+        ]
+      },
+      {
+        "Id": "940GZZLUNHG",
+        "Name": "Notting Hill Gate Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUBWT"
+        ],
+        "Successors": [
+          "940GZZLUHSK"
+        ]
+      },
+      {
+        "Id": "940GZZLUHSK",
+        "Name": "High Street Kensington Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUNHG"
+        ],
+        "Successors": [
+          "940GZZLUECT"
+        ]
+      },
+      {
+        "Id": "940GZZLUKOY",
+        "Name": "Kensington (Olympia) Underground Station",
+        "Order": 34,
+        "Predecessors": [
+          "940GZZLUECT"
+        ],
+        "Successors": []
+      }
+    ]
+  },
+  {
+    "Line": "dlr",
+    "Stations": [
+      {
+        "Id": "940GZZDLLEW",
+        "Name": "Lewisham DLR Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZDLELV"
+        ]
+      },
+      {
+        "Id": "940GZZDLELV",
+        "Name": "Elverson Road DLR Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZDLLEW"
+        ],
+        "Successors": [
+          "940GZZDLDEP"
+        ]
+      },
+      {
+        "Id": "940GZZDLDEP",
+        "Name": "Deptford Bridge DLR Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZDLELV"
+        ],
+        "Successors": [
+          "940GZZDLGRE"
+        ]
+      },
+      {
+        "Id": "940GZZDLGRE",
+        "Name": "Greenwich DLR Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZDLDEP"
+        ],
+        "Successors": [
+          "940GZZDLCUT"
+        ]
+      },
+      {
+        "Id": "940GZZDLCUT",
+        "Name": "Cutty Sark (for Maritime Greenwich) DLR Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZDLGRE"
+        ],
+        "Successors": [
+          "940GZZDLISL"
+        ]
+      },
+      {
+        "Id": "940GZZDLISL",
+        "Name": "Island Gardens DLR Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZDLCUT"
+        ],
+        "Successors": [
+          "940GZZDLMUD"
+        ]
+      },
+      {
+        "Id": "940GZZDLMUD",
+        "Name": "Mudchute DLR Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZDLISL"
+        ],
+        "Successors": [
+          "940GZZDLCLA"
+        ]
+      },
+      {
+        "Id": "940GZZDLCLA",
+        "Name": "Crossharbour DLR Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZDLMUD"
+        ],
+        "Successors": [
+          "940GZZDLSOQ"
+        ]
+      },
+      {
+        "Id": "940GZZDLSOQ",
+        "Name": "South Quay DLR Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZDLCLA"
+        ],
+        "Successors": [
+          "940GZZDLHEQ"
+        ]
+      },
+      {
+        "Id": "940GZZDLHEQ",
+        "Name": "Heron Quays DLR Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZDLSOQ"
+        ],
+        "Successors": [
+          "940GZZDLCAN"
+        ]
+      },
+      {
+        "Id": "940GZZDLCAN",
+        "Name": "Canary Wharf DLR Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZDLHEQ"
+        ],
+        "Successors": [
+          "940GZZDLWIQ"
+        ]
+      },
+      {
+        "Id": "940GZZDLWIQ",
+        "Name": "West India Quay DLR Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZDLCAN"
+        ],
+        "Successors": [
+          "940GZZDLPOP",
+          "940GZZDLWFE"
+        ]
+      },
+      {
+        "Id": "940GZZDLPOP",
+        "Name": "Poplar DLR Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZDLWIQ",
+          "940GZZDLBLA"
+        ],
+        "Successors": [
+          "940GZZDLALL",
+          "940GZZDLWFE"
+        ]
+      },
+      {
+        "Id": "940GZZDLALL",
+        "Name": "All Saints DLR Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZDLPOP"
+        ],
+        "Successors": [
+          "940GZZDLLDP"
+        ]
+      },
+      {
+        "Id": "940GZZDLLDP",
+        "Name": "Langdon Park DLR Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZDLALL"
+        ],
+        "Successors": [
+          "940GZZDLDEV"
+        ]
+      },
+      {
+        "Id": "940GZZDLDEV",
+        "Name": "Devons Road DLR Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZDLLDP"
+        ],
+        "Successors": [
+          "940GZZDLBOW"
+        ]
+      },
+      {
+        "Id": "940GZZDLBOW",
+        "Name": "Bow Church DLR Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZDLDEV"
+        ],
+        "Successors": [
+          "940GZZDLPUD"
+        ]
+      },
+      {
+        "Id": "940GZZDLPUD",
+        "Name": "Pudding Mill Lane DLR Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZDLBOW"
+        ],
+        "Successors": [
+          "940GZZDLSTD"
+        ]
+      },
+      {
+        "Id": "940GZZDLSTD",
+        "Name": "Stratford DLR Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZDLPUD",
+          "940GZZDLSHS"
+        ],
+        "Successors": [
+          "940GZZDLSIT"
+        ]
+      },
+      {
+        "Id": "940GZZDLWFE",
+        "Name": "Westferry DLR Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZDLWIQ",
+          "940GZZDLPOP"
+        ],
+        "Successors": [
+          "940GZZDLLIM"
+        ]
+      },
+      {
+        "Id": "940GZZDLLIM",
+        "Name": "Limehouse DLR Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZDLWFE"
+        ],
+        "Successors": [
+          "940GZZDLSHA"
+        ]
+      },
+      {
+        "Id": "940GZZDLSHA",
+        "Name": "Shadwell DLR Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZDLLIM"
+        ],
+        "Successors": [
+          "940GZZDLBNK",
+          "940GZZDLTWG"
+        ]
+      },
+      {
+        "Id": "940GZZDLBNK",
+        "Name": "Bank DLR Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZDLSHA"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZDLTWG",
+        "Name": "Tower Gateway DLR Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZDLSHA"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZDLBEC",
+        "Name": "Beckton DLR Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZDLGAL"
+        ]
+      },
+      {
+        "Id": "940GZZDLGAL",
+        "Name": "Gallions Reach DLR Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZDLBEC"
+        ],
+        "Successors": [
+          "940GZZDLCYP"
+        ]
+      },
+      {
+        "Id": "940GZZDLCYP",
+        "Name": "Cyprus DLR Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZDLGAL"
+        ],
+        "Successors": [
+          "940GZZDLBPK"
+        ]
+      },
+      {
+        "Id": "940GZZDLBPK",
+        "Name": "Beckton Park DLR Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZDLCYP"
+        ],
+        "Successors": [
+          "940GZZDLRAL"
+        ]
+      },
+      {
+        "Id": "940GZZDLRAL",
+        "Name": "Royal Albert DLR Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZDLBPK"
+        ],
+        "Successors": [
+          "940GZZDLPRE"
+        ]
+      },
+      {
+        "Id": "940GZZDLPRE",
+        "Name": "Prince Regent DLR Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZDLRAL"
+        ],
+        "Successors": [
+          "940GZZDLCUS"
+        ]
+      },
+      {
+        "Id": "940GZZDLCUS",
+        "Name": "Custom House (for ExCel) DLR Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZDLPRE"
+        ],
+        "Successors": [
+          "940GZZDLRVC"
+        ]
+      },
+      {
+        "Id": "940GZZDLRVC",
+        "Name": "Royal Victoria DLR Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZDLCUS"
+        ],
+        "Successors": [
+          "940GZZDLCGT"
+        ]
+      },
+      {
+        "Id": "940GZZDLCGT",
+        "Name": "Canning Town DLR Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZDLRVC",
+          "940GZZDLWSV"
+        ],
+        "Successors": [
+          "940GZZDLEIN",
+          "940GZZDLSTL"
+        ]
+      },
+      {
+        "Id": "940GZZDLEIN",
+        "Name": "East India DLR Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZDLCGT"
+        ],
+        "Successors": [
+          "940GZZDLBLA"
+        ]
+      },
+      {
+        "Id": "940GZZDLBLA",
+        "Name": "Blackwall DLR Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZDLEIN"
+        ],
+        "Successors": [
+          "940GZZDLPOP"
+        ]
+      },
+      {
+        "Id": "940GZZDLSTL",
+        "Name": "Star Lane DLR Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZDLCGT"
+        ],
+        "Successors": [
+          "940GZZDLWHM"
+        ]
+      },
+      {
+        "Id": "940GZZDLWHM",
+        "Name": "West Ham DLR Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZDLSTL"
+        ],
+        "Successors": [
+          "940GZZDLABR"
+        ]
+      },
+      {
+        "Id": "940GZZDLABR",
+        "Name": "Abbey Road DLR Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZDLWHM"
+        ],
+        "Successors": [
+          "940GZZDLSHS"
+        ]
+      },
+      {
+        "Id": "940GZZDLSHS",
+        "Name": "Stratford High Street DLR Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZDLABR"
+        ],
+        "Successors": [
+          "940GZZDLSTD"
+        ]
+      },
+      {
+        "Id": "940GZZDLSIT",
+        "Name": "Stratford International DLR Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZDLSTD"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZDLWLA",
+        "Name": "Woolwich Arsenal DLR Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZDLKGV"
+        ]
+      },
+      {
+        "Id": "940GZZDLKGV",
+        "Name": "King George V DLR Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZDLWLA"
+        ],
+        "Successors": [
+          "940GZZDLLCA"
+        ]
+      },
+      {
+        "Id": "940GZZDLLCA",
+        "Name": "London City Airport DLR Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZDLKGV"
+        ],
+        "Successors": [
+          "940GZZDLPDK"
+        ]
+      },
+      {
+        "Id": "940GZZDLPDK",
+        "Name": "Pontoon Dock DLR Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZDLLCA"
+        ],
+        "Successors": [
+          "940GZZDLWSV"
+        ]
+      },
+      {
+        "Id": "940GZZDLWSV",
+        "Name": "West Silvertown DLR Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZDLPDK"
+        ],
+        "Successors": [
+          "940GZZDLCGT"
+        ]
+      }
+    ]
+  },
+  {
+    "Line": "elizabeth",
+    "Stations": [
+      {
+        "Id": "910GHTRWTM4",
+        "Name": "Heathrow Terminal 4 Rail Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "910GHTRWAPT"
+        ]
+      },
+      {
+        "Id": "910GHTRWAPT",
+        "Name": "Heathrow Terminals 2 & 3 Rail Station",
+        "Order": 2,
+        "Predecessors": [
+          "910GHTRWTM4",
+          "910GHTRWTM5"
+        ],
+        "Successors": [
+          "910GHAYESAH"
+        ]
+      },
+      {
+        "Id": "910GHAYESAH",
+        "Name": "Hayes & Harlington Rail Station",
+        "Order": 10,
+        "Predecessors": [
+          "910GHTRWAPT",
+          "910GWDRYTON"
+        ],
+        "Successors": [
+          "910GSTHALL"
+        ]
+      },
+      {
+        "Id": "910GSTHALL",
+        "Name": "Southall Rail Station",
+        "Order": 11,
+        "Predecessors": [
+          "910GHAYESAH"
+        ],
+        "Successors": [
+          "910GHANWELL"
+        ]
+      },
+      {
+        "Id": "910GHANWELL",
+        "Name": "Hanwell Rail Station",
+        "Order": 12,
+        "Predecessors": [
+          "910GSTHALL"
+        ],
+        "Successors": [
+          "910GWEALING"
+        ]
+      },
+      {
+        "Id": "910GWEALING",
+        "Name": "West Ealing Rail Station",
+        "Order": 13,
+        "Predecessors": [
+          "910GHANWELL"
+        ],
+        "Successors": [
+          "910GEALINGB"
+        ]
+      },
+      {
+        "Id": "910GEALINGB",
+        "Name": "Ealing Broadway Rail Station",
+        "Order": 14,
+        "Predecessors": [
+          "910GWEALING"
+        ],
+        "Successors": [
+          "910GACTONML"
+        ]
+      },
+      {
+        "Id": "910GACTONML",
+        "Name": "Acton Main Line Rail Station",
+        "Order": 15,
+        "Predecessors": [
+          "910GEALINGB"
+        ],
+        "Successors": [
+          "910GPADTLL",
+          "910GPADTON"
+        ]
+      },
+      {
+        "Id": "910GPADTLL",
+        "Name": "Paddington",
+        "Order": 16,
+        "Predecessors": [
+          "910GACTONML"
+        ],
+        "Successors": [
+          "910GBONDST"
+        ]
+      },
+      {
+        "Id": "910GBONDST",
+        "Name": "Bond Street",
+        "Order": 17,
+        "Predecessors": [
+          "910GPADTLL"
+        ],
+        "Successors": [
+          "910GTOTCTRD"
+        ]
+      },
+      {
+        "Id": "910GTOTCTRD",
+        "Name": "Tottenham Court Road",
+        "Order": 18,
+        "Predecessors": [
+          "910GBONDST"
+        ],
+        "Successors": [
+          "910GFRNDXR"
+        ]
+      },
+      {
+        "Id": "910GFRNDXR",
+        "Name": "Farringdon",
+        "Order": 19,
+        "Predecessors": [
+          "910GTOTCTRD"
+        ],
+        "Successors": [
+          "910GLIVSTLL"
+        ]
+      },
+      {
+        "Id": "910GLIVSTLL",
+        "Name": "Liverpool Street",
+        "Order": 20,
+        "Predecessors": [
+          "910GFRNDXR"
+        ],
+        "Successors": [
+          "910GWCHAPXR"
+        ]
+      },
+      {
+        "Id": "910GWCHAPXR",
+        "Name": "Whitechapel",
+        "Order": 21,
+        "Predecessors": [
+          "910GLIVSTLL"
+        ],
+        "Successors": [
+          "910GSTFD",
+          "910GCANWHRF"
+        ]
+      },
+      {
+        "Id": "910GSTFD",
+        "Name": "Stratford (London) Rail Station",
+        "Order": 22,
+        "Predecessors": [
+          "910GWCHAPXR",
+          "910GLIVST"
+        ],
+        "Successors": [
+          "910GMRYLAND"
+        ]
+      },
+      {
+        "Id": "910GMRYLAND",
+        "Name": "Maryland Rail Station",
+        "Order": 23,
+        "Predecessors": [
+          "910GSTFD"
+        ],
+        "Successors": [
+          "910GFRSTGT"
+        ]
+      },
+      {
+        "Id": "910GFRSTGT",
+        "Name": "Forest Gate Rail Station",
+        "Order": 24,
+        "Predecessors": [
+          "910GMRYLAND"
+        ],
+        "Successors": [
+          "910GMANRPK"
+        ]
+      },
+      {
+        "Id": "910GMANRPK",
+        "Name": "Manor Park Rail Station",
+        "Order": 25,
+        "Predecessors": [
+          "910GFRSTGT"
+        ],
+        "Successors": [
+          "910GILFORD"
+        ]
+      },
+      {
+        "Id": "910GILFORD",
+        "Name": "Ilford Rail Station",
+        "Order": 26,
+        "Predecessors": [
+          "910GMANRPK"
+        ],
+        "Successors": [
+          "910GSVNKNGS"
+        ]
+      },
+      {
+        "Id": "910GSVNKNGS",
+        "Name": "Seven Kings Rail Station",
+        "Order": 27,
+        "Predecessors": [
+          "910GILFORD"
+        ],
+        "Successors": [
+          "910GGODMAYS"
+        ]
+      },
+      {
+        "Id": "910GGODMAYS",
+        "Name": "Goodmayes Rail Station",
+        "Order": 28,
+        "Predecessors": [
+          "910GSVNKNGS"
+        ],
+        "Successors": [
+          "910GCHDWLHT"
+        ]
+      },
+      {
+        "Id": "910GCHDWLHT",
+        "Name": "Chadwell Heath Rail Station",
+        "Order": 29,
+        "Predecessors": [
+          "910GGODMAYS"
+        ],
+        "Successors": [
+          "910GROMFORD"
+        ]
+      },
+      {
+        "Id": "910GROMFORD",
+        "Name": "Romford Rail Station",
+        "Order": 30,
+        "Predecessors": [
+          "910GCHDWLHT"
+        ],
+        "Successors": [
+          "910GGIDEAPK"
+        ]
+      },
+      {
+        "Id": "910GGIDEAPK",
+        "Name": "Gidea Park Rail Station",
+        "Order": 31,
+        "Predecessors": [
+          "910GROMFORD"
+        ],
+        "Successors": [
+          "910GHRLDWOD"
+        ]
+      },
+      {
+        "Id": "910GHRLDWOD",
+        "Name": "Harold Wood Rail Station",
+        "Order": 32,
+        "Predecessors": [
+          "910GGIDEAPK"
+        ],
+        "Successors": [
+          "910GBRTWOOD"
+        ]
+      },
+      {
+        "Id": "910GBRTWOOD",
+        "Name": "Brentwood Rail Station",
+        "Order": 33,
+        "Predecessors": [
+          "910GHRLDWOD"
+        ],
+        "Successors": [
+          "910GSHENFLD"
+        ]
+      },
+      {
+        "Id": "910GSHENFLD",
+        "Name": "Shenfield Rail Station",
+        "Order": 34,
+        "Predecessors": [
+          "910GBRTWOOD"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "910GHTRWTM5",
+        "Name": "Heathrow Terminal 5 Rail Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "910GHTRWAPT"
+        ]
+      },
+      {
+        "Id": "910GCANWHRF",
+        "Name": "Canary Wharf",
+        "Order": 22,
+        "Predecessors": [
+          "910GWCHAPXR"
+        ],
+        "Successors": [
+          "910GCSTMHSXR"
+        ]
+      },
+      {
+        "Id": "910GCSTMHSXR",
+        "Name": "Custom House",
+        "Order": 23,
+        "Predecessors": [
+          "910GCANWHRF"
+        ],
+        "Successors": [
+          "910GWOLWXR"
+        ]
+      },
+      {
+        "Id": "910GWOLWXR",
+        "Name": "Woolwich",
+        "Order": 24,
+        "Predecessors": [
+          "910GCSTMHSXR"
+        ],
+        "Successors": [
+          "910GABWDXR"
+        ]
+      },
+      {
+        "Id": "910GABWDXR",
+        "Name": "Abbey Wood",
+        "Order": 25,
+        "Predecessors": [
+          "910GWOLWXR"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "910GRDNGSTN",
+        "Name": "Reading Rail Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "910GTWYFORD"
+        ]
+      },
+      {
+        "Id": "910GTWYFORD",
+        "Name": "Twyford Rail Station",
+        "Order": 2,
+        "Predecessors": [
+          "910GRDNGSTN"
+        ],
+        "Successors": [
+          "910GMDNHEAD"
+        ]
+      },
+      {
+        "Id": "910GMDNHEAD",
+        "Name": "Maidenhead Rail Station",
+        "Order": 3,
+        "Predecessors": [
+          "910GTWYFORD"
+        ],
+        "Successors": [
+          "910GTAPLOW"
+        ]
+      },
+      {
+        "Id": "910GTAPLOW",
+        "Name": "Taplow Rail Station",
+        "Order": 4,
+        "Predecessors": [
+          "910GMDNHEAD"
+        ],
+        "Successors": [
+          "910GBNHAM"
+        ]
+      },
+      {
+        "Id": "910GBNHAM",
+        "Name": "Burnham (Berks) Rail Station",
+        "Order": 5,
+        "Predecessors": [
+          "910GTAPLOW"
+        ],
+        "Successors": [
+          "910GSLOUGH"
+        ]
+      },
+      {
+        "Id": "910GSLOUGH",
+        "Name": "Slough Rail Station",
+        "Order": 6,
+        "Predecessors": [
+          "910GBNHAM"
+        ],
+        "Successors": [
+          "910GLANGLEY"
+        ]
+      },
+      {
+        "Id": "910GLANGLEY",
+        "Name": "Langley (Berks) Rail Station",
+        "Order": 7,
+        "Predecessors": [
+          "910GSLOUGH"
+        ],
+        "Successors": [
+          "910GIVER"
+        ]
+      },
+      {
+        "Id": "910GIVER",
+        "Name": "Iver Rail Station",
+        "Order": 8,
+        "Predecessors": [
+          "910GLANGLEY"
+        ],
+        "Successors": [
+          "910GWDRYTON"
+        ]
+      },
+      {
+        "Id": "910GWDRYTON",
+        "Name": "West Drayton Rail Station",
+        "Order": 9,
+        "Predecessors": [
+          "910GIVER"
+        ],
+        "Successors": [
+          "910GHAYESAH"
+        ]
+      },
+      {
+        "Id": "910GPADTON",
+        "Name": "London Paddington Rail Station",
+        "Order": 16,
+        "Predecessors": [
+          "910GACTONML"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "910GLIVST",
+        "Name": "London Liverpool Street Rail Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "910GSTFD"
+        ]
+      }
+    ]
+  },
+  {
+    "Line": "hammersmith-city",
+    "Stations": [
+      {
+        "Id": "940GZZLUBKG",
+        "Name": "Barking Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUEHM"
+        ]
+      },
+      {
+        "Id": "940GZZLUEHM",
+        "Name": "East Ham Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUBKG"
+        ],
+        "Successors": [
+          "940GZZLUUPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUUPK",
+        "Name": "Upton Park Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUEHM"
+        ],
+        "Successors": [
+          "940GZZLUPLW"
+        ]
+      },
+      {
+        "Id": "940GZZLUPLW",
+        "Name": "Plaistow Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUUPK"
+        ],
+        "Successors": [
+          "940GZZLUWHM"
+        ]
+      },
+      {
+        "Id": "940GZZLUWHM",
+        "Name": "West Ham Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUPLW"
+        ],
+        "Successors": [
+          "940GZZLUBBB"
+        ]
+      },
+      {
+        "Id": "940GZZLUBBB",
+        "Name": "Bromley-by-Bow Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUWHM"
+        ],
+        "Successors": [
+          "940GZZLUBWR"
+        ]
+      },
+      {
+        "Id": "940GZZLUBWR",
+        "Name": "Bow Road Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLUBBB"
+        ],
+        "Successors": [
+          "940GZZLUMED"
+        ]
+      },
+      {
+        "Id": "940GZZLUMED",
+        "Name": "Mile End Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUBWR"
+        ],
+        "Successors": [
+          "940GZZLUSGN"
+        ]
+      },
+      {
+        "Id": "940GZZLUSGN",
+        "Name": "Stepney Green Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLUMED"
+        ],
+        "Successors": [
+          "940GZZLUWPL"
+        ]
+      },
+      {
+        "Id": "940GZZLUWPL",
+        "Name": "Whitechapel Underground Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZLUSGN"
+        ],
+        "Successors": [
+          "940GZZLUADE"
+        ]
+      },
+      {
+        "Id": "940GZZLUADE",
+        "Name": "Aldgate East Underground Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZLUWPL"
+        ],
+        "Successors": [
+          "940GZZLULVT"
+        ]
+      },
+      {
+        "Id": "940GZZLULVT",
+        "Name": "Liverpool Street Underground Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZLUADE"
+        ],
+        "Successors": [
+          "940GZZLUMGT"
+        ]
+      },
+      {
+        "Id": "940GZZLUMGT",
+        "Name": "Moorgate Underground Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZLULVT"
+        ],
+        "Successors": [
+          "940GZZLUBBN"
+        ]
+      },
+      {
+        "Id": "940GZZLUBBN",
+        "Name": "Barbican Underground Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZLUMGT"
+        ],
+        "Successors": [
+          "940GZZLUFCN"
+        ]
+      },
+      {
+        "Id": "940GZZLUFCN",
+        "Name": "Farringdon Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLUBBN"
+        ],
+        "Successors": [
+          "940GZZLUKSX"
+        ]
+      },
+      {
+        "Id": "940GZZLUKSX",
+        "Name": "King's Cross St. Pancras Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUFCN"
+        ],
+        "Successors": [
+          "940GZZLUESQ"
+        ]
+      },
+      {
+        "Id": "940GZZLUESQ",
+        "Name": "Euston Square Underground Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZLUKSX"
+        ],
+        "Successors": [
+          "940GZZLUGPS"
+        ]
+      },
+      {
+        "Id": "940GZZLUGPS",
+        "Name": "Great Portland Street Underground Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZLUESQ"
+        ],
+        "Successors": [
+          "940GZZLUBST"
+        ]
+      },
+      {
+        "Id": "940GZZLUBST",
+        "Name": "Baker Street Underground Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZLUGPS"
+        ],
+        "Successors": [
+          "940GZZLUERC"
+        ]
+      },
+      {
+        "Id": "940GZZLUERC",
+        "Name": "Edgware Road (Circle Line) Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLUBST"
+        ],
+        "Successors": [
+          "940GZZLUPAH"
+        ]
+      },
+      {
+        "Id": "940GZZLUPAH",
+        "Name": "Paddington (H&C Line)-Underground",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLUERC"
+        ],
+        "Successors": [
+          "940GZZLURYO"
+        ]
+      },
+      {
+        "Id": "940GZZLURYO",
+        "Name": "Royal Oak Underground Station",
+        "Order": 22,
+        "Predecessors": [
+          "940GZZLUPAH"
+        ],
+        "Successors": [
+          "940GZZLUWSP"
+        ]
+      },
+      {
+        "Id": "940GZZLUWSP",
+        "Name": "Westbourne Park Underground Station",
+        "Order": 23,
+        "Predecessors": [
+          "940GZZLURYO"
+        ],
+        "Successors": [
+          "940GZZLULAD"
+        ]
+      },
+      {
+        "Id": "940GZZLULAD",
+        "Name": "Ladbroke Grove Underground Station",
+        "Order": 24,
+        "Predecessors": [
+          "940GZZLUWSP"
+        ],
+        "Successors": [
+          "940GZZLULRD"
+        ]
+      },
+      {
+        "Id": "940GZZLULRD",
+        "Name": "Latimer Road Underground Station",
+        "Order": 25,
+        "Predecessors": [
+          "940GZZLULAD"
+        ],
+        "Successors": [
+          "940GZZLUWLA"
+        ]
+      },
+      {
+        "Id": "940GZZLUWLA",
+        "Name": "Wood Lane Underground Station",
+        "Order": 26,
+        "Predecessors": [
+          "940GZZLULRD"
+        ],
+        "Successors": [
+          "940GZZLUSBM"
+        ]
+      },
+      {
+        "Id": "940GZZLUSBM",
+        "Name": "Shepherd's Bush Market Underground Station",
+        "Order": 27,
+        "Predecessors": [
+          "940GZZLUWLA"
+        ],
+        "Successors": [
+          "940GZZLUGHK"
+        ]
+      },
+      {
+        "Id": "940GZZLUGHK",
+        "Name": "Goldhawk Road Underground Station",
+        "Order": 28,
+        "Predecessors": [
+          "940GZZLUSBM"
+        ],
+        "Successors": [
+          "940GZZLUHSC"
+        ]
+      },
+      {
+        "Id": "940GZZLUHSC",
+        "Name": "Hammersmith (H&C Line) Underground Station",
+        "Order": 29,
+        "Predecessors": [
+          "940GZZLUGHK"
+        ],
+        "Successors": []
+      }
+    ]
+  },
+  {
+    "Line": "jubilee",
+    "Stations": [
+      {
+        "Id": "940GZZLUSTD",
+        "Name": "Stratford Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUWHM"
+        ]
+      },
+      {
+        "Id": "940GZZLUWHM",
+        "Name": "West Ham Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUSTD"
+        ],
+        "Successors": [
+          "940GZZLUCGT"
+        ]
+      },
+      {
+        "Id": "940GZZLUCGT",
+        "Name": "Canning Town Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUWHM"
+        ],
+        "Successors": [
+          "940GZZLUNGW"
+        ]
+      },
+      {
+        "Id": "940GZZLUNGW",
+        "Name": "North Greenwich Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUCGT"
+        ],
+        "Successors": [
+          "940GZZLUCYF"
+        ]
+      },
+      {
+        "Id": "940GZZLUCYF",
+        "Name": "Canary Wharf Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUNGW"
+        ],
+        "Successors": [
+          "940GZZLUCWR"
+        ]
+      },
+      {
+        "Id": "940GZZLUCWR",
+        "Name": "Canada Water Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUCYF"
+        ],
+        "Successors": [
+          "940GZZLUBMY"
+        ]
+      },
+      {
+        "Id": "940GZZLUBMY",
+        "Name": "Bermondsey Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLUCWR"
+        ],
+        "Successors": [
+          "940GZZLULNB"
+        ]
+      },
+      {
+        "Id": "940GZZLULNB",
+        "Name": "London Bridge Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUBMY"
+        ],
+        "Successors": [
+          "940GZZLUSWK"
+        ]
+      },
+      {
+        "Id": "940GZZLUSWK",
+        "Name": "Southwark Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLULNB"
+        ],
+        "Successors": [
+          "940GZZLUWLO"
+        ]
+      },
+      {
+        "Id": "940GZZLUWLO",
+        "Name": "Waterloo Underground Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZLUSWK"
+        ],
+        "Successors": [
+          "940GZZLUWSM"
+        ]
+      },
+      {
+        "Id": "940GZZLUWSM",
+        "Name": "Westminster Underground Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZLUWLO"
+        ],
+        "Successors": [
+          "940GZZLUGPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUGPK",
+        "Name": "Green Park Underground Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZLUWSM"
+        ],
+        "Successors": [
+          "940GZZLUBND"
+        ]
+      },
+      {
+        "Id": "940GZZLUBND",
+        "Name": "Bond Street Underground Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZLUGPK"
+        ],
+        "Successors": [
+          "940GZZLUBST"
+        ]
+      },
+      {
+        "Id": "940GZZLUBST",
+        "Name": "Baker Street Underground Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZLUBND"
+        ],
+        "Successors": [
+          "940GZZLUSJW"
+        ]
+      },
+      {
+        "Id": "940GZZLUSJW",
+        "Name": "St. John's Wood Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLUBST"
+        ],
+        "Successors": [
+          "940GZZLUSWC"
+        ]
+      },
+      {
+        "Id": "940GZZLUSWC",
+        "Name": "Swiss Cottage Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUSJW"
+        ],
+        "Successors": [
+          "940GZZLUFYR"
+        ]
+      },
+      {
+        "Id": "940GZZLUFYR",
+        "Name": "Finchley Road Underground Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZLUSWC"
+        ],
+        "Successors": [
+          "940GZZLUWHP"
+        ]
+      },
+      {
+        "Id": "940GZZLUWHP",
+        "Name": "West Hampstead Underground Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZLUFYR"
+        ],
+        "Successors": [
+          "940GZZLUKBN"
+        ]
+      },
+      {
+        "Id": "940GZZLUKBN",
+        "Name": "Kilburn Underground Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZLUWHP"
+        ],
+        "Successors": [
+          "940GZZLUWIG"
+        ]
+      },
+      {
+        "Id": "940GZZLUWIG",
+        "Name": "Willesden Green Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLUKBN"
+        ],
+        "Successors": [
+          "940GZZLUDOH"
+        ]
+      },
+      {
+        "Id": "940GZZLUDOH",
+        "Name": "Dollis Hill Underground Station",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLUWIG"
+        ],
+        "Successors": [
+          "940GZZLUNDN"
+        ]
+      },
+      {
+        "Id": "940GZZLUNDN",
+        "Name": "Neasden Underground Station",
+        "Order": 22,
+        "Predecessors": [
+          "940GZZLUDOH"
+        ],
+        "Successors": [
+          "940GZZLUWYP"
+        ]
+      },
+      {
+        "Id": "940GZZLUWYP",
+        "Name": "Wembley Park Underground Station",
+        "Order": 23,
+        "Predecessors": [
+          "940GZZLUNDN"
+        ],
+        "Successors": [
+          "940GZZLUKBY"
+        ]
+      },
+      {
+        "Id": "940GZZLUKBY",
+        "Name": "Kingsbury Underground Station",
+        "Order": 24,
+        "Predecessors": [
+          "940GZZLUWYP"
+        ],
+        "Successors": [
+          "940GZZLUQBY"
+        ]
+      },
+      {
+        "Id": "940GZZLUQBY",
+        "Name": "Queensbury Underground Station",
+        "Order": 25,
+        "Predecessors": [
+          "940GZZLUKBY"
+        ],
+        "Successors": [
+          "940GZZLUCPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUCPK",
+        "Name": "Canons Park Underground Station",
+        "Order": 26,
+        "Predecessors": [
+          "940GZZLUQBY"
+        ],
+        "Successors": [
+          "940GZZLUSTM"
+        ]
+      },
+      {
+        "Id": "940GZZLUSTM",
+        "Name": "Stanmore Underground Station",
+        "Order": 27,
+        "Predecessors": [
+          "940GZZLUCPK"
+        ],
+        "Successors": []
+      }
+    ]
+  },
+  {
+    "Line": "metropolitan",
+    "Stations": [
+      {
+        "Id": "940GZZLUALD",
+        "Name": "Aldgate Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLULVT"
+        ]
+      },
+      {
+        "Id": "940GZZLULVT",
+        "Name": "Liverpool Street Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUALD"
+        ],
+        "Successors": [
+          "940GZZLUMGT"
+        ]
+      },
+      {
+        "Id": "940GZZLUMGT",
+        "Name": "Moorgate Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLULVT"
+        ],
+        "Successors": [
+          "940GZZLUBBN"
+        ]
+      },
+      {
+        "Id": "940GZZLUBBN",
+        "Name": "Barbican Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUMGT"
+        ],
+        "Successors": [
+          "940GZZLUFCN"
+        ]
+      },
+      {
+        "Id": "940GZZLUFCN",
+        "Name": "Farringdon Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUBBN"
+        ],
+        "Successors": [
+          "940GZZLUKSX"
+        ]
+      },
+      {
+        "Id": "940GZZLUKSX",
+        "Name": "King's Cross St. Pancras Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUFCN"
+        ],
+        "Successors": [
+          "940GZZLUESQ"
+        ]
+      },
+      {
+        "Id": "940GZZLUESQ",
+        "Name": "Euston Square Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLUKSX"
+        ],
+        "Successors": [
+          "940GZZLUGPS"
+        ]
+      },
+      {
+        "Id": "940GZZLUGPS",
+        "Name": "Great Portland Street Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUESQ"
+        ],
+        "Successors": [
+          "940GZZLUBST"
+        ]
+      },
+      {
+        "Id": "940GZZLUBST",
+        "Name": "Baker Street Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLUGPS"
+        ],
+        "Successors": [
+          "940GZZLUFYR"
+        ]
+      },
+      {
+        "Id": "940GZZLUFYR",
+        "Name": "Finchley Road Underground Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZLUBST"
+        ],
+        "Successors": [
+          "940GZZLUWYP"
+        ]
+      },
+      {
+        "Id": "940GZZLUWYP",
+        "Name": "Wembley Park Underground Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZLUFYR"
+        ],
+        "Successors": [
+          "940GZZLUPRD"
+        ]
+      },
+      {
+        "Id": "940GZZLUPRD",
+        "Name": "Preston Road Underground Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZLUWYP"
+        ],
+        "Successors": [
+          "940GZZLUNKP"
+        ]
+      },
+      {
+        "Id": "940GZZLUNKP",
+        "Name": "Northwick Park Underground Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZLUPRD"
+        ],
+        "Successors": [
+          "940GZZLUHOH"
+        ]
+      },
+      {
+        "Id": "940GZZLUHOH",
+        "Name": "Harrow-on-the-Hill Underground Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZLUNKP"
+        ],
+        "Successors": [
+          "940GZZLUNHA",
+          "940GZZLUWHW"
+        ]
+      },
+      {
+        "Id": "940GZZLUNHA",
+        "Name": "North Harrow Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLUHOH"
+        ],
+        "Successors": [
+          "940GZZLUPNR"
+        ]
+      },
+      {
+        "Id": "940GZZLUPNR",
+        "Name": "Pinner Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUNHA"
+        ],
+        "Successors": [
+          "940GZZLUNWH"
+        ]
+      },
+      {
+        "Id": "940GZZLUNWH",
+        "Name": "Northwood Hills Underground Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZLUPNR"
+        ],
+        "Successors": [
+          "940GZZLUNOW"
+        ]
+      },
+      {
+        "Id": "940GZZLUNOW",
+        "Name": "Northwood Underground Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZLUNWH"
+        ],
+        "Successors": [
+          "940GZZLUMPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUMPK",
+        "Name": "Moor Park Underground Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZLUNOW"
+        ],
+        "Successors": [
+          "940GZZLURKW",
+          "940GZZLUCXY"
+        ]
+      },
+      {
+        "Id": "940GZZLURKW",
+        "Name": "Rickmansworth Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLUMPK"
+        ],
+        "Successors": [
+          "940GZZLUCYD"
+        ]
+      },
+      {
+        "Id": "940GZZLUCYD",
+        "Name": "Chorleywood Underground Station",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLURKW"
+        ],
+        "Successors": [
+          "940GZZLUCAL"
+        ]
+      },
+      {
+        "Id": "940GZZLUCAL",
+        "Name": "Chalfont & Latimer Underground Station",
+        "Order": 22,
+        "Predecessors": [
+          "940GZZLUCYD"
+        ],
+        "Successors": [
+          "940GZZLUCSM",
+          "940GZZLUAMS"
+        ]
+      },
+      {
+        "Id": "940GZZLUCSM",
+        "Name": "Chesham Underground Station",
+        "Order": 23,
+        "Predecessors": [
+          "940GZZLUCAL"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZLUAMS",
+        "Name": "Amersham Underground Station",
+        "Order": 23,
+        "Predecessors": [
+          "940GZZLUCAL"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZLUWHW",
+        "Name": "West Harrow Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLUHOH"
+        ],
+        "Successors": [
+          "940GZZLURYL"
+        ]
+      },
+      {
+        "Id": "940GZZLURYL",
+        "Name": "Rayners Lane Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUWHW"
+        ],
+        "Successors": [
+          "940GZZLUEAE"
+        ]
+      },
+      {
+        "Id": "940GZZLUEAE",
+        "Name": "Eastcote Underground Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZLURYL"
+        ],
+        "Successors": [
+          "940GZZLURSM"
+        ]
+      },
+      {
+        "Id": "940GZZLURSM",
+        "Name": "Ruislip Manor Underground Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZLUEAE"
+        ],
+        "Successors": [
+          "940GZZLURSP"
+        ]
+      },
+      {
+        "Id": "940GZZLURSP",
+        "Name": "Ruislip Underground Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZLURSM"
+        ],
+        "Successors": [
+          "940GZZLUICK"
+        ]
+      },
+      {
+        "Id": "940GZZLUICK",
+        "Name": "Ickenham Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLURSP"
+        ],
+        "Successors": [
+          "940GZZLUHGD"
+        ]
+      },
+      {
+        "Id": "940GZZLUHGD",
+        "Name": "Hillingdon Underground Station",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLUICK"
+        ],
+        "Successors": [
+          "940GZZLUUXB"
+        ]
+      },
+      {
+        "Id": "940GZZLUUXB",
+        "Name": "Uxbridge Underground Station",
+        "Order": 22,
+        "Predecessors": [
+          "940GZZLUHGD"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZLUCXY",
+        "Name": "Croxley Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLUMPK"
+        ],
+        "Successors": [
+          "940GZZLUWAF"
+        ]
+      },
+      {
+        "Id": "940GZZLUWAF",
+        "Name": "Watford Underground Station",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLUCXY"
+        ],
+        "Successors": []
+      }
+    ]
+  },
+  {
+    "Line": "northern",
+    "Stations": [
+      {
+        "Id": "940GZZLUHBT",
+        "Name": "High Barnet Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUTAW"
+        ]
+      },
+      {
+        "Id": "940GZZLUTAW",
+        "Name": "Totteridge & Whetstone Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUHBT"
+        ],
+        "Successors": [
+          "940GZZLUWOP"
+        ]
+      },
+      {
+        "Id": "940GZZLUWOP",
+        "Name": "Woodside Park Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUTAW"
+        ],
+        "Successors": [
+          "940GZZLUWFN"
+        ]
+      },
+      {
+        "Id": "940GZZLUWFN",
+        "Name": "West Finchley Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUWOP"
+        ],
+        "Successors": [
+          "940GZZLUFYC"
+        ]
+      },
+      {
+        "Id": "940GZZLUFYC",
+        "Name": "Finchley Central Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUWFN",
+          "940GZZLUMHL"
+        ],
+        "Successors": [
+          "940GZZLUEFY"
+        ]
+      },
+      {
+        "Id": "940GZZLUEFY",
+        "Name": "East Finchley Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUFYC"
+        ],
+        "Successors": [
+          "940GZZLUHGT"
+        ]
+      },
+      {
+        "Id": "940GZZLUHGT",
+        "Name": "Highgate Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLUEFY"
+        ],
+        "Successors": [
+          "940GZZLUACY"
+        ]
+      },
+      {
+        "Id": "940GZZLUACY",
+        "Name": "Archway Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUHGT"
+        ],
+        "Successors": [
+          "940GZZLUTFP"
+        ]
+      },
+      {
+        "Id": "940GZZLUTFP",
+        "Name": "Tufnell Park Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLUACY"
+        ],
+        "Successors": [
+          "940GZZLUKSH"
+        ]
+      },
+      {
+        "Id": "940GZZLUKSH",
+        "Name": "Kentish Town Underground Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZLUTFP"
+        ],
+        "Successors": [
+          "940GZZLUCTN"
+        ]
+      },
+      {
+        "Id": "940GZZLUCTN",
+        "Name": "Camden Town Underground Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZLUKSH",
+          "940GZZLUCFM"
+        ],
+        "Successors": [
+          "940GZZLUMTC",
+          "940GZZLUEUS"
+        ]
+      },
+      {
+        "Id": "940GZZLUMTC",
+        "Name": "Mornington Crescent Underground Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZLUCTN"
+        ],
+        "Successors": [
+          "940GZZLUEUS"
+        ]
+      },
+      {
+        "Id": "940GZZLUEUS",
+        "Name": "Euston Underground Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZLUMTC",
+          "940GZZLUCTN"
+        ],
+        "Successors": [
+          "940GZZLUWRR",
+          "940GZZLUKSX"
+        ]
+      },
+      {
+        "Id": "940GZZLUWRR",
+        "Name": "Warren Street Underground Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZLUEUS"
+        ],
+        "Successors": [
+          "940GZZLUGDG"
+        ]
+      },
+      {
+        "Id": "940GZZLUGDG",
+        "Name": "Goodge Street Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLUWRR"
+        ],
+        "Successors": [
+          "940GZZLUTCR"
+        ]
+      },
+      {
+        "Id": "940GZZLUTCR",
+        "Name": "Tottenham Court Road Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUGDG"
+        ],
+        "Successors": [
+          "940GZZLULSQ"
+        ]
+      },
+      {
+        "Id": "940GZZLULSQ",
+        "Name": "Leicester Square Underground Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZLUTCR"
+        ],
+        "Successors": [
+          "940GZZLUCHX"
+        ]
+      },
+      {
+        "Id": "940GZZLUCHX",
+        "Name": "Charing Cross Underground Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZLULSQ"
+        ],
+        "Successors": [
+          "940GZZLUEMB"
+        ]
+      },
+      {
+        "Id": "940GZZLUEMB",
+        "Name": "Embankment Underground Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZLUCHX"
+        ],
+        "Successors": [
+          "940GZZLUWLO"
+        ]
+      },
+      {
+        "Id": "940GZZLUWLO",
+        "Name": "Waterloo Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLUEMB"
+        ],
+        "Successors": [
+          "940GZZLUKNG"
+        ]
+      },
+      {
+        "Id": "940GZZLUKNG",
+        "Name": "Kennington Underground Station",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLUWLO",
+          "940GZZLUEAC"
+        ],
+        "Successors": [
+          "940GZZLUOVL",
+          "940GZZNEUGST"
+        ]
+      },
+      {
+        "Id": "940GZZLUOVL",
+        "Name": "Oval Underground Station",
+        "Order": 22,
+        "Predecessors": [
+          "940GZZLUKNG"
+        ],
+        "Successors": [
+          "940GZZLUSKW"
+        ]
+      },
+      {
+        "Id": "940GZZLUSKW",
+        "Name": "Stockwell Underground Station",
+        "Order": 23,
+        "Predecessors": [
+          "940GZZLUOVL"
+        ],
+        "Successors": [
+          "940GZZLUCPN"
+        ]
+      },
+      {
+        "Id": "940GZZLUCPN",
+        "Name": "Clapham North Underground Station",
+        "Order": 24,
+        "Predecessors": [
+          "940GZZLUSKW"
+        ],
+        "Successors": [
+          "940GZZLUCPC"
+        ]
+      },
+      {
+        "Id": "940GZZLUCPC",
+        "Name": "Clapham Common Underground Station",
+        "Order": 25,
+        "Predecessors": [
+          "940GZZLUCPN"
+        ],
+        "Successors": [
+          "940GZZLUCPS"
+        ]
+      },
+      {
+        "Id": "940GZZLUCPS",
+        "Name": "Clapham South Underground Station",
+        "Order": 26,
+        "Predecessors": [
+          "940GZZLUCPC"
+        ],
+        "Successors": [
+          "940GZZLUBLM"
+        ]
+      },
+      {
+        "Id": "940GZZLUBLM",
+        "Name": "Balham Underground Station",
+        "Order": 27,
+        "Predecessors": [
+          "940GZZLUCPS"
+        ],
+        "Successors": [
+          "940GZZLUTBC"
+        ]
+      },
+      {
+        "Id": "940GZZLUTBC",
+        "Name": "Tooting Bec Underground Station",
+        "Order": 28,
+        "Predecessors": [
+          "940GZZLUBLM"
+        ],
+        "Successors": [
+          "940GZZLUTBY"
+        ]
+      },
+      {
+        "Id": "940GZZLUTBY",
+        "Name": "Tooting Broadway Underground Station",
+        "Order": 29,
+        "Predecessors": [
+          "940GZZLUTBC"
+        ],
+        "Successors": [
+          "940GZZLUCSD"
+        ]
+      },
+      {
+        "Id": "940GZZLUCSD",
+        "Name": "Colliers Wood Underground Station",
+        "Order": 30,
+        "Predecessors": [
+          "940GZZLUTBY"
+        ],
+        "Successors": [
+          "940GZZLUSWN"
+        ]
+      },
+      {
+        "Id": "940GZZLUSWN",
+        "Name": "South Wimbledon Underground Station",
+        "Order": 31,
+        "Predecessors": [
+          "940GZZLUCSD"
+        ],
+        "Successors": [
+          "940GZZLUMDN"
+        ]
+      },
+      {
+        "Id": "940GZZLUMDN",
+        "Name": "Morden Underground Station",
+        "Order": 32,
+        "Predecessors": [
+          "940GZZLUSWN"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZLUKSX",
+        "Name": "King's Cross St. Pancras Underground Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZLUEUS"
+        ],
+        "Successors": [
+          "940GZZLUAGL"
+        ]
+      },
+      {
+        "Id": "940GZZLUAGL",
+        "Name": "Angel Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLUKSX"
+        ],
+        "Successors": [
+          "940GZZLUODS"
+        ]
+      },
+      {
+        "Id": "940GZZLUODS",
+        "Name": "Old Street Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUAGL"
+        ],
+        "Successors": [
+          "940GZZLUMGT"
+        ]
+      },
+      {
+        "Id": "940GZZLUMGT",
+        "Name": "Moorgate Underground Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZLUODS"
+        ],
+        "Successors": [
+          "940GZZLUBNK"
+        ]
+      },
+      {
+        "Id": "940GZZLUBNK",
+        "Name": "Bank Underground Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZLUMGT"
+        ],
+        "Successors": [
+          "940GZZLULNB"
+        ]
+      },
+      {
+        "Id": "940GZZLULNB",
+        "Name": "London Bridge Underground Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZLUBNK"
+        ],
+        "Successors": [
+          "940GZZLUBOR"
+        ]
+      },
+      {
+        "Id": "940GZZLUBOR",
+        "Name": "Borough Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLULNB"
+        ],
+        "Successors": [
+          "940GZZLUEAC"
+        ]
+      },
+      {
+        "Id": "940GZZLUEAC",
+        "Name": "Elephant & Castle Underground Station",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLUBOR"
+        ],
+        "Successors": [
+          "940GZZLUKNG"
+        ]
+      },
+      {
+        "Id": "940GZZLUEGW",
+        "Name": "Edgware Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUBTK"
+        ]
+      },
+      {
+        "Id": "940GZZLUBTK",
+        "Name": "Burnt Oak Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUEGW"
+        ],
+        "Successors": [
+          "940GZZLUCND"
+        ]
+      },
+      {
+        "Id": "940GZZLUCND",
+        "Name": "Colindale Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUBTK"
+        ],
+        "Successors": [
+          "940GZZLUHCL"
+        ]
+      },
+      {
+        "Id": "940GZZLUHCL",
+        "Name": "Hendon Central Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUCND"
+        ],
+        "Successors": [
+          "940GZZLUBTX"
+        ]
+      },
+      {
+        "Id": "940GZZLUBTX",
+        "Name": "Brent Cross Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUHCL"
+        ],
+        "Successors": [
+          "940GZZLUGGN"
+        ]
+      },
+      {
+        "Id": "940GZZLUGGN",
+        "Name": "Golders Green Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUBTX"
+        ],
+        "Successors": [
+          "940GZZLUHTD"
+        ]
+      },
+      {
+        "Id": "940GZZLUHTD",
+        "Name": "Hampstead Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLUGGN"
+        ],
+        "Successors": [
+          "940GZZLUBZP"
+        ]
+      },
+      {
+        "Id": "940GZZLUBZP",
+        "Name": "Belsize Park Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUHTD"
+        ],
+        "Successors": [
+          "940GZZLUCFM"
+        ]
+      },
+      {
+        "Id": "940GZZLUCFM",
+        "Name": "Chalk Farm Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLUBZP"
+        ],
+        "Successors": [
+          "940GZZLUCTN"
+        ]
+      },
+      {
+        "Id": "940GZZLUMHL",
+        "Name": "Mill Hill East Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUFYC"
+        ]
+      },
+      {
+        "Id": "940GZZNEUGST",
+        "Name": "Nine Elms Underground Station",
+        "Order": 22,
+        "Predecessors": [
+          "940GZZLUKNG"
+        ],
+        "Successors": [
+          "940GZZBPSUST"
+        ]
+      },
+      {
+        "Id": "940GZZBPSUST",
+        "Name": "Battersea Power Station Underground Station",
+        "Order": 23,
+        "Predecessors": [
+          "940GZZNEUGST"
+        ],
+        "Successors": []
+      }
+    ]
+  },
+  {
+    "Line": "piccadilly",
+    "Stations": [
+      {
+        "Id": "940GZZLUCKS",
+        "Name": "Cockfosters Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUOAK"
+        ]
+      },
+      {
+        "Id": "940GZZLUOAK",
+        "Name": "Oakwood Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUCKS"
+        ],
+        "Successors": [
+          "940GZZLUSGT"
+        ]
+      },
+      {
+        "Id": "940GZZLUSGT",
+        "Name": "Southgate Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUOAK"
+        ],
+        "Successors": [
+          "940GZZLUASG"
+        ]
+      },
+      {
+        "Id": "940GZZLUASG",
+        "Name": "Arnos Grove Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUSGT"
+        ],
+        "Successors": [
+          "940GZZLUBDS"
+        ]
+      },
+      {
+        "Id": "940GZZLUBDS",
+        "Name": "Bounds Green Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUASG"
+        ],
+        "Successors": [
+          "940GZZLUWOG"
+        ]
+      },
+      {
+        "Id": "940GZZLUWOG",
+        "Name": "Wood Green Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUBDS"
+        ],
+        "Successors": [
+          "940GZZLUTPN"
+        ]
+      },
+      {
+        "Id": "940GZZLUTPN",
+        "Name": "Turnpike Lane Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLUWOG"
+        ],
+        "Successors": [
+          "940GZZLUMRH"
+        ]
+      },
+      {
+        "Id": "940GZZLUMRH",
+        "Name": "Manor House Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUTPN"
+        ],
+        "Successors": [
+          "940GZZLUFPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUFPK",
+        "Name": "Finsbury Park Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLUMRH"
+        ],
+        "Successors": [
+          "940GZZLUASL"
+        ]
+      },
+      {
+        "Id": "940GZZLUASL",
+        "Name": "Arsenal Underground Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZLUFPK"
+        ],
+        "Successors": [
+          "940GZZLUHWY"
+        ]
+      },
+      {
+        "Id": "940GZZLUHWY",
+        "Name": "Holloway Road Underground Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZLUASL"
+        ],
+        "Successors": [
+          "940GZZLUCAR"
+        ]
+      },
+      {
+        "Id": "940GZZLUCAR",
+        "Name": "Caledonian Road Underground Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZLUHWY"
+        ],
+        "Successors": [
+          "940GZZLUKSX"
+        ]
+      },
+      {
+        "Id": "940GZZLUKSX",
+        "Name": "King's Cross St. Pancras Underground Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZLUCAR"
+        ],
+        "Successors": [
+          "940GZZLURSQ"
+        ]
+      },
+      {
+        "Id": "940GZZLURSQ",
+        "Name": "Russell Square Underground Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZLUKSX"
+        ],
+        "Successors": [
+          "940GZZLUHBN"
+        ]
+      },
+      {
+        "Id": "940GZZLUHBN",
+        "Name": "Holborn Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLURSQ"
+        ],
+        "Successors": [
+          "940GZZLUCGN"
+        ]
+      },
+      {
+        "Id": "940GZZLUCGN",
+        "Name": "Covent Garden Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUHBN"
+        ],
+        "Successors": [
+          "940GZZLULSQ"
+        ]
+      },
+      {
+        "Id": "940GZZLULSQ",
+        "Name": "Leicester Square Underground Station",
+        "Order": 17,
+        "Predecessors": [
+          "940GZZLUCGN"
+        ],
+        "Successors": [
+          "940GZZLUPCC"
+        ]
+      },
+      {
+        "Id": "940GZZLUPCC",
+        "Name": "Piccadilly Circus Underground Station",
+        "Order": 18,
+        "Predecessors": [
+          "940GZZLULSQ"
+        ],
+        "Successors": [
+          "940GZZLUGPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUGPK",
+        "Name": "Green Park Underground Station",
+        "Order": 19,
+        "Predecessors": [
+          "940GZZLUPCC"
+        ],
+        "Successors": [
+          "940GZZLUHPC"
+        ]
+      },
+      {
+        "Id": "940GZZLUHPC",
+        "Name": "Hyde Park Corner Underground Station",
+        "Order": 20,
+        "Predecessors": [
+          "940GZZLUGPK"
+        ],
+        "Successors": [
+          "940GZZLUKNB"
+        ]
+      },
+      {
+        "Id": "940GZZLUKNB",
+        "Name": "Knightsbridge Underground Station",
+        "Order": 21,
+        "Predecessors": [
+          "940GZZLUHPC"
+        ],
+        "Successors": [
+          "940GZZLUSKS"
+        ]
+      },
+      {
+        "Id": "940GZZLUSKS",
+        "Name": "South Kensington Underground Station",
+        "Order": 22,
+        "Predecessors": [
+          "940GZZLUKNB"
+        ],
+        "Successors": [
+          "940GZZLUGTR"
+        ]
+      },
+      {
+        "Id": "940GZZLUGTR",
+        "Name": "Gloucester Road Underground Station",
+        "Order": 23,
+        "Predecessors": [
+          "940GZZLUSKS"
+        ],
+        "Successors": [
+          "940GZZLUECT"
+        ]
+      },
+      {
+        "Id": "940GZZLUECT",
+        "Name": "Earl's Court Underground Station",
+        "Order": 24,
+        "Predecessors": [
+          "940GZZLUGTR"
+        ],
+        "Successors": [
+          "940GZZLUBSC"
+        ]
+      },
+      {
+        "Id": "940GZZLUBSC",
+        "Name": "Barons Court Underground Station",
+        "Order": 25,
+        "Predecessors": [
+          "940GZZLUECT"
+        ],
+        "Successors": [
+          "940GZZLUHSD"
+        ]
+      },
+      {
+        "Id": "940GZZLUHSD",
+        "Name": "Hammersmith (Dist&Picc Line) Underground Station",
+        "Order": 26,
+        "Predecessors": [
+          "940GZZLUBSC"
+        ],
+        "Successors": [
+          "940GZZLUTNG"
+        ]
+      },
+      {
+        "Id": "940GZZLUTNG",
+        "Name": "Turnham Green Underground Station",
+        "Order": 27,
+        "Predecessors": [
+          "940GZZLUHSD"
+        ],
+        "Successors": [
+          "940GZZLUACT"
+        ]
+      },
+      {
+        "Id": "940GZZLUACT",
+        "Name": "Acton Town Underground Station",
+        "Order": 28,
+        "Predecessors": [
+          "940GZZLUTNG"
+        ],
+        "Successors": [
+          "940GZZLUECM",
+          "940GZZLUSEA"
+        ]
+      },
+      {
+        "Id": "940GZZLUECM",
+        "Name": "Ealing Common Underground Station",
+        "Order": 29,
+        "Predecessors": [
+          "940GZZLUACT"
+        ],
+        "Successors": [
+          "940GZZLUNEN"
+        ]
+      },
+      {
+        "Id": "940GZZLUNEN",
+        "Name": "North Ealing Underground Station",
+        "Order": 30,
+        "Predecessors": [
+          "940GZZLUECM"
+        ],
+        "Successors": [
+          "940GZZLUPKR"
+        ]
+      },
+      {
+        "Id": "940GZZLUPKR",
+        "Name": "Park Royal Underground Station",
+        "Order": 31,
+        "Predecessors": [
+          "940GZZLUNEN"
+        ],
+        "Successors": [
+          "940GZZLUALP"
+        ]
+      },
+      {
+        "Id": "940GZZLUALP",
+        "Name": "Alperton Underground Station",
+        "Order": 32,
+        "Predecessors": [
+          "940GZZLUPKR"
+        ],
+        "Successors": [
+          "940GZZLUSUT"
+        ]
+      },
+      {
+        "Id": "940GZZLUSUT",
+        "Name": "Sudbury Town Underground Station",
+        "Order": 33,
+        "Predecessors": [
+          "940GZZLUALP"
+        ],
+        "Successors": [
+          "940GZZLUSUH"
+        ]
+      },
+      {
+        "Id": "940GZZLUSUH",
+        "Name": "Sudbury Hill Underground Station",
+        "Order": 34,
+        "Predecessors": [
+          "940GZZLUSUT"
+        ],
+        "Successors": [
+          "940GZZLUSHH"
+        ]
+      },
+      {
+        "Id": "940GZZLUSHH",
+        "Name": "South Harrow Underground Station",
+        "Order": 35,
+        "Predecessors": [
+          "940GZZLUSUH"
+        ],
+        "Successors": [
+          "940GZZLURYL"
+        ]
+      },
+      {
+        "Id": "940GZZLURYL",
+        "Name": "Rayners Lane Underground Station",
+        "Order": 36,
+        "Predecessors": [
+          "940GZZLUSHH"
+        ],
+        "Successors": [
+          "940GZZLUEAE"
+        ]
+      },
+      {
+        "Id": "940GZZLUEAE",
+        "Name": "Eastcote Underground Station",
+        "Order": 37,
+        "Predecessors": [
+          "940GZZLURYL"
+        ],
+        "Successors": [
+          "940GZZLURSM"
+        ]
+      },
+      {
+        "Id": "940GZZLURSM",
+        "Name": "Ruislip Manor Underground Station",
+        "Order": 38,
+        "Predecessors": [
+          "940GZZLUEAE"
+        ],
+        "Successors": [
+          "940GZZLURSP"
+        ]
+      },
+      {
+        "Id": "940GZZLURSP",
+        "Name": "Ruislip Underground Station",
+        "Order": 39,
+        "Predecessors": [
+          "940GZZLURSM"
+        ],
+        "Successors": [
+          "940GZZLUICK"
+        ]
+      },
+      {
+        "Id": "940GZZLUICK",
+        "Name": "Ickenham Underground Station",
+        "Order": 40,
+        "Predecessors": [
+          "940GZZLURSP"
+        ],
+        "Successors": [
+          "940GZZLUHGD"
+        ]
+      },
+      {
+        "Id": "940GZZLUHGD",
+        "Name": "Hillingdon Underground Station",
+        "Order": 41,
+        "Predecessors": [
+          "940GZZLUICK"
+        ],
+        "Successors": [
+          "940GZZLUUXB"
+        ]
+      },
+      {
+        "Id": "940GZZLUUXB",
+        "Name": "Uxbridge Underground Station",
+        "Order": 42,
+        "Predecessors": [
+          "940GZZLUHGD"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZLUSEA",
+        "Name": "South Ealing Underground Station",
+        "Order": 29,
+        "Predecessors": [
+          "940GZZLUACT"
+        ],
+        "Successors": [
+          "940GZZLUNFD"
+        ]
+      },
+      {
+        "Id": "940GZZLUNFD",
+        "Name": "Northfields Underground Station",
+        "Order": 30,
+        "Predecessors": [
+          "940GZZLUSEA"
+        ],
+        "Successors": [
+          "940GZZLUBOS"
+        ]
+      },
+      {
+        "Id": "940GZZLUBOS",
+        "Name": "Boston Manor Underground Station",
+        "Order": 31,
+        "Predecessors": [
+          "940GZZLUNFD"
+        ],
+        "Successors": [
+          "940GZZLUOSY"
+        ]
+      },
+      {
+        "Id": "940GZZLUOSY",
+        "Name": "Osterley Underground Station",
+        "Order": 32,
+        "Predecessors": [
+          "940GZZLUBOS"
+        ],
+        "Successors": [
+          "940GZZLUHWE"
+        ]
+      },
+      {
+        "Id": "940GZZLUHWE",
+        "Name": "Hounslow East Underground Station",
+        "Order": 33,
+        "Predecessors": [
+          "940GZZLUOSY"
+        ],
+        "Successors": [
+          "940GZZLUHWC"
+        ]
+      },
+      {
+        "Id": "940GZZLUHWC",
+        "Name": "Hounslow Central Underground Station",
+        "Order": 34,
+        "Predecessors": [
+          "940GZZLUHWE"
+        ],
+        "Successors": [
+          "940GZZLUHWT"
+        ]
+      },
+      {
+        "Id": "940GZZLUHWT",
+        "Name": "Hounslow West Underground Station",
+        "Order": 35,
+        "Predecessors": [
+          "940GZZLUHWC"
+        ],
+        "Successors": [
+          "940GZZLUHNX"
+        ]
+      },
+      {
+        "Id": "940GZZLUHNX",
+        "Name": "Hatton Cross Underground Station",
+        "Order": 36,
+        "Predecessors": [
+          "940GZZLUHWT"
+        ],
+        "Successors": [
+          "940GZZLUHRC",
+          "940GZZLUHR4"
+        ]
+      },
+      {
+        "Id": "940GZZLUHRC",
+        "Name": "Heathrow Terminals 2 & 3 Underground Station",
+        "Order": 37,
+        "Predecessors": [
+          "940GZZLUHNX"
+        ],
+        "Successors": [
+          "940GZZLUHR5"
+        ]
+      },
+      {
+        "Id": "940GZZLUHR5",
+        "Name": "Heathrow Terminal 5 Underground Station",
+        "Order": 38,
+        "Predecessors": [
+          "940GZZLUHRC"
+        ],
+        "Successors": []
+      },
+      {
+        "Id": "940GZZLUHR4",
+        "Name": "Heathrow Terminal 4 Underground Station",
+        "Order": 37,
+        "Predecessors": [
+          "940GZZLUHNX"
+        ],
+        "Successors": []
+      }
+    ]
+  },
+  {
+    "Line": "victoria",
+    "Stations": [
+      {
+        "Id": "940GZZLUWWL",
+        "Name": "Walthamstow Central Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUBLR"
+        ]
+      },
+      {
+        "Id": "940GZZLUBLR",
+        "Name": "Blackhorse Road Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUWWL"
+        ],
+        "Successors": [
+          "940GZZLUTMH"
+        ]
+      },
+      {
+        "Id": "940GZZLUTMH",
+        "Name": "Tottenham Hale Underground Station",
+        "Order": 3,
+        "Predecessors": [
+          "940GZZLUBLR"
+        ],
+        "Successors": [
+          "940GZZLUSVS"
+        ]
+      },
+      {
+        "Id": "940GZZLUSVS",
+        "Name": "Seven Sisters Underground Station",
+        "Order": 4,
+        "Predecessors": [
+          "940GZZLUTMH"
+        ],
+        "Successors": [
+          "940GZZLUFPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUFPK",
+        "Name": "Finsbury Park Underground Station",
+        "Order": 5,
+        "Predecessors": [
+          "940GZZLUSVS"
+        ],
+        "Successors": [
+          "940GZZLUHAI"
+        ]
+      },
+      {
+        "Id": "940GZZLUHAI",
+        "Name": "Highbury & Islington Underground Station",
+        "Order": 6,
+        "Predecessors": [
+          "940GZZLUFPK"
+        ],
+        "Successors": [
+          "940GZZLUKSX"
+        ]
+      },
+      {
+        "Id": "940GZZLUKSX",
+        "Name": "King's Cross St. Pancras Underground Station",
+        "Order": 7,
+        "Predecessors": [
+          "940GZZLUHAI"
+        ],
+        "Successors": [
+          "940GZZLUEUS"
+        ]
+      },
+      {
+        "Id": "940GZZLUEUS",
+        "Name": "Euston Underground Station",
+        "Order": 8,
+        "Predecessors": [
+          "940GZZLUKSX"
+        ],
+        "Successors": [
+          "940GZZLUWRR"
+        ]
+      },
+      {
+        "Id": "940GZZLUWRR",
+        "Name": "Warren Street Underground Station",
+        "Order": 9,
+        "Predecessors": [
+          "940GZZLUEUS"
+        ],
+        "Successors": [
+          "940GZZLUOXC"
+        ]
+      },
+      {
+        "Id": "940GZZLUOXC",
+        "Name": "Oxford Circus Underground Station",
+        "Order": 10,
+        "Predecessors": [
+          "940GZZLUWRR"
+        ],
+        "Successors": [
+          "940GZZLUGPK"
+        ]
+      },
+      {
+        "Id": "940GZZLUGPK",
+        "Name": "Green Park Underground Station",
+        "Order": 11,
+        "Predecessors": [
+          "940GZZLUOXC"
+        ],
+        "Successors": [
+          "940GZZLUVIC"
+        ]
+      },
+      {
+        "Id": "940GZZLUVIC",
+        "Name": "Victoria Underground Station",
+        "Order": 12,
+        "Predecessors": [
+          "940GZZLUGPK"
+        ],
+        "Successors": [
+          "940GZZLUPCO"
+        ]
+      },
+      {
+        "Id": "940GZZLUPCO",
+        "Name": "Pimlico Underground Station",
+        "Order": 13,
+        "Predecessors": [
+          "940GZZLUVIC"
+        ],
+        "Successors": [
+          "940GZZLUVXL"
+        ]
+      },
+      {
+        "Id": "940GZZLUVXL",
+        "Name": "Vauxhall Underground Station",
+        "Order": 14,
+        "Predecessors": [
+          "940GZZLUPCO"
+        ],
+        "Successors": [
+          "940GZZLUSKW"
+        ]
+      },
+      {
+        "Id": "940GZZLUSKW",
+        "Name": "Stockwell Underground Station",
+        "Order": 15,
+        "Predecessors": [
+          "940GZZLUVXL"
+        ],
+        "Successors": [
+          "940GZZLUBXN"
+        ]
+      },
+      {
+        "Id": "940GZZLUBXN",
+        "Name": "Brixton Underground Station",
+        "Order": 16,
+        "Predecessors": [
+          "940GZZLUSKW"
+        ],
+        "Successors": []
+      }
+    ]
+  },
+  {
+    "Line": "waterloo-city",
+    "Stations": [
+      {
+        "Id": "940GZZLUBNK",
+        "Name": "Bank Underground Station",
+        "Order": 1,
+        "Predecessors": [],
+        "Successors": [
+          "940GZZLUWLO"
+        ]
+      },
+      {
+        "Id": "940GZZLUWLO",
+        "Name": "Waterloo Underground Station",
+        "Order": 2,
+        "Predecessors": [
+          "940GZZLUBNK"
+        ],
+        "Successors": []
+      }
+    ]
+  }
+]
