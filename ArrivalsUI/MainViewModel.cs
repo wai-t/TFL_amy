@@ -1,9 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.ComponentModel;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Data;
@@ -11,19 +13,41 @@ using tfl_stats.Tfl;
 
 namespace ArrivalsUI
 {
-    internal class MainViewModel
+    internal class MainViewModel : INotifyPropertyChanged
     {
-        public ObservableCollection<LineStations> TflLines { get; init; }
+        public ICollection<LineStations> TflLines { get; init; }
 
         public OrderedStation? SelectedStation { get; set; }
+
+        public string? Filter { get; set; } = "";
+
+        private ObservableCollection<LineStations> _filteredTflLines;
+        public ObservableCollection<LineStations> FilteredTflLines
+        {
+            get => _filteredTflLines;
+            set
+            {
+                _filteredTflLines = value;
+                OnPropertyChanged(nameof(FilteredTflLines));
+            }
+        }
+
+        protected void OnPropertyChanged([CallerMemberName] string? propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
 
         public ObservableCollection<PlatformArrivals> Arrivals { get; set; }
 
         public readonly Dictionary<string, string> StationLineLookup = new Dictionary<string, string>();
 
+        public event PropertyChangedEventHandler? PropertyChanged;
+
         public MainViewModel()
         {
             TflLines = [.. LoadStationList()];
+            Filter = "";
+            FilteredTflLines = new ObservableCollection<LineStations>(TflLines);
 
             foreach (var line in TflLines)
             {

@@ -1,5 +1,6 @@
 ﻿using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -34,12 +35,30 @@ namespace ArrivalsUI
 
                 var line = ViewModel.StationLineLookup[station.Id];
 
-                var predictions = await ApiClient.LineClient.ArrivalsAsync([line], station.Id, null, null);
-
-                ViewModel.UpdatePredictions(predictions);
+                await RefreshPredictions(station, line);
 
             }
 
         }
+
+        private async Task RefreshPredictions(OrderedStation station, string line)
+        {
+            var predictions = await ApiClient.LineClient.ArrivalsAsync([line], station.Id, null, null);
+
+            ViewModel.UpdatePredictions(predictions);
+        }
+
+        private async void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.F5)
+            {
+                e.Handled = true;
+                if (ViewModel.SelectedStation != null)
+                {
+                    await RefreshPredictions(ViewModel.SelectedStation, ViewModel.StationLineLookup[ViewModel.SelectedStation.Id]);
+                }
+            }
+        }
+
     }
 }

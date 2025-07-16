@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArrivalsUI"
         mc:Ignorable="d"
+        KeyDown="Window_KeyDown"
         Title="MainWindow" Height="816" Width="1280">
 
     <Window.Resources>
@@ -20,20 +21,32 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="20px" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <ComboBox x:Name="Filter" Grid.Row="0" IsEditable="True"/>
+            <TreeView x:Name="StationBrowser" 
+                      SelectedItemChanged="TreeView_SelectedItemChanged"
+                  ItemsSource="{Binding FilteredTflLines}" Grid.Column="0" Grid.Row="1">
+                <TreeView.ItemTemplate>
+                    <HierarchicalDataTemplate ItemsSource="{Binding Stations}">
+                        <TextBlock Text="{Binding Line}" FontSize="18" />
+                        <HierarchicalDataTemplate.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding Name}" FontSize="16" />
+                            </DataTemplate>
+                        </HierarchicalDataTemplate.ItemTemplate>
+                    </HierarchicalDataTemplate>
+                </TreeView.ItemTemplate>
+            </TreeView>
 
-        <TreeView x:Name="StationBrowser" SelectedItemChanged="TreeView_SelectedItemChanged"
-                  ItemsSource="{Binding TflLines}" Grid.Column="0" Grid.Row="0">
-            <TreeView.ItemTemplate>
-                <HierarchicalDataTemplate ItemsSource="{Binding Stations}">
-                    <TextBlock Text="{Binding Line}" FontSize="18" />
-                    <HierarchicalDataTemplate.ItemTemplate>
-                        <DataTemplate>
-                            <TextBlock Text="{Binding Name}" FontSize="16" />
-                        </DataTemplate>
-                    </HierarchicalDataTemplate.ItemTemplate>
-                </HierarchicalDataTemplate>
-            </TreeView.ItemTemplate>
-        </TreeView>
+
+        </Grid>
 
         <ScrollViewer VerticalScrollBarVisibility="Auto"  Grid.Column="1" Grid.Row="0">
             <ItemsControl x:Name="ArrivalsView" Background="Black"
