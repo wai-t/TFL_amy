@@ -98,11 +98,12 @@ namespace TestTflObjects
         public async void ArrivalsAsync()
         {
             // 
-            var ret = await _client.ArrivalsAsync(["bakerloo"], "940GZZLUBST", null, null);
+            //var ret = await _client.ArrivalsAsync(["bakerloo"], "940GZZLUBST", null, null);
+            var ret = await _client.ArrivalsAsync(["elizabeth"], "910GHTRWTM4", null, null); // LHR 4
 
             var json = JsonConvert.SerializeObject(ret, Formatting.Indented);
 
-            SaveTestOutput("ArrivalsAsync.json", json);
+            SaveTestOutput($"ArrivalsAsync.json", json);
         }
 
 
