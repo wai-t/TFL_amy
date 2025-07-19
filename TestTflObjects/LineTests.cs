@@ -14,6 +14,13 @@ namespace TestTflObjects
 
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly LineClient _client;
+        private static readonly string[] modes = new[]{ "tube", "dlr","elizabeth-line" };
+        private static readonly string[] lines = new[] {
+            "bakerloo", "central","circle", "district", "dlr", "elizabeth",
+            "hammersmith-city","jubilee","metropolitan","northern",
+            "piccadilly","victoria","waterloo-city"
+        };
+
         public LineTests(HttpClientFactoryFixture fixture)
         {
             _httpClientFactory = fixture.Services.GetRequiredService<IHttpClientFactory>();
@@ -75,6 +82,8 @@ namespace TestTflObjects
             // you can have Abbey Wood to Reading in both directions (inbound and outbound)
             // and then there is Liverpool St to Shenfield, etc.
             var ret = await _client.RouteAsync([Anonymous3.Regular]);
+            ret = ret.Where(l => modes.Contains(l.ModeName) ).ToList();
+            SaveTestOutput("RouteAsync.json", JsonConvert.SerializeObject(ret, Formatting.Indented));
             var t = ret.Where(l => l.ModeName == "elizabeth-line");
         }
 
@@ -92,6 +101,30 @@ namespace TestTflObjects
                 .SingleOrDefault(s => s.ServiceType == StopPointSequenceServiceType.Regular, null)
                 ?.StopPoint
                 .Select((sp, i) => new {i, sp.Id, sp.Name }).ToList() ?? [];
+        }
+
+        [Fact]
+        public async void BranchAnalysisAsync()
+        {
+            foreach (var line in lines)
+            {
+                // StopPoint contains the list of the stations on the given line in order
+                var ret = await _client.RouteSequenceAsync(line, Direction.Inbound, [Anonymous6.Regular], null);
+
+                var branches = ret.StopPointSequences.Select(seq=>
+                new
+                {
+                    seq.BranchId,
+                    seq.PrevBranchIds,
+                    seq.NextBranchIds,
+                    seq.Direction,
+                    StopPoints = seq.StopPoint.Select(sp => new { sp.Id, sp.Name }).ToList()
+                }).ToList();
+
+                var json = JsonConvert.SerializeObject(branches, Formatting.Indented);
+
+                SaveTestOutput($"{line}-BranchAnalysis.json", json);
+            }
         }
 
         [Fact]

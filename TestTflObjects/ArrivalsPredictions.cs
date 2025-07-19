@@ -47,6 +47,15 @@ namespace TestTflObjects
         }
 
         [Fact]
+        public async void TestBuildIndexedStopsForLine()
+        {
+            var line = "elizabeth";
+            var r = await _lineClient.RouteSequenceAsync(line, Direction.Inbound, [Anonymous6.Regular], null);
+            var stopPointSequences = r.StopPointSequences;
+            SaveTestOutput($"StopPointSequences-{line}.json", JsonConvert.SerializeObject(stopPointSequences, Formatting.Indented));
+        }
+
+        [Fact]
         public async Task TestGenerateArrivalPredictions()
         {
             var lines = (await _lineClient.GetByModeAsync(["tube", "dlr", "elizabeth-line"]))
