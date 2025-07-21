@@ -426,6 +426,7 @@ namespace TestTflObjects
 
                 threads = threads.OrderBy(t => t.Count).ToList();
                 var ret = threads.SelectMany(t => t).ToList();
+                ret.Insert(0, node);
                 return ret;
             }
             private void BuildStationNetwork()
