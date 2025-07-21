@@ -5,6 +5,7 @@ using System.ComponentModel.Design;
 using System.Data.SqlTypes;
 using System.Text.Json;
 using tfl_stats.Tfl;
+using Xunit.Sdk;
 
 namespace TestTflObjects
 {
@@ -306,6 +307,7 @@ namespace TestTflObjects
         {
             private HashSet<IndexedStationNode> _nodes = [];
             private HashSet<IndexedBranch> _branches = [];
+
             public IndexedStationNode StartNode { get; } = new() { Station = new() { StationId = "START" } };
             public IndexedStationNode EndNode { get; } = new() { Station = new() { StationId = "END" } };
 
@@ -314,16 +316,22 @@ namespace TestTflObjects
                 Assert.True(_branches.Add(new IndexedBranch(stopPointSequence)));
             }
 
-            public void Construct()
+            public List<IndexedStationNode> Construct()
             {
                 BuildStationNetwork();
-                OrderStations();
+                var ret = OrderStations();
+                return ret;
             }
 
+            public class ThreadStatus
+            {
+                public bool Flagged = false;
+                public List<IndexedStationNode> indexedStationNodes = new();
+            }
             public class PendingJoin
             {
                 public required IndexedStationNode Id;
-                public required Dictionary<IndexedStationNode, List<IndexedStationNode>> Threads;
+                public required Dictionary<IndexedStationNode, ThreadStatus> Threads;
             }
 
             public class PendingSplit
@@ -332,62 +340,80 @@ namespace TestTflObjects
                 public Dictionary<IndexedStationNode, List<IndexedStationNode>> threads = [];
             }
 
-            private void OrderStations()
+            private List<IndexedStationNode> OrderStations()
             {
                 var ret = ProcessSplit(StartNode);
+                return ret;
 
             }
 
             Dictionary<string, PendingJoin> _pendingJoins = [];
 
-            private List<IndexedStationNode> ProcessThread(IndexedStationNode node)
+            private List<IndexedStationNode> ProcessThread(IndexedStationNode pred, IndexedStationNode node)
             {
                 List<IndexedStationNode> ret = [];
                 if (node.Prev.Count>1)
                 {
-                    Assert.Fail("Can't start a threat at a Join");
+                    ret = ProcessJoin(node, pred, []) ;
+                    if (!ret.Any())
+                        return ret;
                 }
                 if (node.Next.Count>1)
                 {
                     ret = ProcessSplit(node);
+                    return ret;
                 }
 
                 var currentNode = node;
-                while (currentNode.Next.Count==1 && currentNode.Next.Single().Prev.Count==1)
+
+                do
                 {
-                    ret.Add(currentNode.Next.Single());
+                    ret.Add(currentNode);
                     currentNode = currentNode.Next.Single();
                 }
-                
-                if (currentNode.Next.Count==1 && currentNode.Next.Single().Prev.Count>1)
+                while (currentNode.Prev.Count == 1 && currentNode.Next.Count == 1);
+
+                if (currentNode.Prev.Count>1)
                 {
-                    var joinres = ProcessJoin(currentNode.Next.Single(), ret);
+                    var joinres = ProcessJoin(currentNode, ret.Last(), ret);
                     if (joinres.Count==0)
                         return []; // means there's another branch waiting to be merged
+                    ret = joinres;
+                    currentNode = joinres.Last();
                 }
 
-                if (currentNode.Next.Count>1)
+                if (currentNode == EndNode)
+                    return ret;
+
+                if (currentNode != EndNode)
                 {
-                    var split = ProcessSplit(currentNode);
-                    return ret.Concat(split).ToList();
+                    var r = ProcessSplit(currentNode).ToList();
+                    ret = ret.Concat(r).ToList();
                 }
 
                 return ret;
             }
-            private List<IndexedStationNode> ProcessJoin(IndexedStationNode node, List<IndexedStationNode> listSoFar)
+            private List<IndexedStationNode> ProcessJoin(IndexedStationNode node, IndexedStationNode pred, List<IndexedStationNode> listSoFar)
             {
                 if (!_pendingJoins.TryGetValue(node.Id, out var pendingJoin))
                 {
-                    pendingJoin = new PendingJoin() {Id = node, Threads = node.Prev.ToDictionary(n=>n,n => new List<IndexedStationNode>()) };
+                    pendingJoin = new PendingJoin() { Id = node, Threads = node.Prev.ToDictionary(n => n, n => new ThreadStatus() { Flagged=false, indexedStationNodes = [] }) };
                     _pendingJoins.Add(node.Id, pendingJoin);
                 }
 
-                pendingJoin.Threads[listSoFar.Last()] = listSoFar;
+                pendingJoin.Threads[pred] = new ThreadStatus() { Flagged=true, indexedStationNodes=listSoFar };
 
-                if (pendingJoin.Threads.Values.All(t=>t.Count>0))
+                if (pendingJoin.Threads.Values.All(t=>t.Flagged))
                 {
-                    var ret = pendingJoin.Threads.Values.OrderByDescending(t => t.Count).SelectMany(t=>t).ToList();
+                    var ret = pendingJoin.Threads.Values.OrderByDescending(t => t.indexedStationNodes.Count).SelectMany(t=>t.indexedStationNodes).ToList();
+                    ret.Add(node);
                     _pendingJoins.Remove(node.Id);
+                    if ( node.Next.Count==1)
+                    {
+                        var nextNode = node.Next.Single();
+                        if (nextNode.Prev.Count > 1)
+                            ret = ProcessJoin(nextNode, node, ret);
+                    }
                     return ret;
                 }
 
@@ -396,7 +422,7 @@ namespace TestTflObjects
 
             private List<IndexedStationNode> ProcessSplit(IndexedStationNode node)
             {
-                var threads = StartNode.Next.Select(head => ProcessThread(head)).ToList();
+                var threads = node.Next.Select(head => ProcessThread(node, head)).ToList();
 
                 threads = threads.OrderBy(t => t.Count).ToList();
                 var ret = threads.SelectMany(t => t).ToList();
@@ -424,6 +450,15 @@ namespace TestTflObjects
                             workQueue.Push(nextBranch);
                     }
                 }
+                foreach (var station in _nodes)
+                {
+                    if (!station.Next.Any())
+                    {
+                        station.Next.Add(EndNode);
+                        EndNode.Prev.Add(station);
+                    }
+                }
+
             }
 
             private IndexedStationNode Add(IndexedBranch branch, MatchedStop stopPoint, IndexedStationNode? prev)
@@ -528,9 +563,19 @@ namespace TestTflObjects
                     graph.AddBranch(stopPointSequence);
                 }
 
-                graph.Construct();
 
                 SaveTestOutput($"{line}-NodeAnalysis.json", JsonConvert.SerializeObject(graph.DumpNodes(), Formatting.Indented));
+
+                var ordered = graph.Construct().Select(s => new
+                {
+                    s.Station.StationId,
+                    StopPoints = s.Station.MatchedStop.Select(ms=> new
+                    {
+                        ms.Name,
+                        ms.Id
+                    })
+                });
+                SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(ordered, Formatting.Indented));
             }
         }
 
