@@ -53,6 +53,14 @@ namespace TestTflObjects
         public HashSet<string> Successors { get; } = successors;
     };
 
+    internal record Branch(int BranchId, List<int> PrevBranchIds, List<int> NextBranchIds, string Direction, List<MatchedStop> StopPoints)
+    {
+        public string FirstStationId => StopPoints.First().ParentId ?? StopPoints.First().Id;
+        public string LastStationId => StopPoints.Last().ParentId ?? StopPoints.Last().Id;
+        public bool IsCircle => FirstStationId == LastStationId;
+        public int Count => StopPoints.Count;
+    };
+
     public static class ExperimentalArrivals
     {
         //
