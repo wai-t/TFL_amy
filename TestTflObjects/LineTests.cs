@@ -1,11 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Newtonsoft.Json;
-using NuGet.Frameworks;
-using System.ComponentModel.Design;
-using System.Data.SqlTypes;
-using System.Text.Json;
 using tfl_stats.Tfl;
-using Xunit.Sdk;
+using TflNetworkBuilder;
 
 namespace TestTflObjects
 {
@@ -17,10 +13,20 @@ namespace TestTflObjects
         private readonly IHttpClientFactory _httpClientFactory;
         private readonly LineClient _client;
         private static readonly string[] modes = ["tube", "dlr", "elizabeth-line"];
-        private static readonly string[] lines = [
-            "bakerloo", "central","circle", "district", "dlr", "elizabeth",
-            "hammersmith-city","jubilee","metropolitan","northern",
-            "piccadilly","victoria","waterloo-city"
+        private static readonly (string,Direction)[] lines = [
+            ("bakerloo", Direction.Inbound),
+            ("central", Direction.Inbound),
+            ("circle", Direction.Inbound),
+            ("district", Direction.Inbound),
+            ("dlr", Direction.Outbound),
+            ("elizabeth", Direction.Inbound),
+            ("hammersmith-city", Direction.Inbound),
+            ("jubilee", Direction.Outbound),
+            ("metropolitan", Direction.Outbound),
+            ("northern", Direction.Inbound),
+            ("piccadilly", Direction.Inbound),
+            ("victoria", Direction.Inbound),
+            ("waterloo-city", Direction.Inbound)
         ];
         private static Dictionary<string, string> StopPointIdMap = [];
 
@@ -93,10 +99,10 @@ namespace TestTflObjects
         [Fact]
         public async void RouteSequenceAsync()
         {
-            foreach (var line in lines)
+            foreach (var (line, dir) in lines)
             {
                 // StopPoint contains the list of the stations on the given line in order
-                var ret = await _client.RouteSequenceAsync(line, Direction.Inbound, [Anonymous6.Regular], null);
+                var ret = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
                 var stops = ret.StopPointSequences
                     .Select(seq => new
                     {
@@ -115,11 +121,12 @@ namespace TestTflObjects
         [Fact]
         public async void BranchAnalysisAsync()
         {
-            //foreach (var line in lines)
+            //foreach (var (line, dir) in lines)
             var line = "elizabeth";
+            var dir = Direction.Inbound;
             {
                 // StopPoint contains the list of the stations on the given line in order
-                var ret = await _client.RouteSequenceAsync(line, Direction.Inbound, [Anonymous6.Regular], null);
+                var ret = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
 
                 var branches = ret.StopPointSequences.Select(seq => new Branch(
                     (int)seq.BranchId!,
@@ -226,336 +233,17 @@ namespace TestTflObjects
             }
         }
 
-        public class Station
-        {
-            public required string StationId { get; set; }
-            public int Index { get; set; } = int.MinValue;
-            public List<int> BranchIds { get; set; } = [];
-
-            public List<MatchedStop> MatchedStop { get; set; } = [];
-
-            public override bool Equals(object? obj)
-            {
-                var right = obj as Station;
-                return right != null && StationId == right.StationId;
-            }
-
-            public override int GetHashCode()
-            {
-                return StationId.GetHashCode();
-            }
-        }
-
-        public class StationNode
-        {
-            public string Id => Station.StationId;
-            public required Station Station {get; init;}
-            public List<StationNode> Next { get; } = [];
-            public List<StationNode> Prev { get; } = [];
-
-            public void AddNext(StationNode nextNode)
-            {
-                if (!Next.Contains(nextNode))
-                    Next.Add(nextNode);
-                if (!nextNode.Prev.Contains(this))
-                    nextNode.Prev.Add(this);
-            }
-
-            public void AddPrev(StationNode prevNode)
-            {
-                if (!Prev.Contains(prevNode))
-                    Prev.Add(prevNode);
-                if (!prevNode.Next.Contains(this))
-                    prevNode.Next.Add(this);
-            }
-
-            public override bool Equals(object? obj)
-            {
-                var right = obj as StationNode;
-                return right != null && Id == right.Id;
-            }
-
-            public override int GetHashCode()
-            {
-                return Id.GetHashCode();
-            }
-        }
-
-        internal class IndexedBranch
-        {
-            private readonly StopPointSequence _sequence;
-
-            public IndexedBranch(StopPointSequence sequence)
-            {
-                _sequence = sequence;
-            }
-
-            public int BranchId => (int)_sequence.BranchId!;
-            public StopPointSequence StopPointSequence => _sequence;
-
-            public override bool Equals(object? obj)
-            {
-                return base.Equals(obj);
-            }
-
-            public override int GetHashCode()
-            {
-                return base.GetHashCode();
-            }
-        }
-        internal class StationGraph
-        {
-            private HashSet<StationNode> _nodes = [];
-            private HashSet<IndexedBranch> _branches = [];
-
-            public StationNode StartNode { get; } = new() { Station = new() { StationId = "START" } };
-            public StationNode EndNode { get; } = new() { Station = new() { StationId = "END" } };
-
-            public void AddBranch(StopPointSequence stopPointSequence)
-            {
-                Assert.True(_branches.Add(new IndexedBranch(stopPointSequence)));
-            }
-
-            public List<StationNode> Construct()
-            {
-                BuildStationNetwork();
-                var ret = OrderStations();
-                return ret;
-            }
-
-            public class ThreadStatus
-            {
-                public bool Flagged = false;
-                public List<StationNode> indexedStationNodes = new();
-            }
-            public class PendingJoin
-            {
-                public required StationNode Id;
-                public required Dictionary<StationNode, ThreadStatus> Threads;
-            }
-
-            public class PendingSplit
-            {
-                public required StationNode Id;
-                public Dictionary<StationNode, List<StationNode>> threads = [];
-            }
-
-            private List<StationNode> OrderStations()
-            {
-                var ret = ProcessSplit(StartNode);
-                return ret;
-
-            }
-
-            Dictionary<string, PendingJoin> _pendingJoins = [];
-
-            private List<StationNode> ProcessThread(StationNode pred, StationNode node)
-            {
-                List<StationNode> ret = [];
-                if (node.Prev.Count>1)
-                {
-                    (var joinNode,ret) = ProcessJoin(node, pred, []) ;
-                    if (joinNode==null)
-                        return ret;
-                    node = joinNode;
-                }
-                if (node.Next.Count>1)
-                {
-                    var splitResult = ProcessSplit(node);
-                    ret = ret.Concat(splitResult).ToList();
-                    return ret;
-                }
-
-                var currentNode = node;
-
-                do
-                {
-                    ret.Add(currentNode);
-                    currentNode = currentNode.Next.Single();
-                }
-                while (currentNode.Prev.Count == 1 && currentNode.Next.Count == 1);
-
-                if (currentNode.Prev.Count>1)
-                {
-                    var (joinNode, joinres) = ProcessJoin(currentNode, ret.Last(), ret);
-                    if (joinNode==null)
-                        return []; // means there's another branch waiting to be merged
-                    ret = joinres;
-                    currentNode = joinNode;
-                }
-
-                if (currentNode == EndNode)
-                    return ret;
-
-                if (currentNode != EndNode)
-                {
-                    var r = ProcessSplit(currentNode).ToList();
-                    ret = ret.Concat(r).ToList();
-                }
-
-                return ret;
-            }
-            private (StationNode?, List<StationNode>) ProcessJoin(StationNode node, StationNode pred, List<StationNode> listSoFar)
-            {
-                if (!_pendingJoins.TryGetValue(node.Id, out var pendingJoin))
-                {
-                    pendingJoin = new PendingJoin() { Id = node, Threads = node.Prev.ToDictionary(n => n, n => new ThreadStatus() { Flagged=false, indexedStationNodes = [] }) };
-                    _pendingJoins.Add(node.Id, pendingJoin);
-                }
-
-                pendingJoin.Threads[pred] = new ThreadStatus() { Flagged=true, indexedStationNodes=listSoFar };
-
-                if (pendingJoin.Threads.Values.All(t=>t.Flagged))
-                {
-                    (StationNode?, List<StationNode>)ret = (node, pendingJoin.Threads.Values.OrderByDescending(t => t.indexedStationNodes.Count).SelectMany(t=>t.indexedStationNodes).ToList());
-                    _pendingJoins.Remove(node.Id);
-                    if ( node.Next.Count==1)
-                    {
-                        var nextNode = node.Next.Single();
-                        if (nextNode.Prev.Count > 1)
-                        {
-                            ret.Item2.Add(node);
-                            ret = ProcessJoin(nextNode, node, ret.Item2);
-                        }
-                    }
-                    return ret;
-                }
-
-                return (null,[]);
-            }
-
-            private List<StationNode> ProcessSplit(StationNode node)
-            {
-                var threads = node.Next.Select(head => ProcessThread(node, head)).ToList();
-
-                threads = threads.OrderBy(t => t.Count).ToList();
-                var ret = threads.SelectMany(t => t).ToList();
-                ret.Insert(0, node);
-                return ret;
-            }
-            private void BuildStationNetwork()
-            {
-                Stack<IndexedBranch> workQueue = new(_branches.Where(b => !b.StopPointSequence.PrevBranchIds.Any()
-                                            || b.StopPointSequence.PrevBranchIds.Contains((int)b.StopPointSequence.BranchId!))
-                                                                        );
-                var remainingBranches = _branches.Except(workQueue);
-
-                while (workQueue.Any())
-                {
-                    StationNode? prevStation = null;
-                    var branch = workQueue.Pop();
-
-                    foreach (var stopPoint in branch.StopPointSequence.StopPoint)
-                    {
-                        if (prevStation!= null && stopPoint.Id == branch.StopPointSequence.StopPoint.First().Id)
-                            break; // break the Circle Line
-                        prevStation = Add(branch, stopPoint, prevStation);
-                    }
-
-                    foreach (var branchId in branch.StopPointSequence.NextBranchIds.Where(i => i != branch.StopPointSequence.BranchId))
-                    {
-                        var nextBranch = remainingBranches.SingleOrDefault(b => b.BranchId == branchId);
-                        if (nextBranch != null)
-                            workQueue.Push(nextBranch);
-                    }
-                }
-                foreach (var station in _nodes)
-                {
-                    if (!station.Next.Any())
-                    {
-                        station.Next.Add(EndNode);
-                        EndNode.Prev.Add(station);
-                    }
-                }
-
-            }
-
-            private StationNode Add(IndexedBranch branch, MatchedStop stopPoint, StationNode? prev)
-            {
-                var node = GetOrCreate(branch.BranchId, stopPoint);
-
-                var existingPrevs = node.Prev;
-                if (prev!=null && !existingPrevs.Contains(prev))
-                {
-                    existingPrevs.Remove(StartNode);
-                    StartNode.Next.Remove(node);
-                    foreach (var p in existingPrevs)
-                    {
-                        if (!p.Next.Contains(node)) 
-                            p.Next.Add(node);
-                    }
-                    node.Prev.Add(prev);
-                    prev.Next.Add(node);
-                }
-                else if (prev == null && !node.Prev.Any() 
-                    && !branch.StopPointSequence.PrevBranchIds.Where(id => id!=branch.StopPointSequence.BranchId).Any())
-                {
-                    node.Prev.Add(StartNode);
-                    StartNode.Next.Add(node);
-                }
-                else
-                {
-                    Assert.True(true);
-                }
-
-                return node;
-
-            }
-
-            private StationNode GetOrCreate(int branchId, MatchedStop stopPoint)
-            {
-                var stationId = stopPoint.ParentId ?? stopPoint.Id;
-
-                var entry = _nodes.SingleOrDefault(n => n.Id == stationId);
-                if (entry is null)
-                {
-                    entry = new StationNode() { Station = new Station() { 
-                        StationId = stationId,
-                        BranchIds = [branchId],
-                        MatchedStop = [stopPoint] } };
-                    _nodes.Add(entry);
-                }
-                else
-                {
-                    Assert.Equal(stationId, entry.Station.StationId);
-
-                    var station = entry.Station;
-                    if (!station.BranchIds.Contains(branchId))
-                        station.BranchIds.Add(branchId);
-                    if (!station.MatchedStop.Any(s => s.Id == stopPoint.Id))
-                        station.MatchedStop.Add(stopPoint);
-                }
-                return entry;
-            }
-
-            public record PrintableNode (string Id, List<String> Prev, List<string> Next);
-
-            public List<PrintableNode> DumpNodes()
-            {
-                List<PrintableNode> output = [];
-                foreach (var node in _nodes)
-                {
-                    output.Add(new PrintableNode(
-                        node.Id,
-                        node.Prev.Select(n => n.Id).ToList(),
-                        node.Next.Select(n => n.Id).ToList()
-                        )
-                    );
-                }
-                return output;
-            }
-
-        }
 
         [Fact]
         public async void BranchAnalysisAsync2()
         {
-            //foreach (var line in lines)
-            //var line = "elizabeth";
-            var line = "circle";
+            foreach (var (line, dir) in lines)
+                //var line = "elizabeth";
+            //var line = "dlr";
+            //var dir = Direction.Outbound;
             {
                 // StopPoint contains the list of the stations on the given line in order
-                var ret = await _client.RouteSequenceAsync(line, Direction.Inbound, [Anonymous6.Regular], null);
+                var ret = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
 
                 var branches = ret.StopPointSequences.Select(seq => new Branch(
                     (int)seq.BranchId!,
@@ -584,6 +272,7 @@ namespace TestTflObjects
                         ms.Id
                     })
                 });
+
                 SaveTestOutput($"{line}-NodeAnalysis.json", JsonConvert.SerializeObject(graph.DumpNodes(), Formatting.Indented));
 
                 SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(ordered, Formatting.Indented));

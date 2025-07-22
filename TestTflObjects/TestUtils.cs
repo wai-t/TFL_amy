@@ -14,5 +14,11 @@ namespace TestTflObjects
             File.WriteAllText(filename, json);
 #endif
         }
+
+        public static void VerifyTestOutput(string filename, string json)
+        {
+            var expected = File.ReadAllText(Path.Combine("TestData/Expected-Results", filename));
+            Assert.Equal(expected, json);
+        }
     }
 }

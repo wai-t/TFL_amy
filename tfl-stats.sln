@@ -19,6 +19,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTflObjects", "TestTflOb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArrivalsUI", "ArrivalsUI\ArrivalsUI.csproj", "{23DCA6CB-1286-45D3-9A44-9C2384D184DE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TflNetworkBuilder", "TflNetworkBuilder\TflNetworkBuilder.csproj", "{B97E9D94-49E5-465C-962D-F33DD04EFD2E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +57,10 @@ Global
 		{23DCA6CB-1286-45D3-9A44-9C2384D184DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{23DCA6CB-1286-45D3-9A44-9C2384D184DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{23DCA6CB-1286-45D3-9A44-9C2384D184DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B97E9D94-49E5-465C-962D-F33DD04EFD2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B97E9D94-49E5-465C-962D-F33DD04EFD2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B97E9D94-49E5-465C-962D-F33DD04EFD2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B97E9D94-49E5-465C-962D-F33DD04EFD2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

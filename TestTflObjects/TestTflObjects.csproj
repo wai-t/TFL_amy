@@ -22,11 +22,16 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\TflNetworkBuilder\TflNetworkBuilder.csproj" />
     <ProjectReference Include="..\TflObjects\TflObjects.csproj" />
   </ItemGroup>
 
   <ItemGroup>
     <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="TestData\Expected-Results\" />
   </ItemGroup>
 
 </Project>
