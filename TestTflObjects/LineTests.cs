@@ -132,7 +132,7 @@ namespace TestTflObjects
                 SaveTestOutput($"{line}-BranchAnalysis.json", JsonConvert.SerializeObject(branches, Formatting.Indented));
 
 
-                Dictionary<string, IndexedStation> stations = [];
+                Dictionary<string, Station> stations = [];
 
                 var all = ret.StopPointSequences.SelectMany(
                     branch => branch.StopPoint,
@@ -147,7 +147,7 @@ namespace TestTflObjects
                 {
                     if (!stations.TryGetValue(sp.StationId, out var indexedStopPoint))
                     {
-                        indexedStopPoint = new IndexedStation() { StationId = sp.StationId };
+                        indexedStopPoint = new Station() { StationId = sp.StationId };
                         stations[sp.StationId] = indexedStopPoint;
                     }
                     if (!indexedStopPoint.MatchedStop.Any(ms => ms.Id == sp.StopPoint.Id))
@@ -202,7 +202,7 @@ namespace TestTflObjects
 
                 SaveTestOutput($"{line}-StationsAnalysis.json", json);
 
-                Queue<IndexedStation> indexedStations = [];
+                Queue<Station> indexedStations = [];
 
                 while (orderedStations.Count > 0)
                 {
@@ -226,7 +226,7 @@ namespace TestTflObjects
             }
         }
 
-        public class IndexedStation
+        public class Station
         {
             public required string StationId { get; set; }
             public int Index { get; set; } = int.MinValue;
@@ -236,7 +236,7 @@ namespace TestTflObjects
 
             public override bool Equals(object? obj)
             {
-                var right = obj as IndexedStation;
+                var right = obj as Station;
                 return right != null && StationId == right.StationId;
             }
 
@@ -246,14 +246,14 @@ namespace TestTflObjects
             }
         }
 
-        public class IndexedStationNode
+        public class StationNode
         {
             public string Id => Station.StationId;
-            public required IndexedStation Station {get; init;}
-            public List<IndexedStationNode> Next { get; } = [];
-            public List<IndexedStationNode> Prev { get; } = [];
+            public required Station Station {get; init;}
+            public List<StationNode> Next { get; } = [];
+            public List<StationNode> Prev { get; } = [];
 
-            public void AddNext(IndexedStationNode nextNode)
+            public void AddNext(StationNode nextNode)
             {
                 if (!Next.Contains(nextNode))
                     Next.Add(nextNode);
@@ -261,7 +261,7 @@ namespace TestTflObjects
                     nextNode.Prev.Add(this);
             }
 
-            public void AddPrev(IndexedStationNode prevNode)
+            public void AddPrev(StationNode prevNode)
             {
                 if (!Prev.Contains(prevNode))
                     Prev.Add(prevNode);
@@ -271,7 +271,7 @@ namespace TestTflObjects
 
             public override bool Equals(object? obj)
             {
-                var right = obj as IndexedStationNode;
+                var right = obj as StationNode;
                 return right != null && Id == right.Id;
             }
 
@@ -303,20 +303,20 @@ namespace TestTflObjects
                 return base.GetHashCode();
             }
         }
-        internal class IndexedStationGraph
+        internal class StationGraph
         {
-            private HashSet<IndexedStationNode> _nodes = [];
+            private HashSet<StationNode> _nodes = [];
             private HashSet<IndexedBranch> _branches = [];
 
-            public IndexedStationNode StartNode { get; } = new() { Station = new() { StationId = "START" } };
-            public IndexedStationNode EndNode { get; } = new() { Station = new() { StationId = "END" } };
+            public StationNode StartNode { get; } = new() { Station = new() { StationId = "START" } };
+            public StationNode EndNode { get; } = new() { Station = new() { StationId = "END" } };
 
             public void AddBranch(StopPointSequence stopPointSequence)
             {
                 Assert.True(_branches.Add(new IndexedBranch(stopPointSequence)));
             }
 
-            public List<IndexedStationNode> Construct()
+            public List<StationNode> Construct()
             {
                 BuildStationNetwork();
                 var ret = OrderStations();
@@ -326,21 +326,21 @@ namespace TestTflObjects
             public class ThreadStatus
             {
                 public bool Flagged = false;
-                public List<IndexedStationNode> indexedStationNodes = new();
+                public List<StationNode> indexedStationNodes = new();
             }
             public class PendingJoin
             {
-                public required IndexedStationNode Id;
-                public required Dictionary<IndexedStationNode, ThreadStatus> Threads;
+                public required StationNode Id;
+                public required Dictionary<StationNode, ThreadStatus> Threads;
             }
 
             public class PendingSplit
             {
-                public required IndexedStationNode Id;
-                public Dictionary<IndexedStationNode, List<IndexedStationNode>> threads = [];
+                public required StationNode Id;
+                public Dictionary<StationNode, List<StationNode>> threads = [];
             }
 
-            private List<IndexedStationNode> OrderStations()
+            private List<StationNode> OrderStations()
             {
                 var ret = ProcessSplit(StartNode);
                 return ret;
@@ -349,18 +349,20 @@ namespace TestTflObjects
 
             Dictionary<string, PendingJoin> _pendingJoins = [];
 
-            private List<IndexedStationNode> ProcessThread(IndexedStationNode pred, IndexedStationNode node)
+            private List<StationNode> ProcessThread(StationNode pred, StationNode node)
             {
-                List<IndexedStationNode> ret = [];
+                List<StationNode> ret = [];
                 if (node.Prev.Count>1)
                 {
-                    ret = ProcessJoin(node, pred, []) ;
-                    if (!ret.Any())
+                    (var joinNode,ret) = ProcessJoin(node, pred, []) ;
+                    if (joinNode==null)
                         return ret;
+                    node = joinNode;
                 }
                 if (node.Next.Count>1)
                 {
-                    ret = ProcessSplit(node);
+                    var splitResult = ProcessSplit(node);
+                    ret = ret.Concat(splitResult).ToList();
                     return ret;
                 }
 
@@ -375,11 +377,11 @@ namespace TestTflObjects
 
                 if (currentNode.Prev.Count>1)
                 {
-                    var joinres = ProcessJoin(currentNode, ret.Last(), ret);
-                    if (joinres.Count==0)
+                    var (joinNode, joinres) = ProcessJoin(currentNode, ret.Last(), ret);
+                    if (joinNode==null)
                         return []; // means there's another branch waiting to be merged
                     ret = joinres;
-                    currentNode = joinres.Last();
+                    currentNode = joinNode;
                 }
 
                 if (currentNode == EndNode)
@@ -393,7 +395,7 @@ namespace TestTflObjects
 
                 return ret;
             }
-            private List<IndexedStationNode> ProcessJoin(IndexedStationNode node, IndexedStationNode pred, List<IndexedStationNode> listSoFar)
+            private (StationNode?, List<StationNode>) ProcessJoin(StationNode node, StationNode pred, List<StationNode> listSoFar)
             {
                 if (!_pendingJoins.TryGetValue(node.Id, out var pendingJoin))
                 {
@@ -405,22 +407,24 @@ namespace TestTflObjects
 
                 if (pendingJoin.Threads.Values.All(t=>t.Flagged))
                 {
-                    var ret = pendingJoin.Threads.Values.OrderByDescending(t => t.indexedStationNodes.Count).SelectMany(t=>t.indexedStationNodes).ToList();
-                    ret.Add(node);
+                    (StationNode?, List<StationNode>)ret = (node, pendingJoin.Threads.Values.OrderByDescending(t => t.indexedStationNodes.Count).SelectMany(t=>t.indexedStationNodes).ToList());
                     _pendingJoins.Remove(node.Id);
                     if ( node.Next.Count==1)
                     {
                         var nextNode = node.Next.Single();
                         if (nextNode.Prev.Count > 1)
-                            ret = ProcessJoin(nextNode, node, ret);
+                        {
+                            ret.Item2.Add(node);
+                            ret = ProcessJoin(nextNode, node, ret.Item2);
+                        }
                     }
                     return ret;
                 }
 
-                return [];
+                return (null,[]);
             }
 
-            private List<IndexedStationNode> ProcessSplit(IndexedStationNode node)
+            private List<StationNode> ProcessSplit(StationNode node)
             {
                 var threads = node.Next.Select(head => ProcessThread(node, head)).ToList();
 
@@ -431,20 +435,24 @@ namespace TestTflObjects
             }
             private void BuildStationNetwork()
             {
-                Stack<IndexedBranch> workQueue = new(_branches.Where(b => !b.StopPointSequence.PrevBranchIds.Any()));
+                Stack<IndexedBranch> workQueue = new(_branches.Where(b => !b.StopPointSequence.PrevBranchIds.Any()
+                                            || b.StopPointSequence.PrevBranchIds.Contains((int)b.StopPointSequence.BranchId!))
+                                                                        );
                 var remainingBranches = _branches.Except(workQueue);
 
                 while (workQueue.Any())
                 {
-                    IndexedStationNode? prevStation = null;
+                    StationNode? prevStation = null;
                     var branch = workQueue.Pop();
 
                     foreach (var stopPoint in branch.StopPointSequence.StopPoint)
                     {
+                        if (prevStation!= null && stopPoint.Id == branch.StopPointSequence.StopPoint.First().Id)
+                            break; // break the Circle Line
                         prevStation = Add(branch, stopPoint, prevStation);
                     }
 
-                    foreach (var branchId in branch.StopPointSequence.NextBranchIds)
+                    foreach (var branchId in branch.StopPointSequence.NextBranchIds.Where(i => i != branch.StopPointSequence.BranchId))
                     {
                         var nextBranch = remainingBranches.SingleOrDefault(b => b.BranchId == branchId);
                         if (nextBranch != null)
@@ -462,7 +470,7 @@ namespace TestTflObjects
 
             }
 
-            private IndexedStationNode Add(IndexedBranch branch, MatchedStop stopPoint, IndexedStationNode? prev)
+            private StationNode Add(IndexedBranch branch, MatchedStop stopPoint, StationNode? prev)
             {
                 var node = GetOrCreate(branch.BranchId, stopPoint);
 
@@ -479,7 +487,8 @@ namespace TestTflObjects
                     node.Prev.Add(prev);
                     prev.Next.Add(node);
                 }
-                else if (prev == null && !node.Prev.Any() && !branch.StopPointSequence.PrevBranchIds.Any())
+                else if (prev == null && !node.Prev.Any() 
+                    && !branch.StopPointSequence.PrevBranchIds.Where(id => id!=branch.StopPointSequence.BranchId).Any())
                 {
                     node.Prev.Add(StartNode);
                     StartNode.Next.Add(node);
@@ -493,14 +502,14 @@ namespace TestTflObjects
 
             }
 
-            private IndexedStationNode GetOrCreate(int branchId, MatchedStop stopPoint)
+            private StationNode GetOrCreate(int branchId, MatchedStop stopPoint)
             {
                 var stationId = stopPoint.ParentId ?? stopPoint.Id;
 
                 var entry = _nodes.SingleOrDefault(n => n.Id == stationId);
                 if (entry is null)
                 {
-                    entry = new IndexedStationNode() { Station = new IndexedStation() { 
+                    entry = new StationNode() { Station = new Station() { 
                         StationId = stationId,
                         BranchIds = [branchId],
                         MatchedStop = [stopPoint] } };
@@ -542,7 +551,8 @@ namespace TestTflObjects
         public async void BranchAnalysisAsync2()
         {
             //foreach (var line in lines)
-            var line = "elizabeth";
+            //var line = "elizabeth";
+            var line = "circle";
             {
                 // StopPoint contains the list of the stations on the given line in order
                 var ret = await _client.RouteSequenceAsync(line, Direction.Inbound, [Anonymous6.Regular], null);
@@ -557,15 +567,13 @@ namespace TestTflObjects
 
                 SaveTestOutput($"{line}-BranchAnalysis.json", JsonConvert.SerializeObject(branches, Formatting.Indented));
 
-                IndexedStationGraph graph = new();
+                StationGraph graph = new();
 
                 foreach (var stopPointSequence in ret.StopPointSequences)
                 {
                     graph.AddBranch(stopPointSequence);
                 }
 
-
-                SaveTestOutput($"{line}-NodeAnalysis.json", JsonConvert.SerializeObject(graph.DumpNodes(), Formatting.Indented));
 
                 var ordered = graph.Construct().Select(s => new
                 {
@@ -576,6 +584,8 @@ namespace TestTflObjects
                         ms.Id
                     })
                 });
+                SaveTestOutput($"{line}-NodeAnalysis.json", JsonConvert.SerializeObject(graph.DumpNodes(), Formatting.Indented));
+
                 SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(ordered, Formatting.Indented));
             }
         }
