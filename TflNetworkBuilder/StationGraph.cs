@@ -12,8 +12,8 @@ namespace TflNetworkBuilder
         private readonly HashSet<StationNode> _nodes = [];
         private readonly HashSet<Branch> _branches = [];
 
-        public StationNode StartNode { get; } = new() { Station = new() { StationId = "START" } };
-        public StationNode EndNode { get; } = new() { Station = new() { StationId = "END" } };
+        public StationNode START_NODE { get; } = new() { Station = new() { StationId = "START" } };
+        public StationNode END_NODE { get; } = new() { Station = new() { StationId = "END" } };
 
         public void AddBranch(StopPointSequence stopPointSequence)
         {
@@ -27,40 +27,40 @@ namespace TflNetworkBuilder
             return ret;
         }
 
-        public class ThreadStatus
+        private class BranchStatus
         {
-            public bool Flagged = false;
-            public List<StationNode> indexedStationNodes = [];
+            public bool Complete = false;
+            public List<StationNode> BranchNodes = [];
         }
-        public class PendingJoin
+        private class PendingJoin
         {
             public required StationNode Id;
-            public required Dictionary<StationNode, ThreadStatus> Threads;
+            public required Dictionary<StationNode, BranchStatus> JoiningBranches;
         }
 
         private List<StationNode> OrderStations()
         {
-            var ret = ProcessSplit(StartNode);
+            var ret = ProcessFork(START_NODE);
             return ret;
         }
 
         Dictionary<string, PendingJoin> _pendingJoins = [];
 
-        private List<StationNode> ProcessThread(StationNode? pred, StationNode node)
+        private List<StationNode> ProcessSequence(StationNode? pred, StationNode node)
         {
-            if (node == EndNode)
+            if (node == END_NODE)
                 return [];
             else if (node.IsMergePoint() && pred!=null)
             {
-                var (joinNode, mergeResult) = ProcessMerge(node, pred, []);
-                if (joinNode == null)
+                var (completed, mergeResult) = ProcessMerge(node, pred, []);
+                if (!completed)
                     return [];
-                var ret2 = ProcessThread(null, joinNode);
+                var ret2 = ProcessSequence(null, node);
                 return [..mergeResult, ..ret2];
             }
             else if (node.IsForkPoint())
             {
-                var splitResult = ProcessSplit(node);
+                var splitResult = ProcessFork(node);
                 return splitResult;
             }
             else
@@ -70,46 +70,54 @@ namespace TflNetworkBuilder
                 ret.Add(node);
                 var currentNode = node.GetNext();
 
-                while (currentNode.IsPassThru() && currentNode != EndNode)
+                while (currentNode.IsPassThru() && currentNode != END_NODE)
                 {
                     ret.Add(currentNode);
                     currentNode = currentNode.GetNext();
                 };
 
-                var ret2 = ProcessThread(ret.Last(), currentNode);
+                var ret2 = ProcessSequence(ret.Last(), currentNode);
                 return [.. ret, .. ret2];
 
             }
 
         }
-        private (StationNode?, List<StationNode>) ProcessMerge(StationNode node, StationNode pred, List<StationNode> listSoFar)
+        private (bool,List<StationNode>) ProcessMerge(StationNode node, StationNode pred, List<StationNode> stationsOnBranch)
         {
             if (!_pendingJoins.TryGetValue(node.Id, out var pendingJoin))
             {
-                pendingJoin = new PendingJoin() { Id = node, Threads = node.Prev.ToDictionary(n => n, n => new ThreadStatus() { Flagged = false, indexedStationNodes = [] }) };
+                pendingJoin = new PendingJoin() {
+                    Id = node,
+                    JoiningBranches = node.Prev.ToDictionary(n => n, n => new BranchStatus() { Complete = false, BranchNodes = [] }) 
+                };
                 _pendingJoins.Add(node.Id, pendingJoin);
             }
 
-            pendingJoin.Threads[pred] = new ThreadStatus() { Flagged = true, indexedStationNodes = listSoFar };
+            pendingJoin.JoiningBranches[pred] = new BranchStatus() {
+                Complete = true,
+                BranchNodes = stationsOnBranch 
+            };
 
-            if (pendingJoin.Threads.Values.All(t => t.Flagged))
+            if (pendingJoin.JoiningBranches.Values.All(t => t.Complete))
             {
-                (StationNode?, List<StationNode>) ret = (node, pendingJoin.Threads.Values.OrderByDescending(t => t.indexedStationNodes.Count).SelectMany(t => t.indexedStationNodes).ToList());
+                 var ret = (true, pendingJoin.JoiningBranches.Values
+                    .OrderByDescending(t => t.BranchNodes.Count)
+                    .SelectMany(t => t.BranchNodes).ToList());
                 _pendingJoins.Remove(node.Id);
 
                 return ret;
             }
 
-            return (null, []);
+            return (false, []);
         }
 
-        private List<StationNode> ProcessSplit(StationNode node)
+        private List<StationNode> ProcessFork(StationNode node)
         {
             List<List<StationNode>> threads = [];
             
             foreach(var head in node.Next)
             {
-                var threadResult = ProcessThread(node, head).ToList();
+                var threadResult = ProcessSequence(node, head).ToList();
                 threads.Add(threadResult);
             }
 
@@ -148,7 +156,7 @@ namespace TflNetworkBuilder
             {
                 if (station.IsTail())
                 {
-                    station.AddNext(EndNode);
+                    station.AddNext(END_NODE);
                 }
             }
 
@@ -158,21 +166,15 @@ namespace TflNetworkBuilder
         {
             var node = GetOrCreate(branch.BranchId, stopPoint);
 
-            //var existingPrevs = node.Prev;
             if (prev != null && !node.Follows(prev))
             {
-                node.RemovePrev(StartNode);
-                //foreach (var p in existingPrevs)
-                //{
-                //    if (!p.Next.Contains(node))
-                //        p.Next.Add(node);
-                //}
+                node.RemovePrev(START_NODE);
                 node.AddPrev(prev);
             }
             else if (prev == null && node.IsHead()
                 && !branch.StopPointSequence.PrevBranchIds.Where(id => id != branch.StopPointSequence.BranchId).Any())
             {
-                node.AddPrev(StartNode);
+                node.AddPrev(START_NODE);
             }
             else
             {
