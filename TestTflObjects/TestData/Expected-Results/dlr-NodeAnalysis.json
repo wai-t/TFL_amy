@@ -1,0 +1,699 @@
+[
+  {
+    "Id": "HUBBAN",
+    "Names": [
+      "940GZZDLBNK HUBBAN Bank DLR Station"
+    ],
+    "Prev": [
+      "START"
+    ],
+    "Next": [
+      "HUBSDE"
+    ],
+    "BranchIds": [
+      15
+    ]
+  },
+  {
+    "Id": "HUBSDE",
+    "Names": [
+      "940GZZDLSHA HUBSDE Shadwell DLR Station"
+    ],
+    "Prev": [
+      "HUBBAN",
+      "HUBTOG"
+    ],
+    "Next": [
+      "HUBLHS"
+    ],
+    "BranchIds": [
+      15,
+      25,
+      16
+    ]
+  },
+  {
+    "Id": "HUBLHS",
+    "Names": [
+      "940GZZDLLIM HUBLHS Limehouse DLR Station"
+    ],
+    "Prev": [
+      "HUBSDE"
+    ],
+    "Next": [
+      "940GZZDLWFE"
+    ],
+    "BranchIds": [
+      25
+    ]
+  },
+  {
+    "Id": "940GZZDLWFE",
+    "Names": [
+      "940GZZDLWFE  Westferry DLR Station"
+    ],
+    "Prev": [
+      "HUBLHS"
+    ],
+    "Next": [
+      "HUBCAW",
+      "940GZZDLPOP"
+    ],
+    "BranchIds": [
+      25,
+      23,
+      22
+    ]
+  },
+  {
+    "Id": "HUBCAW",
+    "Names": [
+      "940GZZDLCAN HUBCAW Canary Wharf DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLWFE",
+      "940GZZDLWIQ"
+    ],
+    "Next": [
+      "940GZZDLHEQ"
+    ],
+    "BranchIds": [
+      23,
+      24,
+      18
+    ]
+  },
+  {
+    "Id": "940GZZDLHEQ",
+    "Names": [
+      "940GZZDLHEQ  Heron Quays DLR Station"
+    ],
+    "Prev": [
+      "HUBCAW"
+    ],
+    "Next": [
+      "940GZZDLSOQ"
+    ],
+    "BranchIds": [
+      24
+    ]
+  },
+  {
+    "Id": "940GZZDLSOQ",
+    "Names": [
+      "940GZZDLSOQ  South Quay DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLHEQ"
+    ],
+    "Next": [
+      "940GZZDLCLA"
+    ],
+    "BranchIds": [
+      24
+    ]
+  },
+  {
+    "Id": "940GZZDLCLA",
+    "Names": [
+      "940GZZDLCLA  Crossharbour DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLSOQ"
+    ],
+    "Next": [
+      "940GZZDLMUD"
+    ],
+    "BranchIds": [
+      24
+    ]
+  },
+  {
+    "Id": "940GZZDLMUD",
+    "Names": [
+      "940GZZDLMUD  Mudchute DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLCLA"
+    ],
+    "Next": [
+      "940GZZDLISL"
+    ],
+    "BranchIds": [
+      24
+    ]
+  },
+  {
+    "Id": "940GZZDLISL",
+    "Names": [
+      "940GZZDLISL  Island Gardens DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLMUD"
+    ],
+    "Next": [
+      "HUBCUT"
+    ],
+    "BranchIds": [
+      24
+    ]
+  },
+  {
+    "Id": "HUBCUT",
+    "Names": [
+      "940GZZDLCUT HUBCUT Cutty Sark (for Maritime Greenwich) DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLISL"
+    ],
+    "Next": [
+      "HUBGNW"
+    ],
+    "BranchIds": [
+      24
+    ]
+  },
+  {
+    "Id": "HUBGNW",
+    "Names": [
+      "940GZZDLGRE HUBGNW Greenwich DLR Station"
+    ],
+    "Prev": [
+      "HUBCUT"
+    ],
+    "Next": [
+      "940GZZDLDEP"
+    ],
+    "BranchIds": [
+      24
+    ]
+  },
+  {
+    "Id": "940GZZDLDEP",
+    "Names": [
+      "940GZZDLDEP  Deptford Bridge DLR Station"
+    ],
+    "Prev": [
+      "HUBGNW"
+    ],
+    "Next": [
+      "940GZZDLELV"
+    ],
+    "BranchIds": [
+      24
+    ]
+  },
+  {
+    "Id": "940GZZDLELV",
+    "Names": [
+      "940GZZDLELV  Elverson Road DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLDEP"
+    ],
+    "Next": [
+      "HUBLEW"
+    ],
+    "BranchIds": [
+      24
+    ]
+  },
+  {
+    "Id": "HUBLEW",
+    "Names": [
+      "940GZZDLLEW HUBLEW Lewisham DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLELV"
+    ],
+    "Next": [
+      "END"
+    ],
+    "BranchIds": [
+      24
+    ]
+  },
+  {
+    "Id": "940GZZDLPOP",
+    "Names": [
+      "940GZZDLPOP  Poplar DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLWFE",
+      "940GZZDLALL"
+    ],
+    "Next": [
+      "940GZZDLBLA",
+      "940GZZDLWIQ"
+    ],
+    "BranchIds": [
+      22,
+      19,
+      13,
+      18
+    ]
+  },
+  {
+    "Id": "940GZZDLBLA",
+    "Names": [
+      "940GZZDLBLA  Blackwall DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLPOP"
+    ],
+    "Next": [
+      "940GZZDLEIN"
+    ],
+    "BranchIds": [
+      19
+    ]
+  },
+  {
+    "Id": "940GZZDLEIN",
+    "Names": [
+      "940GZZDLEIN  East India DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLBLA"
+    ],
+    "Next": [
+      "HUBCAN"
+    ],
+    "BranchIds": [
+      19
+    ]
+  },
+  {
+    "Id": "HUBCAN",
+    "Names": [
+      "940GZZDLCGT HUBCAN Canning Town DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLEIN",
+      "940GZZDLSTL"
+    ],
+    "Next": [
+      "HUBRVC",
+      "940GZZDLWSV"
+    ],
+    "BranchIds": [
+      19,
+      21,
+      20,
+      17
+    ]
+  },
+  {
+    "Id": "HUBRVC",
+    "Names": [
+      "940GZZDLRVC HUBRVC Royal Victoria DLR Station"
+    ],
+    "Prev": [
+      "HUBCAN"
+    ],
+    "Next": [
+      "HUBCUS"
+    ],
+    "BranchIds": [
+      21
+    ]
+  },
+  {
+    "Id": "HUBCUS",
+    "Names": [
+      "940GZZDLCUS HUBCUS Custom House (for ExCel) DLR Station"
+    ],
+    "Prev": [
+      "HUBRVC"
+    ],
+    "Next": [
+      "940GZZDLPRE"
+    ],
+    "BranchIds": [
+      21
+    ]
+  },
+  {
+    "Id": "940GZZDLPRE",
+    "Names": [
+      "940GZZDLPRE  Prince Regent DLR Station"
+    ],
+    "Prev": [
+      "HUBCUS"
+    ],
+    "Next": [
+      "940GZZDLRAL"
+    ],
+    "BranchIds": [
+      21
+    ]
+  },
+  {
+    "Id": "940GZZDLRAL",
+    "Names": [
+      "940GZZDLRAL  Royal Albert DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLPRE"
+    ],
+    "Next": [
+      "940GZZDLBPK"
+    ],
+    "BranchIds": [
+      21
+    ]
+  },
+  {
+    "Id": "940GZZDLBPK",
+    "Names": [
+      "940GZZDLBPK  Beckton Park DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLRAL"
+    ],
+    "Next": [
+      "940GZZDLCYP"
+    ],
+    "BranchIds": [
+      21
+    ]
+  },
+  {
+    "Id": "940GZZDLCYP",
+    "Names": [
+      "940GZZDLCYP  Cyprus DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLBPK"
+    ],
+    "Next": [
+      "940GZZDLGAL"
+    ],
+    "BranchIds": [
+      21
+    ]
+  },
+  {
+    "Id": "940GZZDLGAL",
+    "Names": [
+      "940GZZDLGAL  Gallions Reach DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLCYP"
+    ],
+    "Next": [
+      "940GZZDLBEC"
+    ],
+    "BranchIds": [
+      21
+    ]
+  },
+  {
+    "Id": "940GZZDLBEC",
+    "Names": [
+      "940GZZDLBEC  Beckton DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLGAL"
+    ],
+    "Next": [
+      "END"
+    ],
+    "BranchIds": [
+      21
+    ]
+  },
+  {
+    "Id": "940GZZDLWSV",
+    "Names": [
+      "940GZZDLWSV  West Silvertown DLR Station"
+    ],
+    "Prev": [
+      "HUBCAN"
+    ],
+    "Next": [
+      "940GZZDLPDK"
+    ],
+    "BranchIds": [
+      20
+    ]
+  },
+  {
+    "Id": "940GZZDLPDK",
+    "Names": [
+      "940GZZDLPDK  Pontoon Dock DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLWSV"
+    ],
+    "Next": [
+      "HUBLCY"
+    ],
+    "BranchIds": [
+      20
+    ]
+  },
+  {
+    "Id": "HUBLCY",
+    "Names": [
+      "940GZZDLLCA HUBLCY London City Airport DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLPDK"
+    ],
+    "Next": [
+      "940GZZDLKGV"
+    ],
+    "BranchIds": [
+      20
+    ]
+  },
+  {
+    "Id": "940GZZDLKGV",
+    "Names": [
+      "940GZZDLKGV  King George V DLR Station"
+    ],
+    "Prev": [
+      "HUBLCY"
+    ],
+    "Next": [
+      "HUBWWA"
+    ],
+    "BranchIds": [
+      20
+    ]
+  },
+  {
+    "Id": "HUBWWA",
+    "Names": [
+      "940GZZDLWLA HUBWWA Woolwich Arsenal DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLKGV"
+    ],
+    "Next": [
+      "END"
+    ],
+    "BranchIds": [
+      20
+    ]
+  },
+  {
+    "Id": "940GZZDLSIT",
+    "Names": [
+      "940GZZDLSIT  Stratford International DLR Station"
+    ],
+    "Prev": [
+      "START"
+    ],
+    "Next": [
+      "HUBSRA"
+    ],
+    "BranchIds": [
+      14
+    ]
+  },
+  {
+    "Id": "HUBSRA",
+    "Names": [
+      "940GZZDLSTD HUBSRA Stratford DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLSIT"
+    ],
+    "Next": [
+      "940GZZDLSHS",
+      "940GZZDLPUD"
+    ],
+    "BranchIds": [
+      14,
+      17,
+      13
+    ]
+  },
+  {
+    "Id": "940GZZDLSHS",
+    "Names": [
+      "940GZZDLSHS  Stratford High Street DLR Station"
+    ],
+    "Prev": [
+      "HUBSRA"
+    ],
+    "Next": [
+      "940GZZDLABR"
+    ],
+    "BranchIds": [
+      17
+    ]
+  },
+  {
+    "Id": "940GZZDLABR",
+    "Names": [
+      "940GZZDLABR  Abbey Road DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLSHS"
+    ],
+    "Next": [
+      "HUBWEH"
+    ],
+    "BranchIds": [
+      17
+    ]
+  },
+  {
+    "Id": "HUBWEH",
+    "Names": [
+      "940GZZDLWHM HUBWEH West Ham DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLABR"
+    ],
+    "Next": [
+      "940GZZDLSTL"
+    ],
+    "BranchIds": [
+      17
+    ]
+  },
+  {
+    "Id": "940GZZDLSTL",
+    "Names": [
+      "940GZZDLSTL  Star Lane DLR Station"
+    ],
+    "Prev": [
+      "HUBWEH"
+    ],
+    "Next": [
+      "HUBCAN"
+    ],
+    "BranchIds": [
+      17
+    ]
+  },
+  {
+    "Id": "HUBTOG",
+    "Names": [
+      "940GZZDLTWG HUBTOG Tower Gateway DLR Station"
+    ],
+    "Prev": [
+      "START"
+    ],
+    "Next": [
+      "HUBSDE"
+    ],
+    "BranchIds": [
+      16
+    ]
+  },
+  {
+    "Id": "940GZZDLPUD",
+    "Names": [
+      "940GZZDLPUD  Pudding Mill Lane DLR Station"
+    ],
+    "Prev": [
+      "HUBSRA"
+    ],
+    "Next": [
+      "940GZZDLBOW"
+    ],
+    "BranchIds": [
+      13
+    ]
+  },
+  {
+    "Id": "940GZZDLBOW",
+    "Names": [
+      "940GZZDLBOW  Bow Church DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLPUD"
+    ],
+    "Next": [
+      "940GZZDLDEV"
+    ],
+    "BranchIds": [
+      13
+    ]
+  },
+  {
+    "Id": "940GZZDLDEV",
+    "Names": [
+      "940GZZDLDEV  Devons Road DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLBOW"
+    ],
+    "Next": [
+      "940GZZDLLDP"
+    ],
+    "BranchIds": [
+      13
+    ]
+  },
+  {
+    "Id": "940GZZDLLDP",
+    "Names": [
+      "940GZZDLLDP  Langdon Park DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLDEV"
+    ],
+    "Next": [
+      "940GZZDLALL"
+    ],
+    "BranchIds": [
+      13
+    ]
+  },
+  {
+    "Id": "940GZZDLALL",
+    "Names": [
+      "940GZZDLALL  All Saints DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLLDP"
+    ],
+    "Next": [
+      "940GZZDLPOP"
+    ],
+    "BranchIds": [
+      13
+    ]
+  },
+  {
+    "Id": "940GZZDLWIQ",
+    "Names": [
+      "940GZZDLWIQ  West India Quay DLR Station"
+    ],
+    "Prev": [
+      "940GZZDLPOP"
+    ],
+    "Next": [
+      "HUBCAW"
+    ],
+    "BranchIds": [
+      18
+    ]
+  }
+]

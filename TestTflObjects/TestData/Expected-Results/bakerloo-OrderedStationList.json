@@ -1,0 +1,231 @@
+[
+  {
+    "StationId": "START",
+    "StopPoints": []
+  },
+  {
+    "StationId": "HUBHRW",
+    "StopPoints": [
+      {
+        "Name": "Harrow & Wealdstone Underground Station",
+        "Id": "940GZZLUHAW"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBKNT",
+    "StopPoints": [
+      {
+        "Name": "Kenton Underground Station",
+        "Id": "940GZZLUKEN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBSOK",
+    "StopPoints": [
+      {
+        "Name": "South Kenton Underground Station",
+        "Id": "940GZZLUSKT"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBNWB",
+    "StopPoints": [
+      {
+        "Name": "North Wembley Underground Station",
+        "Id": "940GZZLUNWY"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWMB",
+    "StopPoints": [
+      {
+        "Name": "Wembley Central Underground Station",
+        "Id": "940GZZLUWYC"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBSBP",
+    "StopPoints": [
+      {
+        "Name": "Stonebridge Park Underground Station",
+        "Id": "940GZZLUSGP"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBHDN",
+    "StopPoints": [
+      {
+        "Name": "Harlesden Underground Station",
+        "Id": "940GZZLUHSN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWIJ",
+    "StopPoints": [
+      {
+        "Name": "Willesden Junction Underground Station",
+        "Id": "940GZZLUWJN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBKNL",
+    "StopPoints": [
+      {
+        "Name": "Kensal Green Underground Station",
+        "Id": "940GZZLUKSL"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBQPW",
+    "StopPoints": [
+      {
+        "Name": "Queen's Park Underground Station",
+        "Id": "940GZZLUQPS"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUKPK",
+    "StopPoints": [
+      {
+        "Name": "Kilburn Park Underground Station",
+        "Id": "940GZZLUKPK"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUMVL",
+    "StopPoints": [
+      {
+        "Name": "Maida Vale Underground Station",
+        "Id": "940GZZLUMVL"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWKA",
+    "StopPoints": [
+      {
+        "Name": "Warwick Avenue Underground Station",
+        "Id": "940GZZLUWKA"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBPAD",
+    "StopPoints": [
+      {
+        "Name": "Paddington Underground Station",
+        "Id": "940GZZLUPAC"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUERB",
+    "StopPoints": [
+      {
+        "Name": "Edgware Road (Bakerloo) Underground Station",
+        "Id": "940GZZLUERB"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBMYB",
+    "StopPoints": [
+      {
+        "Name": "Marylebone Underground Station",
+        "Id": "940GZZLUMYB"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBST",
+    "StopPoints": [
+      {
+        "Name": "Baker Street Underground Station",
+        "Id": "940GZZLUBST"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLURGP",
+    "StopPoints": [
+      {
+        "Name": "Regent's Park Underground Station",
+        "Id": "940GZZLURGP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUOXC",
+    "StopPoints": [
+      {
+        "Name": "Oxford Circus Underground Station",
+        "Id": "940GZZLUOXC"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUPCC",
+    "StopPoints": [
+      {
+        "Name": "Piccadilly Circus Underground Station",
+        "Id": "940GZZLUPCC"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBCHX",
+    "StopPoints": [
+      {
+        "Name": "Charing Cross Underground Station",
+        "Id": "940GZZLUCHX"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUEMB",
+    "StopPoints": [
+      {
+        "Name": "Embankment Underground Station",
+        "Id": "940GZZLUEMB"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWAT",
+    "StopPoints": [
+      {
+        "Name": "Waterloo Underground Station",
+        "Id": "940GZZLUWLO"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLULBN",
+    "StopPoints": [
+      {
+        "Name": "Lambeth North Underground Station",
+        "Id": "940GZZLULBN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBEPH",
+    "StopPoints": [
+      {
+        "Name": "Elephant & Castle Underground Station",
+        "Id": "940GZZLUEAC"
+      }
+    ]
+  }
+]

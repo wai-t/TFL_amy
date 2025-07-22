@@ -1,0 +1,800 @@
+[
+  {
+    "Id": "940GZZLUMHL",
+    "Names": [
+      "940GZZLUMHL  Mill Hill East Underground Station"
+    ],
+    "Prev": [
+      "START"
+    ],
+    "Next": [
+      "940GZZLUFYC"
+    ],
+    "BranchIds": [
+      2
+    ]
+  },
+  {
+    "Id": "940GZZLUFYC",
+    "Names": [
+      "940GZZLUFYC  Finchley Central Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUMHL",
+      "940GZZLUWFN"
+    ],
+    "Next": [
+      "940GZZLUEFY"
+    ],
+    "BranchIds": [
+      2,
+      9,
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUEFY",
+    "Names": [
+      "940GZZLUEFY  East Finchley Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUFYC"
+    ],
+    "Next": [
+      "940GZZLUHGT"
+    ],
+    "BranchIds": [
+      9
+    ]
+  },
+  {
+    "Id": "940GZZLUHGT",
+    "Names": [
+      "940GZZLUHGT  Highgate Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUEFY"
+    ],
+    "Next": [
+      "940GZZLUACY"
+    ],
+    "BranchIds": [
+      9
+    ]
+  },
+  {
+    "Id": "940GZZLUACY",
+    "Names": [
+      "940GZZLUACY  Archway Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUHGT"
+    ],
+    "Next": [
+      "940GZZLUTFP"
+    ],
+    "BranchIds": [
+      9
+    ]
+  },
+  {
+    "Id": "940GZZLUTFP",
+    "Names": [
+      "940GZZLUTFP  Tufnell Park Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUACY"
+    ],
+    "Next": [
+      "HUBKTN"
+    ],
+    "BranchIds": [
+      9
+    ]
+  },
+  {
+    "Id": "HUBKTN",
+    "Names": [
+      "940GZZLUKSH HUBKTN Kentish Town Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUTFP"
+    ],
+    "Next": [
+      "940GZZLUCTN"
+    ],
+    "BranchIds": [
+      9
+    ]
+  },
+  {
+    "Id": "940GZZLUCTN",
+    "Names": [
+      "940GZZLUCTN  Camden Town Underground Station"
+    ],
+    "Prev": [
+      "HUBKTN",
+      "940GZZLUCFM"
+    ],
+    "Next": [
+      "HUBEUS",
+      "940GZZLUMTC"
+    ],
+    "BranchIds": [
+      9,
+      4,
+      3,
+      0
+    ]
+  },
+  {
+    "Id": "HUBEUS",
+    "Names": [
+      "940GZZLUEUS HUBEUS Euston Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUCTN",
+      "940GZZLUMTC"
+    ],
+    "Next": [
+      "HUBKGX",
+      "940GZZLUWRR"
+    ],
+    "BranchIds": [
+      4,
+      6,
+      3,
+      5
+    ]
+  },
+  {
+    "Id": "HUBKGX",
+    "Names": [
+      "940GZZLUKSX HUBKGX King's Cross St. Pancras Underground Station"
+    ],
+    "Prev": [
+      "HUBEUS"
+    ],
+    "Next": [
+      "940GZZLUAGL"
+    ],
+    "BranchIds": [
+      6
+    ]
+  },
+  {
+    "Id": "940GZZLUAGL",
+    "Names": [
+      "940GZZLUAGL  Angel Underground Station"
+    ],
+    "Prev": [
+      "HUBKGX"
+    ],
+    "Next": [
+      "HUBOLD"
+    ],
+    "BranchIds": [
+      6
+    ]
+  },
+  {
+    "Id": "HUBOLD",
+    "Names": [
+      "940GZZLUODS HUBOLD Old Street Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUAGL"
+    ],
+    "Next": [
+      "HUBZMG"
+    ],
+    "BranchIds": [
+      6
+    ]
+  },
+  {
+    "Id": "HUBZMG",
+    "Names": [
+      "940GZZLUMGT HUBZMG Moorgate Underground Station"
+    ],
+    "Prev": [
+      "HUBOLD"
+    ],
+    "Next": [
+      "HUBBAN"
+    ],
+    "BranchIds": [
+      6
+    ]
+  },
+  {
+    "Id": "HUBBAN",
+    "Names": [
+      "940GZZLUBNK HUBBAN Bank Underground Station"
+    ],
+    "Prev": [
+      "HUBZMG"
+    ],
+    "Next": [
+      "HUBLBG"
+    ],
+    "BranchIds": [
+      6
+    ]
+  },
+  {
+    "Id": "HUBLBG",
+    "Names": [
+      "940GZZLULNB HUBLBG London Bridge Underground Station"
+    ],
+    "Prev": [
+      "HUBBAN"
+    ],
+    "Next": [
+      "940GZZLUBOR"
+    ],
+    "BranchIds": [
+      6
+    ]
+  },
+  {
+    "Id": "940GZZLUBOR",
+    "Names": [
+      "940GZZLUBOR  Borough Underground Station"
+    ],
+    "Prev": [
+      "HUBLBG"
+    ],
+    "Next": [
+      "HUBEPH"
+    ],
+    "BranchIds": [
+      6
+    ]
+  },
+  {
+    "Id": "HUBEPH",
+    "Names": [
+      "940GZZLUEAC HUBEPH Elephant & Castle Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUBOR"
+    ],
+    "Next": [
+      "940GZZLUKNG"
+    ],
+    "BranchIds": [
+      6
+    ]
+  },
+  {
+    "Id": "940GZZLUKNG",
+    "Names": [
+      "940GZZLUKNG  Kennington Underground Station"
+    ],
+    "Prev": [
+      "HUBEPH",
+      "HUBWAT"
+    ],
+    "Next": [
+      "940GZZLUOVL",
+      "940GZZNEUGST"
+    ],
+    "BranchIds": [
+      6,
+      8,
+      5,
+      7
+    ]
+  },
+  {
+    "Id": "940GZZLUOVL",
+    "Names": [
+      "940GZZLUOVL  Oval Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUKNG"
+    ],
+    "Next": [
+      "940GZZLUSKW"
+    ],
+    "BranchIds": [
+      8
+    ]
+  },
+  {
+    "Id": "940GZZLUSKW",
+    "Names": [
+      "940GZZLUSKW  Stockwell Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUOVL"
+    ],
+    "Next": [
+      "940GZZLUCPN"
+    ],
+    "BranchIds": [
+      8
+    ]
+  },
+  {
+    "Id": "940GZZLUCPN",
+    "Names": [
+      "940GZZLUCPN  Clapham North Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUSKW"
+    ],
+    "Next": [
+      "940GZZLUCPC"
+    ],
+    "BranchIds": [
+      8
+    ]
+  },
+  {
+    "Id": "940GZZLUCPC",
+    "Names": [
+      "940GZZLUCPC  Clapham Common Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUCPN"
+    ],
+    "Next": [
+      "940GZZLUCPS"
+    ],
+    "BranchIds": [
+      8
+    ]
+  },
+  {
+    "Id": "940GZZLUCPS",
+    "Names": [
+      "940GZZLUCPS  Clapham South Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUCPC"
+    ],
+    "Next": [
+      "HUBBAL"
+    ],
+    "BranchIds": [
+      8
+    ]
+  },
+  {
+    "Id": "HUBBAL",
+    "Names": [
+      "940GZZLUBLM HUBBAL Balham Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUCPS"
+    ],
+    "Next": [
+      "940GZZLUTBC"
+    ],
+    "BranchIds": [
+      8
+    ]
+  },
+  {
+    "Id": "940GZZLUTBC",
+    "Names": [
+      "940GZZLUTBC  Tooting Bec Underground Station"
+    ],
+    "Prev": [
+      "HUBBAL"
+    ],
+    "Next": [
+      "940GZZLUTBY"
+    ],
+    "BranchIds": [
+      8
+    ]
+  },
+  {
+    "Id": "940GZZLUTBY",
+    "Names": [
+      "940GZZLUTBY  Tooting Broadway Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUTBC"
+    ],
+    "Next": [
+      "940GZZLUCSD"
+    ],
+    "BranchIds": [
+      8
+    ]
+  },
+  {
+    "Id": "940GZZLUCSD",
+    "Names": [
+      "940GZZLUCSD  Colliers Wood Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUTBY"
+    ],
+    "Next": [
+      "940GZZLUSWN"
+    ],
+    "BranchIds": [
+      8
+    ]
+  },
+  {
+    "Id": "940GZZLUSWN",
+    "Names": [
+      "940GZZLUSWN  South Wimbledon Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUCSD"
+    ],
+    "Next": [
+      "940GZZLUMDN"
+    ],
+    "BranchIds": [
+      8
+    ]
+  },
+  {
+    "Id": "940GZZLUMDN",
+    "Names": [
+      "940GZZLUMDN  Morden Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUSWN"
+    ],
+    "Next": [
+      "END"
+    ],
+    "BranchIds": [
+      8
+    ]
+  },
+  {
+    "Id": "940GZZLUMTC",
+    "Names": [
+      "940GZZLUMTC  Mornington Crescent Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUCTN"
+    ],
+    "Next": [
+      "HUBEUS"
+    ],
+    "BranchIds": [
+      3
+    ]
+  },
+  {
+    "Id": "940GZZLUWRR",
+    "Names": [
+      "940GZZLUWRR  Warren Street Underground Station"
+    ],
+    "Prev": [
+      "HUBEUS"
+    ],
+    "Next": [
+      "940GZZLUGDG"
+    ],
+    "BranchIds": [
+      5
+    ]
+  },
+  {
+    "Id": "940GZZLUGDG",
+    "Names": [
+      "940GZZLUGDG  Goodge Street Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUWRR"
+    ],
+    "Next": [
+      "HUBTCR"
+    ],
+    "BranchIds": [
+      5
+    ]
+  },
+  {
+    "Id": "HUBTCR",
+    "Names": [
+      "940GZZLUTCR HUBTCR Tottenham Court Road Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUGDG"
+    ],
+    "Next": [
+      "940GZZLULSQ"
+    ],
+    "BranchIds": [
+      5
+    ]
+  },
+  {
+    "Id": "940GZZLULSQ",
+    "Names": [
+      "940GZZLULSQ  Leicester Square Underground Station"
+    ],
+    "Prev": [
+      "HUBTCR"
+    ],
+    "Next": [
+      "HUBCHX"
+    ],
+    "BranchIds": [
+      5
+    ]
+  },
+  {
+    "Id": "HUBCHX",
+    "Names": [
+      "940GZZLUCHX HUBCHX Charing Cross Underground Station"
+    ],
+    "Prev": [
+      "940GZZLULSQ"
+    ],
+    "Next": [
+      "940GZZLUEMB"
+    ],
+    "BranchIds": [
+      5
+    ]
+  },
+  {
+    "Id": "940GZZLUEMB",
+    "Names": [
+      "940GZZLUEMB  Embankment Underground Station"
+    ],
+    "Prev": [
+      "HUBCHX"
+    ],
+    "Next": [
+      "HUBWAT"
+    ],
+    "BranchIds": [
+      5
+    ]
+  },
+  {
+    "Id": "HUBWAT",
+    "Names": [
+      "940GZZLUWLO HUBWAT Waterloo Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUEMB"
+    ],
+    "Next": [
+      "940GZZLUKNG"
+    ],
+    "BranchIds": [
+      5
+    ]
+  },
+  {
+    "Id": "940GZZNEUGST",
+    "Names": [
+      "940GZZNEUGST  Nine Elms Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUKNG"
+    ],
+    "Next": [
+      "940GZZBPSUST"
+    ],
+    "BranchIds": [
+      7
+    ]
+  },
+  {
+    "Id": "940GZZBPSUST",
+    "Names": [
+      "940GZZBPSUST  Battersea Power Station Underground Station"
+    ],
+    "Prev": [
+      "940GZZNEUGST"
+    ],
+    "Next": [
+      "END"
+    ],
+    "BranchIds": [
+      7
+    ]
+  },
+  {
+    "Id": "940GZZLUEGW",
+    "Names": [
+      "940GZZLUEGW  Edgware Underground Station"
+    ],
+    "Prev": [
+      "START"
+    ],
+    "Next": [
+      "940GZZLUBTK"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUBTK",
+    "Names": [
+      "940GZZLUBTK  Burnt Oak Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUEGW"
+    ],
+    "Next": [
+      "940GZZLUCND"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUCND",
+    "Names": [
+      "940GZZLUCND  Colindale Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUBTK"
+    ],
+    "Next": [
+      "940GZZLUHCL"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUHCL",
+    "Names": [
+      "940GZZLUHCL  Hendon Central Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUCND"
+    ],
+    "Next": [
+      "940GZZLUBTX"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUBTX",
+    "Names": [
+      "940GZZLUBTX  Brent Cross Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUHCL"
+    ],
+    "Next": [
+      "940GZZLUGGN"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUGGN",
+    "Names": [
+      "940GZZLUGGN  Golders Green Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUBTX"
+    ],
+    "Next": [
+      "940GZZLUHTD"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUHTD",
+    "Names": [
+      "940GZZLUHTD  Hampstead Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUGGN"
+    ],
+    "Next": [
+      "940GZZLUBZP"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUBZP",
+    "Names": [
+      "940GZZLUBZP  Belsize Park Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUHTD"
+    ],
+    "Next": [
+      "940GZZLUCFM"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUCFM",
+    "Names": [
+      "940GZZLUCFM  Chalk Farm Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUBZP"
+    ],
+    "Next": [
+      "940GZZLUCTN"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUHBT",
+    "Names": [
+      "940GZZLUHBT  High Barnet Underground Station"
+    ],
+    "Prev": [
+      "START"
+    ],
+    "Next": [
+      "940GZZLUTAW"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUTAW",
+    "Names": [
+      "940GZZLUTAW  Totteridge & Whetstone Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUHBT"
+    ],
+    "Next": [
+      "940GZZLUWOP"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUWOP",
+    "Names": [
+      "940GZZLUWOP  Woodside Park Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUTAW"
+    ],
+    "Next": [
+      "940GZZLUWFN"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUWFN",
+    "Names": [
+      "940GZZLUWFN  West Finchley Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUWOP"
+    ],
+    "Next": [
+      "940GZZLUFYC"
+    ],
+    "BranchIds": [
+      1
+    ]
+  }
+]

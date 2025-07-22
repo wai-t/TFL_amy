@@ -1,0 +1,24 @@
+[
+  {
+    "StationId": "START",
+    "StopPoints": []
+  },
+  {
+    "StationId": "HUBBAN",
+    "StopPoints": [
+      {
+        "Name": "Bank Underground Station",
+        "Id": "940GZZLUBNK"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWAT",
+    "StopPoints": [
+      {
+        "Name": "Waterloo Underground Station",
+        "Id": "940GZZLUWLO"
+      }
+    ]
+  }
+]

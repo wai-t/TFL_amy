@@ -1,0 +1,32 @@
+[
+  {
+    "Id": "HUBBAN",
+    "Names": [
+      "940GZZLUBNK HUBBAN Bank Underground Station"
+    ],
+    "Prev": [
+      "START"
+    ],
+    "Next": [
+      "HUBWAT"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBWAT",
+    "Names": [
+      "940GZZLUWLO HUBWAT Waterloo Underground Station"
+    ],
+    "Prev": [
+      "HUBBAN"
+    ],
+    "Next": [
+      "END"
+    ],
+    "BranchIds": [
+      0
+    ]
+  }
+]

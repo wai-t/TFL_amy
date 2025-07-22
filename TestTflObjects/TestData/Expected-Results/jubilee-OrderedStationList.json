@@ -1,0 +1,249 @@
+[
+  {
+    "StationId": "START",
+    "StopPoints": []
+  },
+  {
+    "StationId": "940GZZLUSTM",
+    "StopPoints": [
+      {
+        "Name": "Stanmore Underground Station",
+        "Id": "940GZZLUSTM"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUCPK",
+    "StopPoints": [
+      {
+        "Name": "Canons Park Underground Station",
+        "Id": "940GZZLUCPK"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUQBY",
+    "StopPoints": [
+      {
+        "Name": "Queensbury Underground Station",
+        "Id": "940GZZLUQBY"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUKBY",
+    "StopPoints": [
+      {
+        "Name": "Kingsbury Underground Station",
+        "Id": "940GZZLUKBY"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWYP",
+    "StopPoints": [
+      {
+        "Name": "Wembley Park Underground Station",
+        "Id": "940GZZLUWYP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUNDN",
+    "StopPoints": [
+      {
+        "Name": "Neasden Underground Station",
+        "Id": "940GZZLUNDN"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUDOH",
+    "StopPoints": [
+      {
+        "Name": "Dollis Hill Underground Station",
+        "Id": "940GZZLUDOH"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWIG",
+    "StopPoints": [
+      {
+        "Name": "Willesden Green Underground Station",
+        "Id": "940GZZLUWIG"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUKBN",
+    "StopPoints": [
+      {
+        "Name": "Kilburn Underground Station",
+        "Id": "940GZZLUKBN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWHD",
+    "StopPoints": [
+      {
+        "Name": "West Hampstead Underground Station",
+        "Id": "940GZZLUWHP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUFYR",
+    "StopPoints": [
+      {
+        "Name": "Finchley Road Underground Station",
+        "Id": "940GZZLUFYR"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUSWC",
+    "StopPoints": [
+      {
+        "Name": "Swiss Cottage Underground Station",
+        "Id": "940GZZLUSWC"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUSJW",
+    "StopPoints": [
+      {
+        "Name": "St. John's Wood Underground Station",
+        "Id": "940GZZLUSJW"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBST",
+    "StopPoints": [
+      {
+        "Name": "Baker Street Underground Station",
+        "Id": "940GZZLUBST"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBBDS",
+    "StopPoints": [
+      {
+        "Name": "Bond Street Underground Station",
+        "Id": "940GZZLUBND"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUGPK",
+    "StopPoints": [
+      {
+        "Name": "Green Park Underground Station",
+        "Id": "940GZZLUGPK"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWSM",
+    "StopPoints": [
+      {
+        "Name": "Westminster Underground Station",
+        "Id": "940GZZLUWSM"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWAT",
+    "StopPoints": [
+      {
+        "Name": "Waterloo Underground Station",
+        "Id": "940GZZLUWLO"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUSWK",
+    "StopPoints": [
+      {
+        "Name": "Southwark Underground Station",
+        "Id": "940GZZLUSWK"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBLBG",
+    "StopPoints": [
+      {
+        "Name": "London Bridge Underground Station",
+        "Id": "940GZZLULNB"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBMY",
+    "StopPoints": [
+      {
+        "Name": "Bermondsey Underground Station",
+        "Id": "940GZZLUBMY"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBZCW",
+    "StopPoints": [
+      {
+        "Name": "Canada Water Underground Station",
+        "Id": "940GZZLUCWR"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBCAW",
+    "StopPoints": [
+      {
+        "Name": "Canary Wharf Underground Station",
+        "Id": "940GZZLUCYF"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBNGW",
+    "StopPoints": [
+      {
+        "Name": "North Greenwich Underground Station",
+        "Id": "940GZZLUNGW"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBCAN",
+    "StopPoints": [
+      {
+        "Name": "Canning Town Underground Station",
+        "Id": "940GZZLUCGT"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWEH",
+    "StopPoints": [
+      {
+        "Name": "West Ham Underground Station",
+        "Id": "940GZZLUWHM"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBSRA",
+    "StopPoints": [
+      {
+        "Name": "Stratford Underground Station",
+        "Id": "940GZZLUSTD"
+      }
+    ]
+  }
+]

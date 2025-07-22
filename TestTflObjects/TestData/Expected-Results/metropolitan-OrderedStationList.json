@@ -1,0 +1,321 @@
+[
+  {
+    "StationId": "START",
+    "StopPoints": []
+  },
+  {
+    "StationId": "940GZZLUCSM",
+    "StopPoints": [
+      {
+        "Name": "Chesham Underground Station",
+        "Id": "940GZZLUCSM"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWAF",
+    "StopPoints": [
+      {
+        "Name": "Watford Underground Station",
+        "Id": "940GZZLUWAF"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUCXY",
+    "StopPoints": [
+      {
+        "Name": "Croxley Underground Station",
+        "Id": "940GZZLUCXY"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUUXB",
+    "StopPoints": [
+      {
+        "Name": "Uxbridge Underground Station",
+        "Id": "940GZZLUUXB"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUHGD",
+    "StopPoints": [
+      {
+        "Name": "Hillingdon Underground Station",
+        "Id": "940GZZLUHGD"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUICK",
+    "StopPoints": [
+      {
+        "Name": "Ickenham Underground Station",
+        "Id": "940GZZLUICK"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLURSP",
+    "StopPoints": [
+      {
+        "Name": "Ruislip Underground Station",
+        "Id": "940GZZLURSP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLURSM",
+    "StopPoints": [
+      {
+        "Name": "Ruislip Manor Underground Station",
+        "Id": "940GZZLURSM"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUEAE",
+    "StopPoints": [
+      {
+        "Name": "Eastcote Underground Station",
+        "Id": "940GZZLUEAE"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLURYL",
+    "StopPoints": [
+      {
+        "Name": "Rayners Lane Underground Station",
+        "Id": "940GZZLURYL"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWHW",
+    "StopPoints": [
+      {
+        "Name": "West Harrow Underground Station",
+        "Id": "940GZZLUWHW"
+      }
+    ]
+  },
+  {
+    "StationId": "910GAMERSHM",
+    "StopPoints": [
+      {
+        "Name": "Amersham Underground Station",
+        "Id": "940GZZLUAMS"
+      }
+    ]
+  },
+  {
+    "StationId": "910GCHLFNAL",
+    "StopPoints": [
+      {
+        "Name": "Chalfont & Latimer Underground Station",
+        "Id": "940GZZLUCAL"
+      }
+    ]
+  },
+  {
+    "StationId": "910GCHRW",
+    "StopPoints": [
+      {
+        "Name": "Chorleywood Underground Station",
+        "Id": "940GZZLUCYD"
+      }
+    ]
+  },
+  {
+    "StationId": "910GRCKMNSW",
+    "StopPoints": [
+      {
+        "Name": "Rickmansworth Underground Station",
+        "Id": "940GZZLURKW"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUMPK",
+    "StopPoints": [
+      {
+        "Name": "Moor Park Underground Station",
+        "Id": "940GZZLUMPK"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUNOW",
+    "StopPoints": [
+      {
+        "Name": "Northwood Underground Station",
+        "Id": "940GZZLUNOW"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUNWH",
+    "StopPoints": [
+      {
+        "Name": "Northwood Hills Underground Station",
+        "Id": "940GZZLUNWH"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUPNR",
+    "StopPoints": [
+      {
+        "Name": "Pinner Underground Station",
+        "Id": "940GZZLUPNR"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUNHA",
+    "StopPoints": [
+      {
+        "Name": "North Harrow Underground Station",
+        "Id": "940GZZLUNHA"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBHOH",
+    "StopPoints": [
+      {
+        "Name": "Harrow-on-the-Hill Underground Station",
+        "Id": "940GZZLUHOH"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUNKP",
+    "StopPoints": [
+      {
+        "Name": "Northwick Park Underground Station",
+        "Id": "940GZZLUNKP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUPRD",
+    "StopPoints": [
+      {
+        "Name": "Preston Road Underground Station",
+        "Id": "940GZZLUPRD"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWYP",
+    "StopPoints": [
+      {
+        "Name": "Wembley Park Underground Station",
+        "Id": "940GZZLUWYP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWIG",
+    "StopPoints": [
+      {
+        "Name": "Willesden Green Underground Station",
+        "Id": "940GZZLUWIG"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUFYR",
+    "StopPoints": [
+      {
+        "Name": "Finchley Road Underground Station",
+        "Id": "940GZZLUFYR"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBST",
+    "StopPoints": [
+      {
+        "Name": "Baker Street Underground Station",
+        "Id": "940GZZLUBST"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUGPS",
+    "StopPoints": [
+      {
+        "Name": "Great Portland Street Underground Station",
+        "Id": "940GZZLUGPS"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUESQ",
+    "StopPoints": [
+      {
+        "Name": "Euston Square Underground Station",
+        "Id": "940GZZLUESQ"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBKGX",
+    "StopPoints": [
+      {
+        "Name": "King's Cross St. Pancras Underground Station",
+        "Id": "940GZZLUKSX"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBZFD",
+    "StopPoints": [
+      {
+        "Name": "Farringdon Underground Station",
+        "Id": "940GZZLUFCN"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBBN",
+    "StopPoints": [
+      {
+        "Name": "Barbican Underground Station",
+        "Id": "940GZZLUBBN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBZMG",
+    "StopPoints": [
+      {
+        "Name": "Moorgate Underground Station",
+        "Id": "940GZZLUMGT"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBLST",
+    "StopPoints": [
+      {
+        "Name": "Liverpool Street Underground Station",
+        "Id": "940GZZLULVT"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUALD",
+    "StopPoints": [
+      {
+        "Name": "Aldgate Underground Station",
+        "Id": "940GZZLUALD"
+      }
+    ]
+  }
+]

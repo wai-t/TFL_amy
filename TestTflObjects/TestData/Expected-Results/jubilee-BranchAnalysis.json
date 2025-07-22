@@ -1,0 +1,904 @@
+[
+  {
+    "BranchId": 1,
+    "PrevBranchIds": [],
+    "NextBranchIds": [],
+    "Direction": "outbound",
+    "StopPoints": [
+      {
+        "stationId": "940GZZLUSTM",
+        "icsId": "1000219",
+        "topMostParentId": "940GZZLUSTM",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "5",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUSTM",
+        "name": "Stanmore Underground Station",
+        "lat": 51.619839,
+        "lon": -0.303266
+      },
+      {
+        "stationId": "940GZZLUCPK",
+        "icsId": "1000041",
+        "topMostParentId": "940GZZLUCPK",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "5",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUCPK",
+        "name": "Canons Park Underground Station",
+        "lat": 51.607701,
+        "lon": -0.294693
+      },
+      {
+        "stationId": "940GZZLUQBY",
+        "icsId": "1000185",
+        "topMostParentId": "940GZZLUQBY",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "4",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUQBY",
+        "name": "Queensbury Underground Station",
+        "lat": 51.594188,
+        "lon": -0.286219
+      },
+      {
+        "stationId": "940GZZLUKBY",
+        "icsId": "1000128",
+        "topMostParentId": "940GZZLUKBY",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "4",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUKBY",
+        "name": "Kingsbury Underground Station",
+        "lat": 51.584845,
+        "lon": -0.27879
+      },
+      {
+        "stationId": "940GZZLUWYP",
+        "icsId": "1000257",
+        "topMostParentId": "940GZZLUWYP",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "4",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "metropolitan",
+            "name": "Metropolitan",
+            "uri": "/Line/metropolitan",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUWYP",
+        "name": "Wembley Park Underground Station",
+        "lat": 51.563198,
+        "lon": -0.279262
+      },
+      {
+        "stationId": "940GZZLUNDN",
+        "icsId": "1000153",
+        "topMostParentId": "940GZZLUNDN",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "3",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUNDN",
+        "name": "Neasden Underground Station",
+        "lat": 51.553986,
+        "lon": -0.249837
+      },
+      {
+        "stationId": "940GZZLUDOH",
+        "icsId": "1000061",
+        "topMostParentId": "940GZZLUDOH",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "3",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUDOH",
+        "name": "Dollis Hill Underground Station",
+        "lat": 51.551955,
+        "lon": -0.239068
+      },
+      {
+        "stationId": "940GZZLUWIG",
+        "icsId": "1000270",
+        "topMostParentId": "940GZZLUWIG",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2+3",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "metropolitan",
+            "name": "Metropolitan",
+            "uri": "/Line/metropolitan",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUWIG",
+        "name": "Willesden Green Underground Station",
+        "lat": 51.549146,
+        "lon": -0.221537
+      },
+      {
+        "stationId": "940GZZLUKBN",
+        "icsId": "1000126",
+        "topMostParentId": "940GZZLUKBN",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUKBN",
+        "name": "Kilburn Underground Station",
+        "lat": 51.547183,
+        "lon": -0.204248
+      },
+      {
+        "parentId": "HUBWHD",
+        "stationId": "940GZZLUWHP",
+        "icsId": "1000263",
+        "topMostParentId": "HUBWHD",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUWHP",
+        "name": "West Hampstead Underground Station",
+        "lat": 51.546638,
+        "lon": -0.191059
+      },
+      {
+        "stationId": "940GZZLUFYR",
+        "icsId": "1000082",
+        "topMostParentId": "940GZZLUFYR",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "metropolitan",
+            "name": "Metropolitan",
+            "uri": "/Line/metropolitan",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUFYR",
+        "name": "Finchley Road Underground Station",
+        "lat": 51.546825,
+        "lon": -0.179845
+      },
+      {
+        "stationId": "940GZZLUSWC",
+        "icsId": "1000230",
+        "topMostParentId": "940GZZLUSWC",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUSWC",
+        "name": "Swiss Cottage Underground Station",
+        "lat": 51.543681,
+        "lon": -0.174894
+      },
+      {
+        "stationId": "940GZZLUSJW",
+        "icsId": "1000222",
+        "topMostParentId": "940GZZLUSJW",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUSJW",
+        "name": "St. John's Wood Underground Station",
+        "lat": 51.534521,
+        "lon": -0.173948
+      },
+      {
+        "stationId": "940GZZLUBST",
+        "icsId": "1000011",
+        "topMostParentId": "940GZZLUBST",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "1",
+        "lines": [
+          {
+            "id": "bakerloo",
+            "name": "Bakerloo",
+            "uri": "/Line/bakerloo",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "circle",
+            "name": "Circle",
+            "uri": "/Line/circle",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "hammersmith-city",
+            "name": "Hammersmith & City",
+            "uri": "/Line/hammersmith-city",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "metropolitan",
+            "name": "Metropolitan",
+            "uri": "/Line/metropolitan",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUBST",
+        "name": "Baker Street Underground Station",
+        "lat": 51.522883,
+        "lon": -0.15713
+      },
+      {
+        "parentId": "HUBBDS",
+        "stationId": "940GZZLUBND",
+        "icsId": "1000025",
+        "topMostParentId": "HUBBDS",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "1",
+        "lines": [
+          {
+            "id": "central",
+            "name": "Central",
+            "uri": "/Line/central",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUBND",
+        "name": "Bond Street Underground Station",
+        "lat": 51.514304,
+        "lon": -0.149723
+      },
+      {
+        "stationId": "940GZZLUGPK",
+        "icsId": "1000093",
+        "topMostParentId": "940GZZLUGPK",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "1",
+        "hasDisruption": true,
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "piccadilly",
+            "name": "Piccadilly",
+            "uri": "/Line/piccadilly",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "victoria",
+            "name": "Victoria",
+            "uri": "/Line/victoria",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUGPK",
+        "name": "Green Park Underground Station",
+        "lat": 51.506947,
+        "lon": -0.142787
+      },
+      {
+        "parentId": "HUBWSM",
+        "stationId": "940GZZLUWSM",
+        "icsId": "1000266",
+        "topMostParentId": "HUBWSM",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "1",
+        "lines": [
+          {
+            "id": "circle",
+            "name": "Circle",
+            "uri": "/Line/circle",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "district",
+            "name": "District",
+            "uri": "/Line/district",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUWSM",
+        "name": "Westminster Underground Station",
+        "lat": 51.50132,
+        "lon": -0.124861
+      },
+      {
+        "parentId": "HUBWAT",
+        "stationId": "940GZZLUWLO",
+        "icsId": "1000254",
+        "topMostParentId": "HUBWAT",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "1",
+        "lines": [
+          {
+            "id": "bakerloo",
+            "name": "Bakerloo",
+            "uri": "/Line/bakerloo",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "northern",
+            "name": "Northern",
+            "uri": "/Line/northern",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "waterloo-city",
+            "name": "Waterloo & City",
+            "uri": "/Line/waterloo-city",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUWLO",
+        "name": "Waterloo Underground Station",
+        "lat": 51.503299,
+        "lon": -0.11478
+      },
+      {
+        "stationId": "940GZZLUSWK",
+        "icsId": "1000215",
+        "topMostParentId": "940GZZLUSWK",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "1",
+        "hasDisruption": true,
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUSWK",
+        "name": "Southwark Underground Station",
+        "lat": 51.50427,
+        "lon": -0.105331
+      },
+      {
+        "parentId": "HUBLBG",
+        "stationId": "940GZZLULNB",
+        "icsId": "1000139",
+        "topMostParentId": "HUBLBG",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "1",
+        "hasDisruption": true,
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "northern",
+            "name": "Northern",
+            "uri": "/Line/northern",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLULNB",
+        "name": "London Bridge Underground Station",
+        "lat": 51.505721,
+        "lon": -0.088873
+      },
+      {
+        "stationId": "940GZZLUBMY",
+        "icsId": "1000021",
+        "topMostParentId": "940GZZLUBMY",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUBMY",
+        "name": "Bermondsey Underground Station",
+        "lat": 51.49775,
+        "lon": -0.063993
+      },
+      {
+        "parentId": "HUBZCW",
+        "stationId": "940GZZLUCWR",
+        "icsId": "1000037",
+        "topMostParentId": "HUBZCW",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2",
+        "hasDisruption": true,
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUCWR",
+        "name": "Canada Water Underground Station",
+        "lat": 51.497931,
+        "lon": -0.049405
+      },
+      {
+        "parentId": "HUBCAW",
+        "stationId": "940GZZLUCYF",
+        "icsId": "1000038",
+        "topMostParentId": "HUBCAW",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2",
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUCYF",
+        "name": "Canary Wharf Underground Station",
+        "lat": 51.503488,
+        "lon": -0.018246
+      },
+      {
+        "parentId": "HUBNGW",
+        "stationId": "940GZZLUNGW",
+        "icsId": "1000160",
+        "topMostParentId": "HUBNGW",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2/3",
+        "hasDisruption": true,
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUNGW",
+        "name": "North Greenwich Underground Station",
+        "lat": 51.50047,
+        "lon": 0.004287
+      },
+      {
+        "parentId": "HUBCAN",
+        "stationId": "940GZZLUCGT",
+        "icsId": "1000039",
+        "topMostParentId": "HUBCAN",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2/3",
+        "hasDisruption": true,
+        "lines": [
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUCGT",
+        "name": "Canning Town Underground Station",
+        "lat": 51.513584,
+        "lon": 0.008322
+      },
+      {
+        "parentId": "HUBWEH",
+        "stationId": "940GZZLUWHM",
+        "icsId": "1000262",
+        "topMostParentId": "HUBWEH",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2/3",
+        "lines": [
+          {
+            "id": "district",
+            "name": "District",
+            "uri": "/Line/district",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "hammersmith-city",
+            "name": "Hammersmith & City",
+            "uri": "/Line/hammersmith-city",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUWHM",
+        "name": "West Ham Underground Station",
+        "lat": 51.528136,
+        "lon": 0.005055
+      },
+      {
+        "parentId": "HUBSRA",
+        "stationId": "940GZZLUSTD",
+        "icsId": "1000226",
+        "topMostParentId": "HUBSRA",
+        "modes": [
+          "tube"
+        ],
+        "stopType": "NaptanMetroStation",
+        "zone": "2/3",
+        "lines": [
+          {
+            "id": "central",
+            "name": "Central",
+            "uri": "/Line/central",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          },
+          {
+            "id": "jubilee",
+            "name": "Jubilee",
+            "uri": "/Line/jubilee",
+            "type": "Line",
+            "crowding": {},
+            "routeType": "Unknown",
+            "status": "Unknown"
+          }
+        ],
+        "status": true,
+        "id": "940GZZLUSTD",
+        "name": "Stratford Underground Station",
+        "lat": 51.541806,
+        "lon": -0.003458
+      }
+    ],
+    "FirstStationId": "940GZZLUSTM",
+    "LastStationId": "HUBSRA",
+    "IsCircle": false,
+    "Count": 27
+  }
+]

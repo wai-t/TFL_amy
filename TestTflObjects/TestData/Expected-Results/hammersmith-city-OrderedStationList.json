@@ -1,0 +1,267 @@
+[
+  {
+    "StationId": "START",
+    "StopPoints": []
+  },
+  {
+    "StationId": "HUBBKG",
+    "StopPoints": [
+      {
+        "Name": "Barking Underground Station",
+        "Id": "940GZZLUBKG"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUEHM",
+    "StopPoints": [
+      {
+        "Name": "East Ham Underground Station",
+        "Id": "940GZZLUEHM"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUUPK",
+    "StopPoints": [
+      {
+        "Name": "Upton Park Underground Station",
+        "Id": "940GZZLUUPK"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUPLW",
+    "StopPoints": [
+      {
+        "Name": "Plaistow Underground Station",
+        "Id": "940GZZLUPLW"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWEH",
+    "StopPoints": [
+      {
+        "Name": "West Ham Underground Station",
+        "Id": "940GZZLUWHM"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBBB",
+    "StopPoints": [
+      {
+        "Name": "Bromley-by-Bow Underground Station",
+        "Id": "940GZZLUBBB"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBWR",
+    "StopPoints": [
+      {
+        "Name": "Bow Road Underground Station",
+        "Id": "940GZZLUBWR"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUMED",
+    "StopPoints": [
+      {
+        "Name": "Mile End Underground Station",
+        "Id": "940GZZLUMED"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUSGN",
+    "StopPoints": [
+      {
+        "Name": "Stepney Green Underground Station",
+        "Id": "940GZZLUSGN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBZWL",
+    "StopPoints": [
+      {
+        "Name": "Whitechapel Underground Station",
+        "Id": "940GZZLUWPL"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUADE",
+    "StopPoints": [
+      {
+        "Name": "Aldgate East Underground Station",
+        "Id": "940GZZLUADE"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBLST",
+    "StopPoints": [
+      {
+        "Name": "Liverpool Street Underground Station",
+        "Id": "940GZZLULVT"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBZMG",
+    "StopPoints": [
+      {
+        "Name": "Moorgate Underground Station",
+        "Id": "940GZZLUMGT"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBBN",
+    "StopPoints": [
+      {
+        "Name": "Barbican Underground Station",
+        "Id": "940GZZLUBBN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBZFD",
+    "StopPoints": [
+      {
+        "Name": "Farringdon Underground Station",
+        "Id": "940GZZLUFCN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBKGX",
+    "StopPoints": [
+      {
+        "Name": "King's Cross St. Pancras Underground Station",
+        "Id": "940GZZLUKSX"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUESQ",
+    "StopPoints": [
+      {
+        "Name": "Euston Square Underground Station",
+        "Id": "940GZZLUESQ"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUGPS",
+    "StopPoints": [
+      {
+        "Name": "Great Portland Street Underground Station",
+        "Id": "940GZZLUGPS"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBST",
+    "StopPoints": [
+      {
+        "Name": "Baker Street Underground Station",
+        "Id": "940GZZLUBST"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUERC",
+    "StopPoints": [
+      {
+        "Name": "Edgware Road (Circle Line) Underground Station",
+        "Id": "940GZZLUERC"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBPAD",
+    "StopPoints": [
+      {
+        "Name": "Paddington (H&C Line)-Underground",
+        "Id": "940GZZLUPAH"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLURYO",
+    "StopPoints": [
+      {
+        "Name": "Royal Oak Underground Station",
+        "Id": "940GZZLURYO"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWSP",
+    "StopPoints": [
+      {
+        "Name": "Westbourne Park Underground Station",
+        "Id": "940GZZLUWSP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLULAD",
+    "StopPoints": [
+      {
+        "Name": "Ladbroke Grove Underground Station",
+        "Id": "940GZZLULAD"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLULRD",
+    "StopPoints": [
+      {
+        "Name": "Latimer Road Underground Station",
+        "Id": "940GZZLULRD"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWLA",
+    "StopPoints": [
+      {
+        "Name": "Wood Lane Underground Station",
+        "Id": "940GZZLUWLA"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUSBM",
+    "StopPoints": [
+      {
+        "Name": "Shepherd's Bush Market Underground Station",
+        "Id": "940GZZLUSBM"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUGHK",
+    "StopPoints": [
+      {
+        "Name": "Goldhawk Road Underground Station",
+        "Id": "940GZZLUGHK"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBHMS",
+    "StopPoints": [
+      {
+        "Name": "Hammersmith (H&C Line) Underground Station",
+        "Id": "940GZZLUHSC"
+      }
+    ]
+  }
+]

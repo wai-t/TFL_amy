@@ -1,0 +1,531 @@
+[
+  {
+    "Id": "940GZZLUERC",
+    "Names": [
+      "940GZZLUERC  Edgware Road (Circle Line) Underground Station"
+    ],
+    "Prev": [
+      "START"
+    ],
+    "Next": [
+      "HUBPAD"
+    ],
+    "BranchIds": [
+      1,
+      0
+    ]
+  },
+  {
+    "Id": "HUBPAD",
+    "Names": [
+      "940GZZLUPAC HUBPAD Paddington Underground Station",
+      "940GZZLUPAH HUBPAD Paddington (H&C Line)-Underground"
+    ],
+    "Prev": [
+      "940GZZLUERC"
+    ],
+    "Next": [
+      "940GZZLUBWT",
+      "940GZZLURYO"
+    ],
+    "BranchIds": [
+      1,
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUBWT",
+    "Names": [
+      "940GZZLUBWT  Bayswater Underground Station"
+    ],
+    "Prev": [
+      "HUBPAD"
+    ],
+    "Next": [
+      "940GZZLUNHG"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUNHG",
+    "Names": [
+      "940GZZLUNHG  Notting Hill Gate Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUBWT"
+    ],
+    "Next": [
+      "940GZZLUHSK"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUHSK",
+    "Names": [
+      "940GZZLUHSK  High Street Kensington Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUNHG"
+    ],
+    "Next": [
+      "940GZZLUGTR"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUGTR",
+    "Names": [
+      "940GZZLUGTR  Gloucester Road Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUHSK"
+    ],
+    "Next": [
+      "940GZZLUSKS"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUSKS",
+    "Names": [
+      "940GZZLUSKS  South Kensington Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUGTR"
+    ],
+    "Next": [
+      "940GZZLUSSQ"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUSSQ",
+    "Names": [
+      "940GZZLUSSQ  Sloane Square Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUSKS"
+    ],
+    "Next": [
+      "HUBVIC"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "HUBVIC",
+    "Names": [
+      "940GZZLUVIC HUBVIC Victoria Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUSSQ"
+    ],
+    "Next": [
+      "940GZZLUSJP"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUSJP",
+    "Names": [
+      "940GZZLUSJP  St. James's Park Underground Station"
+    ],
+    "Prev": [
+      "HUBVIC"
+    ],
+    "Next": [
+      "HUBWSM"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "HUBWSM",
+    "Names": [
+      "940GZZLUWSM HUBWSM Westminster Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUSJP"
+    ],
+    "Next": [
+      "940GZZLUEMB"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUEMB",
+    "Names": [
+      "940GZZLUEMB  Embankment Underground Station"
+    ],
+    "Prev": [
+      "HUBWSM"
+    ],
+    "Next": [
+      "940GZZLUTMP"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUTMP",
+    "Names": [
+      "940GZZLUTMP  Temple Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUEMB"
+    ],
+    "Next": [
+      "HUBBFR"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "HUBBFR",
+    "Names": [
+      "940GZZLUBKF HUBBFR Blackfriars Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUTMP"
+    ],
+    "Next": [
+      "940GZZLUMSH"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUMSH",
+    "Names": [
+      "940GZZLUMSH  Mansion House Underground Station"
+    ],
+    "Prev": [
+      "HUBBFR"
+    ],
+    "Next": [
+      "HUBCST"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "HUBCST",
+    "Names": [
+      "940GZZLUCST HUBCST Cannon Street Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUMSH"
+    ],
+    "Next": [
+      "940GZZLUMMT"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUMMT",
+    "Names": [
+      "940GZZLUMMT  Monument Underground Station"
+    ],
+    "Prev": [
+      "HUBCST"
+    ],
+    "Next": [
+      "940GZZLUTWH"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUTWH",
+    "Names": [
+      "940GZZLUTWH  Tower Hill Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUMMT"
+    ],
+    "Next": [
+      "940GZZLUALD"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUALD",
+    "Names": [
+      "940GZZLUALD  Aldgate Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUTWH"
+    ],
+    "Next": [
+      "HUBLST"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "HUBLST",
+    "Names": [
+      "940GZZLULVT HUBLST Liverpool Street Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUALD"
+    ],
+    "Next": [
+      "HUBZMG"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "HUBZMG",
+    "Names": [
+      "940GZZLUMGT HUBZMG Moorgate Underground Station"
+    ],
+    "Prev": [
+      "HUBLST"
+    ],
+    "Next": [
+      "940GZZLUBBN"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUBBN",
+    "Names": [
+      "940GZZLUBBN  Barbican Underground Station"
+    ],
+    "Prev": [
+      "HUBZMG"
+    ],
+    "Next": [
+      "HUBZFD"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "HUBZFD",
+    "Names": [
+      "940GZZLUFCN HUBZFD Farringdon Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUBBN"
+    ],
+    "Next": [
+      "HUBKGX"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "HUBKGX",
+    "Names": [
+      "940GZZLUKSX HUBKGX King's Cross St. Pancras Underground Station"
+    ],
+    "Prev": [
+      "HUBZFD"
+    ],
+    "Next": [
+      "940GZZLUESQ"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUESQ",
+    "Names": [
+      "940GZZLUESQ  Euston Square Underground Station"
+    ],
+    "Prev": [
+      "HUBKGX"
+    ],
+    "Next": [
+      "940GZZLUGPS"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUGPS",
+    "Names": [
+      "940GZZLUGPS  Great Portland Street Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUESQ"
+    ],
+    "Next": [
+      "940GZZLUBST"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLUBST",
+    "Names": [
+      "940GZZLUBST  Baker Street Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUGPS"
+    ],
+    "Next": [
+      "END"
+    ],
+    "BranchIds": [
+      1
+    ]
+  },
+  {
+    "Id": "940GZZLURYO",
+    "Names": [
+      "940GZZLURYO  Royal Oak Underground Station"
+    ],
+    "Prev": [
+      "HUBPAD"
+    ],
+    "Next": [
+      "940GZZLUWSP"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUWSP",
+    "Names": [
+      "940GZZLUWSP  Westbourne Park Underground Station"
+    ],
+    "Prev": [
+      "940GZZLURYO"
+    ],
+    "Next": [
+      "940GZZLULAD"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLULAD",
+    "Names": [
+      "940GZZLULAD  Ladbroke Grove Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUWSP"
+    ],
+    "Next": [
+      "940GZZLULRD"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLULRD",
+    "Names": [
+      "940GZZLULRD  Latimer Road Underground Station"
+    ],
+    "Prev": [
+      "940GZZLULAD"
+    ],
+    "Next": [
+      "940GZZLUWLA"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUWLA",
+    "Names": [
+      "940GZZLUWLA  Wood Lane Underground Station"
+    ],
+    "Prev": [
+      "940GZZLULRD"
+    ],
+    "Next": [
+      "940GZZLUSBM"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUSBM",
+    "Names": [
+      "940GZZLUSBM  Shepherd's Bush Market Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUWLA"
+    ],
+    "Next": [
+      "940GZZLUGHK"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUGHK",
+    "Names": [
+      "940GZZLUGHK  Goldhawk Road Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUSBM"
+    ],
+    "Next": [
+      "HUBHMS"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBHMS",
+    "Names": [
+      "940GZZLUHSC HUBHMS Hammersmith (H&C Line) Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUGHK"
+    ],
+    "Next": [
+      "END"
+    ],
+    "BranchIds": [
+      0
+    ]
+  }
+]

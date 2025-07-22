@@ -1,0 +1,447 @@
+[
+  {
+    "StationId": "START",
+    "StopPoints": []
+  },
+  {
+    "StationId": "940GZZLUHLT",
+    "StopPoints": [
+      {
+        "Name": "Hainault Underground Station",
+        "Id": "940GZZLUHLT"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUGGH",
+    "StopPoints": [
+      {
+        "Name": "Grange Hill Underground Station",
+        "Id": "940GZZLUGGH"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUCWL",
+    "StopPoints": [
+      {
+        "Name": "Chigwell Underground Station",
+        "Id": "940GZZLUCWL"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLURVY",
+    "StopPoints": [
+      {
+        "Name": "Roding Valley Underground Station",
+        "Id": "940GZZLURVY"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUFLP",
+    "StopPoints": [
+      {
+        "Name": "Fairlop Underground Station",
+        "Id": "940GZZLUFLP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBKE",
+    "StopPoints": [
+      {
+        "Name": "Barkingside Underground Station",
+        "Id": "940GZZLUBKE"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUNBP",
+    "StopPoints": [
+      {
+        "Name": "Newbury Park Underground Station",
+        "Id": "940GZZLUNBP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUGTH",
+    "StopPoints": [
+      {
+        "Name": "Gants Hill Underground Station",
+        "Id": "940GZZLUGTH"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLURBG",
+    "StopPoints": [
+      {
+        "Name": "Redbridge Underground Station",
+        "Id": "940GZZLURBG"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWSD",
+    "StopPoints": [
+      {
+        "Name": "Wanstead Underground Station",
+        "Id": "940GZZLUWSD"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUEPG",
+    "StopPoints": [
+      {
+        "Name": "Epping Underground Station",
+        "Id": "940GZZLUEPG"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUTHB",
+    "StopPoints": [
+      {
+        "Name": "Theydon Bois Underground Station",
+        "Id": "940GZZLUTHB"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUDBN",
+    "StopPoints": [
+      {
+        "Name": "Debden Underground Station",
+        "Id": "940GZZLUDBN"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLULGN",
+    "StopPoints": [
+      {
+        "Name": "Loughton Underground Station",
+        "Id": "940GZZLULGN"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBKH",
+    "StopPoints": [
+      {
+        "Name": "Buckhurst Hill Underground Station",
+        "Id": "940GZZLUBKH"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWOF",
+    "StopPoints": [
+      {
+        "Name": "Woodford Underground Station",
+        "Id": "940GZZLUWOF"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUSWF",
+    "StopPoints": [
+      {
+        "Name": "South Woodford Underground Station",
+        "Id": "940GZZLUSWF"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUSNB",
+    "StopPoints": [
+      {
+        "Name": "Snaresbrook Underground Station",
+        "Id": "940GZZLUSNB"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLULYS",
+    "StopPoints": [
+      {
+        "Name": "Leytonstone Underground Station",
+        "Id": "940GZZLULYS"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLULYN",
+    "StopPoints": [
+      {
+        "Name": "Leyton Underground Station",
+        "Id": "940GZZLULYN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBSRA",
+    "StopPoints": [
+      {
+        "Name": "Stratford Underground Station",
+        "Id": "940GZZLUSTD"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUMED",
+    "StopPoints": [
+      {
+        "Name": "Mile End Underground Station",
+        "Id": "940GZZLUMED"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUBLG",
+    "StopPoints": [
+      {
+        "Name": "Bethnal Green Underground Station",
+        "Id": "940GZZLUBLG"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBLST",
+    "StopPoints": [
+      {
+        "Name": "Liverpool Street Underground Station",
+        "Id": "940GZZLULVT"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBBAN",
+    "StopPoints": [
+      {
+        "Name": "Bank Underground Station",
+        "Id": "940GZZLUBNK"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUSPU",
+    "StopPoints": [
+      {
+        "Name": "St. Paul's Underground Station",
+        "Id": "940GZZLUSPU"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUCHL",
+    "StopPoints": [
+      {
+        "Name": "Chancery Lane Underground Station",
+        "Id": "940GZZLUCHL"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUHBN",
+    "StopPoints": [
+      {
+        "Name": "Holborn Underground Station",
+        "Id": "940GZZLUHBN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBTCR",
+    "StopPoints": [
+      {
+        "Name": "Tottenham Court Road Underground Station",
+        "Id": "940GZZLUTCR"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUOXC",
+    "StopPoints": [
+      {
+        "Name": "Oxford Circus Underground Station",
+        "Id": "940GZZLUOXC"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBBDS",
+    "StopPoints": [
+      {
+        "Name": "Bond Street Underground Station",
+        "Id": "940GZZLUBND"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUMBA",
+    "StopPoints": [
+      {
+        "Name": "Marble Arch Underground Station",
+        "Id": "940GZZLUMBA"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLULGT",
+    "StopPoints": [
+      {
+        "Name": "Lancaster Gate Underground Station",
+        "Id": "940GZZLULGT"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUQWY",
+    "StopPoints": [
+      {
+        "Name": "Queensway Underground Station",
+        "Id": "940GZZLUQWY"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUNHG",
+    "StopPoints": [
+      {
+        "Name": "Notting Hill Gate Underground Station",
+        "Id": "940GZZLUNHG"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUHPK",
+    "StopPoints": [
+      {
+        "Name": "Holland Park Underground Station",
+        "Id": "940GZZLUHPK"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBSPB",
+    "StopPoints": [
+      {
+        "Name": "Shepherd's Bush (Central) Underground Station",
+        "Id": "940GZZLUSBC"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWCY",
+    "StopPoints": [
+      {
+        "Name": "White City Underground Station",
+        "Id": "940GZZLUWCY"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUEAN",
+    "StopPoints": [
+      {
+        "Name": "East Acton Underground Station",
+        "Id": "940GZZLUEAN"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUNAN",
+    "StopPoints": [
+      {
+        "Name": "North Acton Underground Station",
+        "Id": "940GZZLUNAN"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWTA",
+    "StopPoints": [
+      {
+        "Name": "West Acton Underground Station",
+        "Id": "940GZZLUWTA"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBEAL",
+    "StopPoints": [
+      {
+        "Name": "Ealing Broadway Underground Station",
+        "Id": "940GZZLUEBY"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUHGR",
+    "StopPoints": [
+      {
+        "Name": "Hanger Lane Underground Station",
+        "Id": "940GZZLUHGR"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUPVL",
+    "StopPoints": [
+      {
+        "Name": "Perivale Underground Station",
+        "Id": "940GZZLUPVL"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBGFD",
+    "StopPoints": [
+      {
+        "Name": "Greenford Underground Station",
+        "Id": "940GZZLUGFD"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUNHT",
+    "StopPoints": [
+      {
+        "Name": "Northolt Underground Station",
+        "Id": "940GZZLUNHT"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBSRU",
+    "StopPoints": [
+      {
+        "Name": "South Ruislip Underground Station",
+        "Id": "940GZZLUSRP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLURSG",
+    "StopPoints": [
+      {
+        "Name": "Ruislip Gardens Underground Station",
+        "Id": "940GZZLURSG"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWRU",
+    "StopPoints": [
+      {
+        "Name": "West Ruislip Underground Station",
+        "Id": "940GZZLUWRP"
+      }
+    ]
+  }
+]

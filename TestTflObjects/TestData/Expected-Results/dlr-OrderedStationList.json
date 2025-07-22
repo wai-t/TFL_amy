@@ -1,0 +1,411 @@
+[
+  {
+    "StationId": "START",
+    "StopPoints": []
+  },
+  {
+    "StationId": "HUBBAN",
+    "StopPoints": [
+      {
+        "Name": "Bank DLR Station",
+        "Id": "940GZZDLBNK"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLSIT",
+    "StopPoints": [
+      {
+        "Name": "Stratford International DLR Station",
+        "Id": "940GZZDLSIT"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBSRA",
+    "StopPoints": [
+      {
+        "Name": "Stratford DLR Station",
+        "Id": "940GZZDLSTD"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLSHS",
+    "StopPoints": [
+      {
+        "Name": "Stratford High Street DLR Station",
+        "Id": "940GZZDLSHS"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLABR",
+    "StopPoints": [
+      {
+        "Name": "Abbey Road DLR Station",
+        "Id": "940GZZDLABR"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWEH",
+    "StopPoints": [
+      {
+        "Name": "West Ham DLR Station",
+        "Id": "940GZZDLWHM"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLSTL",
+    "StopPoints": [
+      {
+        "Name": "Star Lane DLR Station",
+        "Id": "940GZZDLSTL"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLPUD",
+    "StopPoints": [
+      {
+        "Name": "Pudding Mill Lane DLR Station",
+        "Id": "940GZZDLPUD"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLBOW",
+    "StopPoints": [
+      {
+        "Name": "Bow Church DLR Station",
+        "Id": "940GZZDLBOW"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLDEV",
+    "StopPoints": [
+      {
+        "Name": "Devons Road DLR Station",
+        "Id": "940GZZDLDEV"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLLDP",
+    "StopPoints": [
+      {
+        "Name": "Langdon Park DLR Station",
+        "Id": "940GZZDLLDP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLALL",
+    "StopPoints": [
+      {
+        "Name": "All Saints DLR Station",
+        "Id": "940GZZDLALL"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBTOG",
+    "StopPoints": [
+      {
+        "Name": "Tower Gateway DLR Station",
+        "Id": "940GZZDLTWG"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBSDE",
+    "StopPoints": [
+      {
+        "Name": "Shadwell DLR Station",
+        "Id": "940GZZDLSHA"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBLHS",
+    "StopPoints": [
+      {
+        "Name": "Limehouse DLR Station",
+        "Id": "940GZZDLLIM"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLWFE",
+    "StopPoints": [
+      {
+        "Name": "Westferry DLR Station",
+        "Id": "940GZZDLWFE"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLPOP",
+    "StopPoints": [
+      {
+        "Name": "Poplar DLR Station",
+        "Id": "940GZZDLPOP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLWIQ",
+    "StopPoints": [
+      {
+        "Name": "West India Quay DLR Station",
+        "Id": "940GZZDLWIQ"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBCAW",
+    "StopPoints": [
+      {
+        "Name": "Canary Wharf DLR Station",
+        "Id": "940GZZDLCAN"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLHEQ",
+    "StopPoints": [
+      {
+        "Name": "Heron Quays DLR Station",
+        "Id": "940GZZDLHEQ"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLSOQ",
+    "StopPoints": [
+      {
+        "Name": "South Quay DLR Station",
+        "Id": "940GZZDLSOQ"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLCLA",
+    "StopPoints": [
+      {
+        "Name": "Crossharbour DLR Station",
+        "Id": "940GZZDLCLA"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLMUD",
+    "StopPoints": [
+      {
+        "Name": "Mudchute DLR Station",
+        "Id": "940GZZDLMUD"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLISL",
+    "StopPoints": [
+      {
+        "Name": "Island Gardens DLR Station",
+        "Id": "940GZZDLISL"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBCUT",
+    "StopPoints": [
+      {
+        "Name": "Cutty Sark (for Maritime Greenwich) DLR Station",
+        "Id": "940GZZDLCUT"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBGNW",
+    "StopPoints": [
+      {
+        "Name": "Greenwich DLR Station",
+        "Id": "940GZZDLGRE"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLDEP",
+    "StopPoints": [
+      {
+        "Name": "Deptford Bridge DLR Station",
+        "Id": "940GZZDLDEP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLELV",
+    "StopPoints": [
+      {
+        "Name": "Elverson Road DLR Station",
+        "Id": "940GZZDLELV"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBLEW",
+    "StopPoints": [
+      {
+        "Name": "Lewisham DLR Station",
+        "Id": "940GZZDLLEW"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLBLA",
+    "StopPoints": [
+      {
+        "Name": "Blackwall DLR Station",
+        "Id": "940GZZDLBLA"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLEIN",
+    "StopPoints": [
+      {
+        "Name": "East India DLR Station",
+        "Id": "940GZZDLEIN"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBCAN",
+    "StopPoints": [
+      {
+        "Name": "Canning Town DLR Station",
+        "Id": "940GZZDLCGT"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLWSV",
+    "StopPoints": [
+      {
+        "Name": "West Silvertown DLR Station",
+        "Id": "940GZZDLWSV"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLPDK",
+    "StopPoints": [
+      {
+        "Name": "Pontoon Dock DLR Station",
+        "Id": "940GZZDLPDK"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBLCY",
+    "StopPoints": [
+      {
+        "Name": "London City Airport DLR Station",
+        "Id": "940GZZDLLCA"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLKGV",
+    "StopPoints": [
+      {
+        "Name": "King George V DLR Station",
+        "Id": "940GZZDLKGV"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBWWA",
+    "StopPoints": [
+      {
+        "Name": "Woolwich Arsenal DLR Station",
+        "Id": "940GZZDLWLA"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBRVC",
+    "StopPoints": [
+      {
+        "Name": "Royal Victoria DLR Station",
+        "Id": "940GZZDLRVC"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBCUS",
+    "StopPoints": [
+      {
+        "Name": "Custom House (for ExCel) DLR Station",
+        "Id": "940GZZDLCUS"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLPRE",
+    "StopPoints": [
+      {
+        "Name": "Prince Regent DLR Station",
+        "Id": "940GZZDLPRE"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLRAL",
+    "StopPoints": [
+      {
+        "Name": "Royal Albert DLR Station",
+        "Id": "940GZZDLRAL"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLBPK",
+    "StopPoints": [
+      {
+        "Name": "Beckton Park DLR Station",
+        "Id": "940GZZDLBPK"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLCYP",
+    "StopPoints": [
+      {
+        "Name": "Cyprus DLR Station",
+        "Id": "940GZZDLCYP"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLGAL",
+    "StopPoints": [
+      {
+        "Name": "Gallions Reach DLR Station",
+        "Id": "940GZZDLGAL"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZDLBEC",
+    "StopPoints": [
+      {
+        "Name": "Beckton DLR Station",
+        "Id": "940GZZDLBEC"
+      }
+    ]
+  }
+]

@@ -1,0 +1,150 @@
+[
+  {
+    "StationId": "START",
+    "StopPoints": []
+  },
+  {
+    "StationId": "HUBWHC",
+    "StopPoints": [
+      {
+        "Name": "Walthamstow Central Underground Station",
+        "Id": "940GZZLUWWL"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBBHO",
+    "StopPoints": [
+      {
+        "Name": "Blackhorse Road Underground Station",
+        "Id": "940GZZLUBLR"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBTOM",
+    "StopPoints": [
+      {
+        "Name": "Tottenham Hale Underground Station",
+        "Id": "940GZZLUTMH"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBSVS",
+    "StopPoints": [
+      {
+        "Name": "Seven Sisters Underground Station",
+        "Id": "940GZZLUSVS"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBFPK",
+    "StopPoints": [
+      {
+        "Name": "Finsbury Park Underground Station",
+        "Id": "940GZZLUFPK"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBHHY",
+    "StopPoints": [
+      {
+        "Name": "Highbury & Islington Underground Station",
+        "Id": "940GZZLUHAI"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBKGX",
+    "StopPoints": [
+      {
+        "Name": "King's Cross St. Pancras Underground Station",
+        "Id": "940GZZLUKSX"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBEUS",
+    "StopPoints": [
+      {
+        "Name": "Euston Underground Station",
+        "Id": "940GZZLUEUS"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUWRR",
+    "StopPoints": [
+      {
+        "Name": "Warren Street Underground Station",
+        "Id": "940GZZLUWRR"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUOXC",
+    "StopPoints": [
+      {
+        "Name": "Oxford Circus Underground Station",
+        "Id": "940GZZLUOXC"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUGPK",
+    "StopPoints": [
+      {
+        "Name": "Green Park Underground Station",
+        "Id": "940GZZLUGPK"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBVIC",
+    "StopPoints": [
+      {
+        "Name": "Victoria Underground Station",
+        "Id": "940GZZLUVIC"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUPCO",
+    "StopPoints": [
+      {
+        "Name": "Pimlico Underground Station",
+        "Id": "940GZZLUPCO"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBVXH",
+    "StopPoints": [
+      {
+        "Name": "Vauxhall Underground Station",
+        "Id": "940GZZLUVXL"
+      }
+    ]
+  },
+  {
+    "StationId": "940GZZLUSKW",
+    "StopPoints": [
+      {
+        "Name": "Stockwell Underground Station",
+        "Id": "940GZZLUSKW"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBBRX",
+    "StopPoints": [
+      {
+        "Name": "Brixton Underground Station",
+        "Id": "940GZZLUBXN"
+      }
+    ]
+  }
+]

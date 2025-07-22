@@ -1,0 +1,383 @@
+[
+  {
+    "StationId": "START",
+    "StopPoints": []
+  },
+  {
+    "StationId": "HUBHX5",
+    "StopPoints": [
+      {
+        "Name": "Heathrow Terminal 5 Rail Station",
+        "Id": "910GHTRWTM5"
+      }
+    ]
+  },
+  {
+    "StationId": "910GRDNGSTN",
+    "StopPoints": [
+      {
+        "Name": "Reading Rail Station",
+        "Id": "910GRDNGSTN"
+      }
+    ]
+  },
+  {
+    "StationId": "910GTWYFORD",
+    "StopPoints": [
+      {
+        "Name": "Twyford Rail Station",
+        "Id": "910GTWYFORD"
+      }
+    ]
+  },
+  {
+    "StationId": "910GMDNHEAD",
+    "StopPoints": [
+      {
+        "Name": "Maidenhead Rail Station",
+        "Id": "910GMDNHEAD"
+      }
+    ]
+  },
+  {
+    "StationId": "910GTAPLOW",
+    "StopPoints": [
+      {
+        "Name": "Taplow Rail Station",
+        "Id": "910GTAPLOW"
+      }
+    ]
+  },
+  {
+    "StationId": "910GBNHAM",
+    "StopPoints": [
+      {
+        "Name": "Burnham (Berks) Rail Station",
+        "Id": "910GBNHAM"
+      }
+    ]
+  },
+  {
+    "StationId": "910GSLOUGH",
+    "StopPoints": [
+      {
+        "Name": "Slough Rail Station",
+        "Id": "910GSLOUGH"
+      }
+    ]
+  },
+  {
+    "StationId": "910GLANGLEY",
+    "StopPoints": [
+      {
+        "Name": "Langley (Berks) Rail Station",
+        "Id": "910GLANGLEY"
+      }
+    ]
+  },
+  {
+    "StationId": "910GIVER",
+    "StopPoints": [
+      {
+        "Name": "Iver Rail Station",
+        "Id": "910GIVER"
+      }
+    ]
+  },
+  {
+    "StationId": "910GWDRYTON",
+    "StopPoints": [
+      {
+        "Name": "West Drayton Rail Station",
+        "Id": "910GWDRYTON"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBHX4",
+    "StopPoints": [
+      {
+        "Name": "Heathrow Terminal 4 Rail Station",
+        "Id": "910GHTRWTM4"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBH13",
+    "StopPoints": [
+      {
+        "Name": "Heathrow Terminals 2 & 3 Rail Station",
+        "Id": "910GHTRWAPT"
+      }
+    ]
+  },
+  {
+    "StationId": "910GHAYESAH",
+    "StopPoints": [
+      {
+        "Name": "Hayes & Harlington Rail Station",
+        "Id": "910GHAYESAH"
+      }
+    ]
+  },
+  {
+    "StationId": "910GSTHALL",
+    "StopPoints": [
+      {
+        "Name": "Southall Rail Station",
+        "Id": "910GSTHALL"
+      }
+    ]
+  },
+  {
+    "StationId": "910GHANWELL",
+    "StopPoints": [
+      {
+        "Name": "Hanwell Rail Station",
+        "Id": "910GHANWELL"
+      }
+    ]
+  },
+  {
+    "StationId": "910GWEALING",
+    "StopPoints": [
+      {
+        "Name": "West Ealing Rail Station",
+        "Id": "910GWEALING"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBEAL",
+    "StopPoints": [
+      {
+        "Name": "Ealing Broadway Rail Station",
+        "Id": "910GEALINGB"
+      }
+    ]
+  },
+  {
+    "StationId": "910GACTONML",
+    "StopPoints": [
+      {
+        "Name": "Acton Main Line Rail Station",
+        "Id": "910GACTONML"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBPAD",
+    "StopPoints": [
+      {
+        "Name": "Paddington",
+        "Id": "910GPADTLL"
+      },
+      {
+        "Name": "London Paddington Rail Station",
+        "Id": "910GPADTON"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBBDS",
+    "StopPoints": [
+      {
+        "Name": "Bond Street",
+        "Id": "910GBONDST"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBTCR",
+    "StopPoints": [
+      {
+        "Name": "Tottenham Court Road",
+        "Id": "910GTOTCTRD"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBZFD",
+    "StopPoints": [
+      {
+        "Name": "Farringdon",
+        "Id": "910GFRNDXR"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBLST",
+    "StopPoints": [
+      {
+        "Name": "London Liverpool Street Rail Station",
+        "Id": "910GLIVST"
+      },
+      {
+        "Name": "Liverpool Street",
+        "Id": "910GLIVSTLL"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBZWL",
+    "StopPoints": [
+      {
+        "Name": "Whitechapel",
+        "Id": "910GWCHAPXR"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBCAW",
+    "StopPoints": [
+      {
+        "Name": "Canary Wharf",
+        "Id": "910GCANWHRF"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBCUS",
+    "StopPoints": [
+      {
+        "Name": "Custom House",
+        "Id": "910GCSTMHSXR"
+      }
+    ]
+  },
+  {
+    "StationId": "910GWOLWXR",
+    "StopPoints": [
+      {
+        "Name": "Woolwich",
+        "Id": "910GWOLWXR"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBABW",
+    "StopPoints": [
+      {
+        "Name": "Abbey Wood",
+        "Id": "910GABWDXR"
+      }
+    ]
+  },
+  {
+    "StationId": "HUBSRA",
+    "StopPoints": [
+      {
+        "Name": "Stratford (London) Rail Station",
+        "Id": "910GSTFD"
+      }
+    ]
+  },
+  {
+    "StationId": "910GMRYLAND",
+    "StopPoints": [
+      {
+        "Name": "Maryland Rail Station",
+        "Id": "910GMRYLAND"
+      }
+    ]
+  },
+  {
+    "StationId": "910GFRSTGT",
+    "StopPoints": [
+      {
+        "Name": "Forest Gate Rail Station",
+        "Id": "910GFRSTGT"
+      }
+    ]
+  },
+  {
+    "StationId": "910GMANRPK",
+    "StopPoints": [
+      {
+        "Name": "Manor Park Rail Station",
+        "Id": "910GMANRPK"
+      }
+    ]
+  },
+  {
+    "StationId": "910GILFORD",
+    "StopPoints": [
+      {
+        "Name": "Ilford Rail Station",
+        "Id": "910GILFORD"
+      }
+    ]
+  },
+  {
+    "StationId": "910GSVNKNGS",
+    "StopPoints": [
+      {
+        "Name": "Seven Kings Rail Station",
+        "Id": "910GSVNKNGS"
+      }
+    ]
+  },
+  {
+    "StationId": "910GGODMAYS",
+    "StopPoints": [
+      {
+        "Name": "Goodmayes Rail Station",
+        "Id": "910GGODMAYS"
+      }
+    ]
+  },
+  {
+    "StationId": "910GCHDWLHT",
+    "StopPoints": [
+      {
+        "Name": "Chadwell Heath Rail Station",
+        "Id": "910GCHDWLHT"
+      }
+    ]
+  },
+  {
+    "StationId": "910GROMFORD",
+    "StopPoints": [
+      {
+        "Name": "Romford Rail Station",
+        "Id": "910GROMFORD"
+      }
+    ]
+  },
+  {
+    "StationId": "910GGIDEAPK",
+    "StopPoints": [
+      {
+        "Name": "Gidea Park Rail Station",
+        "Id": "910GGIDEAPK"
+      }
+    ]
+  },
+  {
+    "StationId": "910GHRLDWOD",
+    "StopPoints": [
+      {
+        "Name": "Harold Wood Rail Station",
+        "Id": "910GHRLDWOD"
+      }
+    ]
+  },
+  {
+    "StationId": "910GBRTWOOD",
+    "StopPoints": [
+      {
+        "Name": "Brentwood Rail Station",
+        "Id": "910GBRTWOOD"
+      }
+    ]
+  },
+  {
+    "StationId": "910GSHENFLD",
+    "StopPoints": [
+      {
+        "Name": "Shenfield Rail Station",
+        "Id": "910GSHENFLD"
+      }
+    ]
+  }
+]

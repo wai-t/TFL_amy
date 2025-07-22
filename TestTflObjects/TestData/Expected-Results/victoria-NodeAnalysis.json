@@ -1,0 +1,242 @@
+[
+  {
+    "Id": "HUBWHC",
+    "Names": [
+      "940GZZLUWWL HUBWHC Walthamstow Central Underground Station"
+    ],
+    "Prev": [
+      "START"
+    ],
+    "Next": [
+      "HUBBHO"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBBHO",
+    "Names": [
+      "940GZZLUBLR HUBBHO Blackhorse Road Underground Station"
+    ],
+    "Prev": [
+      "HUBWHC"
+    ],
+    "Next": [
+      "HUBTOM"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBTOM",
+    "Names": [
+      "940GZZLUTMH HUBTOM Tottenham Hale Underground Station"
+    ],
+    "Prev": [
+      "HUBBHO"
+    ],
+    "Next": [
+      "HUBSVS"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBSVS",
+    "Names": [
+      "940GZZLUSVS HUBSVS Seven Sisters Underground Station"
+    ],
+    "Prev": [
+      "HUBTOM"
+    ],
+    "Next": [
+      "HUBFPK"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBFPK",
+    "Names": [
+      "940GZZLUFPK HUBFPK Finsbury Park Underground Station"
+    ],
+    "Prev": [
+      "HUBSVS"
+    ],
+    "Next": [
+      "HUBHHY"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBHHY",
+    "Names": [
+      "940GZZLUHAI HUBHHY Highbury & Islington Underground Station"
+    ],
+    "Prev": [
+      "HUBFPK"
+    ],
+    "Next": [
+      "HUBKGX"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBKGX",
+    "Names": [
+      "940GZZLUKSX HUBKGX King's Cross St. Pancras Underground Station"
+    ],
+    "Prev": [
+      "HUBHHY"
+    ],
+    "Next": [
+      "HUBEUS"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBEUS",
+    "Names": [
+      "940GZZLUEUS HUBEUS Euston Underground Station"
+    ],
+    "Prev": [
+      "HUBKGX"
+    ],
+    "Next": [
+      "940GZZLUWRR"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUWRR",
+    "Names": [
+      "940GZZLUWRR  Warren Street Underground Station"
+    ],
+    "Prev": [
+      "HUBEUS"
+    ],
+    "Next": [
+      "940GZZLUOXC"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUOXC",
+    "Names": [
+      "940GZZLUOXC  Oxford Circus Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUWRR"
+    ],
+    "Next": [
+      "940GZZLUGPK"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUGPK",
+    "Names": [
+      "940GZZLUGPK  Green Park Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUOXC"
+    ],
+    "Next": [
+      "HUBVIC"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBVIC",
+    "Names": [
+      "940GZZLUVIC HUBVIC Victoria Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUGPK"
+    ],
+    "Next": [
+      "940GZZLUPCO"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUPCO",
+    "Names": [
+      "940GZZLUPCO  Pimlico Underground Station"
+    ],
+    "Prev": [
+      "HUBVIC"
+    ],
+    "Next": [
+      "HUBVXH"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBVXH",
+    "Names": [
+      "940GZZLUVXL HUBVXH Vauxhall Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUPCO"
+    ],
+    "Next": [
+      "940GZZLUSKW"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "940GZZLUSKW",
+    "Names": [
+      "940GZZLUSKW  Stockwell Underground Station"
+    ],
+    "Prev": [
+      "HUBVXH"
+    ],
+    "Next": [
+      "HUBBRX"
+    ],
+    "BranchIds": [
+      0
+    ]
+  },
+  {
+    "Id": "HUBBRX",
+    "Names": [
+      "940GZZLUBXN HUBBRX Brixton Underground Station"
+    ],
+    "Prev": [
+      "940GZZLUSKW"
+    ],
+    "Next": [
+      "END"
+    ],
+    "BranchIds": [
+      0
+    ]
+  }
+]
