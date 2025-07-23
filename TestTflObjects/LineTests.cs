@@ -237,34 +237,41 @@ namespace TestTflObjects
         [Fact]
         public async void BranchAnalysisAsync2()
         {
-            foreach (var (line, dir) in lines)
-                //var line = "elizabeth";
+            //foreach (var (line, dir) in lines)
+                var line = "elizabeth";
             //var line = "dlr";
-            //var dir = Direction.Outbound;
+            var dir = Direction.Inbound;
             {
                 // StopPoint contains the list of the stations on the given line in order
-                var ret = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
+                var lineData = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
 
-                var branches = ret.StopPointSequences.Select(seq => new Branch(
-                    (int)seq.BranchId!,
-                    seq.PrevBranchIds.ToList(),
-                    seq.NextBranchIds.ToList(),
-                    seq.Direction,
-                    seq.StopPoint.ToList()
-                )).ToList();
+                //var branches = lineData.StopPointSequences.Select(seq => new Branch(
+                //    (int)seq.BranchId!,
+                //    seq.PrevBranchIds.ToList(),
+                //    seq.NextBranchIds.ToList(),
+                //    seq.Direction,
+                //    seq.StopPoint.ToList()
+                //)).ToList();
 
                 //SaveTestOutput($"{line}-BranchAnalysis.json", JsonConvert.SerializeObject(branches, Formatting.Indented));
+                //
+                // Not reliable test, because the query returns live status information about the branch
+                //
                 //TestUtils.VerifyTestOutput($"{line}-BranchAnalysis.json", JsonConvert.SerializeObject(branches, Formatting.Indented));
 
                 StationGraph graph = new();
 
-                foreach (var stopPointSequence in ret.StopPointSequences)
+                //
+                // To build the graph, we need to begin by adding all StopPointSequences
+                //
+                foreach (var stopPointSequence in lineData.StopPointSequences)
                 {
                     graph.AddBranch(stopPointSequence);
                 }
 
+                var orderedStationList = graph.Construct();
 
-                var ordered = graph.Construct().Select(s => new
+                var testResult = orderedStationList.Select(s => new
                 {
                     s.Station.StationId,
                     StopPoints = s.Station.MatchedStop.Select(ms=> new
@@ -275,10 +282,16 @@ namespace TestTflObjects
                 });
 
                 //SaveTestOutput($"{line}-NodeAnalysis.json", JsonConvert.SerializeObject(graph.DumpNodes(), Formatting.Indented));
+                //
+                // Check that the Nodes have been built correctly
+                //
                 TestUtils.VerifyTestOutput($"{line}-NodeAnalysis.json", JsonConvert.SerializeObject(graph.DumpNodes(), Formatting.Indented));
 
-                //SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(ordered, Formatting.Indented));
-                TestUtils.VerifyTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(ordered, Formatting.Indented));
+                //SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(testResult, Formatting.Indented));
+                //
+                // Check that the order of the Nodes has been built correctly
+                //
+                TestUtils.VerifyTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(testResult, Formatting.Indented));
             }
         }
 
@@ -286,7 +299,7 @@ namespace TestTflObjects
         public async void ArrivalsAsync()
         {
             // 
-            //var ret = await _client.ArrivalsAsync(["bakerloo"], "940GZZLUBST", null, null);
+            //var lineData = await _client.ArrivalsAsync(["bakerloo"], "940GZZLUBST", null, null);
             var ret = await _client.ArrivalsAsync(["elizabeth"], "910GHTRWTM4", null, null); // LHR 4
 
             var json = JsonConvert.SerializeObject(ret, Formatting.Indented);

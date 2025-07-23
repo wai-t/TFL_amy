@@ -1,3 +1,4 @@
+using System.Net.Http.Headers;
 using System.Text.Json.Nodes;
 using tfl_stats.Tfl;
 using Xunit;
@@ -11,45 +12,42 @@ namespace TflNetworkBuilder
     {
         private readonly HashSet<StationNode> _nodes = [];
         private readonly HashSet<Branch> _branches = [];
+        private List<StationNode> _orderedNodes = [];
 
-        public StationNode START_NODE { get; } = new() { Station = new() { StationId = "START" } };
-        public StationNode END_NODE { get; } = new() { Station = new() { StationId = "END" } };
+        private StationNode START_NODE { get; } = new() { Station = new() { StationId = "START" } };
+        private StationNode END_NODE { get; } = new() { Station = new() { StationId = "END" } };
 
+        //
+        // For each StopPointSequence in the line's RouteSequenceAsync query,
+        // call this method to add it to the graph. This needs to be done
+        // before constructing the network
+        //
         public void AddBranch(StopPointSequence stopPointSequence)
         {
             Assert.True(_branches.Add(new Branch(stopPointSequence)));
         }
 
+        //
+        // Main Entry Point to process the Station Network and produce a stable ordering.
+        //
         public List<StationNode> Construct()
         {
             BuildStationNetwork();
-            var ret = OrderStations();
-            return ret;
+            _orderedNodes = OrderStations();
+            return _orderedNodes;
         }
 
-        private class BranchStatus
-        {
-            public bool Complete = false;
-            public List<StationNode> BranchNodes = [];
-        }
-        private class PendingJoin
-        {
-            public required StationNode Id;
-            public required Dictionary<StationNode, BranchStatus> JoiningBranches;
-        }
 
         private List<StationNode> OrderStations()
         {
-            var ret = ProcessFork(START_NODE);
+            var ret = ProcessSequence(null, START_NODE);
             return ret;
         }
-
-        Dictionary<string, PendingJoin> _pendingJoins = [];
 
         private List<StationNode> ProcessSequence(StationNode? pred, StationNode node)
         {
             if (node == END_NODE)
-                return [];
+                return []; // Do we need this? Is it ever called?
             else if (node.IsMergePoint() && pred!=null)
             {
                 var (completed, mergeResult) = ProcessMerge(node, pred, []);
@@ -63,7 +61,7 @@ namespace TflNetworkBuilder
                 var splitResult = ProcessFork(node);
                 return splitResult;
             }
-            else
+            else // Passthru
             {
                 List<StationNode> ret = [];
 
@@ -82,28 +80,29 @@ namespace TflNetworkBuilder
             }
 
         }
+        // returns tuple
         private (bool,List<StationNode>) ProcessMerge(StationNode node, StationNode pred, List<StationNode> stationsOnBranch)
         {
-            if (!_pendingJoins.TryGetValue(node.Id, out var pendingJoin))
+            if (!_pendingMerges.TryGetValue(node.StationId, out var pendingJoin))
             {
-                pendingJoin = new PendingJoin() {
-                    Id = node,
-                    JoiningBranches = node.Prev.ToDictionary(n => n, n => new BranchStatus() { Complete = false, BranchNodes = [] }) 
+                pendingJoin = new PendingMerge() {
+                    StationAtMergeOfBranch = node,
+                    MergingBranches = node.Prev.ToDictionary(n => n, n => new BranchStatus() { Complete = false, BranchNodes = [] }) 
                 };
-                _pendingJoins.Add(node.Id, pendingJoin);
+                _pendingMerges.Add(node.StationId, pendingJoin);
             }
 
-            pendingJoin.JoiningBranches[pred] = new BranchStatus() {
+            pendingJoin.MergingBranches[pred] = new BranchStatus() {
                 Complete = true,
                 BranchNodes = stationsOnBranch 
             };
 
-            if (pendingJoin.JoiningBranches.Values.All(t => t.Complete))
+            if (pendingJoin.MergingBranches.Values.All(t => t.Complete))
             {
-                 var ret = (true, pendingJoin.JoiningBranches.Values
+                 var ret = (true, pendingJoin.MergingBranches.Values
                     .OrderByDescending(t => t.BranchNodes.Count)
                     .SelectMany(t => t.BranchNodes).ToList());
-                _pendingJoins.Remove(node.Id);
+                _pendingMerges.Remove(node.StationId);
 
                 return ret;
             }
@@ -126,30 +125,43 @@ namespace TflNetworkBuilder
             ret.Insert(0, node);
             return ret;
         }
+
+        //
+        // This is the Kahn Algorithm for walking a DAG
+        //
         private void BuildStationNetwork()
         {
-            Stack<Branch> workQueue = new(_branches.Where(b => !b.StopPointSequence.PrevBranchIds.Any()
-                                        || b.StopPointSequence.PrevBranchIds.Contains((int)b.StopPointSequence.BranchId!))
-                                                                    );
-            var remainingBranches = _branches.Except(workQueue);
+            Stack<Branch> workStack = new(
+                _branches.Where(
+                    b => !b.StopPointSequence.PrevBranchIds.Any() // branch has no previous branch
+                         || b.StopPointSequence.PrevBranchIds.Contains((int)b.StopPointSequence.BranchId!) // branch is a circle
+                         )
+                );
 
-            while (workQueue.Any())
+            var remainingBranches = _branches.Except(workStack); // all the branches not in workStack
+
+            while (workStack.Any())
             {
                 StationNode? prevStation = null;
-                var branch = workQueue.Pop();
+                var branch = workStack.Pop();
 
                 foreach (var stopPoint in branch.StopPointSequence.StopPoint)
                 {
                     if (prevStation != null && stopPoint.Id == branch.StopPointSequence.StopPoint.First().Id)
-                        break; // break the Circle Line
-                    prevStation = Add(branch, stopPoint, prevStation);
+                        break; // break the Circle Line, before the second time we hit Edgware Rd
+                    prevStation = AddStation(branch, stopPoint, prevStation);
                 }
 
-                foreach (var branchId in branch.StopPointSequence.NextBranchIds.Where(i => i != branch.StopPointSequence.BranchId))
+                foreach (var branchId in branch.StopPointSequence.NextBranchIds
+                    .Where(i => i != branch.StopPointSequence.BranchId)) // Needed to deal with Circle line which points to itself
                 {
                     var nextBranch = remainingBranches.SingleOrDefault(b => b.BranchId == branchId);
                     if (nextBranch != null)
-                        workQueue.Push(nextBranch);
+                        workStack.Push(nextBranch);
+                    //
+                    // Bug?? We should remove nextBranch from remainingBranches
+                    //
+
                 }
             }
             foreach (var station in _nodes)
@@ -162,10 +174,11 @@ namespace TflNetworkBuilder
 
         }
 
-        private StationNode Add(Branch branch, MatchedStop stopPoint, StationNode? prev)
+        private StationNode AddStation(Branch branch, MatchedStop stopPoint, StationNode? prev)
         {
-            var node = GetOrCreate(branch.BranchId, stopPoint);
+            var node = GetOrCreateStation(branch.BranchId, stopPoint);
 
+            // Build the next and prev links
             if (prev != null && !node.Follows(prev))
             {
                 node.RemovePrev(START_NODE);
@@ -185,13 +198,14 @@ namespace TflNetworkBuilder
 
         }
 
-        private StationNode GetOrCreate(int branchId, MatchedStop stopPoint)
+        private StationNode GetOrCreateStation(int branchId, MatchedStop stopPoint)
         {
             var stationId = stopPoint.ParentId ?? stopPoint.Id;
 
-            var entry = _nodes.SingleOrDefault(n => n.Id == stationId);
+            var entry = _nodes.SingleOrDefault(n => n.StationId == stationId);
             if (entry is null)
             {
+                // first time we have seen this StationId
                 entry = new StationNode()
                 {
                     Station = new Station()
@@ -205,6 +219,7 @@ namespace TflNetworkBuilder
             }
             else
             {
+                // We have seen this StationId before
                 Assert.Equal(stationId, entry.Station.StationId);
 
                 var station = entry.Station;
@@ -214,6 +229,31 @@ namespace TflNetworkBuilder
                     station.MatchedStop.Add(stopPoint);
             }
             return entry;
+        }
+
+        //
+        // private classes to monitor state
+        //
+
+        // TODO refactor into a separate class
+        //
+        // When Ordering, maintain a list of all merges that are
+        // waiting to be completed. A merge is completed when all
+        // of the branches feeding into it are complete. Before
+        // that, it is pending
+        //
+        Dictionary<string, PendingMerge> _pendingMerges = [];
+        private class PendingMerge
+        {
+            public required StationNode StationAtMergeOfBranch;
+            public required Dictionary<StationNode, BranchStatus> MergingBranches; // Key = Penultimate station on merging branch.
+        }
+
+        private class BranchStatus
+        {
+            public bool Complete = false;               // Complete is set true whenever the merging branch is complete.
+            public List<StationNode> BranchNodes = [];  // List of Stations on the merging branch. These will be collected
+                                                        // together when the merge is complete.
         }
 
         //
@@ -228,10 +268,10 @@ namespace TflNetworkBuilder
             foreach (var node in _nodes)
             {
                 output.Add(new PrintableNode(
-                    node.Id,
+                    node.StationId,
                     [.. node.Station.MatchedStop.Select(s => $"{s.Id} {s.ParentId} {s.Name}")],
-                    [.. node.Prev.Select(n => n.Id)],
-                    [.. node.Next.Select(n => n.Id)],
+                    [.. node.Prev.Select(n => n.StationId)],
+                    [.. node.Next.Select(n => n.StationId)],
                     node.Station.BranchIds
                 ));
             }

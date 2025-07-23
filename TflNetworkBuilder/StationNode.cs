@@ -5,7 +5,7 @@ namespace TflNetworkBuilder
 {
     public class StationNode
     {
-        public string Id => Station.StationId;
+        public string StationId => Station.StationId;
         public required Station Station { get; init; }
         public List<StationNode> Next { get; init; } = [];
         public List<StationNode> Prev { get; init; } = [];
@@ -87,12 +87,12 @@ namespace TflNetworkBuilder
         }
         public override bool Equals(object? obj)
         {
-            return obj is StationNode right && Id == right.Id;
+            return obj is StationNode right && StationId == right.StationId;
         }
 
         public override int GetHashCode()
         {
-            return Id.GetHashCode();
+            return StationId.GetHashCode();
         }
     }
 
