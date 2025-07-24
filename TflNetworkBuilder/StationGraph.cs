@@ -40,30 +40,31 @@ namespace TflNetworkBuilder
 
         private List<StationNode> OrderStations()
         {
-            var ret = ProcessSequence(null, START_NODE);
+            var ret = ProcessSequence(null, START_NODE, []);
             return ret;
         }
 
-        private List<StationNode> ProcessSequence(StationNode? pred, StationNode node)
+        private List<StationNode> ProcessSequence(StationNode? pred, StationNode node, List<StationNode> broughtForward)
         {
             if (node == END_NODE)
-                return []; // Do we need this? Is it ever called?
+                // This is the last recursion.  Return everything we have collected
+                return broughtForward;
             else if (node.IsMergePoint() && pred!=null)
             {
-                var (completed, mergeResult) = ProcessMerge(node, pred, []);
+                var (completed, mergeResult) = ProcessMerge(node, pred, broughtForward);
                 if (!completed)
                     return [];
-                var ret2 = ProcessSequence(null, node);
-                return [..mergeResult, ..ret2];
+                var ret2 = ProcessSequence(null, node, mergeResult);
+                return ret2;
             }
             else if (node.IsForkPoint())
             {
                 var splitResult = ProcessFork(node);
-                return splitResult;
+                return [..broughtForward, ..splitResult];
             }
             else // Passthru
             {
-                List<StationNode> ret = [];
+                List<StationNode> ret = broughtForward;
 
                 ret.Add(node);
                 var currentNode = node.GetNext();
@@ -74,8 +75,8 @@ namespace TflNetworkBuilder
                     currentNode = currentNode.GetNext();
                 };
 
-                var ret2 = ProcessSequence(ret.Last(), currentNode);
-                return [.. ret, .. ret2];
+                var ret2 = ProcessSequence(ret.Last(), currentNode, ret);
+                return ret2;
 
             }
 
@@ -116,7 +117,7 @@ namespace TflNetworkBuilder
             
             foreach(var head in node.Next)
             {
-                var threadResult = ProcessSequence(node, head).ToList();
+                var threadResult = ProcessSequence(node, head, []).ToList();
                 threads.Add(threadResult);
             }
 

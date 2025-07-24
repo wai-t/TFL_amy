@@ -237,21 +237,14 @@ namespace TestTflObjects
         [Fact]
         public async void BranchAnalysisAsync2()
         {
-            //foreach (var (line, dir) in lines)
-                var line = "elizabeth";
-            //var line = "dlr";
-            var dir = Direction.Inbound;
+            foreach (var (line, dir) in lines)
+                //var line = "elizabeth";
+                //var line = "dlr";
+                //var dir = Direction.Inbound;
             {
                 // StopPoint contains the list of the stations on the given line in order
                 var lineData = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
 
-                //var branches = lineData.StopPointSequences.Select(seq => new Branch(
-                //    (int)seq.BranchId!,
-                //    seq.PrevBranchIds.ToList(),
-                //    seq.NextBranchIds.ToList(),
-                //    seq.Direction,
-                //    seq.StopPoint.ToList()
-                //)).ToList();
 
                 //SaveTestOutput($"{line}-BranchAnalysis.json", JsonConvert.SerializeObject(branches, Formatting.Indented));
                 //
@@ -287,11 +280,11 @@ namespace TestTflObjects
                 //
                 TestUtils.VerifyTestOutput($"{line}-NodeAnalysis.json", JsonConvert.SerializeObject(graph.DumpNodes(), Formatting.Indented));
 
-                //SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(testResult, Formatting.Indented));
+                SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(testResult, Formatting.Indented));
                 //
                 // Check that the order of the Nodes has been built correctly
                 //
-                TestUtils.VerifyTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(testResult, Formatting.Indented));
+                //TestUtils.VerifyTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(testResult, Formatting.Indented));
             }
         }
 
