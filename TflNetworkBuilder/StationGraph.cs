@@ -51,67 +51,49 @@ namespace TflNetworkBuilder
                 return broughtForward;
             else if (node.IsMergePoint() && pred!=null)
             {
-                var (completed, mergeResult) = ProcessMerge(node, pred, broughtForward);
-                if (!completed)
-                    return [];
-                var ret2 = ProcessSequence(null, node, mergeResult);
-                return ret2;
+                var ret = ProcessMerge(node, pred, broughtForward);
+                return ret;
             }
             else if (node.IsForkPoint())
             {
-                var splitResult = ProcessFork(node);
-                return [..broughtForward, ..splitResult];
+                var splitResult = ProcessFork(node, broughtForward);
+                return splitResult;
             }
             else // Passthru
             {
-                List<StationNode> ret = broughtForward;
-
-                ret.Add(node);
-                var currentNode = node.GetNext();
-
-                while (currentNode.IsPassThru() && currentNode != END_NODE)
-                {
-                    ret.Add(currentNode);
-                    currentNode = currentNode.GetNext();
-                };
-
-                var ret2 = ProcessSequence(ret.Last(), currentNode, ret);
-                return ret2;
-
+                return ProcessChain(node, broughtForward);
             }
 
         }
-        // returns tuple
-        private (bool,List<StationNode>) ProcessMerge(StationNode node, StationNode pred, List<StationNode> stationsOnBranch)
-        {
-            if (!_pendingMerges.TryGetValue(node.StationId, out var pendingJoin))
-            {
-                pendingJoin = new PendingMerge() {
-                    StationAtMergeOfBranch = node,
-                    MergingBranches = node.Prev.ToDictionary(n => n, n => new BranchStatus() { Complete = false, BranchNodes = [] }) 
-                };
-                _pendingMerges.Add(node.StationId, pendingJoin);
-            }
 
-            pendingJoin.MergingBranches[pred] = new BranchStatus() {
-                Complete = true,
-                BranchNodes = stationsOnBranch 
+        private List<StationNode> ProcessChain(StationNode node, List<StationNode> broughtForward)
+        {
+            List<StationNode> ret = broughtForward;
+
+            ret.Add(node);
+            var currentNode = node.GetNext();
+
+            while (currentNode.IsPassThru() && currentNode != END_NODE)
+            {
+                ret.Add(currentNode);
+                currentNode = currentNode.GetNext();
             };
 
-            if (pendingJoin.MergingBranches.Values.All(t => t.Complete))
-            {
-                 var ret = (true, pendingJoin.MergingBranches.Values
-                    .OrderByDescending(t => t.BranchNodes.Count)
-                    .SelectMany(t => t.BranchNodes).ToList());
-                _pendingMerges.Remove(node.StationId);
-
-                return ret;
-            }
-
-            return (false, []);
+            var ret2 = ProcessSequence(ret.Last(), currentNode, ret);
+            return ret2;
         }
 
-        private List<StationNode> ProcessFork(StationNode node)
+        private MergeProcessor _mergeProcessor = new();
+        private List<StationNode> ProcessMerge(StationNode node, StationNode pred, List<StationNode> stationsOnBranch)
+        {
+           if (_mergeProcessor.ProcessMerge(node, pred, ref stationsOnBranch))
+            {
+                return ProcessSequence(null, node, stationsOnBranch);
+            }
+           return [];
+        }
+
+        private List<StationNode> ProcessFork(StationNode node, List<StationNode> broughtForward)
         {
             List<List<StationNode>> threads = [];
             
@@ -124,7 +106,7 @@ namespace TflNetworkBuilder
             threads = threads.OrderBy(t => t.Count).ToList();
             var ret = threads.SelectMany(t => t).ToList();
             ret.Insert(0, node);
-            return ret;
+            return [..broughtForward, ..ret];
         }
 
         //
@@ -232,30 +214,6 @@ namespace TflNetworkBuilder
             return entry;
         }
 
-        //
-        // private classes to monitor state
-        //
-
-        // TODO refactor into a separate class
-        //
-        // When Ordering, maintain a list of all merges that are
-        // waiting to be completed. A merge is completed when all
-        // of the branches feeding into it are complete. Before
-        // that, it is pending
-        //
-        Dictionary<string, PendingMerge> _pendingMerges = [];
-        private class PendingMerge
-        {
-            public required StationNode StationAtMergeOfBranch;
-            public required Dictionary<StationNode, BranchStatus> MergingBranches; // Key = Penultimate station on merging branch.
-        }
-
-        private class BranchStatus
-        {
-            public bool Complete = false;               // Complete is set true whenever the merging branch is complete.
-            public List<StationNode> BranchNodes = [];  // List of Stations on the merging branch. These will be collected
-                                                        // together when the merge is complete.
-        }
 
         //
         // Debugging and Testing Helpers
