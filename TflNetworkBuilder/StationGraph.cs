@@ -1,4 +1,5 @@
 using System.Net.Http.Headers;
+using System.Text;
 using System.Text.Json.Nodes;
 using tfl_stats.Tfl;
 using Xunit;
@@ -17,6 +18,9 @@ namespace TflNetworkBuilder
         private StationNode START_NODE { get; } = new() { Station = new() { StationId = "START" } };
         private StationNode END_NODE { get; } = new() { Station = new() { StationId = "END" } };
 
+
+        public List<StationNode> OrderedNodes => _orderedNodes;
+        public List<Branch> Branches => [.. _branches];
         //
         // For each StopPointSequence in the line's RouteSequenceAsync query,
         // call this method to add it to the graph. This needs to be done
@@ -34,6 +38,10 @@ namespace TflNetworkBuilder
         {
             BuildStationNetwork();
             _orderedNodes = OrderStations();
+            foreach (var (i,node) in _orderedNodes.Select((node, i)=>(i,node)))
+            {
+                node.Station.Index = i;
+            }
             return _orderedNodes;
         }
 
@@ -41,7 +49,7 @@ namespace TflNetworkBuilder
         private List<StationNode> OrderStations()
         {
             var ret = ProcessSequence(null, START_NODE, []);
-            return ret;
+            return [..ret,END_NODE];
         }
 
         private List<StationNode> ProcessSequence(StationNode? pred, StationNode node, List<StationNode> broughtForward)
@@ -214,6 +222,46 @@ namespace TflNetworkBuilder
             return entry;
         }
 
+        public string LinearOutput()
+        {
+            var branches = _branches.OrderBy(b => b.BranchId).ToArray();
+
+            HashSet<Branch> activeBranches = [];
+
+            StringBuilder line = new();
+            foreach (var stationNode in _orderedNodes)
+            {
+                StringBuilder rec = new();
+                var station = stationNode.Station;
+                foreach (var branch in branches)
+                {
+                    if (branch.StartsAt(stationNode))
+                    {
+                        activeBranches.Add(branch);
+                    }
+                    if (branch.Visits(stationNode))
+                    {
+                        rec.Append("=");
+                    }
+                    else if (activeBranches.Contains(branch))
+                    {
+                        rec.Append("|");
+                    }
+                    else
+                    {
+                        rec.Append(" ");
+                    }
+                    if (branch.EndsAt(stationNode))
+                    {
+                        activeBranches.Remove(branch);
+                    }
+                }
+                line.Append(rec.ToString());
+                line.AppendLine(stationNode.StationId);
+            }
+
+            return line.ToString();
+        }
 
         //
         // Debugging and Testing Helpers

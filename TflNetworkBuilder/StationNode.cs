@@ -1,14 +1,18 @@
 #pragma warning disable CA1860 // Avoid using 'Enumerable.Any()' extension method
 
 
+using Newtonsoft.Json;
+
 namespace TflNetworkBuilder
 {
     public class StationNode
     {
-        public string StationId => Station.StationId;
+        public string StationId { get => Station.StationId; set { } }
         public required Station Station { get; init; }
-        public List<StationNode> Next { get; init; } = [];
-        public List<StationNode> Prev { get; init; } = [];
+        [JsonIgnore]
+        public List<StationNode> Next { get; set; } = [];
+        [JsonIgnore]
+        public List<StationNode> Prev { get; set; } = [];
 
         public void AddNext(StationNode nextNode)
         {
@@ -95,6 +99,5 @@ namespace TflNetworkBuilder
             return StationId.GetHashCode();
         }
     }
-
 
 }

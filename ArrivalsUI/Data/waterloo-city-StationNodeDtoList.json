@@ -1,0 +1,159 @@
+[
+  {
+    "Station": {
+      "StationId": "START",
+      "Index": 0,
+      "BranchIds": [],
+      "MatchedStop": []
+    },
+    "NextIds": [
+      "HUBBAN"
+    ],
+    "PrevIds": []
+  },
+  {
+    "Station": {
+      "StationId": "HUBBAN",
+      "Index": 1,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "parentId": "HUBBAN",
+          "stationId": "940GZZLUBNK",
+          "icsId": "1000013",
+          "topMostParentId": "HUBBAN",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "central",
+              "name": "Central",
+              "uri": "/Line/central",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "northern",
+              "name": "Northern",
+              "uri": "/Line/northern",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "waterloo-city",
+              "name": "Waterloo & City",
+              "uri": "/Line/waterloo-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUBNK",
+          "name": "Bank Underground Station",
+          "lat": 51.51225,
+          "lon": -0.087792
+        }
+      ]
+    },
+    "NextIds": [
+      "HUBWAT"
+    ],
+    "PrevIds": [
+      "START"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "HUBWAT",
+      "Index": 2,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "parentId": "HUBWAT",
+          "stationId": "940GZZLUWLO",
+          "icsId": "1000254",
+          "topMostParentId": "HUBWAT",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "bakerloo",
+              "name": "Bakerloo",
+              "uri": "/Line/bakerloo",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "jubilee",
+              "name": "Jubilee",
+              "uri": "/Line/jubilee",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "northern",
+              "name": "Northern",
+              "uri": "/Line/northern",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "waterloo-city",
+              "name": "Waterloo & City",
+              "uri": "/Line/waterloo-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUWLO",
+          "name": "Waterloo Underground Station",
+          "lat": 51.503299,
+          "lon": -0.11478
+        }
+      ]
+    },
+    "NextIds": [
+      "END"
+    ],
+    "PrevIds": [
+      "HUBBAN"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "END",
+      "Index": 3,
+      "BranchIds": [],
+      "MatchedStop": []
+    },
+    "NextIds": [],
+    "PrevIds": [
+      "HUBWAT"
+    ]
+  }
+]

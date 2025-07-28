@@ -48,6 +48,10 @@
 
         </Grid>
 
+        <local:ArrivalsPanel Arrivals="{Binding Arrivals}"  Grid.Column="1" Grid.Row="0">
+            
+        </local:ArrivalsPanel>
+        <!--
         <ScrollViewer VerticalScrollBarVisibility="Auto"  Grid.Column="1" Grid.Row="0">
             <ItemsControl x:Name="ArrivalsView" Background="Black"
                       ItemsSource="{Binding Arrivals}" Grid.Column="1" Grid.Row="0">
@@ -84,6 +88,6 @@
             </ItemsControl>
 
         </ScrollViewer>
-
+-->
     </Grid>
 </Window>

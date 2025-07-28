@@ -8,9 +8,9 @@ using tfl_stats.Tfl;
 
 namespace ArrivalsUI
 {
-    internal record OrderedStation(string Name, string Id, int Order, IEnumerable<string> predecessors, IEnumerable<string> successors);
+    public record OrderedStation(string Name, string Id, int Order, IEnumerable<string> predecessors, IEnumerable<string> successors);
 
-    internal record LineStations(string Line, IEnumerable<OrderedStation> Stations);
+    public record LineStations(string Line, IEnumerable<OrderedStation> Stations);
 
-    internal record PlatformArrivals(string PlatformName, ObservableCollection<Prediction> Predictions);
+    public record PlatformArrivals(string PlatformName, ObservableCollection<Prediction> Predictions);
 }

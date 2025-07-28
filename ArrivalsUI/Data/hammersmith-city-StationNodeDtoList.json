@@ -1,0 +1,1708 @@
+[
+  {
+    "Station": {
+      "StationId": "START",
+      "Index": 0,
+      "BranchIds": [],
+      "MatchedStop": []
+    },
+    "NextIds": [
+      "HUBBKG"
+    ],
+    "PrevIds": []
+  },
+  {
+    "Station": {
+      "StationId": "HUBBKG",
+      "Index": 1,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "parentId": "HUBBKG",
+          "stationId": "940GZZLUBKG",
+          "icsId": "1000015",
+          "topMostParentId": "HUBBKG",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "4",
+          "hasDisruption": true,
+          "lines": [
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUBKG",
+          "name": "Barking Underground Station",
+          "lat": 51.539321,
+          "lon": 0.081053
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUEHM"
+    ],
+    "PrevIds": [
+      "START"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUEHM",
+      "Index": 2,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUEHM",
+          "icsId": "1000068",
+          "topMostParentId": "940GZZLUEHM",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "3+4",
+          "lines": [
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUEHM",
+          "name": "East Ham Underground Station",
+          "lat": 51.538948,
+          "lon": 0.051186
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUUPK"
+    ],
+    "PrevIds": [
+      "HUBBKG"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUUPK",
+      "Index": 3,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUUPK",
+          "icsId": "1000245",
+          "topMostParentId": "940GZZLUUPK",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "3",
+          "lines": [
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUUPK",
+          "name": "Upton Park Underground Station",
+          "lat": 51.53534,
+          "lon": 0.035263
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUPLW"
+    ],
+    "PrevIds": [
+      "940GZZLUEHM"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUPLW",
+      "Index": 4,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUPLW",
+          "icsId": "1000182",
+          "topMostParentId": "940GZZLUPLW",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "3",
+          "lines": [
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUPLW",
+          "name": "Plaistow Underground Station",
+          "lat": 51.531341,
+          "lon": 0.017451
+        }
+      ]
+    },
+    "NextIds": [
+      "HUBWEH"
+    ],
+    "PrevIds": [
+      "940GZZLUUPK"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "HUBWEH",
+      "Index": 5,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "parentId": "HUBWEH",
+          "stationId": "940GZZLUWHM",
+          "icsId": "1000262",
+          "topMostParentId": "HUBWEH",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2/3",
+          "lines": [
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "jubilee",
+              "name": "Jubilee",
+              "uri": "/Line/jubilee",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUWHM",
+          "name": "West Ham Underground Station",
+          "lat": 51.528136,
+          "lon": 0.005055
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUBBB"
+    ],
+    "PrevIds": [
+      "940GZZLUPLW"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUBBB",
+      "Index": 6,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUBBB",
+          "icsId": "1000032",
+          "topMostParentId": "940GZZLUBBB",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2/3",
+          "hasDisruption": true,
+          "lines": [
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUBBB",
+          "name": "Bromley-by-Bow Underground Station",
+          "lat": 51.524839,
+          "lon": -0.011538
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUBWR"
+    ],
+    "PrevIds": [
+      "HUBWEH"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUBWR",
+      "Index": 7,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUBWR",
+          "icsId": "1000029",
+          "topMostParentId": "940GZZLUBWR",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUBWR",
+          "name": "Bow Road Underground Station",
+          "lat": 51.52694,
+          "lon": -0.025128
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUMED"
+    ],
+    "PrevIds": [
+      "940GZZLUBBB"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUMED",
+      "Index": 8,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUMED",
+          "icsId": "1000146",
+          "topMostParentId": "940GZZLUMED",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "central",
+              "name": "Central",
+              "uri": "/Line/central",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUMED",
+          "name": "Mile End Underground Station",
+          "lat": 51.525122,
+          "lon": -0.03364
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUSGN"
+    ],
+    "PrevIds": [
+      "940GZZLUBWR"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUSGN",
+      "Index": 9,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUSGN",
+          "icsId": "1000220",
+          "topMostParentId": "940GZZLUSGN",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUSGN",
+          "name": "Stepney Green Underground Station",
+          "lat": 51.521858,
+          "lon": -0.046596
+        }
+      ]
+    },
+    "NextIds": [
+      "HUBZWL"
+    ],
+    "PrevIds": [
+      "940GZZLUMED"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "HUBZWL",
+      "Index": 10,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "parentId": "HUBZWL",
+          "stationId": "940GZZLUWPL",
+          "icsId": "1000268",
+          "topMostParentId": "HUBZWL",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUWPL",
+          "name": "Whitechapel Underground Station",
+          "lat": 51.519518,
+          "lon": -0.059971
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUADE"
+    ],
+    "PrevIds": [
+      "940GZZLUSGN"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUADE",
+      "Index": 11,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUADE",
+          "icsId": "1000004",
+          "topMostParentId": "940GZZLUADE",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUADE",
+          "name": "Aldgate East Underground Station",
+          "lat": 51.515037,
+          "lon": -0.072384
+        }
+      ]
+    },
+    "NextIds": [
+      "HUBLST"
+    ],
+    "PrevIds": [
+      "HUBZWL"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "HUBLST",
+      "Index": 12,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "parentId": "HUBLST",
+          "stationId": "940GZZLULVT",
+          "icsId": "1000138",
+          "topMostParentId": "HUBLST",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "central",
+              "name": "Central",
+              "uri": "/Line/central",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "metropolitan",
+              "name": "Metropolitan",
+              "uri": "/Line/metropolitan",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLULVT",
+          "name": "Liverpool Street Underground Station",
+          "lat": 51.517372,
+          "lon": -0.083182
+        }
+      ]
+    },
+    "NextIds": [
+      "HUBZMG"
+    ],
+    "PrevIds": [
+      "940GZZLUADE"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "HUBZMG",
+      "Index": 13,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "parentId": "HUBZMG",
+          "stationId": "940GZZLUMGT",
+          "icsId": "1000149",
+          "topMostParentId": "HUBZMG",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "metropolitan",
+              "name": "Metropolitan",
+              "uri": "/Line/metropolitan",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "northern",
+              "name": "Northern",
+              "uri": "/Line/northern",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUMGT",
+          "name": "Moorgate Underground Station",
+          "lat": 51.518176,
+          "lon": -0.088322
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUBBN"
+    ],
+    "PrevIds": [
+      "HUBLST"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUBBN",
+      "Index": 14,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUBBN",
+          "icsId": "1000014",
+          "topMostParentId": "940GZZLUBBN",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "metropolitan",
+              "name": "Metropolitan",
+              "uri": "/Line/metropolitan",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUBBN",
+          "name": "Barbican Underground Station",
+          "lat": 51.520275,
+          "lon": -0.097993
+        }
+      ]
+    },
+    "NextIds": [
+      "HUBZFD"
+    ],
+    "PrevIds": [
+      "HUBZMG"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "HUBZFD",
+      "Index": 15,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "parentId": "HUBZFD",
+          "stationId": "940GZZLUFCN",
+          "icsId": "1000080",
+          "topMostParentId": "HUBZFD",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "metropolitan",
+              "name": "Metropolitan",
+              "uri": "/Line/metropolitan",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUFCN",
+          "name": "Farringdon Underground Station",
+          "lat": 51.520252,
+          "lon": -0.104913
+        }
+      ]
+    },
+    "NextIds": [
+      "HUBKGX"
+    ],
+    "PrevIds": [
+      "940GZZLUBBN"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "HUBKGX",
+      "Index": 16,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "parentId": "HUBKGX",
+          "stationId": "940GZZLUKSX",
+          "icsId": "1000129",
+          "topMostParentId": "HUBKGX",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "hasDisruption": true,
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "metropolitan",
+              "name": "Metropolitan",
+              "uri": "/Line/metropolitan",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "northern",
+              "name": "Northern",
+              "uri": "/Line/northern",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "piccadilly",
+              "name": "Piccadilly",
+              "uri": "/Line/piccadilly",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "victoria",
+              "name": "Victoria",
+              "uri": "/Line/victoria",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUKSX",
+          "name": "King's Cross St. Pancras Underground Station",
+          "lat": 51.530663,
+          "lon": -0.123194
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUESQ"
+    ],
+    "PrevIds": [
+      "HUBZFD"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUESQ",
+      "Index": 17,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUESQ",
+          "icsId": "1000078",
+          "topMostParentId": "940GZZLUESQ",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "metropolitan",
+              "name": "Metropolitan",
+              "uri": "/Line/metropolitan",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUESQ",
+          "name": "Euston Square Underground Station",
+          "lat": 51.525604,
+          "lon": -0.135829
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUGPS"
+    ],
+    "PrevIds": [
+      "HUBKGX"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUGPS",
+      "Index": 18,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUGPS",
+          "icsId": "1000091",
+          "topMostParentId": "940GZZLUGPS",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "metropolitan",
+              "name": "Metropolitan",
+              "uri": "/Line/metropolitan",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUGPS",
+          "name": "Great Portland Street Underground Station",
+          "lat": 51.52384,
+          "lon": -0.144262
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUBST"
+    ],
+    "PrevIds": [
+      "940GZZLUESQ"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUBST",
+      "Index": 19,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUBST",
+          "icsId": "1000011",
+          "topMostParentId": "940GZZLUBST",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "bakerloo",
+              "name": "Bakerloo",
+              "uri": "/Line/bakerloo",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "jubilee",
+              "name": "Jubilee",
+              "uri": "/Line/jubilee",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "metropolitan",
+              "name": "Metropolitan",
+              "uri": "/Line/metropolitan",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUBST",
+          "name": "Baker Street Underground Station",
+          "lat": 51.522883,
+          "lon": -0.15713
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUERC"
+    ],
+    "PrevIds": [
+      "940GZZLUGPS"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUERC",
+      "Index": 20,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUERC",
+          "icsId": "1000072",
+          "topMostParentId": "940GZZLUERC",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "district",
+              "name": "District",
+              "uri": "/Line/district",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUERC",
+          "name": "Edgware Road (Circle Line) Underground Station",
+          "lat": 51.519858,
+          "lon": -0.167832
+        }
+      ]
+    },
+    "NextIds": [
+      "HUBPAD"
+    ],
+    "PrevIds": [
+      "940GZZLUBST"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "HUBPAD",
+      "Index": 21,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "parentId": "HUBPAD",
+          "stationId": "940GZZLUPAH",
+          "icsId": "1000175",
+          "topMostParentId": "HUBPAD",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUPAH",
+          "name": "Paddington (H&C Line)-Underground",
+          "lat": 51.518187,
+          "lon": -0.178306
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLURYO"
+    ],
+    "PrevIds": [
+      "940GZZLUERC"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLURYO",
+      "Index": 22,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLURYO",
+          "icsId": "1000196",
+          "topMostParentId": "940GZZLURYO",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLURYO",
+          "name": "Royal Oak Underground Station",
+          "lat": 51.519113,
+          "lon": -0.188748
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUWSP"
+    ],
+    "PrevIds": [
+      "HUBPAD"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUWSP",
+      "Index": 23,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUWSP",
+          "icsId": "1000259",
+          "topMostParentId": "940GZZLUWSP",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUWSP",
+          "name": "Westbourne Park Underground Station",
+          "lat": 51.52111,
+          "lon": -0.201065
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLULAD"
+    ],
+    "PrevIds": [
+      "940GZZLURYO"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLULAD",
+      "Index": 24,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLULAD",
+          "icsId": "1000131",
+          "topMostParentId": "940GZZLULAD",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLULAD",
+          "name": "Ladbroke Grove Underground Station",
+          "lat": 51.517449,
+          "lon": -0.210391
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLULRD"
+    ],
+    "PrevIds": [
+      "940GZZLUWSP"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLULRD",
+      "Index": 25,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLULRD",
+          "icsId": "1000134",
+          "topMostParentId": "940GZZLULRD",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLULRD",
+          "name": "Latimer Road Underground Station",
+          "lat": 51.513389,
+          "lon": -0.217799
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUWLA"
+    ],
+    "PrevIds": [
+      "940GZZLULAD"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUWLA",
+      "Index": 26,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUWLA",
+          "icsId": "1000278",
+          "topMostParentId": "940GZZLUWLA",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUWLA",
+          "name": "Wood Lane Underground Station",
+          "lat": 51.509669,
+          "lon": -0.22453
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUSBM"
+    ],
+    "PrevIds": [
+      "940GZZLULRD"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUSBM",
+      "Index": 27,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUSBM",
+          "icsId": "1000204",
+          "topMostParentId": "940GZZLUSBM",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUSBM",
+          "name": "Shepherd's Bush Market Underground Station",
+          "lat": 51.505579,
+          "lon": -0.226375
+        }
+      ]
+    },
+    "NextIds": [
+      "940GZZLUGHK"
+    ],
+    "PrevIds": [
+      "940GZZLUWLA"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "940GZZLUGHK",
+      "Index": 28,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "stationId": "940GZZLUGHK",
+          "icsId": "1000088",
+          "topMostParentId": "940GZZLUGHK",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUGHK",
+          "name": "Goldhawk Road Underground Station",
+          "lat": 51.502005,
+          "lon": -0.226715
+        }
+      ]
+    },
+    "NextIds": [
+      "HUBHMS"
+    ],
+    "PrevIds": [
+      "940GZZLUSBM"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "HUBHMS",
+      "Index": 29,
+      "BranchIds": [
+        0
+      ],
+      "MatchedStop": [
+        {
+          "parentId": "HUBHMS",
+          "stationId": "940GZZLUHSC",
+          "icsId": "1000097",
+          "topMostParentId": "HUBHMS",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "2",
+          "lines": [
+            {
+              "id": "circle",
+              "name": "Circle",
+              "uri": "/Line/circle",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "hammersmith-city",
+              "name": "Hammersmith & City",
+              "uri": "/Line/hammersmith-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUHSC",
+          "name": "Hammersmith (H&C Line) Underground Station",
+          "lat": 51.49339,
+          "lon": -0.22503
+        }
+      ]
+    },
+    "NextIds": [
+      "END"
+    ],
+    "PrevIds": [
+      "940GZZLUGHK"
+    ]
+  },
+  {
+    "Station": {
+      "StationId": "END",
+      "Index": 30,
+      "BranchIds": [],
+      "MatchedStop": []
+    },
+    "NextIds": [],
+    "PrevIds": [
+      "HUBHMS"
+    ]
+  }
+]

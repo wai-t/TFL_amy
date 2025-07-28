@@ -237,20 +237,13 @@ namespace TestTflObjects
         [Fact]
         public async void BranchAnalysisAsync2()
         {
-            foreach (var (line, dir) in lines)
-                //var line = "elizabeth";
-                //var line = "dlr";
-                //var dir = Direction.Inbound;
+            //foreach (var (line, dir) in lines)
+                var line = "elizabeth";
+            //var line = "dlr";
+            var dir = Direction.Inbound;
             {
                 // StopPoint contains the list of the stations on the given line in order
                 var lineData = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
-
-
-                //SaveTestOutput($"{line}-BranchAnalysis.json", JsonConvert.SerializeObject(branches, Formatting.Indented));
-                //
-                // Not reliable test, because the query returns live status information about the branch
-                //
-                //TestUtils.VerifyTestOutput($"{line}-BranchAnalysis.json", JsonConvert.SerializeObject(branches, Formatting.Indented));
 
                 StationGraph graph = new();
 
@@ -264,6 +257,8 @@ namespace TestTflObjects
 
                 var orderedStationList = graph.Construct();
 
+                SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(orderedStationList, Formatting.Indented));
+
                 var testResult = orderedStationList.Select(s => new
                 {
                     s.Station.StationId,
@@ -274,17 +269,23 @@ namespace TestTflObjects
                     })
                 });
 
+                var lineOutput = graph.LinearOutput();
+
                 //SaveTestOutput($"{line}-NodeAnalysis.json", JsonConvert.SerializeObject(graph.DumpNodes(), Formatting.Indented));
                 //
                 // Check that the Nodes have been built correctly
                 //
                 TestUtils.VerifyTestOutput($"{line}-NodeAnalysis.json", JsonConvert.SerializeObject(graph.DumpNodes(), Formatting.Indented));
 
-                SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(testResult, Formatting.Indented));
+
+                 //SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(testResult, Formatting.Indented));
                 //
                 // Check that the order of the Nodes has been built correctly
                 //
                 //TestUtils.VerifyTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(testResult, Formatting.Indented));
+
+
+                SaveTestOutput($"{line}-Branches.json", JsonConvert.SerializeObject(graph.Branches, Formatting.Indented));
             }
         }
 
