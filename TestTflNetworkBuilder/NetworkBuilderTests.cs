@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 using tfl_stats.Tfl;
 using TflNetworkBuilder;
 
-namespace TestTflObjects
+namespace TestTflNetworkBuilder
 {
     [Collection("HttpClientFactory collection")]
     public class NetworkBuilderTests
@@ -42,24 +42,16 @@ namespace TestTflObjects
         public async void BranchAnalysisAsync2()
         {
             foreach (var (line, dir) in lines)
-                //var line = "elizabeth";
+            //var line = "elizabeth";
             //var line = "dlr";
             //var dir = Direction.Inbound;
             {
                 // StopPoint contains the list of the stations on the given line in order
                 var lineData = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
 
-                StationGraph graph = new();
+                StationGraph graph = new(lineData);
 
-                //
-                // To build the graph, we need to begin by adding all StopPointSequences
-                //
-                foreach (var stopPointSequence in lineData.StopPointSequences)
-                {
-                    graph.AddBranch(stopPointSequence);
-                }
-
-                var stationNodeDtoList = graph.Construct().Select(s => s.ToDto());
+                var stationNodeDtoList = graph.OrderedNodes.Select(s => s.ToDto());
 
                 TestUtils.SaveTestOutput($"{line}-StationNodeDtoList.json", JsonConvert.SerializeObject(stationNodeDtoList, Formatting.Indented));
 
@@ -79,22 +71,13 @@ namespace TestTflObjects
                 // StopPoint contains the list of the stations on the given line in order
                 var lineData = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
 
-                StationGraph graph = new();
+                StationGraph graph = new(lineData);
 
-                //
-                // To build the graph, we need to begin by adding all StopPointSequences
-                //
-                foreach (var stopPointSequence in lineData.StopPointSequences)
-                {
-                    graph.AddBranch(stopPointSequence);
-                }
-
-                var stationNodeDtoList = graph.Construct();
+                var stationNodeDtoList = graph.OrderedNodes;
 
                 var geomAnalyser = new GeometryAnalyser(graph.Branches, []);
 
             }
         }
-
     }
 }

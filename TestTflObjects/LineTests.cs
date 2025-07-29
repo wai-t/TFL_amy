@@ -245,17 +245,9 @@ namespace TestTflObjects
                 // StopPoint contains the list of the stations on the given line in order
                 var lineData = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
 
-                StationGraph graph = new();
+                StationGraph graph = new(lineData);
 
-                //
-                // To build the graph, we need to begin by adding all StopPointSequences
-                //
-                foreach (var stopPointSequence in lineData.StopPointSequences)
-                {
-                    graph.AddBranch(stopPointSequence);
-                }
-
-                var orderedStationList = graph.Construct();
+                var orderedStationList = graph.OrderedNodes;
 
                 SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(orderedStationList, Formatting.Indented));
 

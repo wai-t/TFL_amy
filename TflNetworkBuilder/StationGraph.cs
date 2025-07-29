@@ -21,12 +21,24 @@ namespace TflNetworkBuilder
 
         public List<StationNode> OrderedNodes => _orderedNodes;
         public List<Branch> Branches => [.. _branches];
+
+        public StationGraph(RouteSequence sequenceData)
+        {
+            //
+            // To build the graph, we need to begin by adding all StopPointSequences
+            //
+            foreach (var stopPointSequence in sequenceData.StopPointSequences)
+            {
+                AddBranch(stopPointSequence);
+            }
+            Construct();
+        }
         //
         // For each StopPointSequence in the line's RouteSequenceAsync query,
         // call this method to add it to the graph. This needs to be done
         // before constructing the network
         //
-        public void AddBranch(StopPointSequence stopPointSequence)
+        private void AddBranch(StopPointSequence stopPointSequence)
         {
             Assert.True(_branches.Add(new Branch(stopPointSequence)));
         }
@@ -34,22 +46,21 @@ namespace TflNetworkBuilder
         //
         // Main Entry Point to process the Station Network and produce a stable ordering.
         //
-        public List<StationNode> Construct()
+        private void Construct()
         {
             BuildStationNetwork();
             _orderedNodes = OrderStations();
-            foreach (var (i,node) in _orderedNodes.Select((node, i)=>(i,node)))
-            {
-                node.Station.Index = i;
-            }
-            return _orderedNodes;
         }
 
 
         private List<StationNode> OrderStations()
         {
-            var ret = ProcessSequence(null, START_NODE, []);
-            return [..ret,END_NODE];
+            var ret = ProcessSequence(null, START_NODE, []).Append(END_NODE);
+            foreach (var (i, node) in ret.Select((node, i) => (i, node)))
+            {
+                node.Station.Index = i;
+            }
+            return ret.ToList();
         }
 
         private List<StationNode> ProcessSequence(StationNode? pred, StationNode node, List<StationNode> broughtForward)
@@ -283,6 +294,31 @@ namespace TflNetworkBuilder
                 ));
             }
             return output;
+        }
+
+        private StationGraph()
+        {
+
+        }
+
+        //
+        // Only used for testing
+        //
+        public static StationGraph StationGraphFromTestData(HashSet<StationNode> nodes)
+        {
+
+            var sg = new StationGraph();
+            foreach (var node in nodes)
+            {
+                if (!node.Prev.Any()) node.AddPrev(sg.START_NODE);
+                if (!node.Next.Any()) node.AddNext(sg.END_NODE);
+            }
+            sg._nodes.Clear();
+            sg._nodes.UnionWith(nodes);
+            
+            sg._orderedNodes = sg.OrderStations();
+
+            return sg;
         }
 
     }
