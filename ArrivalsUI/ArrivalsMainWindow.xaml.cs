@@ -16,12 +16,12 @@ using TflNetworkBuilder;
 namespace ArrivalsUI
 {
     /// <summary>
-    /// Interaction logic for TabbedLines.xaml
+    /// Interaction logic for ArrivalsMainWindow.xaml
     /// </summary>
-    public partial class TabbedLines : Window
+    public partial class ArrivalsMainWindow : Window
     {
         public TabbedLinesVM ViewModel => (TabbedLinesVM)DataContext;
-        public TabbedLines()
+        public ArrivalsMainWindow()
         {
             InitializeComponent();
 

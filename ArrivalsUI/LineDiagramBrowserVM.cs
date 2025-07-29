@@ -15,7 +15,7 @@ using TflNetworkBuilder;
 
 namespace ArrivalsUI
 {
-    public class LineDiagramViewModel : INotifyPropertyChanged, IGraphicsClient
+    public class LineDiagramBrowserVM : INotifyPropertyChanged, IGraphicsClient
     {
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
@@ -30,7 +30,7 @@ namespace ArrivalsUI
 
         readonly List<Branch> _branches;
         readonly List<StationNode> _stations;
-        public LineDiagramViewModel(string line)
+        public LineDiagramBrowserVM(string line)
         {
             _line = line;
             var branchesJson = File.ReadAllText($"Data/{_line}-BranchesList.json");
@@ -49,7 +49,7 @@ namespace ArrivalsUI
         // where to draw a station marker, the station name, and a piece of railway line
         public void AddStopMarker(int rowNo, int colNo)
         {
-            Stops.Add(new StopViewModel
+            Stops.Add(new StopVM
             {
                 X = colNo * GridSize + Left - 2,
                 Y = rowNo * GridSize + Top - 2,
@@ -57,7 +57,7 @@ namespace ArrivalsUI
         }
         public void AddStationName(int rowNo, int colNo, Station station)
         {
-            StationNames.Add(new Label
+            StationNames.Add(new LabelVM
             {
                 X = colNo * GridSize + Left,
                 Y = rowNo * GridSize + Top - 8,
@@ -67,7 +67,7 @@ namespace ArrivalsUI
 
         public void AddTrackSection(int rowNo, int colNo, int targetColNo)
         {
-            Connections.Add(new ConnectionViewModel
+            Connections.Add(new ConnectionVM
             {
                 X0 = colNo * GridSize + Left,
                 Y0 = (rowNo - 1) * GridSize + Top,
@@ -76,17 +76,17 @@ namespace ArrivalsUI
             });
         }
 
-        public ObservableCollection<StopViewModel> Stops { get; set; } = [];
-        public ObservableCollection<ConnectionViewModel> Connections { get; set; } = [];
+        public ObservableCollection<StopVM> Stops { get; set; } = [];
+        public ObservableCollection<ConnectionVM> Connections { get; set; } = [];
 
-        public ObservableCollection<Label> StationNames { get; set; } = [];
+        public ObservableCollection<LabelVM> StationNames { get; set; } = [];
 
         private string _line;
         public string Line { get => _line; set { _line = value; OnPropertyChanged(nameof(Line)); } }
 
     }
 
-    public class StopViewModel : INotifyPropertyChanged
+    public class StopVM : INotifyPropertyChanged
     {
         public int X { get; set; }
         public int Y { get; set; }
@@ -97,7 +97,7 @@ namespace ArrivalsUI
         public event PropertyChangedEventHandler? PropertyChanged;
     }
 
-    public class ConnectionViewModel : INotifyPropertyChanged
+    public class ConnectionVM : INotifyPropertyChanged
     {
         public int X0 { get; set; }
         public int X1 { get; set; }
@@ -107,7 +107,7 @@ namespace ArrivalsUI
         public event PropertyChangedEventHandler? PropertyChanged;
     }
 
-    public class Label
+    public class LabelVM
     {
         public string Name => Station.MatchedStop.First().Name;
 

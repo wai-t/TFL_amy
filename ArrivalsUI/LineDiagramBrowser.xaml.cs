@@ -48,7 +48,7 @@ namespace ArrivalsUI
             var textBlock = sender as TextBlock;
             if (textBlock != null)
             {
-                if (textBlock.DataContext is Label label)
+                if (textBlock.DataContext is LabelVM label)
                 {
                     var args = new StationSelectedEventArgs(StationSelectedEvent, label.Station);
                     RaiseEvent(args);

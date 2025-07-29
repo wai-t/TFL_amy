@@ -81,12 +81,12 @@ namespace ArrivalsUI
     {
         public required string Header { get; set; }
 
-        private LineDiagramViewModel? _lineDiagram;
-        public LineDiagramViewModel LineDiagramViewModel {  get 
+        private LineDiagramBrowserVM? _lineDiagram;
+        public LineDiagramBrowserVM LineDiagramViewModel {  get 
             {
                 if (_lineDiagram == null)
                 {
-                    _lineDiagram = new LineDiagramViewModel(Header);
+                    _lineDiagram = new LineDiagramBrowserVM(Header);
                 }
                 return _lineDiagram;
             }
