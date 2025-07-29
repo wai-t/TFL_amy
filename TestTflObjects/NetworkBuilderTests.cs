@@ -91,7 +91,7 @@ namespace TestTflObjects
 
                 var stationNodeDtoList = graph.Construct();
 
-                var geomAnalyser = new GeometryAnalyser(graph.Branches);
+                var geomAnalyser = new GeometryAnalyser(graph.Branches, []);
 
             }
         }

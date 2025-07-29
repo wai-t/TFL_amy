@@ -1,17 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Emit;
 using System.Text;
 using System.Threading.Tasks;
 using System.Transactions;
 using tfl_stats.Tfl;
 using Xunit;
+using static System.Formats.Asn1.AsnWriter;
 
 namespace TflNetworkBuilder
 {
     public class GeometryAnalyser
     {
         List<Branch> _branches;
+        List<StationNode> _stations;
+
         double _meanlat;
         double _meanlon;
         double _latvar;
@@ -23,10 +27,10 @@ namespace TflNetworkBuilder
         double _latscale;
         double _lonscale;
 
-        public GeometryAnalyser(List<Branch> branches) { 
+        public GeometryAnalyser(List<Branch> branches, List<StationNode> stations) { 
             _branches = branches;
+            _stations = stations;
             ComputeMajorAxis();
-            //ComputeBranchTurns();
         }
 
         //
@@ -90,35 +94,122 @@ namespace TflNetworkBuilder
 
         }
 
-        //public void ComputeBranchTurns()
-        //{
-        //    List<(Branch, double)> branches = [];
-        //    foreach (Branch branch in _branches)
-        //    {
-        //        var offset = ComputeBranchOffset(branch);
-        //        branches.Add((branch, offset));
-        //    }
-        //    _orderedBranches = branches.OrderByDescending(p => p.Item2).Select((p,i) => (i,p.Item1)).ToList();
-        //}
-        //public double ComputeBranchOffset(Branch branch)
-        //{
-        //    var firstStop = branch.First.Id;
-        //    var lastStop = branch.Last.Id;
-        //    var sumOffset = 0.0;
-        //    var n = 0;
-        //    foreach (var stopPoint in branch.StopPointSequence.StopPoint)
-        //    {
-        //        var offset = ComputeOffsetFromMedian(stopPoint);
-        //        sumOffset += offset;
-        //        n++;
-        //    }
-        //    var meanOffset = sumOffset / n;
-        //    return meanOffset * _offsetScale;
-        //}
-
-        public double ComputeOffsetFromMedian(MatchedStop stopPoint)
+        private double ComputeOffsetFromMedian(MatchedStop stopPoint)
         {
             return (stopPoint.Lat!.Value - _meanlat) * _latcoeff + (stopPoint.Lon!.Value - _meanlon) * _loncoeff;
         }
+
+        public void BuildConnectionDiagram(IGraphicsClient graphicsOutput)
+        {
+            List<EdgeData>? incoming = null;
+
+            int maxSlot = 0;
+            int rowNo = 0;
+            foreach (var station in _stations.SkipLast(1))
+            {
+                if (incoming == null)
+                {
+                    // the first station will be a START StationNode which is not
+                    // a real station, but it links to the one or more Stations
+                    // at the head of the track. So call BuildEdge to get
+                    // the first set of tracks heading downstream
+                    incoming = [BuildEdge(station)];
+                }
+
+                List<EdgeData> outgoing = [];
+
+                // this will be the slot position of the current station at each iteration.
+                // Use this to identify the slot position at which incoming tracks will
+                // merge to a single slot.
+                int thisStationSlot = -1;
+
+                // Keep count of the current incoming slot
+                int incomingSlot = 0;
+                foreach (var input in incoming)
+                {
+                    foreach (var output in input.Targets)
+                    {
+                        // usually only one Target, unless the input came from a fork at the
+                        // last station
+                        if (output.StationId == station.StationId)
+                        {
+                            if (thisStationSlot == -1)
+                            {
+                                // Find the outgoing slot for the current station so
+                                // that all lines merging will join at the correct slot
+                                thisStationSlot = outgoing.Count;
+                                //
+                                // Any forks in the line are made at a station. So
+                                // BuildEdge will make sure that the EdgeData will have one Target
+                                // for each branch of a fork.
+                                outgoing.Add(BuildEdge(station));
+
+                                // Output the graphic to mark the station on the correct slot
+                                graphicsOutput.AddStopMarker(rowNo, thisStationSlot);
+                            }
+
+                            // tracks coming from START and 
+                            // leading to END are fake, so are not visible.
+                            if (!input.Hide)
+                                graphicsOutput.AddTrackSection(rowNo, incomingSlot, thisStationSlot);
+                        }
+                        else
+                        {
+                            // tracks coming from START and 
+                            // leading to END are fake, so are not visible.
+                            if (!input.Hide && !(output.StationId == "END"))
+                                graphicsOutput.AddTrackSection(rowNo, incomingSlot, outgoing.Count);
+                            outgoing.Add(new EdgeData { Hide = input.Hide || output.StationId == "END", Targets = [output] });
+                        }
+                    }
+                    incomingSlot++;
+                }
+                if (outgoing.Count > maxSlot) maxSlot = outgoing.Count;
+                incoming = outgoing;
+                rowNo++;
+            }
+
+            AddStationLabels(maxSlot, graphicsOutput);
+
+        }
+
+        private EdgeData BuildEdge(StationNode station)
+        {
+            return new EdgeData
+            {
+                Hide = station.StationId == "START",
+                // The Targets are ordered from left to right as seen from the line's main direction. So
+                // a line that is mostly North-South will have the West-most fork on the left and the East-most
+                // fork on the right. This is calculated using ComputeOffsetFromMedian()
+                Targets = station.Next
+                                .OrderByDescending(n =>
+                                    n.StationId == "END" ? int.MaxValue : ComputeOffsetFromMedian(
+                                    n.Station.MatchedStop.First())
+                                ).ToList()
+            };
+        }
+
+        private void AddStationLabels(int left, IGraphicsClient graphicsOutput)
+        {
+            int rowNo = 1;
+            foreach (var station in _stations.Skip(1).SkipLast(1))
+            {
+                graphicsOutput.AddStationName(rowNo, left + 1, station.Station);
+                rowNo++;
+            }
+        }
+
+        private record EdgeData
+        {
+            public required bool Hide { get; set; }
+            public required List<StationNode> Targets { get; set; } = [];
+        }
+    }
+
+    public interface IGraphicsClient
+    {
+        void AddStationName(int rowNo, int colNo, Station station);
+        void AddTrackSection(int rowNo, int colNo, int targetColNo);
+        void AddStopMarker(int rowNo, int colNo);
     }
 }
