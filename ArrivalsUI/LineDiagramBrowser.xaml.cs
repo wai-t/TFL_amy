@@ -12,17 +12,35 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using TflNetworkBuilder;
 
 namespace ArrivalsUI
 {
+    public delegate void StationSelectedHandler(object sender, StationSelectedEventArgs station);
     /// <summary>
     /// Interaction logic for LineDiagramBrowser.xaml
     /// </summary>
     public partial class LineDiagramBrowser : UserControl
     {
+        public static readonly RoutedEvent StationSelectedEvent =
+            EventManager.RegisterRoutedEvent(
+            "StationSelected",
+            RoutingStrategy.Bubble,
+            typeof(StationSelectedHandler),
+            typeof(LineDiagramBrowser));
+
+        public event StationSelectedHandler StationSelected
+        {
+            add { AddHandler(StationSelectedEvent, value); }
+            remove { RemoveHandler(StationSelectedEvent, value); }
+        }        
+
+
         public LineDiagramBrowser()
         {
             InitializeComponent();
+
+
         }
 
         private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -32,9 +50,20 @@ namespace ArrivalsUI
             {
                 if (textBlock.DataContext is Label label)
                 {
-                    label.OnStationSelect?.Invoke(label.Station);
+                    var args = new StationSelectedEventArgs(StationSelectedEvent, label.Station);
+                    RaiseEvent(args);
                 }
             }
+        }
+    }
+    public class StationSelectedEventArgs : RoutedEventArgs
+    {
+        public Station SelectedStation { get; }
+
+        public StationSelectedEventArgs(RoutedEvent routedEvent, Station station)
+            : base(routedEvent)
+        {
+            SelectedStation = station;
         }
     }
 }

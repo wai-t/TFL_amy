@@ -20,7 +20,7 @@ namespace ArrivalsUI
     /// </summary>
     public partial class TabbedLines : Window
     {
-        
+        public TabbedLinesVM ViewModel => (TabbedLinesVM)DataContext;
         public TabbedLines()
         {
             InitializeComponent();
@@ -28,5 +28,10 @@ namespace ArrivalsUI
             DataContext = new TabbedLinesVM();
         }
 
+        public void LineDiagramBrowser_StationSelected(object sender, StationSelectedEventArgs args)
+        {
+            var station = args.SelectedStation as Station;
+            ViewModel.HandleStationSelection(station);
+        }
     }
 }

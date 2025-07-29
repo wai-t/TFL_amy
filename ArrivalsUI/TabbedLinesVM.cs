@@ -38,8 +38,7 @@ namespace ArrivalsUI
             _lines.ForEach(
                 l => Tabs.Add(
                     new TabbedLineVM { 
-                        Header = l,
-                        OnStationSelection = HandleStationSelection
+                        Header = l
                         }
                     )
             );
@@ -82,14 +81,12 @@ namespace ArrivalsUI
     {
         public required string Header { get; set; }
 
-        public Action<Station>? OnStationSelection;
-
         private LineDiagramViewModel? _lineDiagram;
         public LineDiagramViewModel LineDiagramViewModel {  get 
             {
                 if (_lineDiagram == null)
                 {
-                    _lineDiagram = new LineDiagramViewModel(Header, OnStationSelection);
+                    _lineDiagram = new LineDiagramViewModel(Header);
                 }
                 return _lineDiagram;
             }

@@ -30,10 +30,8 @@ namespace ArrivalsUI
 
         readonly List<Branch> _branches;
         readonly List<StationNode> _stations;
-        public LineDiagramViewModel(string line, Action<Station>? stationSelectionHandler)
+        public LineDiagramViewModel(string line)
         {
-            _stationSelectionHandler = stationSelectionHandler;
-
             _line = line;
             var branchesJson = File.ReadAllText($"Data/{_line}-BranchesList.json");
             _branches = JsonConvert.DeserializeObject<List<Branch>>(branchesJson)!.ToList();
@@ -64,7 +62,6 @@ namespace ArrivalsUI
                 X = colNo * GridSize + Left,
                 Y = rowNo * GridSize + Top - 8,
                 Station = station, 
-                OnStationSelect = _stationSelectionHandler
             });
         }
 
@@ -84,7 +81,6 @@ namespace ArrivalsUI
 
         public ObservableCollection<Label> StationNames { get; set; } = [];
 
-        private Action<Station>? _stationSelectionHandler;
         private string _line;
         public string Line { get => _line; set { _line = value; OnPropertyChanged(nameof(Line)); } }
 
@@ -113,9 +109,7 @@ namespace ArrivalsUI
 
     public class Label
     {
-        public Action<Station>? OnStationSelect;
         public string Name => Station.MatchedStop.First().Name;
-
 
         public required Station Station { get; set; }
         public int X { get; set; }

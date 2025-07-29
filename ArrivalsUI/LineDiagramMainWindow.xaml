@@ -21,7 +21,13 @@
             </TabControl.ItemTemplate>
             <TabControl.ContentTemplate>
                 <DataTemplate>
-                    <local:LineDiagramBrowser x:Name="lineDiagram" DataContext="{Binding LineDiagramViewModel}" />
+                    <local:LineDiagramBrowser x:Name="lineDiagram" DataContext="{Binding LineDiagramViewModel}">
+                        <local:LineDiagramBrowser.Style>
+                            <Style TargetType="{x:Type local:LineDiagramBrowser}">
+                                <EventSetter Event="StationSelected" Handler="LineDiagramBrowser_StationSelected"/>
+                            </Style>
+                        </local:LineDiagramBrowser.Style>
+                    </local:LineDiagramBrowser>
                 </DataTemplate>
             </TabControl.ContentTemplate>
         </TabControl>
