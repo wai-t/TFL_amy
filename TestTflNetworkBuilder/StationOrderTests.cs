@@ -27,12 +27,13 @@ namespace TestTflNetworkBuilder
             StationNode first = NewStation("first", nodes);
             AddStationsAfter(first, ["second"], nodes);
 
-
             var stationGraph = StationGraph.StationGraphFromTestData(nodes);
 
             var orderedStations = stationGraph.OrderedNodes.Select(s => s.StationId).ToList();
 
             Assert.Equal(orderedStations, ["START", "first", "second", "END"]);
+
+            AssertOrder(stationGraph.OrderedNodes);
         }
 
         //
@@ -59,6 +60,8 @@ namespace TestTflNetworkBuilder
             // The line forks and the algorithm chooses to append the shorter branch first.
             //
             Assert.Equal(orderedStations, ["START", "first", "fork", "r1", "r2", "l1", "l2", "l3", "END"]);
+
+            AssertOrder(stationGraph.OrderedNodes);
         }
 
         //
@@ -91,6 +94,8 @@ namespace TestTflNetworkBuilder
             // This overrides whatever the earlier fork would have wanted
             //
             Assert.Equal(orderedStations, ["START", "first", "fork", "l1", "l2", "l3", "r1", "r2", "merge", "last","END"]);
+
+            AssertOrder(stationGraph.OrderedNodes);
         }
 
         //
@@ -123,12 +128,70 @@ namespace TestTflNetworkBuilder
             // This overrides whatever the earlier fork would have wanted
             //
             Assert.Equal(orderedStations, ["START", "l1", "l2", "l3", "l4", "r1", "r2", "merge", "last", "END"]);
+
+            AssertOrder(stationGraph.OrderedNodes);
         }
 
+
+        //
+        // l1 -> l2 -> l3 -> ↓
+        // r1 -> r2 ------>merge -> a1 -> a2
+        //                   ↓-> b1 -> b2
         [Fact]
         public void TestMergeAndForkOnTheSameStation()
         {
-                // TODO
+            HashSet<StationNode> nodes = [];
+            var l1 = NewStation("l1", nodes);
+            var left = AddStationsAfter(l1, ["l2", "l3"], nodes).Last();
+            var r1 = NewStation("r1", nodes);
+            var right = AddStationsAfter(r1, ["r2"], nodes).Last();
+
+            // line rejoins at merge
+            var merge = AddStationsAfter(left, ["merge"], nodes).Last();
+            right.AddNext(merge);
+
+            AddStationsAfter(merge, ["a1", "a2"], nodes);
+            AddStationsAfter(merge, ["b1", "b2"], nodes);
+
+            var stationGraph = StationGraph.StationGraphFromTestData(nodes);
+            var orderedStations = stationGraph.OrderedNodes.Select(s => s.StationId).ToList();
+
+            List<string> expected = ["START", "l1", "l2", "l3", "r1", "r2", "merge", "a1", "a2", "b1", "b2", "END"];
+            Assert.Equal(expected, orderedStations);
+
+            AssertOrder(stationGraph.OrderedNodes);
+        }
+
+        [Fact]
+        public void TestTriangularGrid()
+        {
+            var nodes = new HashSet<StationNode>();
+
+            List<StationNode> lastrow = [NewStation("c00", nodes)];
+            for (var row = 1; row < 4; row++)
+            {
+                var l = NewStation($"c{row}0", nodes);
+                var r = Enumerable.Range(0, row).Select(i => $"c{row}{i + 1}").ToList();
+                List<StationNode> thisRow = [l, ..AddStationsAfter(l, r, nodes)];
+
+                for (var col = 0; col < row; col++)
+                {
+                    lastrow[col].AddNext(thisRow[col]);
+                }
+
+                lastrow = thisRow;
+
+            }
+
+            var stationGraph = StationGraph.StationGraphFromTestData(nodes);
+
+            var s = stationGraph.OrderedNodes.Select(s => s.StationId);
+
+            List<string> expected = ["START","c00","c10","c20","c11","c21","c30","c31","c22","c32","c33","END"];
+
+            Assert.Equal(expected, s);
+
+            AssertOrder(stationGraph.OrderedNodes);
         }
 
         //
@@ -138,6 +201,7 @@ namespace TestTflNetworkBuilder
         public void TestMatrix()
         {
             HashSet<StationNode> nodes = [];
+
             StationNode first = NewStation("first", nodes);
             var fork = AddStationsAfter(first, ["fork"], nodes).Last();
             // line splits into two
@@ -173,9 +237,22 @@ namespace TestTflNetworkBuilder
             var orderedStations = stationGraph.OrderedNodes;
             var s = orderedStations.Select(s => s.StationId).ToList();
 
-            Assert.Equal("WHO KNOWS!", "WHO KNOWS!"); // Placeholder assertion, need a piece of paper.
+            List<string> expected = ["START", "first",
+                            "fork","l1","l2","l3","r1","r2","merge","last",
+                            "second-fork","sr1","sr2","sl1","sl2",
+                            "third-fork","tr1","tr2","tl1","tl2",
+                            "fourth-fork","fr1","fr2","fl1","fl2",
+                            "fifth-fork","fifth-r1","fifth-r2","fifth-l1","fifth-l2",
+                            "sixth-fork","sixth-l1","sixth-l2","sixth-r1","sixth-r2","END"];
+            Assert.Equal(expected, s);
 
             // But we can check that no station is above or below its predecessors or successors
+            AssertOrder(orderedStations);
+
+        }
+
+        private static void AssertOrder(List<StationNode> orderedStations)
+        {
             foreach (var station in orderedStations)
             {
                 foreach (var next in station.Next)
@@ -188,8 +265,8 @@ namespace TestTflNetworkBuilder
                     Assert.True(prev.Station.Index < station.Station.Index);
                 }
             }
-
         }
+
         private static StationNode NewStation(string stationName, HashSet<StationNode> nodes)
         {
             var n = new StationNode { Station = new() { StationId = stationName } };
