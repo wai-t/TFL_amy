@@ -4,6 +4,7 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ArrivalsUI"
+             xmlns:map ="clr-namespace:MapControl;assembly=MapControl.WPF"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid>
@@ -11,11 +12,17 @@
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="700"/>
         </Grid.ColumnDefinitions>
-        <Canvas Grid.Column="0">
+        <!--Canvas Grid.Column="0">
             
-        </Canvas>
+        </Canvas-->
+        <map:Map Center="51.5074,-0.1278" ZoomLevel="12">
+            <map:MapTileLayer>
+                <map:MapTileLayer.TileSource>
+                    <map:TileSource UriTemplate="https://tile.openstreetmap.org/{z}/{x}/{y}.png" />
+                </map:MapTileLayer.TileSource>
+            </map:MapTileLayer>
+        </map:Map>
         <local:ArrivalsPanel Grid.Column="1">
-
         </local:ArrivalsPanel>
     </Grid>
 </UserControl>
