@@ -11,7 +11,7 @@ using tfl_stats.Tfl;
 
 namespace ArrivalsUI
 {
-    internal class MainViewModel : INotifyPropertyChanged
+    internal class StationBrowsingVM : INotifyPropertyChanged
     {
         public ICollection<LineStations> TflLines { get; init; }
 
@@ -41,7 +41,7 @@ namespace ArrivalsUI
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
-        public MainViewModel()
+        public StationBrowsingVM()
         {
             TflLines = [.. LoadStationList()];
             Filter = "";

@@ -18,47 +18,29 @@ namespace ArrivalsUI
     /// </summary>
     public partial class MainWindow : Window
     {
-        MainViewModel ViewModel => (MainViewModel)DataContext;
+        Lazy<LineDiagramWindow> _lineDiagramWindow = new Lazy<LineDiagramWindow>(() => new LineDiagramWindow());
+        Lazy<StationBrowsingWindow> _stationBrowsingWindow = new Lazy<StationBrowsingWindow>(() => new StationBrowsingWindow());
+        Lazy<Map> _mapWindow = new Lazy<Map>(() => new Map());
         public MainWindow()
         {
             InitializeComponent();
 
-            DataContext = new MainViewModel();
-
+            MainContent.Content = _lineDiagramWindow.Value;
         }
 
-        private async void TreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
+        private void LineDiagrams_Click(object sender, RoutedEventArgs e)
         {
-            if (e.NewValue is OrderedStation station)
-            {
-                ViewModel.SelectedStation = station;
-
-                var line = ViewModel.StationLineLookup[station.Id];
-
-                await RefreshPredictions(station, line);
-
-            }
-
+            MainContent.Content = _lineDiagramWindow.Value;
         }
 
-        private async Task RefreshPredictions(OrderedStation station, string line)
+        private void BrowseStationArrivals_Click(object sender, RoutedEventArgs e)
         {
-            var predictions = await ApiClient.LineClient.ArrivalsAsync([line], station.Id, null, null);
-
-            ViewModel.UpdatePredictions(predictions);
+            MainContent.Content = _stationBrowsingWindow.Value;
         }
 
-        private async void Window_KeyDown(object sender, KeyEventArgs e)
+        private void Map_Click(object sender, RoutedEventArgs e)
         {
-            if (e.Key == Key.F5)
-            {
-                e.Handled = true;
-                if (ViewModel.SelectedStation != null)
-                {
-                    await RefreshPredictions(ViewModel.SelectedStation, ViewModel.StationLineLookup[ViewModel.SelectedStation.Id]);
-                }
-            }
+            MainContent.Content = _mapWindow.Value;
         }
-
     }
 }

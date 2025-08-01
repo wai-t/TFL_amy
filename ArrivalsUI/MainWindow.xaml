@@ -5,89 +5,16 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ArrivalsUI"
         mc:Ignorable="d"
-        KeyDown="Window_KeyDown"
         Title="MainWindow" Height="816" Width="1280">
+    <DockPanel>
+        <Menu x:Name="menu" DockPanel.Dock="Top">
+            <MenuItem Header="Browse Stations" x:Name="BrowseStationArrivals" Click="BrowseStationArrivals_Click"/>
+            <MenuItem Header="Line Diagrams" x:Name="LineDiagrams" Click="LineDiagrams_Click"/>
+            <MenuItem Header="Map" x:Name="Map" Click="Map_Click"/>
 
-    <Window.Resources>
-        <local:TimeConverter x:Key="TimeConverter" />
-    </Window.Resources>
+        </Menu>
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="3*"/>
-            <ColumnDefinition Width="7*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-        </Grid.RowDefinitions>
+        <ContentControl x:Name="MainContent" />
 
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="20px" />
-                <RowDefinition Height="*" />
-            </Grid.RowDefinitions>
-            <ComboBox x:Name="Filter" Grid.Row="0" IsEditable="True"/>
-            <TreeView x:Name="StationBrowser" 
-                      SelectedItemChanged="TreeView_SelectedItemChanged"
-                  ItemsSource="{Binding FilteredTflLines}" Grid.Column="0" Grid.Row="1">
-                <TreeView.ItemTemplate>
-                    <HierarchicalDataTemplate ItemsSource="{Binding Stations}">
-                        <TextBlock Text="{Binding Line}" FontSize="18" />
-                        <HierarchicalDataTemplate.ItemTemplate>
-                            <DataTemplate>
-                                <TextBlock Text="{Binding Name}" FontSize="16" />
-                            </DataTemplate>
-                        </HierarchicalDataTemplate.ItemTemplate>
-                    </HierarchicalDataTemplate>
-                </TreeView.ItemTemplate>
-            </TreeView>
-
-
-        </Grid>
-
-        <local:ArrivalsPanel Arrivals="{Binding Arrivals}"  Grid.Column="1" Grid.Row="0">
-            
-        </local:ArrivalsPanel>
-        <!--
-        <ScrollViewer VerticalScrollBarVisibility="Auto"  Grid.Column="1" Grid.Row="0">
-            <ItemsControl x:Name="ArrivalsView" Background="Black"
-                      ItemsSource="{Binding Arrivals}" Grid.Column="1" Grid.Row="0">
-                <ItemsControl.ItemTemplate>
-                    <DataTemplate>
-                        <GroupBox Header="{Binding PlatformName}" Margin="5"
-                               Foreground="White" BorderBrush="DarkGray" FontWeight="Bold">
-                            <ItemsControl ItemsSource="{Binding Predictions}">
-                                <ItemsControl.ItemTemplate>
-                                    <DataTemplate>
-                                        <Grid Margin="2">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="*" />
-                                                <ColumnDefinition Width="Auto" />
-                                            </Grid.ColumnDefinitions>
-
-                                            <TextBlock Text="{Binding DestinationName}" Grid.Column="0" Grid.Row="0"
-                                                   FontFamily="Consolas" FontSize="16" FontWeight="Bold"
-                                                   Foreground="#FFFF00"/>
-                                            <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" Margin="2"
-                                                    Grid.Column="1" Grid.Row="0">
-                                                <TextBlock Text="{Binding TimeToStation, Converter={StaticResource TimeConverter}}" 
-                                                   FontFamily="Consolas" FontSize="16" FontWeight="Bold" Foreground="#FFFF00" />
-                                                <TextBlock Text=" min"  
-                                                   FontFamily="Consolas" FontSize="16" FontWeight="Bold" Foreground="#FFFF00"/>
-                                            </StackPanel>
-                                        </Grid>
-                                    </DataTemplate>
-                                </ItemsControl.ItemTemplate>
-                            </ItemsControl>
-                        </GroupBox>
-                    </DataTemplate>
-                </ItemsControl.ItemTemplate>
-            </ItemsControl>
-
-        </ScrollViewer>
--->
-    </Grid>
+    </DockPanel>
 </Window>

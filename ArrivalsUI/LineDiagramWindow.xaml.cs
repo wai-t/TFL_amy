@@ -10,21 +10,21 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
 using System.Windows.Shapes;
 using TflNetworkBuilder;
 
 namespace ArrivalsUI
 {
     /// <summary>
-    /// Interaction logic for ArrivalsMainWindow.xaml
+    /// Interaction logic for LineDiagramWindow.xaml
     /// </summary>
-    public partial class ArrivalsMainWindow : Window
+    public partial class LineDiagramWindow : UserControl
     {
         public TabbedLinesVM ViewModel => (TabbedLinesVM)DataContext;
-        public ArrivalsMainWindow()
+        public LineDiagramWindow()
         {
             InitializeComponent();
-
             DataContext = new TabbedLinesVM();
         }
 
