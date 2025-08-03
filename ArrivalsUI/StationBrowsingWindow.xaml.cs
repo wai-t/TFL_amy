@@ -1,6 +1,7 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
+using TflNetworkBuilder;
 
 namespace ArrivalsUI
 {
@@ -18,23 +19,16 @@ namespace ArrivalsUI
 
         private async void TreeView_SelectedItemChanged(object sender, RoutedPropertyChangedEventArgs<object> e)
         {
-            if (e.NewValue is OrderedStation station)
+            if (e.NewValue is StationNode station)
             {
                 ViewModel.SelectedStation = station;
 
-                var line = ViewModel.StationLineLookup[station.Id];
+                var lines = ViewModel.StationLineLookup[station.StationId];
 
-                await RefreshPredictions(station, line);
+                await ViewModel.HandleSelection(station, lines);
 
             }
 
-        }
-
-        private async Task RefreshPredictions(OrderedStation station, string line)
-        {
-            var predictions = await ApiClient.LineClient.ArrivalsAsync([line], station.Id, null, null);
-
-            ViewModel.UpdatePredictions(predictions);
         }
 
         private async void Window_KeyDown(object sender, KeyEventArgs e)
@@ -44,7 +38,7 @@ namespace ArrivalsUI
                 e.Handled = true;
                 if (ViewModel.SelectedStation != null)
                 {
-                    await RefreshPredictions(ViewModel.SelectedStation, ViewModel.StationLineLookup[ViewModel.SelectedStation.Id]);
+                    await ViewModel.HandleSelection(ViewModel.SelectedStation, ViewModel.StationLineLookup[ViewModel.SelectedStation.Station.MatchedStop.First().Id]);
                 }
             }
         }

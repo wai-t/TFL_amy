@@ -27,7 +27,7 @@ namespace TestTflNetworkBuilder
             StationNode first = NewStation("first", nodes);
             AddStationsAfter(first, ["second"], nodes);
 
-            var stationGraph = StationGraph.StationGraphFromTestData(nodes);
+            var stationGraph = LineGraph.StationGraphFromTestData(nodes);
 
             var orderedStations = stationGraph.OrderedNodes.Select(s => s.StationId).ToList();
 
@@ -52,7 +52,7 @@ namespace TestTflNetworkBuilder
             var right = AddStationsAfter(fork, ["r1", "r2"], nodes).Last();
 
 
-            var stationGraph = StationGraph.StationGraphFromTestData(nodes);
+            var stationGraph = LineGraph.StationGraphFromTestData(nodes);
 
             var orderedStations = stationGraph.OrderedNodes.Select(s => s.StationId).ToList();
 
@@ -85,7 +85,7 @@ namespace TestTflNetworkBuilder
 
             AddStationsAfter(merge, ["last"], nodes);
 
-            var stationGraph = StationGraph.StationGraphFromTestData(nodes);
+            var stationGraph = LineGraph.StationGraphFromTestData(nodes);
 
             var orderedStations = stationGraph.OrderedNodes.Select(s => s.StationId).ToList();
 
@@ -119,7 +119,7 @@ namespace TestTflNetworkBuilder
 
             AddStationsAfter(merge, ["last"], nodes);
 
-            var stationGraph = StationGraph.StationGraphFromTestData(nodes);
+            var stationGraph = LineGraph.StationGraphFromTestData(nodes);
 
             var orderedStations = stationGraph.OrderedNodes.Select(s => s.StationId).ToList();
 
@@ -153,7 +153,7 @@ namespace TestTflNetworkBuilder
             AddStationsAfter(merge, ["a1", "a2"], nodes);
             AddStationsAfter(merge, ["b1", "b2"], nodes);
 
-            var stationGraph = StationGraph.StationGraphFromTestData(nodes);
+            var stationGraph = LineGraph.StationGraphFromTestData(nodes);
             var orderedStations = stationGraph.OrderedNodes.Select(s => s.StationId).ToList();
 
             List<string> expected = ["START", "l1", "l2", "l3", "r1", "r2", "merge", "a1", "a2", "b1", "b2", "END"];
@@ -183,7 +183,7 @@ namespace TestTflNetworkBuilder
 
             }
 
-            var stationGraph = StationGraph.StationGraphFromTestData(nodes);
+            var stationGraph = LineGraph.StationGraphFromTestData(nodes);
 
             var s = stationGraph.OrderedNodes.Select(s => s.StationId);
 
@@ -232,7 +232,7 @@ namespace TestTflNetworkBuilder
             var sixthLeft = AddStationsAfter(sixthFork, ["sixth-l1", "sixth-l2"], nodes).Last();
             var sixthRight = AddStationsAfter(sixthFork, ["sixth-r1", "sixth-r2"], nodes).Last();
 
-            var stationGraph = StationGraph.StationGraphFromTestData(nodes);
+            var stationGraph = LineGraph.StationGraphFromTestData(nodes);
 
             var orderedStations = stationGraph.OrderedNodes;
             var s = orderedStations.Select(s => s.StationId).ToList();

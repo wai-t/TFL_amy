@@ -1,13 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.IO;
-using System.Linq;
 using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
-using tfl_stats.Tfl;
+using TflNetworkBuilder;
 
 namespace ArrivalsUI
 {
@@ -15,7 +9,7 @@ namespace ArrivalsUI
     {
         public ICollection<LineStations> TflLines { get; init; }
 
-        public OrderedStation? SelectedStation { get; set; }
+        public StationNode? SelectedStation { get; set; }
 
         public string? Filter { get; set; } = "";
 
@@ -37,7 +31,7 @@ namespace ArrivalsUI
 
         public ObservableCollection<PlatformArrivals> Arrivals { get; set; }
 
-        public readonly Dictionary<string, string> StationLineLookup = new Dictionary<string, string>();
+        public readonly Dictionary<string, List<string>> StationLineLookup = [];
 
         public event PropertyChangedEventHandler? PropertyChanged;
 
@@ -51,7 +45,11 @@ namespace ArrivalsUI
             {
                 foreach (var station in line.Stations)
                 {
-                    StationLineLookup[station.Id] = line.Line;
+                    if (!StationLineLookup.ContainsKey(station.StationId))
+                    {
+                        StationLineLookup[station.StationId] = new List<string>();
+                    }
+                    StationLineLookup[station.StationId].Add(line.Line);
                 }
             }
 
@@ -59,32 +57,19 @@ namespace ArrivalsUI
         }
         private static List<LineStations> LoadStationList()
         {
-            var stationsData = File.ReadAllText("IndexedStops.json");
-
-            return Newtonsoft.Json.JsonConvert.DeserializeObject<List<LineStations>>(stationsData)!;
-
+            var networkGraph = new NetworkGraph(MetaData.Lines);
+            return networkGraph.BuildLineStations();
         }
 
-        internal void UpdatePredictions(ICollection<Prediction> predictions)
+        internal async Task HandleSelection(StationNode station, List<string> lines)
         {
+            var arrivals = await PlatformArrivalsClient.GetArrivalsAsync(station.Station.MatchedStop.Select(s => s.Id).ToList(), lines);
             Arrivals.Clear();
-            Dictionary<string, IList<Prediction>> platformArrivals = [];
-
-            foreach (var prediction in predictions)
+            foreach (var arrival in arrivals)
             {
-                if (!platformArrivals.TryGetValue(prediction.PlatformName, out var platformList))
-                {
-                    platformList = new List<Prediction>();
-                    platformArrivals[prediction.PlatformName] = platformList;
-                }
-                platformList.Add(prediction);
-            }
-
-            foreach (var platform in platformArrivals)
-            {
-                Arrivals.Add(new PlatformArrivals(platform.Key, 
-                    new ObservableCollection<Prediction>(platform.Value.OrderBy(p => p.TimeToStation))));
+                Arrivals.Add(arrival);
             }
         }
+
     }
 }

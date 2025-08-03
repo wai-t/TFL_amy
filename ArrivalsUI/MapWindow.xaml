@@ -10,7 +10,7 @@
 
     <UserControl.Resources>
         <ResourceDictionary>
-            <DataTemplate DataType="{x:Type local:PolylineItem}">
+            <DataTemplate DataType="{x:Type local:SequenceItem}">
                 <map:MapPolyline Locations="{Binding Locations}" Stroke="{Binding Brush}" StrokeThickness="3"/>
             </DataTemplate>
 
@@ -75,7 +75,7 @@
                     </map:MapTileLayer.TileSource>
                 </map:MapTileLayer>
 
-                <map:MapItemsControl ItemsSource="{Binding PolylineItems}"/>
+                <map:MapItemsControl ItemsSource="{Binding Sequences}"/>
                 <map:MapItemsControl ItemsSource="{Binding StopPoints}" ItemContainerStyle="{StaticResource StopPointStyle}"/>
             </map:Map>
 

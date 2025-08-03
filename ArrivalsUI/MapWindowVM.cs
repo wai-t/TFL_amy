@@ -1,109 +1,76 @@
 ﻿using MapControl;
-using Newtonsoft.Json;
 using System.Collections.ObjectModel;
-using System.IO;
 using System.Windows.Media;
-using tfl_stats.Tfl;
 using TflNetworkBuilder;
 
 namespace ArrivalsUI
 {
-    public class MapWindowVM
+    public class MapWindowVM : IMapClient
     {
-        private List<string> _lines = [
-            "bakerloo",
-            "central",
-            "circle",
-            "district",
-            "dlr",
-            "elizabeth",
-            "hammersmith-city",
-            "jubilee",
-            "metropolitan",
-            "northern",
-            "piccadilly",
-            "victoria",
-            "waterloo-city",
-        ];
-        HashSet<StationLink> _links = [];
 
-        List<StopPointSequence> _sequences = [];
         Dictionary<string, StopPointItem> _stopPoints = [];
+        Dictionary<string, List<string>> _stationStopPoints = [];
         public MapWindowVM()
         {
+            var mapBuilder = new MapBuilder(MetaData.Lines);
+            mapBuilder.BuildMap(this);
 
-            foreach (var line in _lines)
+            foreach (var stopPoint in mapBuilder.StopPoints)
             {
-                var links = File.ReadAllText($"Data/{line}-StationLinks.json");
-                var linkList = JsonConvert.DeserializeObject<List<StationLink>>(links)!;
-                foreach (var link in linkList)
+                var stationId = stopPoint.ParentId ?? stopPoint.Id;
+                if (!_stationStopPoints.ContainsKey(stationId))
                 {
-                    // Add the link to the set, which will ensure uniqueness (by line)
-                    _links.Add(link);
+                    _stationStopPoints[stationId] = [];
                 }
-
-                var branches = File.ReadAllText($"Data/{line}-BranchesList.json");
-                var branchList = JsonConvert.DeserializeObject<List<Branch>>(branches)!;
-                foreach (var branch in branchList)
-                {
-                    _sequences.Add(branch.StopPointSequence);
-                    foreach (var stop in branch.StopPointSequence.StopPoint)
-                    {
-                        if (!_stopPoints.ContainsKey(stop.Id))
-                        {
-                            _stopPoints[stop.Id] = new StopPointItem
-                            {
-                                Id = stop.Id,
-                                Name = stop.Name,
-                                Location = new Location(stop.Lat!.Value, stop.Lon!.Value)
-                            };
-                        }
-                        if (!_stopPoints[stop.Id].Lines.Contains(line))
-                        {
-                            _stopPoints[stop.Id].Lines.Add(line);
-                        }
-                    }
-                    PolylineItems.Add(new PolylineItem
-                    {
-                        Line = line,
-                        Locations = new LocationCollection(branch.StopPointSequence.StopPoint.Select(sp => _stopPoints[sp.Id].Location))
-                    });
-                }
+                _stationStopPoints[stationId].Add(stopPoint.Id);
             }
         }
-        public async void HandleStationSelection(string stopPointId, List<string> lines)
+
+
+        public async Task HandleStationSelection(StopPointItem stopPointVM)
         {
-            var predictions = await ApiClient.LineClient.ArrivalsAsync(lines, stopPointId, null, null);
-            UpdatePredictions(predictions);
-        }
-        internal void UpdatePredictions(ICollection<Prediction> predictions)
-        {
+            var stationId = _stationStopPoints.Where(kvp => kvp.Value.Contains(stopPointVM.Id)).Select(kvp => kvp.Key).FirstOrDefault()!;
+            var arrivals = await PlatformArrivalsClient.GetArrivalsAsync(_stationStopPoints[stationId], stopPointVM.Lines);
             Arrivals.Clear();
-            Dictionary<string, IList<Prediction>> platformArrivals = [];
-
-            foreach (var prediction in predictions)
+            foreach (var arrival in arrivals)
             {
-                var key = $"{prediction.LineId.ToUpper()}-{prediction.PlatformName}";
-                if (!platformArrivals.TryGetValue(key, out var platformList))
-                {
-                    platformList = new List<Prediction>();
-                    platformArrivals[key] = platformList;
-                }
-                platformList.Add(prediction);
-            }
-
-            foreach (var platform in platformArrivals)
-            {
-                Arrivals.Add(new PlatformArrivals(platform.Key,
-                    new ObservableCollection<Prediction>(platform.Value.OrderBy(p => p.TimeToStation))));
+                Arrivals.Add(arrival);
             }
         }
 
-        public Dictionary<string, List<StationLink>> Lines => _links.GroupBy(l => l.LineId)
-            .ToDictionary(g => g.Key, g => g.ToList());
+        public void AddStopPoint(string label, string id, double lat, double lon, IEnumerable<string> lines)
+        {
+            if (!_stopPoints.ContainsKey(id))
+            {
+                // If the stop point does not exist, create a new one
+                _stopPoints[id] = new StopPointItem
+                {
+                    Id = id,
+                    Name = label,
+                    Lat = lat,
+                    Lon = lon,
+                    Lines = lines.ToList()
+                };
+            }
+            else if (lines.Except(_stopPoints[id].Lines).Any())
+            {
+                // should never happen
+                _stopPoints[id].Lines.AddRange(lines.Except(_stopPoints[id].Lines));
+                throw new Exception($"Stop point {id} already exists but with different lines. Existing: {string.Join(", ", _stopPoints[id].Lines)}, New: {string.Join(", ", lines)}");
+            }
+        }
 
+        public void AddSequence(string line, IEnumerable<(double, double)> points)
+        {
+            var locations = points.Select(p => new Location(p.Item1, p.Item2)).ToList();
+            Sequences.Add(new SequenceItem
+            {
+                Line = line,
+                Locations = new LocationCollection(locations)
+            });
+        }
 
-        public ObservableCollection<PolylineItem> PolylineItems { get; set; } = [];
+        public ObservableCollection<SequenceItem> Sequences { get; set; } = [];
 
         public List<StopPointItem> StopPoints => _stopPoints.Values.ToList();
 
@@ -111,11 +78,11 @@ namespace ArrivalsUI
 
     }
 
-    public class PolylineItem
+    public class SequenceItem
     {
         public required string Line { get; set; }
 
-        public SolidColorBrush Brush => LineColours.LineBrush(Line);
+        public SolidColorBrush Brush => new SolidColorBrush(MetaData.LinesAndColours[Line]);
         public required LocationCollection Locations { get; set; }
     }
 
@@ -123,9 +90,12 @@ namespace ArrivalsUI
     {
         public required string Id { get; set; }
         public required string Name { get; set; }
-        public List<string> Lines { get; } = [];
-        public required Location Location { get; set; }
+        public List<string> Lines { get; set; } = [];
 
+        public double Lat { get; set; }
+        public double Lon { get; set; }
+
+        public Location Location => new(Lat, Lon);
         public string Label => Name + "\n" + string.Join("\n", Lines);
     }
 }

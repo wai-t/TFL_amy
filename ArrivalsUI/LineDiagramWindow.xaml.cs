@@ -15,10 +15,10 @@ namespace ArrivalsUI
             DataContext = new LineDiagramVM();
         }
 
-        public void LineDiagramBrowser_StationSelected(object sender, StationSelectedEventArgs args)
+        public async void LineDiagramBrowser_StationSelected(object sender, StationSelectedEventArgs args)
         {
             var station = args.SelectedStation as Station;
-            ViewModel.HandleStationSelection(station);
+            await ViewModel.HandleStationSelection(station);
         }
     }
 }

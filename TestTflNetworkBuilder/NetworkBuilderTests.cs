@@ -49,15 +49,15 @@ namespace TestTflNetworkBuilder
                 // StopPoint contains the list of the stations on the given line in order
                 var lineData = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
 
-                StationGraph graph = new(lineData);
+                LineGraph graph = new(lineData);
 
-                var stationNodeDtoList = graph.OrderedNodes.Select(s => s.ToDto());
+                var stationNodeDtoList = graph.OrderedNodes.Where(n => n.StationId!="START" && n.StationId!="END").Select(s => s.ToDto());
 
                 TestUtils.SaveTestOutput($"{line}-StationNodeDtoList.json", JsonConvert.SerializeObject(stationNodeDtoList, Formatting.Indented));
 
                 TestUtils.SaveTestOutput($"{line}-BranchesList.json", JsonConvert.SerializeObject(graph.Branches, Formatting.Indented));
 
-                TestUtils.SaveTestOutput($"{line}-StationLinks.json", JsonConvert.SerializeObject(graph.StationLinks, Formatting.Indented));
+                //TestUtils.SaveTestOutput($"{line}-StationLinks.json", JsonConvert.SerializeObject(graph.StationLinks, Formatting.Indented));
             }
         }
         [Fact]
@@ -71,13 +71,21 @@ namespace TestTflNetworkBuilder
                 // StopPoint contains the list of the stations on the given line in order
                 var lineData = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
 
-                StationGraph graph = new(lineData);
+                LineGraph graph = new(lineData);
 
                 var stationNodeDtoList = graph.OrderedNodes;
 
-                var geomAnalyser = new GeometryAnalyser(graph.Branches, []);
+                //var geomAnalyser = new GeometryAnalyser(graph.Branches, []);
+                var geomAnalyser = new GeometryAnalyser(line);
 
             }
+        }
+
+        [Fact]
+        public async void TestNetworkGraph()
+        {
+            var networkGraph = new NetworkGraph(lines.Select(l => l.Item1).ToList());
+            var lineStations = networkGraph.BuildLineStations();
         }
     }
 }

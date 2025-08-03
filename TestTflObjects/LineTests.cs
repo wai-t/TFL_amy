@@ -97,23 +97,14 @@ namespace TestTflObjects
         }
 
         [Fact]
+        [Trait("Category", "Metadata Generation")]
         public async void RouteSequenceAsync()
         {
             foreach (var (line, dir) in lines)
             {
                 // StopPoint contains the list of the stations on the given line in order
                 var ret = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
-                var stops = ret.StopPointSequences
-                    .Select(seq => new
-                    {
-                        seq.ServiceType,
-                        seq.BranchId,
-                        seq.PrevBranchIds,
-                        seq.NextBranchIds,
-                        seq.Direction,
-                        StopPoints = seq.StopPoint.Select(sp => new { sp.Id, sp.Name })
-                    });
-                var json = JsonConvert.SerializeObject(stops, Formatting.Indented);
+                var json = JsonConvert.SerializeObject(ret, Formatting.Indented);
                 SaveTestOutput($"{line}-RouteSequence.json", json);
             }
         }
@@ -209,77 +200,9 @@ namespace TestTflObjects
 
                 SaveTestOutput($"{line}-StationsAnalysis.json", json);
 
-                Queue<Station> indexedStations = [];
-
-                while (orderedStations.Count > 0)
-                {
-                    var stationBatch = orderedStations.TakeWhile(s => s.BranchIds.Count == 1).ToList();
-                    if (stationBatch.Count() > 0)
-                    {
-                        var grouping = stationBatch
-                            .GroupBy(s => s.BranchIds[0])
-                            .OrderByDescending(g => g.Count())
-                            .SelectMany(g => g.ToList());
-                        foreach (var station in grouping)
-                        {
-                            indexedStations.Enqueue(station);
-                        }
-                    }
-                    else
-                    {
-                        indexedStations.Enqueue(orderedStations.Take(1).First());
-                    }
-                }
             }
         }
 
-
-        [Fact]
-        public async void BranchAnalysisAsync2()
-        {
-            //foreach (var (line, dir) in lines)
-                var line = "elizabeth";
-            //var line = "dlr";
-            var dir = Direction.Inbound;
-            {
-                // StopPoint contains the list of the stations on the given line in order
-                var lineData = await _client.RouteSequenceAsync(line, dir, [Anonymous6.Regular], null);
-
-                StationGraph graph = new(lineData);
-
-                var orderedStationList = graph.OrderedNodes;
-
-                SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(orderedStationList, Formatting.Indented));
-
-                var testResult = orderedStationList.Select(s => new
-                {
-                    s.Station.StationId,
-                    StopPoints = s.Station.MatchedStop.Select(ms=> new
-                    {
-                        ms.Name,
-                        ms.Id
-                    })
-                });
-
-                var lineOutput = graph.LinearOutput();
-
-                //SaveTestOutput($"{line}-NodeAnalysis.json", JsonConvert.SerializeObject(graph.DumpNodes(), Formatting.Indented));
-                //
-                // Check that the Nodes have been built correctly
-                //
-                TestUtils.VerifyTestOutput($"{line}-NodeAnalysis.json", JsonConvert.SerializeObject(graph.DumpNodes(), Formatting.Indented));
-
-
-                 //SaveTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(testResult, Formatting.Indented));
-                //
-                // Check that the order of the Nodes has been built correctly
-                //
-                //TestUtils.VerifyTestOutput($"{line}-OrderedStationList.json", JsonConvert.SerializeObject(testResult, Formatting.Indented));
-
-
-                SaveTestOutput($"{line}-Branches.json", JsonConvert.SerializeObject(graph.Branches, Formatting.Indented));
-            }
-        }
 
         [Fact]
         public async void ArrivalsAsync()

@@ -1,5 +1,4 @@
 ﻿using System.Collections.ObjectModel;
-using tfl_stats.Tfl;
 using TflNetworkBuilder;
 
 namespace ArrivalsUI
@@ -11,25 +10,9 @@ namespace ArrivalsUI
 
         public ObservableCollection<PlatformArrivals> Arrivals { get; set; } = [];
 
-        private List<string> _lines =  [
-            "bakerloo",
-            "central",
-            "circle",
-            "district",
-            "dlr",
-            "elizabeth",
-            "hammersmith-city",
-            "jubilee",
-            "metropolitan",
-            "northern",
-            "piccadilly",
-            "victoria",
-            "waterloo-city",
-        ];
-
-        public LineDiagramVM() 
+        public LineDiagramVM()
         {
-            _lines.ForEach(
+            MetaData.Lines.ForEach(
                 l => Tabs.Add(
                     new LineDiagramTabVM(l)
                 )
@@ -37,32 +20,14 @@ namespace ArrivalsUI
             SelectedTab = Tabs[0];
         }
 
-        public async void HandleStationSelection(Station station)
+        public async Task HandleStationSelection(Station station)
         {
             var line = SelectedTab.Header;
-            var stopPoint = station.MatchedStop.Where(m => m.Lines.Select(l => l.Id).Contains(line)).First();
-            var predictions = await ApiClient.LineClient.ArrivalsAsync([line], stopPoint.Id, null, null);
-            UpdatePredictions(predictions);
-        }
-        internal void UpdatePredictions(ICollection<Prediction> predictions)
-        {
+            var arrivals = await PlatformArrivalsClient.GetArrivalsAsync(station.MatchedStop.Select(m => m.Id).ToList(), [line]);
             Arrivals.Clear();
-            Dictionary<string, IList<Prediction>> platformArrivals = [];
-
-            foreach (var prediction in predictions)
+            foreach (var arrival in arrivals)
             {
-                if (!platformArrivals.TryGetValue(prediction.PlatformName, out var platformList))
-                {
-                    platformList = new List<Prediction>();
-                    platformArrivals[prediction.PlatformName] = platformList;
-                }
-                platformList.Add(prediction);
-            }
-
-            foreach (var platform in platformArrivals)
-            {
-                Arrivals.Add(new PlatformArrivals(platform.Key,
-                    new ObservableCollection<Prediction>(platform.Value.OrderBy(p => p.TimeToStation))));
+                Arrivals.Add(arrival);
             }
         }
     }
@@ -76,7 +41,7 @@ namespace ArrivalsUI
         public LineDiagramTabVM(string header)
         {
             Header = header;
-            _lineDiagram 
+            _lineDiagram
                 = new Lazy<LineDiagramBrowserVM>(() => new LineDiagramBrowserVM(Header));
         }
         public LineDiagramBrowserVM LineDiagramViewModel

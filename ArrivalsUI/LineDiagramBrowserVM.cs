@@ -1,21 +1,10 @@
-﻿using Newtonsoft.Json;
-using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
+﻿using System.Collections.ObjectModel;
 using System.ComponentModel;
-using System.IO;
-using System.Linq;
-using System.Reflection.Emit;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows.Controls;
-using System.Windows.Markup;
-using System.Windows.Media;
 using TflNetworkBuilder;
 
 namespace ArrivalsUI
 {
-    public class LineDiagramBrowserVM : INotifyPropertyChanged, IGraphicsClient
+    public class LineDiagramBrowserVM : INotifyPropertyChanged, ILineDiagramClient
     {
         public event PropertyChangedEventHandler? PropertyChanged;
         protected void OnPropertyChanged(string propertyName)
@@ -27,24 +16,15 @@ namespace ArrivalsUI
         const int Left = 12;     // Leave some empty space on the left
         const int Top = 12;      // Leave some empty space on the right
 
-        readonly List<Branch> _branches;
-        readonly List<StationNode> _stations;
         public LineDiagramBrowserVM(string line)
         {
             _line = line;
-            var branchesJson = File.ReadAllText($"Data/{_line}-BranchesList.json");
-            _branches = JsonConvert.DeserializeObject<List<Branch>>(branchesJson)!.ToList();
-
-            var stationsJson = File.ReadAllText($"Data/{_line}-StationNodeDtoList.json");
-            var dtoList = JsonConvert.DeserializeObject<List<StationNodeDto>>(stationsJson)!;
-            _stations = dtoList.FromDtoList();
-
-            var geometry = new GeometryAnalyser(_branches, _stations);
-            geometry.BuildConnectionDiagram(this);
+            var geometry = new GeometryAnalyser(line);
+            geometry.BuildLineDiagram(this);
         }
 
-        // Interface implementation of IGraphicsClient methods
-        // These are called by GeomentryAnalyser.BuildConnectionDiagram to tell us
+        // Interface implementation of ILineDiagramClient methods
+        // These are called by GeomentryAnalyser.BuildLineDiagram to tell us
         // where to draw a station marker, the station name, and a piece of railway line
         public void AddStopMarker(int rowNo, int colNo)
         {
@@ -60,7 +40,7 @@ namespace ArrivalsUI
             {
                 X = colNo * GridSize + Left,
                 Y = rowNo * GridSize + Top - 8,
-                Station = station, 
+                Station = station,
             });
         }
 
@@ -70,7 +50,7 @@ namespace ArrivalsUI
             {
                 X0 = colNo * GridSize + Left,
                 Y0 = (rowNo - 1) * GridSize + Top,
-                X1 = targetColNo * GridSize +Left,
+                X1 = targetColNo * GridSize + Left,
                 Y1 = rowNo * GridSize + Top,
             });
         }

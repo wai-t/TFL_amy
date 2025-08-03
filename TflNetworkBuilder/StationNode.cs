@@ -8,6 +8,8 @@ namespace TflNetworkBuilder
     public class StationNode
     {
         public string StationId { get => Station.StationId; set { } }
+
+        public string Name => string.Join("/",Station.MatchedStop.Select(m => m.Name));
         public required Station Station { get; init; }
         [JsonIgnore]
         public List<StationNode> Next { get; set; } = [];

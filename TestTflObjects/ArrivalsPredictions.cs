@@ -3,6 +3,7 @@ using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 using tfl_stats.Tfl;
@@ -23,39 +24,7 @@ namespace TestTflObjects
             _lineClient = new LineClient(_httpClientFactory.CreateClient());
         }
 
-        //
-        // a route is a list of stations visited on a line. Each line can have many routes
-        [Fact]
-        public async Task TestBuildIndexedStops()
-        {
-            var lines = (await _lineClient.GetByModeAsync(["tube", "dlr", "elizabeth-line"]))
-                .Select(l => l.Id).ToList();
-
-            List<Task<(string, IEnumerable<OrderedStation>)>> tasks = [];
-            foreach (var line in lines)
-            {
-                tasks.Add( Task.Run(async () => (line, await ExperimentalArrivals.BuildIndexedStopsForLineAsync(line, _lineClient))) );
-            }
-
-            var lineStationLists = await Task.WhenAll([.. tasks]);
-
-            foreach (var (line, stations) in lineStationLists)
-            {
-                SaveTestOutput($"IndexedStops-{line}.json", JsonConvert.SerializeObject(stations, Formatting.Indented));
-            }
-
-        }
-
-        [Fact]
-        public async void TestBuildIndexedStopsForLine()
-        {
-            var line = "elizabeth";
-            var r = await _lineClient.RouteSequenceAsync(line, Direction.Inbound, [Anonymous6.Regular], null);
-            var stopPointSequences = r.StopPointSequences;
-            SaveTestOutput($"StopPointSequences-{line}.json", JsonConvert.SerializeObject(stopPointSequences, Formatting.Indented));
-        }
-
-        [Fact]
+        [Fact(Skip ="This test overloads the TfL server and returns HTTP 429 errors frequently")]
         public async Task TestGenerateArrivalPredictions()
         {
             var lines = (await _lineClient.GetByModeAsync(["tube", "dlr", "elizabeth-line"]))

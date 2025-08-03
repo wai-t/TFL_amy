@@ -1,4 +1,4 @@
-using System.Text.Json.Serialization;
+using Newtonsoft.Json;
 using tfl_stats.Tfl;
 #pragma warning disable CA1860 // Avoid using 'Enumerable.Any()' extension method
 

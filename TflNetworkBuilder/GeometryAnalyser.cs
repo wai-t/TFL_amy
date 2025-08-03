@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection.Emit;
@@ -27,9 +28,22 @@ namespace TflNetworkBuilder
         double _latscale;
         double _lonscale;
 
-        public GeometryAnalyser(List<Branch> branches, List<StationNode> stations) { 
-            _branches = branches;
-            _stations = stations;
+        //public GeometryAnalyser(List<Branch> branches, List<StationNode> stations) { 
+        //    _branches = branches;
+        //    _stations = stations;
+        //    ComputeMajorAxis();
+        //}
+
+        public GeometryAnalyser(string line)
+        {
+            var json = File.ReadAllText($"Data/{line}-RouteSequence.json");
+            var routeSequence = JsonConvert.DeserializeObject<RouteSequence>(json)!;
+
+            var lineGraph = new LineGraph(routeSequence);
+
+            _branches = lineGraph.Branches;
+            _stations = lineGraph.OrderedNodes;
+
             ComputeMajorAxis();
         }
 
@@ -99,7 +113,7 @@ namespace TflNetworkBuilder
             return (stopPoint.Lat!.Value - _meanlat) * _latcoeff + (stopPoint.Lon!.Value - _meanlon) * _loncoeff;
         }
 
-        public void BuildConnectionDiagram(IGraphicsClient graphicsOutput)
+        public void BuildLineDiagram(ILineDiagramClient graphicsOutput)
         {
             List<EdgeData>? incoming = null;
 
@@ -189,7 +203,7 @@ namespace TflNetworkBuilder
             };
         }
 
-        private void AddStationLabels(int left, IGraphicsClient graphicsOutput)
+        private void AddStationLabels(int left, ILineDiagramClient graphicsOutput)
         {
             int rowNo = 1;
             foreach (var station in _stations.Skip(1).SkipLast(1))
@@ -206,7 +220,7 @@ namespace TflNetworkBuilder
         }
     }
 
-    public interface IGraphicsClient
+    public interface ILineDiagramClient
     {
         void AddStationName(int rowNo, int colNo, Station station);
         void AddTrackSection(int rowNo, int colNo, int targetColNo);
