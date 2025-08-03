@@ -1,3 +1,4 @@
+using System.Text.Json.Serialization;
 using tfl_stats.Tfl;
 #pragma warning disable CA1860 // Avoid using 'Enumerable.Any()' extension method
 
@@ -12,6 +13,10 @@ namespace TflNetworkBuilder
 
         public List<MatchedStop> MatchedStop { get; set; } = [];
 
+        [JsonIgnore]
+        public double Lat => MatchedStop.Average(stop => stop.Lat!.Value);
+        [JsonIgnore]
+        public double Lon => MatchedStop.Average(stop => stop.Lon!.Value);
         public override bool Equals(object? obj)
         {
             return obj is Station right && StationId == right.StationId;

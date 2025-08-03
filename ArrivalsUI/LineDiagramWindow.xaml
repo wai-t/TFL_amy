@@ -9,7 +9,7 @@
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="550"/>
         </Grid.ColumnDefinitions>
 
         <TabControl ItemsSource="{Binding Tabs}" SelectedItem="{Binding SelectedTab, Mode=TwoWay}"

@@ -1,0 +1,4422 @@
+[
+  {
+    "From": {
+      "StationId": "910GRDNGSTN",
+      "Station": {
+        "StationId": "910GRDNGSTN",
+        "Index": 1,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GRDNGSTN",
+            "icsId": "1000972",
+            "topMostParentId": "910GRDNGSTN",
+            "modes": [
+              "national-rail",
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "south-western-railway",
+                "name": "South Western Railway",
+                "uri": "/Line/south-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GRDNGSTN",
+            "name": "Reading Rail Station",
+            "lat": 51.458786,
+            "lon": -0.971863
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GTWYFORD",
+      "Station": {
+        "StationId": "910GTWYFORD",
+        "Index": 2,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GTWYFORD",
+            "icsId": "1000969",
+            "topMostParentId": "910GTWYFORD",
+            "modes": [
+              "national-rail",
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GTWYFORD",
+            "name": "Twyford Rail Station",
+            "lat": 51.475534,
+            "lon": -0.863293
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GTWYFORD",
+      "Station": {
+        "StationId": "910GTWYFORD",
+        "Index": 2,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GTWYFORD",
+            "icsId": "1000969",
+            "topMostParentId": "910GTWYFORD",
+            "modes": [
+              "national-rail",
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GTWYFORD",
+            "name": "Twyford Rail Station",
+            "lat": 51.475534,
+            "lon": -0.863293
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GMDNHEAD",
+      "Station": {
+        "StationId": "910GMDNHEAD",
+        "Index": 3,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GMDNHEAD",
+            "icsId": "1000964",
+            "topMostParentId": "910GMDNHEAD",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GMDNHEAD",
+            "name": "Maidenhead Rail Station",
+            "lat": 51.518669,
+            "lon": -0.72266
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GMDNHEAD",
+      "Station": {
+        "StationId": "910GMDNHEAD",
+        "Index": 3,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GMDNHEAD",
+            "icsId": "1000964",
+            "topMostParentId": "910GMDNHEAD",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GMDNHEAD",
+            "name": "Maidenhead Rail Station",
+            "lat": 51.518669,
+            "lon": -0.72266
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GTAPLOW",
+      "Station": {
+        "StationId": "910GTAPLOW",
+        "Index": 4,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GTAPLOW",
+            "icsId": "1000960",
+            "topMostParentId": "910GTAPLOW",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GTAPLOW",
+            "name": "Taplow Rail Station",
+            "lat": 51.523562,
+            "lon": -0.68137
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GTAPLOW",
+      "Station": {
+        "StationId": "910GTAPLOW",
+        "Index": 4,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GTAPLOW",
+            "icsId": "1000960",
+            "topMostParentId": "910GTAPLOW",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GTAPLOW",
+            "name": "Taplow Rail Station",
+            "lat": 51.523562,
+            "lon": -0.68137
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GBNHAM",
+      "Station": {
+        "StationId": "910GBNHAM",
+        "Index": 5,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GBNHAM",
+            "icsId": "1000860",
+            "topMostParentId": "910GBNHAM",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GBNHAM",
+            "name": "Burnham (Berks) Rail Station",
+            "lat": 51.523506,
+            "lon": -0.646374
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GBNHAM",
+      "Station": {
+        "StationId": "910GBNHAM",
+        "Index": 5,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GBNHAM",
+            "icsId": "1000860",
+            "topMostParentId": "910GBNHAM",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GBNHAM",
+            "name": "Burnham (Berks) Rail Station",
+            "lat": 51.523506,
+            "lon": -0.646374
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GSLOUGH",
+      "Station": {
+        "StationId": "910GSLOUGH",
+        "Index": 6,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GSLOUGH",
+            "icsId": "1000951",
+            "topMostParentId": "910GSLOUGH",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GSLOUGH",
+            "name": "Slough Rail Station",
+            "lat": 51.51188,
+            "lon": -0.59151
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GSLOUGH",
+      "Station": {
+        "StationId": "910GSLOUGH",
+        "Index": 6,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GSLOUGH",
+            "icsId": "1000951",
+            "topMostParentId": "910GSLOUGH",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GSLOUGH",
+            "name": "Slough Rail Station",
+            "lat": 51.51188,
+            "lon": -0.59151
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GLANGLEY",
+      "Station": {
+        "StationId": "910GLANGLEY",
+        "Index": 7,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GLANGLEY",
+            "icsId": "1000957",
+            "topMostParentId": "910GLANGLEY",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GLANGLEY",
+            "name": "Langley (Berks) Rail Station",
+            "lat": 51.508062,
+            "lon": -0.541756
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GLANGLEY",
+      "Station": {
+        "StationId": "910GLANGLEY",
+        "Index": 7,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GLANGLEY",
+            "icsId": "1000957",
+            "topMostParentId": "910GLANGLEY",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GLANGLEY",
+            "name": "Langley (Berks) Rail Station",
+            "lat": 51.508062,
+            "lon": -0.541756
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GIVER",
+      "Station": {
+        "StationId": "910GIVER",
+        "Index": 8,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GIVER",
+            "icsId": "1000955",
+            "topMostParentId": "910GIVER",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GIVER",
+            "name": "Iver Rail Station",
+            "lat": 51.508503,
+            "lon": -0.506726
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GIVER",
+      "Station": {
+        "StationId": "910GIVER",
+        "Index": 8,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GIVER",
+            "icsId": "1000955",
+            "topMostParentId": "910GIVER",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GIVER",
+            "name": "Iver Rail Station",
+            "lat": 51.508503,
+            "lon": -0.506726
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GWDRYTON",
+      "Station": {
+        "StationId": "910GWDRYTON",
+        "Index": 9,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GWDRYTON",
+            "icsId": "1001325",
+            "topMostParentId": "910GWDRYTON",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GWDRYTON",
+            "name": "West Drayton Rail Station",
+            "lat": 51.510055,
+            "lon": -0.472234
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GWDRYTON",
+      "Station": {
+        "StationId": "910GWDRYTON",
+        "Index": 9,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GWDRYTON",
+            "icsId": "1001325",
+            "topMostParentId": "910GWDRYTON",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GWDRYTON",
+            "name": "West Drayton Rail Station",
+            "lat": 51.510055,
+            "lon": -0.472234
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GHAYESAH",
+      "Station": {
+        "StationId": "910GHAYESAH",
+        "Index": 13,
+        "BranchIds": [
+          3,
+          10,
+          9
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GHAYESAH",
+            "icsId": "1001144",
+            "topMostParentId": "910GHAYESAH",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "5",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHAYESAH",
+            "name": "Hayes & Harlington Rail Station",
+            "lat": 51.503096,
+            "lon": -0.420683
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBHX5",
+      "Station": {
+        "StationId": "HUBHX5",
+        "Index": 10,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBHX5",
+            "stationId": "910GHTRWTM5",
+            "icsId": "1016430",
+            "topMostParentId": "HUBHX5",
+            "modes": [
+              "national-rail",
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "heathrow-express",
+                "name": "Heathrow Express",
+                "uri": "/Line/heathrow-express",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHTRWTM5",
+            "name": "Heathrow Terminal 5 Rail Station",
+            "lat": 51.470053,
+            "lon": -0.490589
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBH13",
+      "Station": {
+        "StationId": "HUBH13",
+        "Index": 12,
+        "BranchIds": [
+          1,
+          9,
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBH13",
+            "stationId": "910GHTRWAPT",
+            "icsId": "1001147",
+            "topMostParentId": "HUBH13",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "heathrow-express",
+                "name": "Heathrow Express",
+                "uri": "/Line/heathrow-express",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHTRWAPT",
+            "name": "Heathrow Terminals 2 & 3 Rail Station",
+            "lat": 51.471987,
+            "lon": -0.454788
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBHX4",
+      "Station": {
+        "StationId": "HUBHX4",
+        "Index": 11,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBHX4",
+            "stationId": "910GHTRWTM4",
+            "icsId": "1000104",
+            "topMostParentId": "HUBHX4",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHTRWTM4",
+            "name": "Heathrow Terminal 4 Rail Station",
+            "lat": 51.458268,
+            "lon": -0.445463
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBH13",
+      "Station": {
+        "StationId": "HUBH13",
+        "Index": 12,
+        "BranchIds": [
+          1,
+          9,
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBH13",
+            "stationId": "910GHTRWAPT",
+            "icsId": "1001147",
+            "topMostParentId": "HUBH13",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "heathrow-express",
+                "name": "Heathrow Express",
+                "uri": "/Line/heathrow-express",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHTRWAPT",
+            "name": "Heathrow Terminals 2 & 3 Rail Station",
+            "lat": 51.471987,
+            "lon": -0.454788
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBH13",
+      "Station": {
+        "StationId": "HUBH13",
+        "Index": 12,
+        "BranchIds": [
+          1,
+          9,
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBH13",
+            "stationId": "910GHTRWAPT",
+            "icsId": "1001147",
+            "topMostParentId": "HUBH13",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "heathrow-express",
+                "name": "Heathrow Express",
+                "uri": "/Line/heathrow-express",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHTRWAPT",
+            "name": "Heathrow Terminals 2 & 3 Rail Station",
+            "lat": 51.471987,
+            "lon": -0.454788
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GHAYESAH",
+      "Station": {
+        "StationId": "910GHAYESAH",
+        "Index": 13,
+        "BranchIds": [
+          3,
+          10,
+          9
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GHAYESAH",
+            "icsId": "1001144",
+            "topMostParentId": "910GHAYESAH",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "5",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHAYESAH",
+            "name": "Hayes & Harlington Rail Station",
+            "lat": 51.503096,
+            "lon": -0.420683
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GHAYESAH",
+      "Station": {
+        "StationId": "910GHAYESAH",
+        "Index": 13,
+        "BranchIds": [
+          3,
+          10,
+          9
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GHAYESAH",
+            "icsId": "1001144",
+            "topMostParentId": "910GHAYESAH",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "5",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHAYESAH",
+            "name": "Hayes & Harlington Rail Station",
+            "lat": 51.503096,
+            "lon": -0.420683
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GSTHALL",
+      "Station": {
+        "StationId": "910GSTHALL",
+        "Index": 14,
+        "BranchIds": [
+          10
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GSTHALL",
+            "icsId": "1001255",
+            "topMostParentId": "910GSTHALL",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GSTHALL",
+            "name": "Southall Rail Station",
+            "lat": 51.505957,
+            "lon": -0.37861
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GSTHALL",
+      "Station": {
+        "StationId": "910GSTHALL",
+        "Index": 14,
+        "BranchIds": [
+          10
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GSTHALL",
+            "icsId": "1001255",
+            "topMostParentId": "910GSTHALL",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GSTHALL",
+            "name": "Southall Rail Station",
+            "lat": 51.505957,
+            "lon": -0.37861
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GHANWELL",
+      "Station": {
+        "StationId": "910GHANWELL",
+        "Index": 15,
+        "BranchIds": [
+          10
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GHANWELL",
+            "icsId": "1001135",
+            "topMostParentId": "910GHANWELL",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHANWELL",
+            "name": "Hanwell Rail Station",
+            "lat": 51.511835,
+            "lon": -0.338583
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GHANWELL",
+      "Station": {
+        "StationId": "910GHANWELL",
+        "Index": 15,
+        "BranchIds": [
+          10
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GHANWELL",
+            "icsId": "1001135",
+            "topMostParentId": "910GHANWELL",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHANWELL",
+            "name": "Hanwell Rail Station",
+            "lat": 51.511835,
+            "lon": -0.338583
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GWEALING",
+      "Station": {
+        "StationId": "910GWEALING",
+        "Index": 16,
+        "BranchIds": [
+          10
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GWEALING",
+            "icsId": "1001327",
+            "topMostParentId": "910GWEALING",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GWEALING",
+            "name": "West Ealing Rail Station",
+            "lat": 51.513506,
+            "lon": -0.320133
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GWEALING",
+      "Station": {
+        "StationId": "910GWEALING",
+        "Index": 16,
+        "BranchIds": [
+          10
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GWEALING",
+            "icsId": "1001327",
+            "topMostParentId": "910GWEALING",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GWEALING",
+            "name": "West Ealing Rail Station",
+            "lat": 51.513506,
+            "lon": -0.320133
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBEAL",
+      "Station": {
+        "StationId": "HUBEAL",
+        "Index": 17,
+        "BranchIds": [
+          10
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBEAL",
+            "stationId": "910GEALINGB",
+            "icsId": "1000062",
+            "topMostParentId": "HUBEAL",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GEALINGB",
+            "name": "Ealing Broadway Rail Station",
+            "lat": 51.514841,
+            "lon": -0.301752
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBEAL",
+      "Station": {
+        "StationId": "HUBEAL",
+        "Index": 17,
+        "BranchIds": [
+          10
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBEAL",
+            "stationId": "910GEALINGB",
+            "icsId": "1000062",
+            "topMostParentId": "HUBEAL",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GEALINGB",
+            "name": "Ealing Broadway Rail Station",
+            "lat": 51.514841,
+            "lon": -0.301752
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GACTONML",
+      "Station": {
+        "StationId": "910GACTONML",
+        "Index": 18,
+        "BranchIds": [
+          10,
+          6,
+          5
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GACTONML",
+            "icsId": "1001003",
+            "topMostParentId": "910GACTONML",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GACTONML",
+            "name": "Acton Main Line Rail Station",
+            "lat": 51.51718,
+            "lon": -0.266756
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GACTONML",
+      "Station": {
+        "StationId": "910GACTONML",
+        "Index": 18,
+        "BranchIds": [
+          10,
+          6,
+          5
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GACTONML",
+            "icsId": "1001003",
+            "topMostParentId": "910GACTONML",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GACTONML",
+            "name": "Acton Main Line Rail Station",
+            "lat": 51.51718,
+            "lon": -0.266756
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBPAD",
+      "Station": {
+        "StationId": "HUBPAD",
+        "Index": 19,
+        "BranchIds": [
+          6,
+          2,
+          5
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBPAD",
+            "stationId": "910GPADTLL",
+            "icsId": "1001221",
+            "topMostParentId": "HUBPAD",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GPADTLL",
+            "name": "Paddington",
+            "lat": 51.516449,
+            "lon": -0.177107
+          },
+          {
+            "parentId": "HUBPAD",
+            "stationId": "910GPADTON",
+            "icsId": "1001221",
+            "topMostParentId": "HUBPAD",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "heathrow-express",
+                "name": "Heathrow Express",
+                "uri": "/Line/heathrow-express",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GPADTON",
+            "name": "London Paddington Rail Station",
+            "lat": 51.515996,
+            "lon": -0.176174
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBPAD",
+      "Station": {
+        "StationId": "HUBPAD",
+        "Index": 19,
+        "BranchIds": [
+          6,
+          2,
+          5
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBPAD",
+            "stationId": "910GPADTLL",
+            "icsId": "1001221",
+            "topMostParentId": "HUBPAD",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GPADTLL",
+            "name": "Paddington",
+            "lat": 51.516449,
+            "lon": -0.177107
+          },
+          {
+            "parentId": "HUBPAD",
+            "stationId": "910GPADTON",
+            "icsId": "1001221",
+            "topMostParentId": "HUBPAD",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "great-western-railway",
+                "name": "Great Western Railway",
+                "uri": "/Line/great-western-railway",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "heathrow-express",
+                "name": "Heathrow Express",
+                "uri": "/Line/heathrow-express",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GPADTON",
+            "name": "London Paddington Rail Station",
+            "lat": 51.515996,
+            "lon": -0.176174
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBBDS",
+      "Station": {
+        "StationId": "HUBBDS",
+        "Index": 20,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBBDS",
+            "stationId": "910GBONDST",
+            "icsId": "1000025",
+            "topMostParentId": "HUBBDS",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GBONDST",
+            "name": "Bond Street",
+            "lat": 51.51369,
+            "lon": -0.149517
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBBDS",
+      "Station": {
+        "StationId": "HUBBDS",
+        "Index": 20,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBBDS",
+            "stationId": "910GBONDST",
+            "icsId": "1000025",
+            "topMostParentId": "HUBBDS",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GBONDST",
+            "name": "Bond Street",
+            "lat": 51.51369,
+            "lon": -0.149517
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBTCR",
+      "Station": {
+        "StationId": "HUBTCR",
+        "Index": 21,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBTCR",
+            "stationId": "910GTOTCTRD",
+            "icsId": "1000235",
+            "topMostParentId": "HUBTCR",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GTOTCTRD",
+            "name": "Tottenham Court Road",
+            "lat": 51.515075,
+            "lon": -0.130263
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBTCR",
+      "Station": {
+        "StationId": "HUBTCR",
+        "Index": 21,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBTCR",
+            "stationId": "910GTOTCTRD",
+            "icsId": "1000235",
+            "topMostParentId": "HUBTCR",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GTOTCTRD",
+            "name": "Tottenham Court Road",
+            "lat": 51.515075,
+            "lon": -0.130263
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBZFD",
+      "Station": {
+        "StationId": "HUBZFD",
+        "Index": 22,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBZFD",
+            "stationId": "910GFRNDXR",
+            "icsId": "1000080",
+            "topMostParentId": "HUBZFD",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GFRNDXR",
+            "name": "Farringdon",
+            "lat": 51.519635,
+            "lon": -0.102892
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBZFD",
+      "Station": {
+        "StationId": "HUBZFD",
+        "Index": 22,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBZFD",
+            "stationId": "910GFRNDXR",
+            "icsId": "1000080",
+            "topMostParentId": "HUBZFD",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GFRNDXR",
+            "name": "Farringdon",
+            "lat": 51.519635,
+            "lon": -0.102892
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBLST",
+      "Station": {
+        "StationId": "HUBLST",
+        "Index": 23,
+        "BranchIds": [
+          4,
+          2
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBLST",
+            "stationId": "910GLIVST",
+            "icsId": "1000138",
+            "topMostParentId": "HUBLST",
+            "modes": [
+              "elizabeth-line",
+              "national-rail",
+              "overground"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "c2c",
+                "name": "c2c",
+                "uri": "/Line/c2c",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "weaver",
+                "name": "Weaver",
+                "uri": "/Line/weaver",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GLIVST",
+            "name": "London Liverpool Street Rail Station",
+            "lat": 51.517991,
+            "lon": -0.081426
+          },
+          {
+            "parentId": "HUBLST",
+            "stationId": "910GLIVSTLL",
+            "icsId": "1000138",
+            "topMostParentId": "HUBLST",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GLIVSTLL",
+            "name": "Liverpool Street",
+            "lat": 51.517721,
+            "lon": -0.082043
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBLST",
+      "Station": {
+        "StationId": "HUBLST",
+        "Index": 23,
+        "BranchIds": [
+          4,
+          2
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBLST",
+            "stationId": "910GLIVST",
+            "icsId": "1000138",
+            "topMostParentId": "HUBLST",
+            "modes": [
+              "elizabeth-line",
+              "national-rail",
+              "overground"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "c2c",
+                "name": "c2c",
+                "uri": "/Line/c2c",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "weaver",
+                "name": "Weaver",
+                "uri": "/Line/weaver",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GLIVST",
+            "name": "London Liverpool Street Rail Station",
+            "lat": 51.517991,
+            "lon": -0.081426
+          },
+          {
+            "parentId": "HUBLST",
+            "stationId": "910GLIVSTLL",
+            "icsId": "1000138",
+            "topMostParentId": "HUBLST",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GLIVSTLL",
+            "name": "Liverpool Street",
+            "lat": 51.517721,
+            "lon": -0.082043
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBSRA",
+      "Station": {
+        "StationId": "HUBSRA",
+        "Index": 29,
+        "BranchIds": [
+          4,
+          11,
+          7
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBSRA",
+            "stationId": "910GSTFD",
+            "icsId": "1000226",
+            "topMostParentId": "HUBSRA",
+            "modes": [
+              "elizabeth-line",
+              "national-rail",
+              "overground"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "2/3",
+            "lines": [
+              {
+                "id": "c2c",
+                "name": "c2c",
+                "uri": "/Line/c2c",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "mildmay",
+                "name": "Mildmay",
+                "uri": "/Line/mildmay",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GSTFD",
+            "name": "Stratford (London) Rail Station",
+            "lat": 51.541895,
+            "lon": -0.003397
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBLST",
+      "Station": {
+        "StationId": "HUBLST",
+        "Index": 23,
+        "BranchIds": [
+          4,
+          2
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBLST",
+            "stationId": "910GLIVST",
+            "icsId": "1000138",
+            "topMostParentId": "HUBLST",
+            "modes": [
+              "elizabeth-line",
+              "national-rail",
+              "overground"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "c2c",
+                "name": "c2c",
+                "uri": "/Line/c2c",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "weaver",
+                "name": "Weaver",
+                "uri": "/Line/weaver",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GLIVST",
+            "name": "London Liverpool Street Rail Station",
+            "lat": 51.517991,
+            "lon": -0.081426
+          },
+          {
+            "parentId": "HUBLST",
+            "stationId": "910GLIVSTLL",
+            "icsId": "1000138",
+            "topMostParentId": "HUBLST",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GLIVSTLL",
+            "name": "Liverpool Street",
+            "lat": 51.517721,
+            "lon": -0.082043
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBZWL",
+      "Station": {
+        "StationId": "HUBZWL",
+        "Index": 24,
+        "BranchIds": [
+          2,
+          8,
+          7
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBZWL",
+            "stationId": "910GWCHAPXR",
+            "icsId": "1000268",
+            "topMostParentId": "HUBZWL",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GWCHAPXR",
+            "name": "Whitechapel",
+            "lat": 51.520373,
+            "lon": -0.060021
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBZWL",
+      "Station": {
+        "StationId": "HUBZWL",
+        "Index": 24,
+        "BranchIds": [
+          2,
+          8,
+          7
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBZWL",
+            "stationId": "910GWCHAPXR",
+            "icsId": "1000268",
+            "topMostParentId": "HUBZWL",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GWCHAPXR",
+            "name": "Whitechapel",
+            "lat": 51.520373,
+            "lon": -0.060021
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBCAW",
+      "Station": {
+        "StationId": "HUBCAW",
+        "Index": 25,
+        "BranchIds": [
+          8
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBCAW",
+            "stationId": "910GCANWHRF",
+            "icsId": "1002163",
+            "topMostParentId": "HUBCAW",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GCANWHRF",
+            "name": "Canary Wharf",
+            "lat": 51.506203,
+            "lon": -0.018834
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBZWL",
+      "Station": {
+        "StationId": "HUBZWL",
+        "Index": 24,
+        "BranchIds": [
+          2,
+          8,
+          7
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBZWL",
+            "stationId": "910GWCHAPXR",
+            "icsId": "1000268",
+            "topMostParentId": "HUBZWL",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GWCHAPXR",
+            "name": "Whitechapel",
+            "lat": 51.520373,
+            "lon": -0.060021
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBSRA",
+      "Station": {
+        "StationId": "HUBSRA",
+        "Index": 29,
+        "BranchIds": [
+          4,
+          11,
+          7
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBSRA",
+            "stationId": "910GSTFD",
+            "icsId": "1000226",
+            "topMostParentId": "HUBSRA",
+            "modes": [
+              "elizabeth-line",
+              "national-rail",
+              "overground"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "2/3",
+            "lines": [
+              {
+                "id": "c2c",
+                "name": "c2c",
+                "uri": "/Line/c2c",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "mildmay",
+                "name": "Mildmay",
+                "uri": "/Line/mildmay",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GSTFD",
+            "name": "Stratford (London) Rail Station",
+            "lat": 51.541895,
+            "lon": -0.003397
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBCAW",
+      "Station": {
+        "StationId": "HUBCAW",
+        "Index": 25,
+        "BranchIds": [
+          8
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBCAW",
+            "stationId": "910GCANWHRF",
+            "icsId": "1002163",
+            "topMostParentId": "HUBCAW",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GCANWHRF",
+            "name": "Canary Wharf",
+            "lat": 51.506203,
+            "lon": -0.018834
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBCUS",
+      "Station": {
+        "StationId": "HUBCUS",
+        "Index": 26,
+        "BranchIds": [
+          8
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBCUS",
+            "stationId": "910GCSTMHSXR",
+            "icsId": "1001079",
+            "topMostParentId": "HUBCUS",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GCSTMHSXR",
+            "name": "Custom House",
+            "lat": 51.509436,
+            "lon": 0.027681
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBCUS",
+      "Station": {
+        "StationId": "HUBCUS",
+        "Index": 26,
+        "BranchIds": [
+          8
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBCUS",
+            "stationId": "910GCSTMHSXR",
+            "icsId": "1001079",
+            "topMostParentId": "HUBCUS",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GCSTMHSXR",
+            "name": "Custom House",
+            "lat": 51.509436,
+            "lon": 0.027681
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GWOLWXR",
+      "Station": {
+        "StationId": "910GWOLWXR",
+        "Index": 27,
+        "BranchIds": [
+          8
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GWOLWXR",
+            "icsId": "1002162",
+            "topMostParentId": "910GWOLWXR",
+            "modes": [
+              "bus",
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "122",
+                "name": "122",
+                "uri": "/Line/122",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "161",
+                "name": "161",
+                "uri": "/Line/161",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "177",
+                "name": "177",
+                "uri": "/Line/177",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "180",
+                "name": "180",
+                "uri": "/Line/180",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "244",
+                "name": "244",
+                "uri": "/Line/244",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "291",
+                "name": "291",
+                "uri": "/Line/291",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "301",
+                "name": "301",
+                "uri": "/Line/301",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "380",
+                "name": "380",
+                "uri": "/Line/380",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "422",
+                "name": "422",
+                "uri": "/Line/422",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "469",
+                "name": "469",
+                "uri": "/Line/469",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "472",
+                "name": "472",
+                "uri": "/Line/472",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "53",
+                "name": "53",
+                "uri": "/Line/53",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "54",
+                "name": "54",
+                "uri": "/Line/54",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "672",
+                "name": "672",
+                "uri": "/Line/672",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "96",
+                "name": "96",
+                "uri": "/Line/96",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "99",
+                "name": "99",
+                "uri": "/Line/99",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "n1",
+                "name": "N1",
+                "uri": "/Line/n1",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "n53",
+                "name": "N53",
+                "uri": "/Line/n53",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GWOLWXR",
+            "name": "Woolwich",
+            "lat": 51.49119,
+            "lon": 0.07072
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GWOLWXR",
+      "Station": {
+        "StationId": "910GWOLWXR",
+        "Index": 27,
+        "BranchIds": [
+          8
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GWOLWXR",
+            "icsId": "1002162",
+            "topMostParentId": "910GWOLWXR",
+            "modes": [
+              "bus",
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "122",
+                "name": "122",
+                "uri": "/Line/122",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "161",
+                "name": "161",
+                "uri": "/Line/161",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "177",
+                "name": "177",
+                "uri": "/Line/177",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "180",
+                "name": "180",
+                "uri": "/Line/180",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "244",
+                "name": "244",
+                "uri": "/Line/244",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "291",
+                "name": "291",
+                "uri": "/Line/291",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "301",
+                "name": "301",
+                "uri": "/Line/301",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "380",
+                "name": "380",
+                "uri": "/Line/380",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "422",
+                "name": "422",
+                "uri": "/Line/422",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "469",
+                "name": "469",
+                "uri": "/Line/469",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "472",
+                "name": "472",
+                "uri": "/Line/472",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "53",
+                "name": "53",
+                "uri": "/Line/53",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "54",
+                "name": "54",
+                "uri": "/Line/54",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "672",
+                "name": "672",
+                "uri": "/Line/672",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "96",
+                "name": "96",
+                "uri": "/Line/96",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "99",
+                "name": "99",
+                "uri": "/Line/99",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "n1",
+                "name": "N1",
+                "uri": "/Line/n1",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "n53",
+                "name": "N53",
+                "uri": "/Line/n53",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GWOLWXR",
+            "name": "Woolwich",
+            "lat": 51.49119,
+            "lon": 0.07072
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBABW",
+      "Station": {
+        "StationId": "HUBABW",
+        "Index": 28,
+        "BranchIds": [
+          8
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBABW",
+            "stationId": "910GABWDXR",
+            "icsId": "1001001",
+            "topMostParentId": "HUBABW",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GABWDXR",
+            "name": "Abbey Wood",
+            "lat": 51.491284,
+            "lon": 0.121087
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "HUBSRA",
+      "Station": {
+        "StationId": "HUBSRA",
+        "Index": 29,
+        "BranchIds": [
+          4,
+          11,
+          7
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBSRA",
+            "stationId": "910GSTFD",
+            "icsId": "1000226",
+            "topMostParentId": "HUBSRA",
+            "modes": [
+              "elizabeth-line",
+              "national-rail",
+              "overground"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "2/3",
+            "lines": [
+              {
+                "id": "c2c",
+                "name": "c2c",
+                "uri": "/Line/c2c",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "mildmay",
+                "name": "Mildmay",
+                "uri": "/Line/mildmay",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GSTFD",
+            "name": "Stratford (London) Rail Station",
+            "lat": 51.541895,
+            "lon": -0.003397
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GMRYLAND",
+      "Station": {
+        "StationId": "910GMRYLAND",
+        "Index": 30,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GMRYLAND",
+            "icsId": "1001190",
+            "topMostParentId": "910GMRYLAND",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GMRYLAND",
+            "name": "Maryland Rail Station",
+            "lat": 51.546081,
+            "lon": 0.005815
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GMRYLAND",
+      "Station": {
+        "StationId": "910GMRYLAND",
+        "Index": 30,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GMRYLAND",
+            "icsId": "1001190",
+            "topMostParentId": "910GMRYLAND",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GMRYLAND",
+            "name": "Maryland Rail Station",
+            "lat": 51.546081,
+            "lon": 0.005815
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GFRSTGT",
+      "Station": {
+        "StationId": "910GFRSTGT",
+        "Index": 31,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GFRSTGT",
+            "icsId": "1001111",
+            "topMostParentId": "910GFRSTGT",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GFRSTGT",
+            "name": "Forest Gate Rail Station",
+            "lat": 51.549432,
+            "lon": 0.024353
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GFRSTGT",
+      "Station": {
+        "StationId": "910GFRSTGT",
+        "Index": 31,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GFRSTGT",
+            "icsId": "1001111",
+            "topMostParentId": "910GFRSTGT",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GFRSTGT",
+            "name": "Forest Gate Rail Station",
+            "lat": 51.549432,
+            "lon": 0.024353
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GMANRPK",
+      "Station": {
+        "StationId": "910GMANRPK",
+        "Index": 32,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GMANRPK",
+            "icsId": "1001189",
+            "topMostParentId": "910GMANRPK",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3+4",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GMANRPK",
+            "name": "Manor Park Rail Station",
+            "lat": 51.552477,
+            "lon": 0.046342
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GMANRPK",
+      "Station": {
+        "StationId": "910GMANRPK",
+        "Index": 32,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GMANRPK",
+            "icsId": "1001189",
+            "topMostParentId": "910GMANRPK",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "3+4",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GMANRPK",
+            "name": "Manor Park Rail Station",
+            "lat": 51.552477,
+            "lon": 0.046342
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GILFORD",
+      "Station": {
+        "StationId": "910GILFORD",
+        "Index": 33,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GILFORD",
+            "icsId": "1001157",
+            "topMostParentId": "910GILFORD",
+            "modes": [
+              "national-rail",
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GILFORD",
+            "name": "Ilford Rail Station",
+            "lat": 51.559118,
+            "lon": 0.06968
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GILFORD",
+      "Station": {
+        "StationId": "910GILFORD",
+        "Index": 33,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GILFORD",
+            "icsId": "1001157",
+            "topMostParentId": "910GILFORD",
+            "modes": [
+              "national-rail",
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GILFORD",
+            "name": "Ilford Rail Station",
+            "lat": 51.559118,
+            "lon": 0.06968
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GSVNKNGS",
+      "Station": {
+        "StationId": "910GSVNKNGS",
+        "Index": 34,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GSVNKNGS",
+            "icsId": "1001246",
+            "topMostParentId": "910GSVNKNGS",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GSVNKNGS",
+            "name": "Seven Kings Rail Station",
+            "lat": 51.564026,
+            "lon": 0.0971
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GSVNKNGS",
+      "Station": {
+        "StationId": "910GSVNKNGS",
+        "Index": 34,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GSVNKNGS",
+            "icsId": "1001246",
+            "topMostParentId": "910GSVNKNGS",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GSVNKNGS",
+            "name": "Seven Kings Rail Station",
+            "lat": 51.564026,
+            "lon": 0.0971
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GGODMAYS",
+      "Station": {
+        "StationId": "910GGODMAYS",
+        "Index": 35,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GGODMAYS",
+            "icsId": "1001117",
+            "topMostParentId": "910GGODMAYS",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GGODMAYS",
+            "name": "Goodmayes Rail Station",
+            "lat": 51.565579,
+            "lon": 0.110807
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GGODMAYS",
+      "Station": {
+        "StationId": "910GGODMAYS",
+        "Index": 35,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GGODMAYS",
+            "icsId": "1001117",
+            "topMostParentId": "910GGODMAYS",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GGODMAYS",
+            "name": "Goodmayes Rail Station",
+            "lat": 51.565579,
+            "lon": 0.110807
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GCHDWLHT",
+      "Station": {
+        "StationId": "910GCHDWLHT",
+        "Index": 36,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GCHDWLHT",
+            "icsId": "1001055",
+            "topMostParentId": "910GCHDWLHT",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "5",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GCHDWLHT",
+            "name": "Chadwell Heath Rail Station",
+            "lat": 51.568039,
+            "lon": 0.128958
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GCHDWLHT",
+      "Station": {
+        "StationId": "910GCHDWLHT",
+        "Index": 36,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GCHDWLHT",
+            "icsId": "1001055",
+            "topMostParentId": "910GCHDWLHT",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "5",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GCHDWLHT",
+            "name": "Chadwell Heath Rail Station",
+            "lat": 51.568039,
+            "lon": 0.128958
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GROMFORD",
+      "Station": {
+        "StationId": "910GROMFORD",
+        "Index": 37,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GROMFORD",
+            "icsId": "1001243",
+            "topMostParentId": "910GROMFORD",
+            "modes": [
+              "elizabeth-line",
+              "national-rail",
+              "overground"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "liberty",
+                "name": "Liberty",
+                "uri": "/Line/liberty",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GROMFORD",
+            "name": "Romford Rail Station",
+            "lat": 51.574829,
+            "lon": 0.183237
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GROMFORD",
+      "Station": {
+        "StationId": "910GROMFORD",
+        "Index": 37,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GROMFORD",
+            "icsId": "1001243",
+            "topMostParentId": "910GROMFORD",
+            "modes": [
+              "elizabeth-line",
+              "national-rail",
+              "overground"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "liberty",
+                "name": "Liberty",
+                "uri": "/Line/liberty",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GROMFORD",
+            "name": "Romford Rail Station",
+            "lat": 51.574829,
+            "lon": 0.183237
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GGIDEAPK",
+      "Station": {
+        "StationId": "910GGIDEAPK",
+        "Index": 38,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GGIDEAPK",
+            "icsId": "1001115",
+            "topMostParentId": "910GGIDEAPK",
+            "modes": [
+              "national-rail",
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GGIDEAPK",
+            "name": "Gidea Park Rail Station",
+            "lat": 51.581904,
+            "lon": 0.205964
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GGIDEAPK",
+      "Station": {
+        "StationId": "910GGIDEAPK",
+        "Index": 38,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GGIDEAPK",
+            "icsId": "1001115",
+            "topMostParentId": "910GGIDEAPK",
+            "modes": [
+              "national-rail",
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GGIDEAPK",
+            "name": "Gidea Park Rail Station",
+            "lat": 51.581904,
+            "lon": 0.205964
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GHRLDWOD",
+      "Station": {
+        "StationId": "910GHRLDWOD",
+        "Index": 39,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GHRLDWOD",
+            "icsId": "1001137",
+            "topMostParentId": "910GHRLDWOD",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHRLDWOD",
+            "name": "Harold Wood Rail Station",
+            "lat": 51.592766,
+            "lon": 0.233129
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GHRLDWOD",
+      "Station": {
+        "StationId": "910GHRLDWOD",
+        "Index": 39,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GHRLDWOD",
+            "icsId": "1001137",
+            "topMostParentId": "910GHRLDWOD",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GHRLDWOD",
+            "name": "Harold Wood Rail Station",
+            "lat": 51.592766,
+            "lon": 0.233129
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GBRTWOOD",
+      "Station": {
+        "StationId": "910GBRTWOOD",
+        "Index": 40,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GBRTWOOD",
+            "icsId": "1000292",
+            "topMostParentId": "910GBRTWOOD",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "9",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GBRTWOOD",
+            "name": "Brentwood Rail Station",
+            "lat": 51.613605,
+            "lon": 0.299586
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  },
+  {
+    "From": {
+      "StationId": "910GBRTWOOD",
+      "Station": {
+        "StationId": "910GBRTWOOD",
+        "Index": 40,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GBRTWOOD",
+            "icsId": "1000292",
+            "topMostParentId": "910GBRTWOOD",
+            "modes": [
+              "elizabeth-line"
+            ],
+            "stopType": "NaptanRailStation",
+            "zone": "9",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GBRTWOOD",
+            "name": "Brentwood Rail Station",
+            "lat": 51.613605,
+            "lon": 0.299586
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "910GSHENFLD",
+      "Station": {
+        "StationId": "910GSHENFLD",
+        "Index": 41,
+        "BranchIds": [
+          11
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "910GSHENFLD",
+            "icsId": "1006448",
+            "topMostParentId": "910GSHENFLD",
+            "modes": [
+              "elizabeth-line",
+              "national-rail"
+            ],
+            "stopType": "NaptanRailStation",
+            "lines": [
+              {
+                "id": "elizabeth",
+                "name": "Elizabeth line",
+                "uri": "/Line/elizabeth",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "greater-anglia",
+                "name": "Greater Anglia",
+                "uri": "/Line/greater-anglia",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "910GSHENFLD",
+            "name": "Shenfield Rail Station",
+            "lat": 51.630877,
+            "lon": 0.329851
+          }
+        ]
+      }
+    },
+    "LineId": "elizabeth"
+  }
+]

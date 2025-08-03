@@ -1,0 +1,1482 @@
+[
+  {
+    "From": {
+      "StationId": "HUBWHC",
+      "Station": {
+        "StationId": "HUBWHC",
+        "Index": 1,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBWHC",
+            "stationId": "940GZZLUWWL",
+            "icsId": "1000249",
+            "topMostParentId": "HUBWHC",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWWL",
+            "name": "Walthamstow Central Underground Station",
+            "lat": 51.582965,
+            "lon": -0.019885
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBBHO",
+      "Station": {
+        "StationId": "HUBBHO",
+        "Index": 2,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBBHO",
+            "stationId": "940GZZLUBLR",
+            "icsId": "1000024",
+            "topMostParentId": "HUBBHO",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBLR",
+            "name": "Blackhorse Road Underground Station",
+            "lat": 51.586919,
+            "lon": -0.04115
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "HUBBHO",
+      "Station": {
+        "StationId": "HUBBHO",
+        "Index": 2,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBBHO",
+            "stationId": "940GZZLUBLR",
+            "icsId": "1000024",
+            "topMostParentId": "HUBBHO",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBLR",
+            "name": "Blackhorse Road Underground Station",
+            "lat": 51.586919,
+            "lon": -0.04115
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBTOM",
+      "Station": {
+        "StationId": "HUBTOM",
+        "Index": 3,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBTOM",
+            "stationId": "940GZZLUTMH",
+            "icsId": "1000236",
+            "topMostParentId": "HUBTOM",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUTMH",
+            "name": "Tottenham Hale Underground Station",
+            "lat": 51.588108,
+            "lon": -0.060241
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "HUBTOM",
+      "Station": {
+        "StationId": "HUBTOM",
+        "Index": 3,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBTOM",
+            "stationId": "940GZZLUTMH",
+            "icsId": "1000236",
+            "topMostParentId": "HUBTOM",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUTMH",
+            "name": "Tottenham Hale Underground Station",
+            "lat": 51.588108,
+            "lon": -0.060241
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBSVS",
+      "Station": {
+        "StationId": "HUBSVS",
+        "Index": 4,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBSVS",
+            "stationId": "940GZZLUSVS",
+            "icsId": "1000201",
+            "topMostParentId": "HUBSVS",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSVS",
+            "name": "Seven Sisters Underground Station",
+            "lat": 51.58333,
+            "lon": -0.072584
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "HUBSVS",
+      "Station": {
+        "StationId": "HUBSVS",
+        "Index": 4,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBSVS",
+            "stationId": "940GZZLUSVS",
+            "icsId": "1000201",
+            "topMostParentId": "HUBSVS",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSVS",
+            "name": "Seven Sisters Underground Station",
+            "lat": 51.58333,
+            "lon": -0.072584
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBFPK",
+      "Station": {
+        "StationId": "HUBFPK",
+        "Index": 5,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBFPK",
+            "stationId": "940GZZLUFPK",
+            "icsId": "1000083",
+            "topMostParentId": "HUBFPK",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "piccadilly",
+                "name": "Piccadilly",
+                "uri": "/Line/piccadilly",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUFPK",
+            "name": "Finsbury Park Underground Station",
+            "lat": 51.564158,
+            "lon": -0.106825
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "HUBFPK",
+      "Station": {
+        "StationId": "HUBFPK",
+        "Index": 5,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBFPK",
+            "stationId": "940GZZLUFPK",
+            "icsId": "1000083",
+            "topMostParentId": "HUBFPK",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "piccadilly",
+                "name": "Piccadilly",
+                "uri": "/Line/piccadilly",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUFPK",
+            "name": "Finsbury Park Underground Station",
+            "lat": 51.564158,
+            "lon": -0.106825
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBHHY",
+      "Station": {
+        "StationId": "HUBHHY",
+        "Index": 6,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBHHY",
+            "stationId": "940GZZLUHAI",
+            "icsId": "1000108",
+            "topMostParentId": "HUBHHY",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUHAI",
+            "name": "Highbury & Islington Underground Station",
+            "lat": 51.54635,
+            "lon": -0.103324
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "HUBHHY",
+      "Station": {
+        "StationId": "HUBHHY",
+        "Index": 6,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBHHY",
+            "stationId": "940GZZLUHAI",
+            "icsId": "1000108",
+            "topMostParentId": "HUBHHY",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUHAI",
+            "name": "Highbury & Islington Underground Station",
+            "lat": 51.54635,
+            "lon": -0.103324
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBKGX",
+      "Station": {
+        "StationId": "HUBKGX",
+        "Index": 7,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBKGX",
+            "stationId": "940GZZLUKSX",
+            "icsId": "1000129",
+            "topMostParentId": "HUBKGX",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "circle",
+                "name": "Circle",
+                "uri": "/Line/circle",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "hammersmith-city",
+                "name": "Hammersmith & City",
+                "uri": "/Line/hammersmith-city",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "metropolitan",
+                "name": "Metropolitan",
+                "uri": "/Line/metropolitan",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "piccadilly",
+                "name": "Piccadilly",
+                "uri": "/Line/piccadilly",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUKSX",
+            "name": "King's Cross St. Pancras Underground Station",
+            "lat": 51.530663,
+            "lon": -0.123194
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "HUBKGX",
+      "Station": {
+        "StationId": "HUBKGX",
+        "Index": 7,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBKGX",
+            "stationId": "940GZZLUKSX",
+            "icsId": "1000129",
+            "topMostParentId": "HUBKGX",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "circle",
+                "name": "Circle",
+                "uri": "/Line/circle",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "hammersmith-city",
+                "name": "Hammersmith & City",
+                "uri": "/Line/hammersmith-city",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "metropolitan",
+                "name": "Metropolitan",
+                "uri": "/Line/metropolitan",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "piccadilly",
+                "name": "Piccadilly",
+                "uri": "/Line/piccadilly",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUKSX",
+            "name": "King's Cross St. Pancras Underground Station",
+            "lat": 51.530663,
+            "lon": -0.123194
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBEUS",
+      "Station": {
+        "StationId": "HUBEUS",
+        "Index": 8,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBEUS",
+            "stationId": "940GZZLUEUS",
+            "icsId": "1000077",
+            "topMostParentId": "HUBEUS",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUEUS",
+            "name": "Euston Underground Station",
+            "lat": 51.527824,
+            "lon": -0.131846
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "HUBEUS",
+      "Station": {
+        "StationId": "HUBEUS",
+        "Index": 8,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBEUS",
+            "stationId": "940GZZLUEUS",
+            "icsId": "1000077",
+            "topMostParentId": "HUBEUS",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUEUS",
+            "name": "Euston Underground Station",
+            "lat": 51.527824,
+            "lon": -0.131846
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUWRR",
+      "Station": {
+        "StationId": "940GZZLUWRR",
+        "Index": 9,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUWRR",
+            "icsId": "1000252",
+            "topMostParentId": "940GZZLUWRR",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWRR",
+            "name": "Warren Street Underground Station",
+            "lat": 51.524951,
+            "lon": -0.138321
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUWRR",
+      "Station": {
+        "StationId": "940GZZLUWRR",
+        "Index": 9,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUWRR",
+            "icsId": "1000252",
+            "topMostParentId": "940GZZLUWRR",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWRR",
+            "name": "Warren Street Underground Station",
+            "lat": 51.524951,
+            "lon": -0.138321
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUOXC",
+      "Station": {
+        "StationId": "940GZZLUOXC",
+        "Index": 10,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUOXC",
+            "icsId": "1000173",
+            "topMostParentId": "940GZZLUOXC",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "bakerloo",
+                "name": "Bakerloo",
+                "uri": "/Line/bakerloo",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUOXC",
+            "name": "Oxford Circus Underground Station",
+            "lat": 51.515224,
+            "lon": -0.141903
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUOXC",
+      "Station": {
+        "StationId": "940GZZLUOXC",
+        "Index": 10,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUOXC",
+            "icsId": "1000173",
+            "topMostParentId": "940GZZLUOXC",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "bakerloo",
+                "name": "Bakerloo",
+                "uri": "/Line/bakerloo",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUOXC",
+            "name": "Oxford Circus Underground Station",
+            "lat": 51.515224,
+            "lon": -0.141903
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUGPK",
+      "Station": {
+        "StationId": "940GZZLUGPK",
+        "Index": 11,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUGPK",
+            "icsId": "1000093",
+            "topMostParentId": "940GZZLUGPK",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "jubilee",
+                "name": "Jubilee",
+                "uri": "/Line/jubilee",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "piccadilly",
+                "name": "Piccadilly",
+                "uri": "/Line/piccadilly",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUGPK",
+            "name": "Green Park Underground Station",
+            "lat": 51.506947,
+            "lon": -0.142787
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUGPK",
+      "Station": {
+        "StationId": "940GZZLUGPK",
+        "Index": 11,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUGPK",
+            "icsId": "1000093",
+            "topMostParentId": "940GZZLUGPK",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "jubilee",
+                "name": "Jubilee",
+                "uri": "/Line/jubilee",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "piccadilly",
+                "name": "Piccadilly",
+                "uri": "/Line/piccadilly",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUGPK",
+            "name": "Green Park Underground Station",
+            "lat": 51.506947,
+            "lon": -0.142787
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBVIC",
+      "Station": {
+        "StationId": "HUBVIC",
+        "Index": 12,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBVIC",
+            "stationId": "940GZZLUVIC",
+            "icsId": "1000248",
+            "topMostParentId": "HUBVIC",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "circle",
+                "name": "Circle",
+                "uri": "/Line/circle",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "district",
+                "name": "District",
+                "uri": "/Line/district",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUVIC",
+            "name": "Victoria Underground Station",
+            "lat": 51.496359,
+            "lon": -0.143102
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "HUBVIC",
+      "Station": {
+        "StationId": "HUBVIC",
+        "Index": 12,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBVIC",
+            "stationId": "940GZZLUVIC",
+            "icsId": "1000248",
+            "topMostParentId": "HUBVIC",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "circle",
+                "name": "Circle",
+                "uri": "/Line/circle",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "district",
+                "name": "District",
+                "uri": "/Line/district",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUVIC",
+            "name": "Victoria Underground Station",
+            "lat": 51.496359,
+            "lon": -0.143102
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUPCO",
+      "Station": {
+        "StationId": "940GZZLUPCO",
+        "Index": 13,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUPCO",
+            "icsId": "1000180",
+            "topMostParentId": "940GZZLUPCO",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUPCO",
+            "name": "Pimlico Underground Station",
+            "lat": 51.489097,
+            "lon": -0.133761
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUPCO",
+      "Station": {
+        "StationId": "940GZZLUPCO",
+        "Index": 13,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUPCO",
+            "icsId": "1000180",
+            "topMostParentId": "940GZZLUPCO",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUPCO",
+            "name": "Pimlico Underground Station",
+            "lat": 51.489097,
+            "lon": -0.133761
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBVXH",
+      "Station": {
+        "StationId": "HUBVXH",
+        "Index": 14,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBVXH",
+            "stationId": "940GZZLUVXL",
+            "icsId": "1000247",
+            "topMostParentId": "HUBVXH",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1+2",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUVXL",
+            "name": "Vauxhall Underground Station",
+            "lat": 51.485743,
+            "lon": -0.124204
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "HUBVXH",
+      "Station": {
+        "StationId": "HUBVXH",
+        "Index": 14,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBVXH",
+            "stationId": "940GZZLUVXL",
+            "icsId": "1000247",
+            "topMostParentId": "HUBVXH",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1+2",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUVXL",
+            "name": "Vauxhall Underground Station",
+            "lat": 51.485743,
+            "lon": -0.124204
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUSKW",
+      "Station": {
+        "StationId": "940GZZLUSKW",
+        "Index": 15,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUSKW",
+            "icsId": "1000223",
+            "topMostParentId": "940GZZLUSKW",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSKW",
+            "name": "Stockwell Underground Station",
+            "lat": 51.472184,
+            "lon": -0.122644
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUSKW",
+      "Station": {
+        "StationId": "940GZZLUSKW",
+        "Index": 15,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUSKW",
+            "icsId": "1000223",
+            "topMostParentId": "940GZZLUSKW",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSKW",
+            "name": "Stockwell Underground Station",
+            "lat": 51.472184,
+            "lon": -0.122644
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBBRX",
+      "Station": {
+        "StationId": "HUBBRX",
+        "Index": 16,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBBRX",
+            "stationId": "940GZZLUBXN",
+            "icsId": "1000031",
+            "topMostParentId": "HUBBRX",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBXN",
+            "name": "Brixton Underground Station",
+            "lat": 51.462618,
+            "lon": -0.114888
+          }
+        ]
+      }
+    },
+    "LineId": "victoria"
+  }
+]

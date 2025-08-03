@@ -100,4 +100,33 @@ namespace TflNetworkBuilder
         }
     }
 
+    public class StationLink
+    {
+        public required StationNode From { get; init; }
+        public required StationNode To { get; init; }
+
+        public required string LineId { get; init; }
+
+        [JsonIgnore]
+        public double StartLat => From.Station.Lat;
+        [JsonIgnore]
+        public double StartLon => From.Station.Lon;
+        [JsonIgnore]
+        public double EndLat => To.Station.Lat;
+        [JsonIgnore]
+        public double EndLon => To.Station.Lon;
+
+        public override bool Equals(object? obj)
+        {
+            if (obj is not StationLink right)
+                return false;
+            return From.Equals(right.From.StationId) && To.Equals(right.To.StationId) && LineId.Equals(right.LineId);
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(From.StationId, To.StationId, LineId);
+        }
+    }
+
 }

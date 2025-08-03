@@ -23,7 +23,6 @@ namespace ArrivalsUI
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
-
         const int GridSize = 12; // Size of 1 X,Y unit in pixels
         const int Left = 12;     // Leave some empty space on the left
         const int Top = 12;      // Leave some empty space on the right

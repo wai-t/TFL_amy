@@ -1,17 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using TflNetworkBuilder;
 
 namespace ArrivalsUI
@@ -22,6 +11,10 @@ namespace ArrivalsUI
     /// </summary>
     public partial class LineDiagramBrowser : UserControl
     {
+        //
+        // Using a Routed Event to allow other controls to subscribe to
+        // StationSelected events. In this case, the LineDiagramWindow
+        //
         public static readonly RoutedEvent StationSelectedEvent =
             EventManager.RegisterRoutedEvent(
             "StationSelected",
@@ -39,8 +32,6 @@ namespace ArrivalsUI
         public LineDiagramBrowser()
         {
             InitializeComponent();
-
-
         }
 
         private void TextBlock_MouseLeftButtonUp(object sender, MouseButtonEventArgs e)
@@ -66,4 +57,8 @@ namespace ArrivalsUI
             SelectedStation = station;
         }
     }
+
+
+
+
 }

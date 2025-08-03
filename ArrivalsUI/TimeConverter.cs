@@ -7,7 +7,8 @@ namespace ArrivalsUI
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return (int)value / 60;
+            int sec = (int)value;
+            return sec >= 60 ? (sec / 60).ToString()+" min" : sec.ToString()+" sec";
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture) => throw new NotSupportedException();

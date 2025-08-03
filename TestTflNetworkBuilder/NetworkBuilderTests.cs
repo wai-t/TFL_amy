@@ -57,7 +57,7 @@ namespace TestTflNetworkBuilder
 
                 TestUtils.SaveTestOutput($"{line}-BranchesList.json", JsonConvert.SerializeObject(graph.Branches, Formatting.Indented));
 
-
+                TestUtils.SaveTestOutput($"{line}-StationLinks.json", JsonConvert.SerializeObject(graph.StationLinks, Formatting.Indented));
             }
         }
         [Fact]

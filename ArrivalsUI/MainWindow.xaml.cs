@@ -1,15 +1,4 @@
-﻿using System.IO;
-using System.Text;
-using System.Threading.Tasks;
-using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
+﻿using System.Windows;
 
 namespace ArrivalsUI
 {
@@ -20,12 +9,12 @@ namespace ArrivalsUI
     {
         Lazy<LineDiagramWindow> _lineDiagramWindow = new Lazy<LineDiagramWindow>(() => new LineDiagramWindow());
         Lazy<StationBrowsingWindow> _stationBrowsingWindow = new Lazy<StationBrowsingWindow>(() => new StationBrowsingWindow());
-        Lazy<Map> _mapWindow = new Lazy<Map>(() => new Map());
+        Lazy<MapWindow> _mapWindow = new Lazy<MapWindow>(() => new MapWindow());
         public MainWindow()
         {
             InitializeComponent();
 
-            MainContent.Content = _lineDiagramWindow.Value;
+            MainContent.Content = _mapWindow.Value;
         }
 
         private void LineDiagrams_Click(object sender, RoutedEventArgs e)

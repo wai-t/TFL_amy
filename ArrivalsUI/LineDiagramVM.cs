@@ -1,21 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 using tfl_stats.Tfl;
 using TflNetworkBuilder;
 
 namespace ArrivalsUI
 {
-    public class TabbedLinesVM
+    public class LineDiagramVM
     {
-        public ObservableCollection<TabbedLineVM> Tabs { get; set; } = [];
-        public TabbedLineVM SelectedTab { get; set; }
+        public ObservableCollection<LineDiagramTabVM> Tabs { get; set; } = [];
+        public LineDiagramTabVM SelectedTab { get; set; }
 
         public ObservableCollection<PlatformArrivals> Arrivals { get; set; } = [];
-
 
         private List<string> _lines =  [
             "bakerloo",
@@ -33,18 +27,14 @@ namespace ArrivalsUI
             "waterloo-city",
         ];
 
-        public TabbedLinesVM() 
+        public LineDiagramVM() 
         {
             _lines.ForEach(
                 l => Tabs.Add(
-                    new TabbedLineVM { 
-                        Header = l
-                        }
-                    )
+                    new LineDiagramTabVM(l)
+                )
             );
             SelectedTab = Tabs[0];
-
-            
         }
 
         public async void HandleStationSelection(Station station)
@@ -77,18 +67,23 @@ namespace ArrivalsUI
         }
     }
 
-    public class TabbedLineVM
+    public class LineDiagramTabVM
     {
-        public required string Header { get; set; }
+        public string Header { get; set; }
 
-        private LineDiagramBrowserVM? _lineDiagram;
-        public LineDiagramBrowserVM LineDiagramViewModel {  get 
+        private Lazy<LineDiagramBrowserVM> _lineDiagram;
+
+        public LineDiagramTabVM(string header)
+        {
+            Header = header;
+            _lineDiagram 
+                = new Lazy<LineDiagramBrowserVM>(() => new LineDiagramBrowserVM(Header));
+        }
+        public LineDiagramBrowserVM LineDiagramViewModel
+        {
+            get
             {
-                if (_lineDiagram == null)
-                {
-                    _lineDiagram = new LineDiagramBrowserVM(Header);
-                }
-                return _lineDiagram;
+                return _lineDiagram.Value;
             }
         }
     }

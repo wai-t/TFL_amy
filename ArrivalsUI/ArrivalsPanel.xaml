@@ -29,13 +29,9 @@
                                         <TextBlock Text="{Binding DestinationName}" Grid.Column="0" Grid.Row="0"
                                                    FontFamily="Consolas" FontSize="16" FontWeight="Bold"
                                                    Foreground="#FFFF00"/>
-                                        <StackPanel Orientation="Horizontal"  VerticalAlignment="Center" Margin="2"
-                                                    Grid.Column="1" Grid.Row="0">
-                                            <TextBlock Text="{Binding TimeToStation, Converter={StaticResource TimeConverter}}" 
-                                                   FontFamily="Consolas" FontSize="16" FontWeight="Bold" Foreground="#FFFF00" />
-                                            <TextBlock Text=" min"  
-                                                   FontFamily="Consolas" FontSize="16" FontWeight="Bold" Foreground="#FFFF00"/>
-                                        </StackPanel>
+                                        <TextBlock Text="{Binding TimeToStation, Converter={StaticResource TimeConverter}}" 
+                                                FontFamily="Consolas" FontSize="16" FontWeight="Bold" Foreground="#FFFF00"
+                                                    Grid.Column="1"/>
                                     </Grid>
                                 </DataTemplate>
                             </ItemsControl.ItemTemplate>

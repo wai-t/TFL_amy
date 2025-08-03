@@ -14,6 +14,8 @@ namespace TflNetworkBuilder
         private readonly HashSet<StationNode> _nodes = [];
         private readonly HashSet<Branch> _branches = [];
         private List<StationNode> _orderedNodes = [];
+        private HashSet<StationLink> _stationLinks = [];
+        private string _lineId = string.Empty;
 
         private StationNode START_NODE { get; } = new() { Station = new() { StationId = "START" } };
         private StationNode END_NODE { get; } = new() { Station = new() { StationId = "END" } };
@@ -22,8 +24,11 @@ namespace TflNetworkBuilder
         public List<StationNode> OrderedNodes => _orderedNodes;
         public List<Branch> Branches => [.. _branches];
 
+        public List<StationLink> StationLinks => [.. _stationLinks];
+
         public StationGraph(RouteSequence sequenceData)
         {
+            _lineId = sequenceData.LineId;
             //
             // To build the graph, we need to begin by adding all StopPointSequences
             //
@@ -50,6 +55,16 @@ namespace TflNetworkBuilder
         {
             BuildStationNetwork();
             _orderedNodes = OrderStations();
+
+            foreach (var node in _orderedNodes.Where(n => n.StationId!="START" && n.StationId!="END"))
+            {
+                node.RemovePrev(START_NODE);
+                node.RemoveNext(END_NODE);
+                foreach (var next in node.Next)
+                {
+                    _stationLinks.Add(new StationLink { From = node, To = next, LineId = _lineId });
+                }
+            }
         }
 
 

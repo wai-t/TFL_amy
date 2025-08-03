@@ -1,0 +1,4418 @@
+[
+  {
+    "From": {
+      "StationId": "940GZZLUHLT",
+      "Station": {
+        "StationId": "940GZZLUHLT",
+        "Index": 1,
+        "BranchIds": [
+          0,
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUHLT",
+            "icsId": "1000095",
+            "topMostParentId": "940GZZLUHLT",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUHLT",
+            "name": "Hainault Underground Station",
+            "lat": 51.603659,
+            "lon": 0.093482
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUGGH",
+      "Station": {
+        "StationId": "940GZZLUGGH",
+        "Index": 7,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUGGH",
+            "icsId": "1000090",
+            "topMostParentId": "940GZZLUGGH",
+            "modes": [
+              "bus",
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "462",
+                "name": "462",
+                "uri": "/Line/462",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUGGH",
+            "name": "Grange Hill Underground Station",
+            "lat": 51.613378,
+            "lon": 0.092066
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUHLT",
+      "Station": {
+        "StationId": "940GZZLUHLT",
+        "Index": 1,
+        "BranchIds": [
+          0,
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUHLT",
+            "icsId": "1000095",
+            "topMostParentId": "940GZZLUHLT",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUHLT",
+            "name": "Hainault Underground Station",
+            "lat": 51.603659,
+            "lon": 0.093482
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUFLP",
+      "Station": {
+        "StationId": "940GZZLUFLP",
+        "Index": 13,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUFLP",
+            "icsId": "1000079",
+            "topMostParentId": "940GZZLUFLP",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUFLP",
+            "name": "Fairlop Underground Station",
+            "lat": 51.595618,
+            "lon": 0.091004
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUEPG",
+      "Station": {
+        "StationId": "940GZZLUEPG",
+        "Index": 2,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUEPG",
+            "icsId": "1000076",
+            "topMostParentId": "940GZZLUEPG",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUEPG",
+            "name": "Epping Underground Station",
+            "lat": 51.69368,
+            "lon": 0.113767
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUTHB",
+      "Station": {
+        "StationId": "940GZZLUTHB",
+        "Index": 3,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUTHB",
+            "icsId": "1000232",
+            "topMostParentId": "940GZZLUTHB",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUTHB",
+            "name": "Theydon Bois Underground Station",
+            "lat": 51.671759,
+            "lon": 0.103085
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUTHB",
+      "Station": {
+        "StationId": "940GZZLUTHB",
+        "Index": 3,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUTHB",
+            "icsId": "1000232",
+            "topMostParentId": "940GZZLUTHB",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUTHB",
+            "name": "Theydon Bois Underground Station",
+            "lat": 51.671759,
+            "lon": 0.103085
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUDBN",
+      "Station": {
+        "StationId": "940GZZLUDBN",
+        "Index": 4,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUDBN",
+            "icsId": "1000060",
+            "topMostParentId": "940GZZLUDBN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUDBN",
+            "name": "Debden Underground Station",
+            "lat": 51.645386,
+            "lon": 0.083782
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUDBN",
+      "Station": {
+        "StationId": "940GZZLUDBN",
+        "Index": 4,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUDBN",
+            "icsId": "1000060",
+            "topMostParentId": "940GZZLUDBN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUDBN",
+            "name": "Debden Underground Station",
+            "lat": 51.645386,
+            "lon": 0.083782
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLULGN",
+      "Station": {
+        "StationId": "940GZZLULGN",
+        "Index": 5,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLULGN",
+            "icsId": "1000140",
+            "topMostParentId": "940GZZLULGN",
+            "modes": [
+              "bus",
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "167",
+                "name": "167",
+                "uri": "/Line/167",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "20",
+                "name": "20",
+                "uri": "/Line/20",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "397",
+                "name": "397",
+                "uri": "/Line/397",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "677",
+                "name": "677",
+                "uri": "/Line/677",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "w14",
+                "name": "W14",
+                "uri": "/Line/w14",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLULGN",
+            "name": "Loughton Underground Station",
+            "lat": 51.641443,
+            "lon": 0.055476
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLULGN",
+      "Station": {
+        "StationId": "940GZZLULGN",
+        "Index": 5,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLULGN",
+            "icsId": "1000140",
+            "topMostParentId": "940GZZLULGN",
+            "modes": [
+              "bus",
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "167",
+                "name": "167",
+                "uri": "/Line/167",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "20",
+                "name": "20",
+                "uri": "/Line/20",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "397",
+                "name": "397",
+                "uri": "/Line/397",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "677",
+                "name": "677",
+                "uri": "/Line/677",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "w14",
+                "name": "W14",
+                "uri": "/Line/w14",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLULGN",
+            "name": "Loughton Underground Station",
+            "lat": 51.641443,
+            "lon": 0.055476
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUBKH",
+      "Station": {
+        "StationId": "940GZZLUBKH",
+        "Index": 6,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUBKH",
+            "icsId": "1000033",
+            "topMostParentId": "940GZZLUBKH",
+            "modes": [
+              "bus",
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "5",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "167",
+                "name": "167",
+                "uri": "/Line/167",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "677",
+                "name": "677",
+                "uri": "/Line/677",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "w14",
+                "name": "W14",
+                "uri": "/Line/w14",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBKH",
+            "name": "Buckhurst Hill Underground Station",
+            "lat": 51.626605,
+            "lon": 0.046757
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUBKH",
+      "Station": {
+        "StationId": "940GZZLUBKH",
+        "Index": 6,
+        "BranchIds": [
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUBKH",
+            "icsId": "1000033",
+            "topMostParentId": "940GZZLUBKH",
+            "modes": [
+              "bus",
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "5",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "167",
+                "name": "167",
+                "uri": "/Line/167",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "677",
+                "name": "677",
+                "uri": "/Line/677",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "w14",
+                "name": "W14",
+                "uri": "/Line/w14",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBKH",
+            "name": "Buckhurst Hill Underground Station",
+            "lat": 51.626605,
+            "lon": 0.046757
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUWOF",
+      "Station": {
+        "StationId": "940GZZLUWOF",
+        "Index": 10,
+        "BranchIds": [
+          0,
+          5,
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUWOF",
+            "icsId": "1000274",
+            "topMostParentId": "940GZZLUWOF",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWOF",
+            "name": "Woodford Underground Station",
+            "lat": 51.606899,
+            "lon": 0.03397
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUGGH",
+      "Station": {
+        "StationId": "940GZZLUGGH",
+        "Index": 7,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUGGH",
+            "icsId": "1000090",
+            "topMostParentId": "940GZZLUGGH",
+            "modes": [
+              "bus",
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "462",
+                "name": "462",
+                "uri": "/Line/462",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUGGH",
+            "name": "Grange Hill Underground Station",
+            "lat": 51.613378,
+            "lon": 0.092066
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUCWL",
+      "Station": {
+        "StationId": "940GZZLUCWL",
+        "Index": 8,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUCWL",
+            "icsId": "1000047",
+            "topMostParentId": "940GZZLUCWL",
+            "modes": [
+              "tube",
+              "bus"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "167",
+                "name": "167",
+                "uri": "/Line/167",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "667",
+                "name": "667",
+                "uri": "/Line/667",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "677",
+                "name": "677",
+                "uri": "/Line/677",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUCWL",
+            "name": "Chigwell Underground Station",
+            "lat": 51.617916,
+            "lon": 0.075041
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUCWL",
+      "Station": {
+        "StationId": "940GZZLUCWL",
+        "Index": 8,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUCWL",
+            "icsId": "1000047",
+            "topMostParentId": "940GZZLUCWL",
+            "modes": [
+              "tube",
+              "bus"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "167",
+                "name": "167",
+                "uri": "/Line/167",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "667",
+                "name": "667",
+                "uri": "/Line/667",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "677",
+                "name": "677",
+                "uri": "/Line/677",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUCWL",
+            "name": "Chigwell Underground Station",
+            "lat": 51.617916,
+            "lon": 0.075041
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLURVY",
+      "Station": {
+        "StationId": "940GZZLURVY",
+        "Index": 9,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLURVY",
+            "icsId": "1000194",
+            "topMostParentId": "940GZZLURVY",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLURVY",
+            "name": "Roding Valley Underground Station",
+            "lat": 51.617199,
+            "lon": 0.043647
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLURVY",
+      "Station": {
+        "StationId": "940GZZLURVY",
+        "Index": 9,
+        "BranchIds": [
+          0
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLURVY",
+            "icsId": "1000194",
+            "topMostParentId": "940GZZLURVY",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLURVY",
+            "name": "Roding Valley Underground Station",
+            "lat": 51.617199,
+            "lon": 0.043647
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUWOF",
+      "Station": {
+        "StationId": "940GZZLUWOF",
+        "Index": 10,
+        "BranchIds": [
+          0,
+          5,
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUWOF",
+            "icsId": "1000274",
+            "topMostParentId": "940GZZLUWOF",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWOF",
+            "name": "Woodford Underground Station",
+            "lat": 51.606899,
+            "lon": 0.03397
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUWOF",
+      "Station": {
+        "StationId": "940GZZLUWOF",
+        "Index": 10,
+        "BranchIds": [
+          0,
+          5,
+          2
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUWOF",
+            "icsId": "1000274",
+            "topMostParentId": "940GZZLUWOF",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWOF",
+            "name": "Woodford Underground Station",
+            "lat": 51.606899,
+            "lon": 0.03397
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUSWF",
+      "Station": {
+        "StationId": "940GZZLUSWF",
+        "Index": 11,
+        "BranchIds": [
+          5
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUSWF",
+            "icsId": "1000217",
+            "topMostParentId": "940GZZLUSWF",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSWF",
+            "name": "South Woodford Underground Station",
+            "lat": 51.591907,
+            "lon": 0.027338
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUSWF",
+      "Station": {
+        "StationId": "940GZZLUSWF",
+        "Index": 11,
+        "BranchIds": [
+          5
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUSWF",
+            "icsId": "1000217",
+            "topMostParentId": "940GZZLUSWF",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSWF",
+            "name": "South Woodford Underground Station",
+            "lat": 51.591907,
+            "lon": 0.027338
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUSNB",
+      "Station": {
+        "StationId": "940GZZLUSNB",
+        "Index": 12,
+        "BranchIds": [
+          5
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUSNB",
+            "icsId": "1000207",
+            "topMostParentId": "940GZZLUSNB",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSNB",
+            "name": "Snaresbrook Underground Station",
+            "lat": 51.580678,
+            "lon": 0.02144
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUSNB",
+      "Station": {
+        "StationId": "940GZZLUSNB",
+        "Index": 12,
+        "BranchIds": [
+          5
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUSNB",
+            "icsId": "1000207",
+            "topMostParentId": "940GZZLUSNB",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSNB",
+            "name": "Snaresbrook Underground Station",
+            "lat": 51.580678,
+            "lon": 0.02144
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLULYS",
+      "Station": {
+        "StationId": "940GZZLULYS",
+        "Index": 19,
+        "BranchIds": [
+          5,
+          6,
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLULYS",
+            "icsId": "1000137",
+            "topMostParentId": "940GZZLULYS",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3+4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLULYS",
+            "name": "Leytonstone Underground Station",
+            "lat": 51.568324,
+            "lon": 0.008194
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUFLP",
+      "Station": {
+        "StationId": "940GZZLUFLP",
+        "Index": 13,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUFLP",
+            "icsId": "1000079",
+            "topMostParentId": "940GZZLUFLP",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUFLP",
+            "name": "Fairlop Underground Station",
+            "lat": 51.595618,
+            "lon": 0.091004
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUBKE",
+      "Station": {
+        "StationId": "940GZZLUBKE",
+        "Index": 14,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUBKE",
+            "icsId": "1000016",
+            "topMostParentId": "940GZZLUBKE",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBKE",
+            "name": "Barkingside Underground Station",
+            "lat": 51.585689,
+            "lon": 0.088585
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUBKE",
+      "Station": {
+        "StationId": "940GZZLUBKE",
+        "Index": 14,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUBKE",
+            "icsId": "1000016",
+            "topMostParentId": "940GZZLUBKE",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBKE",
+            "name": "Barkingside Underground Station",
+            "lat": 51.585689,
+            "lon": 0.088585
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUNBP",
+      "Station": {
+        "StationId": "940GZZLUNBP",
+        "Index": 15,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUNBP",
+            "icsId": "1000154",
+            "topMostParentId": "940GZZLUNBP",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUNBP",
+            "name": "Newbury Park Underground Station",
+            "lat": 51.575726,
+            "lon": 0.090004
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUNBP",
+      "Station": {
+        "StationId": "940GZZLUNBP",
+        "Index": 15,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUNBP",
+            "icsId": "1000154",
+            "topMostParentId": "940GZZLUNBP",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUNBP",
+            "name": "Newbury Park Underground Station",
+            "lat": 51.575726,
+            "lon": 0.090004
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUGTH",
+      "Station": {
+        "StationId": "940GZZLUGTH",
+        "Index": 16,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUGTH",
+            "icsId": "1000085",
+            "topMostParentId": "940GZZLUGTH",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUGTH",
+            "name": "Gants Hill Underground Station",
+            "lat": 51.576544,
+            "lon": 0.066185
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUGTH",
+      "Station": {
+        "StationId": "940GZZLUGTH",
+        "Index": 16,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUGTH",
+            "icsId": "1000085",
+            "topMostParentId": "940GZZLUGTH",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUGTH",
+            "name": "Gants Hill Underground Station",
+            "lat": 51.576544,
+            "lon": 0.066185
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLURBG",
+      "Station": {
+        "StationId": "940GZZLURBG",
+        "Index": 17,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLURBG",
+            "icsId": "1000190",
+            "topMostParentId": "940GZZLURBG",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLURBG",
+            "name": "Redbridge Underground Station",
+            "lat": 51.576243,
+            "lon": 0.04536
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLURBG",
+      "Station": {
+        "StationId": "940GZZLURBG",
+        "Index": 17,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLURBG",
+            "icsId": "1000190",
+            "topMostParentId": "940GZZLURBG",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLURBG",
+            "name": "Redbridge Underground Station",
+            "lat": 51.576243,
+            "lon": 0.04536
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUWSD",
+      "Station": {
+        "StationId": "940GZZLUWSD",
+        "Index": 18,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUWSD",
+            "icsId": "1000250",
+            "topMostParentId": "940GZZLUWSD",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWSD",
+            "name": "Wanstead Underground Station",
+            "lat": 51.575501,
+            "lon": 0.028527
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUWSD",
+      "Station": {
+        "StationId": "940GZZLUWSD",
+        "Index": 18,
+        "BranchIds": [
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUWSD",
+            "icsId": "1000250",
+            "topMostParentId": "940GZZLUWSD",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWSD",
+            "name": "Wanstead Underground Station",
+            "lat": 51.575501,
+            "lon": 0.028527
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLULYS",
+      "Station": {
+        "StationId": "940GZZLULYS",
+        "Index": 19,
+        "BranchIds": [
+          5,
+          6,
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLULYS",
+            "icsId": "1000137",
+            "topMostParentId": "940GZZLULYS",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3+4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLULYS",
+            "name": "Leytonstone Underground Station",
+            "lat": 51.568324,
+            "lon": 0.008194
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLULYS",
+      "Station": {
+        "StationId": "940GZZLULYS",
+        "Index": 19,
+        "BranchIds": [
+          5,
+          6,
+          1
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLULYS",
+            "icsId": "1000137",
+            "topMostParentId": "940GZZLULYS",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3+4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLULYS",
+            "name": "Leytonstone Underground Station",
+            "lat": 51.568324,
+            "lon": 0.008194
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLULYN",
+      "Station": {
+        "StationId": "940GZZLULYN",
+        "Index": 20,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLULYN",
+            "icsId": "1000136",
+            "topMostParentId": "940GZZLULYN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLULYN",
+            "name": "Leyton Underground Station",
+            "lat": 51.556589,
+            "lon": -0.005523
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLULYN",
+      "Station": {
+        "StationId": "940GZZLULYN",
+        "Index": 20,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLULYN",
+            "icsId": "1000136",
+            "topMostParentId": "940GZZLULYN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLULYN",
+            "name": "Leyton Underground Station",
+            "lat": 51.556589,
+            "lon": -0.005523
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBSRA",
+      "Station": {
+        "StationId": "HUBSRA",
+        "Index": 21,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBSRA",
+            "stationId": "940GZZLUSTD",
+            "icsId": "1000226",
+            "topMostParentId": "HUBSRA",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2/3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "jubilee",
+                "name": "Jubilee",
+                "uri": "/Line/jubilee",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSTD",
+            "name": "Stratford Underground Station",
+            "lat": 51.541806,
+            "lon": -0.003458
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "HUBSRA",
+      "Station": {
+        "StationId": "HUBSRA",
+        "Index": 21,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBSRA",
+            "stationId": "940GZZLUSTD",
+            "icsId": "1000226",
+            "topMostParentId": "HUBSRA",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2/3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "jubilee",
+                "name": "Jubilee",
+                "uri": "/Line/jubilee",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSTD",
+            "name": "Stratford Underground Station",
+            "lat": 51.541806,
+            "lon": -0.003458
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUMED",
+      "Station": {
+        "StationId": "940GZZLUMED",
+        "Index": 22,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUMED",
+            "icsId": "1000146",
+            "topMostParentId": "940GZZLUMED",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "district",
+                "name": "District",
+                "uri": "/Line/district",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "hammersmith-city",
+                "name": "Hammersmith & City",
+                "uri": "/Line/hammersmith-city",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUMED",
+            "name": "Mile End Underground Station",
+            "lat": 51.525122,
+            "lon": -0.03364
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUMED",
+      "Station": {
+        "StationId": "940GZZLUMED",
+        "Index": 22,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUMED",
+            "icsId": "1000146",
+            "topMostParentId": "940GZZLUMED",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "district",
+                "name": "District",
+                "uri": "/Line/district",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "hammersmith-city",
+                "name": "Hammersmith & City",
+                "uri": "/Line/hammersmith-city",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUMED",
+            "name": "Mile End Underground Station",
+            "lat": 51.525122,
+            "lon": -0.03364
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUBLG",
+      "Station": {
+        "StationId": "940GZZLUBLG",
+        "Index": 23,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUBLG",
+            "icsId": "1000022",
+            "topMostParentId": "940GZZLUBLG",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBLG",
+            "name": "Bethnal Green Underground Station",
+            "lat": 51.527222,
+            "lon": -0.055506
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUBLG",
+      "Station": {
+        "StationId": "940GZZLUBLG",
+        "Index": 23,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUBLG",
+            "icsId": "1000022",
+            "topMostParentId": "940GZZLUBLG",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBLG",
+            "name": "Bethnal Green Underground Station",
+            "lat": 51.527222,
+            "lon": -0.055506
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBLST",
+      "Station": {
+        "StationId": "HUBLST",
+        "Index": 24,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBLST",
+            "stationId": "940GZZLULVT",
+            "icsId": "1000138",
+            "topMostParentId": "HUBLST",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "circle",
+                "name": "Circle",
+                "uri": "/Line/circle",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "hammersmith-city",
+                "name": "Hammersmith & City",
+                "uri": "/Line/hammersmith-city",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "metropolitan",
+                "name": "Metropolitan",
+                "uri": "/Line/metropolitan",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLULVT",
+            "name": "Liverpool Street Underground Station",
+            "lat": 51.517372,
+            "lon": -0.083182
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "HUBLST",
+      "Station": {
+        "StationId": "HUBLST",
+        "Index": 24,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBLST",
+            "stationId": "940GZZLULVT",
+            "icsId": "1000138",
+            "topMostParentId": "HUBLST",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "circle",
+                "name": "Circle",
+                "uri": "/Line/circle",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "hammersmith-city",
+                "name": "Hammersmith & City",
+                "uri": "/Line/hammersmith-city",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "metropolitan",
+                "name": "Metropolitan",
+                "uri": "/Line/metropolitan",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLULVT",
+            "name": "Liverpool Street Underground Station",
+            "lat": 51.517372,
+            "lon": -0.083182
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBBAN",
+      "Station": {
+        "StationId": "HUBBAN",
+        "Index": 25,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBBAN",
+            "stationId": "940GZZLUBNK",
+            "icsId": "1000013",
+            "topMostParentId": "HUBBAN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "waterloo-city",
+                "name": "Waterloo & City",
+                "uri": "/Line/waterloo-city",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBNK",
+            "name": "Bank Underground Station",
+            "lat": 51.51225,
+            "lon": -0.087792
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "HUBBAN",
+      "Station": {
+        "StationId": "HUBBAN",
+        "Index": 25,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBBAN",
+            "stationId": "940GZZLUBNK",
+            "icsId": "1000013",
+            "topMostParentId": "HUBBAN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "waterloo-city",
+                "name": "Waterloo & City",
+                "uri": "/Line/waterloo-city",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBNK",
+            "name": "Bank Underground Station",
+            "lat": 51.51225,
+            "lon": -0.087792
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUSPU",
+      "Station": {
+        "StationId": "940GZZLUSPU",
+        "Index": 26,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUSPU",
+            "icsId": "1000225",
+            "topMostParentId": "940GZZLUSPU",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSPU",
+            "name": "St. Paul's Underground Station",
+            "lat": 51.514936,
+            "lon": -0.097567
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUSPU",
+      "Station": {
+        "StationId": "940GZZLUSPU",
+        "Index": 26,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUSPU",
+            "icsId": "1000225",
+            "topMostParentId": "940GZZLUSPU",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSPU",
+            "name": "St. Paul's Underground Station",
+            "lat": 51.514936,
+            "lon": -0.097567
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUCHL",
+      "Station": {
+        "StationId": "940GZZLUCHL",
+        "Index": 27,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUCHL",
+            "icsId": "1000044",
+            "topMostParentId": "940GZZLUCHL",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUCHL",
+            "name": "Chancery Lane Underground Station",
+            "lat": 51.518247,
+            "lon": -0.111583
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUCHL",
+      "Station": {
+        "StationId": "940GZZLUCHL",
+        "Index": 27,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUCHL",
+            "icsId": "1000044",
+            "topMostParentId": "940GZZLUCHL",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUCHL",
+            "name": "Chancery Lane Underground Station",
+            "lat": 51.518247,
+            "lon": -0.111583
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUHBN",
+      "Station": {
+        "StationId": "940GZZLUHBN",
+        "Index": 28,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUHBN",
+            "icsId": "1000112",
+            "topMostParentId": "940GZZLUHBN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "piccadilly",
+                "name": "Piccadilly",
+                "uri": "/Line/piccadilly",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUHBN",
+            "name": "Holborn Underground Station",
+            "lat": 51.51758,
+            "lon": -0.120475
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUHBN",
+      "Station": {
+        "StationId": "940GZZLUHBN",
+        "Index": 28,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUHBN",
+            "icsId": "1000112",
+            "topMostParentId": "940GZZLUHBN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "piccadilly",
+                "name": "Piccadilly",
+                "uri": "/Line/piccadilly",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUHBN",
+            "name": "Holborn Underground Station",
+            "lat": 51.51758,
+            "lon": -0.120475
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBTCR",
+      "Station": {
+        "StationId": "HUBTCR",
+        "Index": 29,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBTCR",
+            "stationId": "940GZZLUTCR",
+            "icsId": "1000235",
+            "topMostParentId": "HUBTCR",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUTCR",
+            "name": "Tottenham Court Road Underground Station",
+            "lat": 51.516426,
+            "lon": -0.13041
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "HUBTCR",
+      "Station": {
+        "StationId": "HUBTCR",
+        "Index": 29,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBTCR",
+            "stationId": "940GZZLUTCR",
+            "icsId": "1000235",
+            "topMostParentId": "HUBTCR",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "northern",
+                "name": "Northern",
+                "uri": "/Line/northern",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUTCR",
+            "name": "Tottenham Court Road Underground Station",
+            "lat": 51.516426,
+            "lon": -0.13041
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUOXC",
+      "Station": {
+        "StationId": "940GZZLUOXC",
+        "Index": 30,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUOXC",
+            "icsId": "1000173",
+            "topMostParentId": "940GZZLUOXC",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "bakerloo",
+                "name": "Bakerloo",
+                "uri": "/Line/bakerloo",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUOXC",
+            "name": "Oxford Circus Underground Station",
+            "lat": 51.515224,
+            "lon": -0.141903
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUOXC",
+      "Station": {
+        "StationId": "940GZZLUOXC",
+        "Index": 30,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUOXC",
+            "icsId": "1000173",
+            "topMostParentId": "940GZZLUOXC",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "bakerloo",
+                "name": "Bakerloo",
+                "uri": "/Line/bakerloo",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "victoria",
+                "name": "Victoria",
+                "uri": "/Line/victoria",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUOXC",
+            "name": "Oxford Circus Underground Station",
+            "lat": 51.515224,
+            "lon": -0.141903
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBBDS",
+      "Station": {
+        "StationId": "HUBBDS",
+        "Index": 31,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBBDS",
+            "stationId": "940GZZLUBND",
+            "icsId": "1000025",
+            "topMostParentId": "HUBBDS",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "jubilee",
+                "name": "Jubilee",
+                "uri": "/Line/jubilee",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBND",
+            "name": "Bond Street Underground Station",
+            "lat": 51.514304,
+            "lon": -0.149723
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "HUBBDS",
+      "Station": {
+        "StationId": "HUBBDS",
+        "Index": 31,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBBDS",
+            "stationId": "940GZZLUBND",
+            "icsId": "1000025",
+            "topMostParentId": "HUBBDS",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "jubilee",
+                "name": "Jubilee",
+                "uri": "/Line/jubilee",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUBND",
+            "name": "Bond Street Underground Station",
+            "lat": 51.514304,
+            "lon": -0.149723
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUMBA",
+      "Station": {
+        "StationId": "940GZZLUMBA",
+        "Index": 32,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUMBA",
+            "icsId": "1000144",
+            "topMostParentId": "940GZZLUMBA",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUMBA",
+            "name": "Marble Arch Underground Station",
+            "lat": 51.513424,
+            "lon": -0.158953
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUMBA",
+      "Station": {
+        "StationId": "940GZZLUMBA",
+        "Index": 32,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUMBA",
+            "icsId": "1000144",
+            "topMostParentId": "940GZZLUMBA",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUMBA",
+            "name": "Marble Arch Underground Station",
+            "lat": 51.513424,
+            "lon": -0.158953
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLULGT",
+      "Station": {
+        "StationId": "940GZZLULGT",
+        "Index": 33,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLULGT",
+            "icsId": "1000133",
+            "topMostParentId": "940GZZLULGT",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLULGT",
+            "name": "Lancaster Gate Underground Station",
+            "lat": 51.511723,
+            "lon": -0.175494
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLULGT",
+      "Station": {
+        "StationId": "940GZZLULGT",
+        "Index": 33,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLULGT",
+            "icsId": "1000133",
+            "topMostParentId": "940GZZLULGT",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLULGT",
+            "name": "Lancaster Gate Underground Station",
+            "lat": 51.511723,
+            "lon": -0.175494
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUQWY",
+      "Station": {
+        "StationId": "940GZZLUQWY",
+        "Index": 34,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUQWY",
+            "icsId": "1000187",
+            "topMostParentId": "940GZZLUQWY",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUQWY",
+            "name": "Queensway Underground Station",
+            "lat": 51.510312,
+            "lon": -0.187152
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUQWY",
+      "Station": {
+        "StationId": "940GZZLUQWY",
+        "Index": 34,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUQWY",
+            "icsId": "1000187",
+            "topMostParentId": "940GZZLUQWY",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUQWY",
+            "name": "Queensway Underground Station",
+            "lat": 51.510312,
+            "lon": -0.187152
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUNHG",
+      "Station": {
+        "StationId": "940GZZLUNHG",
+        "Index": 35,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUNHG",
+            "icsId": "1000167",
+            "topMostParentId": "940GZZLUNHG",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1+2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "circle",
+                "name": "Circle",
+                "uri": "/Line/circle",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "district",
+                "name": "District",
+                "uri": "/Line/district",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUNHG",
+            "name": "Notting Hill Gate Underground Station",
+            "lat": 51.509128,
+            "lon": -0.196104
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUNHG",
+      "Station": {
+        "StationId": "940GZZLUNHG",
+        "Index": 35,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUNHG",
+            "icsId": "1000167",
+            "topMostParentId": "940GZZLUNHG",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "1+2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "circle",
+                "name": "Circle",
+                "uri": "/Line/circle",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "district",
+                "name": "District",
+                "uri": "/Line/district",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUNHG",
+            "name": "Notting Hill Gate Underground Station",
+            "lat": 51.509128,
+            "lon": -0.196104
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUHPK",
+      "Station": {
+        "StationId": "940GZZLUHPK",
+        "Index": 36,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUHPK",
+            "icsId": "1000113",
+            "topMostParentId": "940GZZLUHPK",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUHPK",
+            "name": "Holland Park Underground Station",
+            "lat": 51.507143,
+            "lon": -0.205679
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUHPK",
+      "Station": {
+        "StationId": "940GZZLUHPK",
+        "Index": 36,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUHPK",
+            "icsId": "1000113",
+            "topMostParentId": "940GZZLUHPK",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUHPK",
+            "name": "Holland Park Underground Station",
+            "lat": 51.507143,
+            "lon": -0.205679
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBSPB",
+      "Station": {
+        "StationId": "HUBSPB",
+        "Index": 37,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBSPB",
+            "stationId": "940GZZLUSBC",
+            "icsId": "1000203",
+            "topMostParentId": "HUBSPB",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSBC",
+            "name": "Shepherd's Bush (Central) Underground Station",
+            "lat": 51.504376,
+            "lon": -0.218813
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "HUBSPB",
+      "Station": {
+        "StationId": "HUBSPB",
+        "Index": 37,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBSPB",
+            "stationId": "940GZZLUSBC",
+            "icsId": "1000203",
+            "topMostParentId": "HUBSPB",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "hasDisruption": true,
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSBC",
+            "name": "Shepherd's Bush (Central) Underground Station",
+            "lat": 51.504376,
+            "lon": -0.218813
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUWCY",
+      "Station": {
+        "StationId": "940GZZLUWCY",
+        "Index": 38,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUWCY",
+            "icsId": "1000269",
+            "topMostParentId": "940GZZLUWCY",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWCY",
+            "name": "White City Underground Station",
+            "lat": 51.511959,
+            "lon": -0.224297
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUWCY",
+      "Station": {
+        "StationId": "940GZZLUWCY",
+        "Index": 38,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUWCY",
+            "icsId": "1000269",
+            "topMostParentId": "940GZZLUWCY",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWCY",
+            "name": "White City Underground Station",
+            "lat": 51.511959,
+            "lon": -0.224297
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUEAN",
+      "Station": {
+        "StationId": "940GZZLUEAN",
+        "Index": 39,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUEAN",
+            "icsId": "1000065",
+            "topMostParentId": "940GZZLUEAN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUEAN",
+            "name": "East Acton Underground Station",
+            "lat": 51.516612,
+            "lon": -0.247248
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUEAN",
+      "Station": {
+        "StationId": "940GZZLUEAN",
+        "Index": 39,
+        "BranchIds": [
+          6
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUEAN",
+            "icsId": "1000065",
+            "topMostParentId": "940GZZLUEAN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUEAN",
+            "name": "East Acton Underground Station",
+            "lat": 51.516612,
+            "lon": -0.247248
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUNAN",
+      "Station": {
+        "StationId": "940GZZLUNAN",
+        "Index": 40,
+        "BranchIds": [
+          6,
+          4,
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUNAN",
+            "icsId": "1000157",
+            "topMostParentId": "940GZZLUNAN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2+3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUNAN",
+            "name": "North Acton Underground Station",
+            "lat": 51.523524,
+            "lon": -0.259755
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUNAN",
+      "Station": {
+        "StationId": "940GZZLUNAN",
+        "Index": 40,
+        "BranchIds": [
+          6,
+          4,
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUNAN",
+            "icsId": "1000157",
+            "topMostParentId": "940GZZLUNAN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2+3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUNAN",
+            "name": "North Acton Underground Station",
+            "lat": 51.523524,
+            "lon": -0.259755
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUHGR",
+      "Station": {
+        "StationId": "940GZZLUHGR",
+        "Index": 43,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUHGR",
+            "icsId": "1000099",
+            "topMostParentId": "940GZZLUHGR",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUHGR",
+            "name": "Hanger Lane Underground Station",
+            "lat": 51.530177,
+            "lon": -0.292704
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUNAN",
+      "Station": {
+        "StationId": "940GZZLUNAN",
+        "Index": 40,
+        "BranchIds": [
+          6,
+          4,
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUNAN",
+            "icsId": "1000157",
+            "topMostParentId": "940GZZLUNAN",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "2+3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUNAN",
+            "name": "North Acton Underground Station",
+            "lat": 51.523524,
+            "lon": -0.259755
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUWTA",
+      "Station": {
+        "StationId": "940GZZLUWTA",
+        "Index": 41,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUWTA",
+            "icsId": "1000258",
+            "topMostParentId": "940GZZLUWTA",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWTA",
+            "name": "West Acton Underground Station",
+            "lat": 51.518001,
+            "lon": -0.28098
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUWTA",
+      "Station": {
+        "StationId": "940GZZLUWTA",
+        "Index": 41,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUWTA",
+            "icsId": "1000258",
+            "topMostParentId": "940GZZLUWTA",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWTA",
+            "name": "West Acton Underground Station",
+            "lat": 51.518001,
+            "lon": -0.28098
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBEAL",
+      "Station": {
+        "StationId": "HUBEAL",
+        "Index": 42,
+        "BranchIds": [
+          3
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBEAL",
+            "stationId": "940GZZLUEBY",
+            "icsId": "1000062",
+            "topMostParentId": "HUBEAL",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              },
+              {
+                "id": "district",
+                "name": "District",
+                "uri": "/Line/district",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUEBY",
+            "name": "Ealing Broadway Underground Station",
+            "lat": 51.515017,
+            "lon": -0.301457
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUHGR",
+      "Station": {
+        "StationId": "940GZZLUHGR",
+        "Index": 43,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUHGR",
+            "icsId": "1000099",
+            "topMostParentId": "940GZZLUHGR",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "3",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUHGR",
+            "name": "Hanger Lane Underground Station",
+            "lat": 51.530177,
+            "lon": -0.292704
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUPVL",
+      "Station": {
+        "StationId": "940GZZLUPVL",
+        "Index": 44,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUPVL",
+            "icsId": "1000178",
+            "topMostParentId": "940GZZLUPVL",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUPVL",
+            "name": "Perivale Underground Station",
+            "lat": 51.536717,
+            "lon": -0.323446
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUPVL",
+      "Station": {
+        "StationId": "940GZZLUPVL",
+        "Index": 44,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUPVL",
+            "icsId": "1000178",
+            "topMostParentId": "940GZZLUPVL",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUPVL",
+            "name": "Perivale Underground Station",
+            "lat": 51.536717,
+            "lon": -0.323446
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBGFD",
+      "Station": {
+        "StationId": "HUBGFD",
+        "Index": 45,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBGFD",
+            "stationId": "940GZZLUGFD",
+            "icsId": "1000092",
+            "topMostParentId": "HUBGFD",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUGFD",
+            "name": "Greenford Underground Station",
+            "lat": 51.542424,
+            "lon": -0.34605
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "HUBGFD",
+      "Station": {
+        "StationId": "HUBGFD",
+        "Index": 45,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBGFD",
+            "stationId": "940GZZLUGFD",
+            "icsId": "1000092",
+            "topMostParentId": "HUBGFD",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "4",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUGFD",
+            "name": "Greenford Underground Station",
+            "lat": 51.542424,
+            "lon": -0.34605
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLUNHT",
+      "Station": {
+        "StationId": "940GZZLUNHT",
+        "Index": 46,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUNHT",
+            "icsId": "1000162",
+            "topMostParentId": "940GZZLUNHT",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "5",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUNHT",
+            "name": "Northolt Underground Station",
+            "lat": 51.548236,
+            "lon": -0.368699
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLUNHT",
+      "Station": {
+        "StationId": "940GZZLUNHT",
+        "Index": 46,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLUNHT",
+            "icsId": "1000162",
+            "topMostParentId": "940GZZLUNHT",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "5",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUNHT",
+            "name": "Northolt Underground Station",
+            "lat": 51.548236,
+            "lon": -0.368699
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBSRU",
+      "Station": {
+        "StationId": "HUBSRU",
+        "Index": 47,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBSRU",
+            "stationId": "940GZZLUSRP",
+            "icsId": "1000214",
+            "topMostParentId": "HUBSRU",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "5",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSRP",
+            "name": "South Ruislip Underground Station",
+            "lat": 51.556853,
+            "lon": -0.398915
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "HUBSRU",
+      "Station": {
+        "StationId": "HUBSRU",
+        "Index": 47,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBSRU",
+            "stationId": "940GZZLUSRP",
+            "icsId": "1000214",
+            "topMostParentId": "HUBSRU",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "5",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUSRP",
+            "name": "South Ruislip Underground Station",
+            "lat": 51.556853,
+            "lon": -0.398915
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "940GZZLURSG",
+      "Station": {
+        "StationId": "940GZZLURSG",
+        "Index": 48,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLURSG",
+            "icsId": "1000198",
+            "topMostParentId": "940GZZLURSG",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "5",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLURSG",
+            "name": "Ruislip Gardens Underground Station",
+            "lat": 51.560736,
+            "lon": -0.41071
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  },
+  {
+    "From": {
+      "StationId": "940GZZLURSG",
+      "Station": {
+        "StationId": "940GZZLURSG",
+        "Index": 48,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "stationId": "940GZZLURSG",
+            "icsId": "1000198",
+            "topMostParentId": "940GZZLURSG",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "5",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLURSG",
+            "name": "Ruislip Gardens Underground Station",
+            "lat": 51.560736,
+            "lon": -0.41071
+          }
+        ]
+      }
+    },
+    "To": {
+      "StationId": "HUBWRU",
+      "Station": {
+        "StationId": "HUBWRU",
+        "Index": 49,
+        "BranchIds": [
+          4
+        ],
+        "MatchedStop": [
+          {
+            "parentId": "HUBWRU",
+            "stationId": "940GZZLUWRP",
+            "icsId": "1000267",
+            "topMostParentId": "HUBWRU",
+            "modes": [
+              "tube"
+            ],
+            "stopType": "NaptanMetroStation",
+            "zone": "6",
+            "lines": [
+              {
+                "id": "central",
+                "name": "Central",
+                "uri": "/Line/central",
+                "type": "Line",
+                "crowding": {},
+                "routeType": "Unknown",
+                "status": "Unknown"
+              }
+            ],
+            "status": true,
+            "id": "940GZZLUWRP",
+            "name": "West Ruislip Underground Station",
+            "lat": 51.569688,
+            "lon": -0.437886
+          }
+        ]
+      }
+    },
+    "LineId": "central"
+  }
+]
