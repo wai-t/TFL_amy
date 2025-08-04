@@ -12,17 +12,12 @@
     <PackageReference Include="Microsoft.Extensions.Caching.Abstractions" Version="9.0.7" />
     <PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="9.0.7" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="XAML.MapControl.WPF" Version="13.5.0" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TflNetworkBuilder\TflNetworkBuilder.csproj" />
     <ProjectReference Include="..\TflObjects\TflObjects.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Reference Include="MapControl.WPF">
-      <HintPath>..\..\..\XAML-Map-Control\MapControl\WPF\bin\Debug\net8.0-windows\MapControl.WPF.dll</HintPath>
-    </Reference>
   </ItemGroup>
 
   <ItemGroup>
