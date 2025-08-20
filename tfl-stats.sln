@@ -23,6 +23,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TflNetworkBuilder", "TflNet
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestTflNetworkBuilder", "TestTflNetworkBuilder\TestTflNetworkBuilder.csproj", "{56A83409-C867-4A42-B3AE-F970D9E8E761}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LineDiagramFileGenerator", "LineDiagramFileGenerator\LineDiagramFileGenerator.csproj", "{807FCA4D-8CA6-4409-B73C-0F944E0AF812}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B97E9D94-49E5-465C-962D-F33DD04EFD2E} = {B97E9D94-49E5-465C-962D-F33DD04EFD2E}
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +72,10 @@ Global
 		{56A83409-C867-4A42-B3AE-F970D9E8E761}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56A83409-C867-4A42-B3AE-F970D9E8E761}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56A83409-C867-4A42-B3AE-F970D9E8E761}.Release|Any CPU.Build.0 = Release|Any CPU
+		{807FCA4D-8CA6-4409-B73C-0F944E0AF812}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{807FCA4D-8CA6-4409-B73C-0F944E0AF812}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{807FCA4D-8CA6-4409-B73C-0F944E0AF812}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{807FCA4D-8CA6-4409-B73C-0F944E0AF812}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

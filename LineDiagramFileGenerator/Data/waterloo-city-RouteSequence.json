@@ -1,0 +1,546 @@
+{
+  "lineId": "waterloo-city",
+  "lineName": "Waterloo & City",
+  "direction": "inbound",
+  "isOutboundOnly": false,
+  "mode": "tube",
+  "lineStrings": [
+    "[[[-0.087792,51.51225],[-0.11478,51.503299]]]"
+  ],
+  "stations": [
+    {
+      "icsId": "1000013",
+      "modes": [
+        "bus",
+        "dlr",
+        "tube"
+      ],
+      "stopType": "TransportInterchange",
+      "zone": "1",
+      "lines": [
+        {
+          "id": "133",
+          "name": "133",
+          "uri": "/Line/133",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "141",
+          "name": "141",
+          "uri": "/Line/141",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "21",
+          "name": "21",
+          "uri": "/Line/21",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "25",
+          "name": "25",
+          "uri": "/Line/25",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "26",
+          "name": "26",
+          "uri": "/Line/26",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "43",
+          "name": "43",
+          "uri": "/Line/43",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "8",
+          "name": "8",
+          "uri": "/Line/8",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "central",
+          "name": "Central",
+          "uri": "/Line/central",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "dlr",
+          "name": "DLR",
+          "uri": "/Line/dlr",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "n21",
+          "name": "N21",
+          "uri": "/Line/n21",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "n242",
+          "name": "N242",
+          "uri": "/Line/n242",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "n25",
+          "name": "N25",
+          "uri": "/Line/n25",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "n26",
+          "name": "N26",
+          "uri": "/Line/n26",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "n550",
+          "name": "N550",
+          "uri": "/Line/n550",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "n551",
+          "name": "N551",
+          "uri": "/Line/n551",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "n8",
+          "name": "N8",
+          "uri": "/Line/n8",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "northern",
+          "name": "Northern",
+          "uri": "/Line/northern",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "waterloo-city",
+          "name": "Waterloo & City",
+          "uri": "/Line/waterloo-city",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        }
+      ],
+      "status": true,
+      "id": "HUBBAN",
+      "name": "Bank",
+      "lat": 51.513395,
+      "lon": -0.089095
+    },
+    {
+      "icsId": "1000254",
+      "modes": [
+        "bus",
+        "national-rail",
+        "tube"
+      ],
+      "stopType": "TransportInterchange",
+      "zone": "1",
+      "lines": [
+        {
+          "id": "1",
+          "name": "1",
+          "uri": "/Line/1",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "11",
+          "name": "11",
+          "uri": "/Line/11",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "139",
+          "name": "139",
+          "uri": "/Line/139",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "171",
+          "name": "171",
+          "uri": "/Line/171",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "172",
+          "name": "172",
+          "uri": "/Line/172",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "176",
+          "name": "176",
+          "uri": "/Line/176",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "188",
+          "name": "188",
+          "uri": "/Line/188",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "243",
+          "name": "243",
+          "uri": "/Line/243",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "341",
+          "name": "341",
+          "uri": "/Line/341",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "381",
+          "name": "381",
+          "uri": "/Line/381",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "59",
+          "name": "59",
+          "uri": "/Line/59",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "68",
+          "name": "68",
+          "uri": "/Line/68",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "76",
+          "name": "76",
+          "uri": "/Line/76",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "77",
+          "name": "77",
+          "uri": "/Line/77",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "bakerloo",
+          "name": "Bakerloo",
+          "uri": "/Line/bakerloo",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "c10",
+          "name": "C10",
+          "uri": "/Line/c10",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "jubilee",
+          "name": "Jubilee",
+          "uri": "/Line/jubilee",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "n1",
+          "name": "N1",
+          "uri": "/Line/n1",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "n381",
+          "name": "N381",
+          "uri": "/Line/n381",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "n68",
+          "name": "N68",
+          "uri": "/Line/n68",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "northern",
+          "name": "Northern",
+          "uri": "/Line/northern",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "sl6",
+          "name": "SL6",
+          "uri": "/Line/sl6",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "south-western-railway",
+          "name": "South Western Railway",
+          "uri": "/Line/south-western-railway",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        },
+        {
+          "id": "waterloo-city",
+          "name": "Waterloo & City",
+          "uri": "/Line/waterloo-city",
+          "type": "Line",
+          "crowding": {},
+          "routeType": "Unknown",
+          "status": "Unknown"
+        }
+      ],
+      "status": true,
+      "id": "HUBWAT",
+      "name": "Waterloo",
+      "lat": 51.504269,
+      "lon": -0.113356
+    }
+  ],
+  "stopPointSequences": [
+    {
+      "lineId": "waterloo-city",
+      "lineName": "Waterloo & City",
+      "direction": "inbound",
+      "branchId": 0,
+      "nextBranchIds": [],
+      "prevBranchIds": [],
+      "stopPoint": [
+        {
+          "parentId": "HUBBAN",
+          "stationId": "940GZZLUBNK",
+          "icsId": "1000013",
+          "topMostParentId": "HUBBAN",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "central",
+              "name": "Central",
+              "uri": "/Line/central",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "northern",
+              "name": "Northern",
+              "uri": "/Line/northern",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "waterloo-city",
+              "name": "Waterloo & City",
+              "uri": "/Line/waterloo-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUBNK",
+          "name": "Bank Underground Station",
+          "lat": 51.51225,
+          "lon": -0.087792
+        },
+        {
+          "parentId": "HUBWAT",
+          "stationId": "940GZZLUWLO",
+          "icsId": "1000254",
+          "topMostParentId": "HUBWAT",
+          "modes": [
+            "tube"
+          ],
+          "stopType": "NaptanMetroStation",
+          "zone": "1",
+          "lines": [
+            {
+              "id": "bakerloo",
+              "name": "Bakerloo",
+              "uri": "/Line/bakerloo",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "jubilee",
+              "name": "Jubilee",
+              "uri": "/Line/jubilee",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "northern",
+              "name": "Northern",
+              "uri": "/Line/northern",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            },
+            {
+              "id": "waterloo-city",
+              "name": "Waterloo & City",
+              "uri": "/Line/waterloo-city",
+              "type": "Line",
+              "crowding": {},
+              "routeType": "Unknown",
+              "status": "Unknown"
+            }
+          ],
+          "status": true,
+          "id": "940GZZLUWLO",
+          "name": "Waterloo Underground Station",
+          "lat": 51.503299,
+          "lon": -0.11478
+        }
+      ],
+      "serviceType": "Regular"
+    }
+  ],
+  "orderedLineRoutes": [
+    {
+      "name": "Bank  &harr;  Waterloo ",
+      "naptanIds": [
+        "940GZZLUBNK",
+        "940GZZLUWLO"
+      ],
+      "serviceType": "Regular"
+    }
+  ]
+}
