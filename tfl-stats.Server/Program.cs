@@ -1,4 +1,5 @@
 using tfl_stats.Core.Client.Generated;
+using tfl_stats.Server.Middleware;
 using tfl_stats.Server.Services;
 using tfl_stats.Server.Services.Cache;
 
@@ -71,6 +72,9 @@ namespace tfl_stats.Server
             app.MapControllers();
 
             app.MapFallbackToFile("/index.html");
+
+            // use the Recorder class as a middleware layer
+            app.UseMiddleware<Recorder>();
 
             app.Run();
 
